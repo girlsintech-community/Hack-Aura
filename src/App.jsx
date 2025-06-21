@@ -1,11 +1,18 @@
 import React from 'react';
 import './App.css';
 import Navbar from './Navbar';
+import Countdown from './Countdown';
+//import CodeOfConduct from './CodeOfConduct';
+//import Hero from './Hero';
+//import Timeline from './Timeline';
 
 function App() {
   return (
     <>
       <Navbar />
+      
+
+     
 
       {/* Hero Section */}
       <div className="aurora-bg" id="home">
@@ -16,6 +23,7 @@ function App() {
           <button className="btn-secondary">Explore</button>
         </div>
       </div>
+      <Countdown />
 
       {/* Page Sections */}
       <div id="about">

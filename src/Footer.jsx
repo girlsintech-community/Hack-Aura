@@ -9,7 +9,7 @@ function Footer() {
         <div className="footer-left">
           <h2>HackAura</h2>
           <div className="social-links">
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <a href="https://github.com/girlsintech-community" target="_blank" rel="noopener noreferrer" title="GitHub">
               <img 
                 src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.15.0/github.svg" 
                 alt="GitHub"

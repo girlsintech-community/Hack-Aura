@@ -1,19 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import './App.css';
+import Navbar from './Navbar';
 
 function App() {
   return (
-    <div className="aurora-bg">
-      <h1>Welcome to HackAura</h1>
-      <p>Illuminate Innovation</p>
+    <>
+      <Navbar />
 
-      <div className="button-group">
-        <button className="btn-primary">Register</button>
-        <button className="btn-secondary">Explore</button>
+      {/* Hero Section */}
+      <div className="aurora-bg" id="home">
+        <h1>Welcome to HackAura</h1>
+        <p>Illuminate Innovation</p>
+        <div className="button-group">
+          <button className="btn-primary">Register</button>
+          <button className="btn-secondary">Explore</button>
+        </div>
       </div>
-    </div>
+
+      {/* Page Sections */}
+      <div id="about">
+        {/* About Section Content Here */}
+      </div>
+
+      <div id="timeline">
+        {/* Timeline Section Content Here */}
+      </div>
+
+      <div id="sponsors">
+        {/* Sponsors Section (Partners + Sponsors) */}
+      </div>
+
+      <div id="footer">
+        {/* Footer / Support Section */}
+      </div>
+    </>
   );
 }
 

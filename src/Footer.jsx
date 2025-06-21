@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -85,7 +86,7 @@ function Footer() {
             <li><a href="#sponsors">Sponsors</a></li>
             <li><a href="#humans">Humans of HackAura</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="#code-of-conduct">Code of Conduct</a></li>
+            <li><Link to="/code-of-conduct">Code of Conduct</Link></li>
           </ul>
         </div>
       </div>

@@ -1,19 +1,18 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Navbar from './Navbar';
 import Countdown from './Countdown';
 import CodeOfConduct from './CodeOfConduct';
-import Footer from './Footer' ;
-//import Hero from './Hero';
+import Footer from './Footer';
 import Timeline from './Timeline';
 
-function App() {
+// Create a component for your homepage content
+function HomePage() {
   return (
-  <>
+    <>
       <Navbar />
-      
-
-     
 
       {/* Hero Section */}
       <div className="aurora-bg" id="home">
@@ -24,27 +23,26 @@ function App() {
           <button className="btn-secondary">Explore</button>
         </div>
       </div>
+
       <Countdown />
 
       {/* Page Sections */}
-      <div id="about">
-        {/* About Section Content Here */}
-      </div>
-
-      <div id="timeline">
-        {/* Timeline Section Content Here */}
-      </div>
-      <Timeline />
-
-      <div id="sponsors">
-        {/* Sponsors Section (Partners + Sponsors) */}
-      </div>
-
-      <CodeOfConduct />
-      <div id="footer">
-        <Footer />
-      </div>
+      <div id="about">{/* About Section */}</div>
+      <div id="timeline"><Timeline /></div>
+      <div id="sponsors">{/* Sponsors */}</div>
     </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/code-of-conduct" element={<CodeOfConduct />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

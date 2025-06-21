@@ -1,111 +1,76 @@
-/* Navbar base styles */
-.navbar {
+/* Wrapper for logo + nav */
+.navbar-wrapper {
   position: fixed;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 1rem 2rem;
+  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: nowrap; /* ❌ prevent wrapping */
-  gap: 1.2rem;
-  font-weight: 600;
+  justify-content: center;
   z-index: 1000;
-  color: #ffffff;
-  border-radius: 12px;
-  max-width: 95vw;
-  background-color: transparent;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  overflow-x: auto;
+  pointer-events: none; /* allow nav to be clickable */
 }
 
+/* LOGO (absolute to left) */
+.navbar-logo {
+  position: absolute;
+  left: 5rem;
+  top : 0.1rem ;
+  pointer-events: all;
+}
 
-/* Navbar link base styles */
+.navbar-logo img {
+  height: 90px;
+  width: auto;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: transparent;
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(0px);
+  transition: all 0.3s ease;
+  pointer-events: all;
+}
+
+.navbar.scrolled {
+  background-color: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .navbar a {
-  flex-shrink: 1; /* 👈 allows text to shrink slightly */
   text-decoration: none;
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 600;
   padding: 0.6rem 1.2rem;
-  border-radius: 12px;
-  white-space: nowrap;
+  border-radius: 8px;
   transition: all 0.3s ease;
-  z-index: 1;
 }
 
-
-/* When navbar is scrolled */
-/* When navbar is scrolled - Enhanced Glassy Effect */
-.navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.15); /* Lighter, more transparent background */
-  backdrop-filter: blur(15px); /* Slightly less blur, can be adjusted */
-  -webkit-backdrop-filter: blur(15px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* More visible light border */
-}
-
-/* Subtle shrink on group hover */
-.navbar:hover a {
-  transform: scale(0.95);
-  opacity: 0.7;
-}
-
-/* Enhanced hover effect on single link */
 .navbar a:hover {
-  transform: scale(1.15);
-  opacity: 1;
-  background: linear-gradient(135deg, #38fdd9, #7b6cf9, #1e90ff);
-  background-size: 200% 200%;
-  animation: auroraShift 3s ease infinite;
-  box-shadow: 0 0 15px rgba(56, 253, 217, 0.3);
-  color: #fff;
+  background-color: rgba(56, 253, 217, 0.1);
+  color: #38fdd9;
+  transform: translateY(-2px);
 }
 
-/* Animated gradient shift */
-@keyframes auroraShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Optional: if a link is very long, like “Humans of HackAura” */
-.navbar a.long {
-  max-width: 160px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Responsive adjustments */
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .navbar {
-    top: 10px;
-    padding: 0.8rem 1.5rem;
     gap: 1rem;
-    border-radius: 12px;
+    padding: 0.6rem 1rem;
+  }
+
+  .navbar-logo img {
+    height: 48px;
   }
 
   .navbar a {
     font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    top: 8px;
-    padding: 0.6rem 1rem;
-    gap: 0.8rem;
-  }
-
-  .navbar a {
-    font-size: 0.85rem;
-    padding: 0.4rem 0.8rem;
   }
 }

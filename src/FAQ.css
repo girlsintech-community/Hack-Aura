@@ -61,7 +61,7 @@
 
 /* Rotates the arrow on open */
 .faq-item.open .faq-arrow {
-  transform: rotate(180deg);
+  transform: rotate(360deg);
 }
 
 .faq-answer {

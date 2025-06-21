@@ -36,12 +36,13 @@
 
 
 /* When navbar is scrolled */
+/* When navbar is scrolled - Enhanced Glassy Effect */
 .navbar.scrolled {
-  background-color: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px); /* Safari support */
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15); /* Lighter, more transparent background */
+  backdrop-filter: blur(15px); /* Slightly less blur, can be adjusted */
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* More visible light border */
 }
 
 /* Subtle shrink on group hover */

@@ -7,6 +7,7 @@ import Countdown from './Countdown';
 import CodeOfConduct from './CodeOfConduct';
 import Footer from './Footer';
 import Timeline from './Timeline';
+import FAQ from './FAQ' ;
 
 // Create a component for your homepage content
 function HomePage() {
@@ -30,6 +31,7 @@ function HomePage() {
       <div id="about">{/* About Section */}</div>
       <div id="timeline"><Timeline /></div>
       <div id="sponsors">{/* Sponsors */}</div>
+      <div id="faq"><FAQ /></div>
     </>
   );
 }

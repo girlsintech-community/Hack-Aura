@@ -2,11 +2,14 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+
 import Navbar from './Navbar';
 import Countdown from './Countdown';
 import CodeOfConduct from './CodeOfConduct';
 import Footer from './Footer';
 import Timeline from './Timeline';
+import About from './About';
+import OrganizationAbout from './AboutOrg';
 
 // Create a component for your homepage content
 function HomePage() {
@@ -27,7 +30,11 @@ function HomePage() {
       <Countdown />
 
       {/* Page Sections */}
-      <div id="about">{/* About Section */}</div>
+      <div >
+        <About/>
+        <OrganizationAbout/>
+        </div>
+      
       <div id="timeline"><Timeline /></div>
       <div id="sponsors">{/* Sponsors */}</div>
     </>

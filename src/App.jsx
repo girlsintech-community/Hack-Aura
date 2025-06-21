@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './Navbar';
 import Countdown from './Countdown';
-//import CodeOfConduct from './CodeOfConduct';
+import CodeOfConduct from './CodeOfConduct';
 //import Hero from './Hero';
 //import Timeline from './Timeline';
 
@@ -38,6 +38,7 @@ function App() {
         {/* Sponsors Section (Partners + Sponsors) */}
       </div>
 
+      <CodeOfConduct />
       <div id="footer">
         {/* Footer / Support Section */}
       </div>

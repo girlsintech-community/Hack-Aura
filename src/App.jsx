@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import Countdown from './Countdown';
 import CodeOfConduct from './CodeOfConduct';
 //import Hero from './Hero';
-//import Timeline from './Timeline';
+import Timeline from './Timeline';
 
 function App() {
   return (
@@ -33,6 +33,7 @@ function App() {
       <div id="timeline">
         {/* Timeline Section Content Here */}
       </div>
+      <Timeline />
 
       <div id="sponsors">
         {/* Sponsors Section (Partners + Sponsors) */}

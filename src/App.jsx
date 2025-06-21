@@ -10,6 +10,7 @@ import Footer from './Footer';
 import Timeline from './Timeline';
 import About from './About';
 import OrganizationAbout from './AboutOrg';
+import FAQ from './FAQ' ;
 
 // Create a component for your homepage content
 function HomePage() {
@@ -37,6 +38,7 @@ function HomePage() {
       
       <div id="timeline"><Timeline /></div>
       <div id="sponsors">{/* Sponsors */}</div>
+      <div id="faq"><FAQ /></div>
     </>
   );
 }

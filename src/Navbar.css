@@ -53,10 +53,25 @@
   transition: all 0.3s ease;
 }
 
+.navbar:hover a {
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
 .navbar a:hover {
-  background-color: rgba(56, 253, 217, 0.1);
-  color: #38fdd9;
-  transform: translateY(-2px);
+  transform: scale(1.15);
+  opacity: 1;
+  background: linear-gradient(135deg, #38fdd9, #7b6cf9, #1e90ff);
+  background-size: 200% 200%;
+  animation: auroraShift 3s ease infinite;
+  box-shadow: 0 0 15px rgba(56, 253, 217, 0.3);
+  color: #fff;
+}
+
+@keyframes auroraShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Responsive tweaks */

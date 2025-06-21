@@ -7,17 +7,21 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      console.log('Scroll position:', scrollY); // Debug log
-      console.log('Scrolled state:', scrollY > 50); // Debug log
-      setScrolled(scrollY > 50);
+      const isScrolled = scrollY > 50;
+      setScrolled(isScrolled);
     };
 
+    // Check scroll position immediately
+    handleScroll();
+    
+    // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Debug log to see current state
-  console.log('Current scrolled state:', scrolled);
+    
+    // Cleanup function
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty dependency array
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>

@@ -3,12 +3,13 @@ import './App.css';
 import Navbar from './Navbar';
 import Countdown from './Countdown';
 import CodeOfConduct from './CodeOfConduct';
+import Footer from './Footer' ;
 //import Hero from './Hero';
 import Timeline from './Timeline';
 
 function App() {
   return (
-    <>
+  <>
       <Navbar />
       
 
@@ -41,7 +42,7 @@ function App() {
 
       <CodeOfConduct />
       <div id="footer">
-        {/* Footer / Support Section */}
+        <Footer />
       </div>
     </>
   );

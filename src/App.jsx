@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 import Navbar from './Navbar';
+import Hero from './Hero';
 import Countdown from './Countdown';
 import CodeOfConduct from './CodeOfConduct';
 import Footer from './Footer';
@@ -19,7 +20,7 @@ function HomePage() {
   return (
     <>
       <Navbar />
-
+<Hero />
       {/* Hero Section */}
       <div className="aurora-bg" id="home">
         <h1>Welcome to HackAura</h1>

@@ -1,52 +1,97 @@
-.countdown-section {
-  text-align: center;
-  padding: 4rem 1rem;
-  background: transparent;
-}
-
-.countdown-title {
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--aurora-green);
-  margin-bottom: 2rem;
-  text-shadow: 0 0 8px rgba(0, 255, 200, 0.4);
-}
-
-.countdown-grid {
+.countdown-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
-  flex-wrap: wrap;
+  margin: 3rem 0;
 }
 
-.countdown-box {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid var(--aurora-purple);
+.flip-unit {
+  position: relative;
+  perspective: 1000px;
+  text-align: center;
+}
+
+.flip-card {
+  position: relative;
+  width: 100px;
+  height: 120px;
+  background: #111;
   border-radius: 12px;
-  padding: 1.5rem 2rem;
-  min-width: 100px;
-  box-shadow: 0 0 12px rgba(169, 120, 242, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(8px);
+  overflow: hidden;
+  box-shadow: 0 0 10px #00ff88;
 }
 
-.countdown-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(169, 120, 242, 0.5);
+.top-half,
+.bottom-half,
+.flip-top-half,
+.flip-bottom-half {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  font-size: 3rem;
+  color: #00ff88;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
 }
 
-.countdown-value {
+.top-half {
+  top: 0;
+  border-bottom: 1px solid #333;
+}
+
+.bottom-half {
+  bottom: 0;
+  transform: rotateX(0deg);
+}
+
+.flip-top-half {
+  top: 0;
+  transform-origin: bottom;
+  background: #111;
+  animation: flipTop 0.4s ease-in forwards;
+  z-index: 2;
+}
+
+.flip-bottom-half {
+  bottom: 0;
+  transform-origin: top;
+  background: #111;
+  animation: flipBottom 0.4s ease-out forwards;
+  z-index: 1;
+}
+
+.label {
   display: block;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--aurora-blue);
-  margin-bottom: 0.3rem;
-  text-shadow: 0 0 6px rgba(0, 179, 255, 0.5);
+  margin-top: 0.6rem;
+  color: #aaa;
+  font-family: monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
-.countdown-label {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--dimmed);
-  letter-spacing: 1px;
+@keyframes flipTop {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flipBottom {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+.countdown-container.single-row {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
 }

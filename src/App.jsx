@@ -33,7 +33,7 @@ function HomePage() {
       <Countdown />
 
       {/* Page Sections */}
-      <div >
+      <div id = "about" >
         <About/>
         <OrganizationAbout/>
         </div>

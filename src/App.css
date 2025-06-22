@@ -213,14 +213,6 @@ p {
   transform: translateY(-3px) scale(1.02);
 }
 
-/* ====== Section Styling ====== */
-#about, #timeline, #sponsors {
-  min-height: 50vh;
-  padding: 4rem 1rem;
-  background: rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(0, 255, 136, 0.1);
-  backdrop-filter: blur(5px);
-}
 
 /* ====== Responsive Design ====== */
 @media (max-width: 768px) {

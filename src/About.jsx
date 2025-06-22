@@ -3,31 +3,39 @@ import './About.css';
 
 const About = () => {
   return (
-    <section  className="about-section">
-      <div className="container">
-        <h2>ABOUT THE HACKATHON</h2>
-        <div className="content-grid">
-          <div className="about-content">
+    <section className="about-section" id="about">
+      <div className="about-container">
+        <h2>About the Hackathon</h2>
+
+        <div className="about-content">
+          <div className="text-block">
             <p className="highlight">
-              CyberHack is a 48-hour immersive coding marathon where innovation meets technology.
+              HackAura is a <strong>24-hour virtual hackathon</strong> where innovation meets purpose—powered by cutting-edge technologies including <strong>Web3, Artificial Intelligence, and Open Innovation</strong>.
             </p>
+
             <p>
-              Founded in 2020, we bring together developers, designers, and tech enthusiasts to build 
-              cutting-edge solutions for real-world problems. Our events feature workshops, mentorship, 
-              and networking opportunities with industry leaders.
+              Scheduled for <strong>October 2025</strong>, HackAura is a national platform inviting student innovators to design solutions addressing real-world challenges faced by women. 
+              Teams of <strong>2 to 5 members</strong> can participate, and each must include at least <strong>two girls</strong>—promoting inclusivity in tech.
             </p>
-            <ul className="cyber-list">
-              <li>• 48 hours of non-stop coding</li>
-              <li>• Workshops from tech giants</li>
-              <li>• $50,000+ in prizes</li>
-              <li>• Global community of 10,000+ hackers</li>
+
+            <p>
+              The event features multiple tracks, curated workshops, and mentorship to fuel ideation and execution. Projects will be judged on:
+            </p>
+
+            <ul className="evaluation-criteria">
+              <li>🔍 <strong>Innovation</strong> & Originality</li>
+              <li>🚀 <strong>Scalability</strong> & Sustainability</li>
+              <li>📊 <strong>Market Viability</strong></li>
+              <li>💡 <strong>Technical Execution</strong> & UX</li>
             </ul>
+
+            <p>
+              HackAura aims to cultivate forward-thinking solutions while fostering talent, collaboration, and leadership among emerging technologists.
+            </p>
           </div>
         </div>
       </div>
     </section>
-
-    
   );
 };
 

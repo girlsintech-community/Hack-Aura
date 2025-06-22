@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-
 import Navbar from './Navbar';
 import Hero from './Hero';
 import Countdown from './Countdown';
@@ -22,14 +20,7 @@ function HomePage() {
       <Navbar />
 <Hero />
       {/* Hero Section */}
-      <div className="aurora-bg" id="home">
-        <h1>Welcome to HackAura</h1>
-        <p>Illuminate Innovation</p>
-        <div className="button-group">
-          <button className="btn-primary">Register</button>
-          <button className="btn-secondary">Explore</button>
-        </div>
-      </div>
+     
 
       <Countdown />
 

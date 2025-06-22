@@ -18,7 +18,10 @@ const Hero = () => {
           <span>ILLUMINATE</span>
           <span>INNOVATION</span>
         </div>
-
+ <div className="button-group">
+          <button className="btn-primary">Register</button>
+          <button className="btn-secondary">Explore</button>
+        </div>
         
       </div>
     </div>

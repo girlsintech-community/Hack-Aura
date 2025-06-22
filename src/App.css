@@ -219,18 +219,8 @@ p {
   .aurora-bg {
     padding: 2rem 1rem;
   }
-  
-  .button-group {
-    flex-direction: column;
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .btn-primary, .btn-secondary {
-    width: 100%;
-    padding: 1.2rem 2rem;
-  }
-}
+} 
+ 
 
 @media (max-width: 480px) {
   h1 {

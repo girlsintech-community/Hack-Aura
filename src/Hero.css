@@ -55,3 +55,46 @@
   font-size: 1.5rem;
   font-weight: 600;
 }
+.button-group {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #00FFB2, #00E6A3);
+  border: none;
+  color: black;
+  padding: 0.75rem 2.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00FFB2;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #00FFB2;
+  padding: 0.75rem 2.5rem;
+  border: 2px solid #00FFB2;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 255, 178, 0.1);
+  box-shadow: 0 0 10px #00FFB2;
+  transform: scale(1.05);
+}
+
+

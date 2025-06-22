@@ -1,0 +1,47 @@
+.hack-aura-container {
+  position: relative;
+  height: 100vh;
+  background: url('E:\Hack-Aura\src\assets\images\hero.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.overlay-text {
+  text-align: center;
+}
+
+.top-text {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.hack-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 1rem 0;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.3rem;
+  font-weight: 400;
+}
+
+.duration {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}

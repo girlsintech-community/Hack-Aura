@@ -17,6 +17,7 @@ const FlipUnit = ({ value, label }) => {
   }, [value, prevValue]);
 
   return (
+    
     <div className="flip-unit">
       <div className="flip-card">
         <div className="top-half">{value}</div>

@@ -7,7 +7,7 @@
 
 /* ==== TITLE (Updated to match FAQ style) ==== */
 .timeline-title {
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
   font-family: 'Orbitron', sans-serif;
   font-weight: 800; /* Extra bold to match thickness */
   
@@ -125,7 +125,8 @@
 
 /* ==== DESCRIPTION ==== */
 .timeline-content p {
-  font-size: 1.05rem;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+
   color: #a0aec0;
   line-height: 1.7;
   margin: 0;

@@ -1,102 +1,101 @@
-/* Wrapper for logo + nav */
+/* === GLASSY NAVBAR WRAPPER === */
 .navbar-wrapper {
   position: fixed;
-  top: 20px;
-  width: 100%;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 4rem);
+  max-width: 1400px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* logo left, nav center/right */
-  padding: 0 5rem;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
   z-index: 1000;
-  pointer-events: none; /* allow child elements to be clickable */
-  box-sizing: border-box;
+  border-radius: 20px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.2);
+  transition: all 0.4s ease;
+  pointer-events: none;
 }
 
-/* LOGO */
+/* === LOGO === */
 .navbar-logo {
   pointer-events: all;
   flex-shrink: 0;
 }
 
 .navbar-logo img {
-  height: 90px;
+  height: 72px;
   width: auto;
-  max-width: 100%;
   object-fit: contain;
 }
 
-/* NAVBAR */
+/* === NAVIGATION LINKS === */
 .navbar {
   display: flex;
   gap: 1.5rem;
-  padding: 1rem 2rem;
-  background-color: transparent;
-  border-radius: 12px;
-  backdrop-filter: blur(0px);
-  transition: all 0.3s ease;
   pointer-events: all;
+  align-items: center;
   justify-content: center;
-  flex: 1;
 }
 
-.navbar.scrolled {
-  background-color: rgba(10, 10, 10, 0.75);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Navbar links */
 .navbar a {
   text-decoration: none;
-  color: #ffffff;
+  color: #e0fdf4;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.6rem 1.2rem;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: all 0.3s ease;
-}
 
-.navbar:hover a {
-  transform: scale(0.95);
-  opacity: 0.7;
 }
 
 .navbar a:hover {
-  transform: scale(1.15);
-  opacity: 1;
   background: linear-gradient(135deg, #38fdd9, #7b6cf9, #1e90ff);
   background-size: 200% 200%;
   animation: auroraShift 3s ease infinite;
-  box-shadow: 0 0 15px rgba(56, 253, 217, 0.3);
-  color: #fff;
+  color: #0f172a;
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(56, 253, 217, 0.4);
 }
 
+/* === Aurora Gradient Animation === */
 @keyframes auroraShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Responsive tweaks */
+/* === SCROLLED NAVBAR STYLE === */
+.navbar-wrapper.scrolled {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  box-shadow: 0 8px 40px rgba(6, 182, 212, 0.2);
+}
+
+/* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
   .navbar-wrapper {
     flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+    padding: 1rem 1.25rem;
   }
 
   .navbar {
     flex-wrap: wrap;
+    gap: 1rem;
     justify-content: center;
   }
 
   .navbar-logo img {
-    height: 48px;
+    height: 50px;
   }
 
   .navbar a {
     font-size: 0.9rem;
+    padding: 0.5rem 1rem;
   }
 }

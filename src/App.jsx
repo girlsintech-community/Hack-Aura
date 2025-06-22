@@ -1,4 +1,4 @@
-import React from 'react';
+import {React,useState} from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
@@ -12,12 +12,23 @@ import OrganizationAbout from './AboutOrg';
 import FAQ from './FAQ' ;
 import Humans from './Humans';
 import Sponsorships from './Sponsor';
+import ContactPopup from './Contact';
 
 // Create a component for your homepage content
 function HomePage() {
+
+  const [showContact, setShowContact] = useState(false);
+
+  const handleContactClick = () => {
+    setShowContact(true);
+  };
+
+  const closePopup = () => {
+    setShowContact(false);
+  };
   return (
     <>
-      <Navbar />
+      <Navbar onContactClick={handleContactClick}  />
 <Hero />
       {/* Hero Section */}
      
@@ -33,11 +44,14 @@ function HomePage() {
       <div id="timeline"><Timeline /></div>
       <div id="sponsors"><Sponsorships/></div>
       <div id="faq"><FAQ /></div>
+      {showContact && <ContactPopup onClose={closePopup} />}
     </>
   );
 }
 
 function App() {
+
+  
   return (
     <Router>
       <Routes>

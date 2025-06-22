@@ -19,7 +19,6 @@
   margin: 0 auto;
   padding: 3.5rem;
   line-height: 1.85;
-  font-size: 1.0rem;
   backdrop-filter: blur(15px);
   transition: 0.4s ease;
 }
@@ -53,9 +52,7 @@
 
 /* ==== HEADINGS WITH AMPLIFIED GLOW ==== */
 .about-section h2, .org-content h2, .gallery-title {
-  font-size: clamp(2.5rem, 6vw, 3.75rem);
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 800; /* Extra bold to match Timeline/Sponsors */
+
   
   /* Exact gradient matching Timeline and Sponsors */
   background: linear-gradient(90deg, 
@@ -93,6 +90,15 @@
   
   /* Amplified glow animation */
   animation: amplifiedGlow 1.5s ease-in-out infinite alternate;
+
+   font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+  z-index: 2;
+  position: relative;
 }
 
 /* Fallback for browsers that don't support background-clip: text */
@@ -115,7 +121,16 @@
   background: linear-gradient(90deg, transparent, #10b981, transparent);
   border-radius: 5px;
 }
-
+li{
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: var(--text-color);
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  position: relative;
+}
 /* ==== VISION TITLES WITH AMPLIFIED GLOW ==== */
 .vision-title {
   font-size: 1.8rem;

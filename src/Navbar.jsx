@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import ContactPopup from './Contact';
 import logo from './assets/logo.png';
 //import girlsintech from './assets/girlsintech.png';
 
-const Navbar = () => {
+const Navbar = ({onContactClick}) => {
   const [scrolled, setScrolled] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -29,7 +31,10 @@ const Navbar = () => {
         <a href="#sponsors">Sponsors</a>
         <a href="/humans">Humans of HackAura</a>
         <a href="#footer">Support</a>
+        <a onClick={onContactClick} style={{ cursor: 'pointer' }}>Contact</a>
       </nav>
+
+
     </div>
   );
 };

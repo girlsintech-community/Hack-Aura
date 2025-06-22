@@ -13,6 +13,7 @@ import FAQ from './FAQ' ;
 import Humans from './Humans';
 import Sponsorships from './Sponsor';
 import ContactPopup from './Contact';
+import HackathonTracks from './Tracks';
 
 // Create a component for your homepage content
 function HomePage() {
@@ -42,8 +43,10 @@ function HomePage() {
         </div>
       
       <div id="timeline"><Timeline /></div>
+      <div id = "tracks"><HackathonTracks/></div>
       <div id="sponsors"><Sponsorships/></div>
       <div id="faq"><FAQ /></div>
+      
       {showContact && <ContactPopup onClose={closePopup} />}
     </>
   );

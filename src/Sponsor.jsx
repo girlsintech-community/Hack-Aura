@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Sponsor.css';
+import ContactPopup from './Contact';
 
 const HackathonSponsors = () => {
+  const [showContact, setShowContact] = useState(false);
+
+  const openContactPopup = () => {
+    setShowContact(true);
+  };
+
+  const closeContactPopup = () => {
+    setShowContact(false);
+  };
+
   return (
     <section className="hackathon-sponsors" id="sponsors">
       <div className="sponsors-container">
@@ -29,16 +40,18 @@ const HackathonSponsors = () => {
               Join us as a sponsor or community partner. Get featured across our platform, events, panels, swag kits, and more.
               Elevate your brand while empowering the next generation of changemakers.
             </p>
-            <a
-              href="mailto:hackathon@yourdomain.com?subject=Sponsorship Inquiry"
+            <button
               className="sponsor-button"
+              onClick={openContactPopup}
               aria-label="Partner or Sponsor Us"
             >
               Partner / Sponsor Us <span className="cyber-arrow">→</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
+
+      {showContact && <ContactPopup onClose={closeContactPopup} />}
     </section>
   );
 };

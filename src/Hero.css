@@ -53,7 +53,7 @@
 }
 .button-group {
   display: flex;
-  gap: 1.5rem;
+  gap: 5.5rem;
   justify-content: center;
   margin-top: 2rem;
 }

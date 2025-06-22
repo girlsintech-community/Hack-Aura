@@ -31,16 +31,12 @@ function HomePage() {
       <Navbar onContactClick={handleContactClick}  />
 <Hero />
       {/* Hero Section */}
-     
-
       <Countdown />
-
       {/* Page Sections */}
       <div id = "about" >
         <About/>
         <OrganizationAbout/>
-        </div>
-      
+      </div>
       <div id="timeline"><Timeline /></div>
       <div id="sponsors"><Sponsorships/></div>
       <div id="faq"><FAQ /></div>

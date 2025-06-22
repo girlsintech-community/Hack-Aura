@@ -108,6 +108,7 @@
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  color: #000;
 }
 
 .countdown-box {
@@ -116,21 +117,21 @@
   border-radius: 12px;
   padding: 1.5rem 2rem;
   min-width: 100px;
-  box-shadow: 0 0 12px rgba(169, 120, 242, 0.3);
+  box-shadow: 0 0 12px rgba(105, 160, 146, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(8px);
 }
 
 .countdown-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(169, 120, 242, 0.5);
+  box-shadow: 0 0 20px rgba(42, 211, 107, 0.5);
 }
 
 .countdown-value {
   display: block;
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--aurora-blue);
+  color: rgb(64, 215, 107);
   margin-bottom: 0.3rem;
   text-shadow: 0 0 6px rgba(0, 179, 255, 0.5);
 }

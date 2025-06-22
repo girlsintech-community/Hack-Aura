@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { User, Award, Mic, Users, Gavel, Linkedin } from 'lucide-react';
 import './Humans.css';
 import Navbar from './Navbar' ;
+import Footer from './Footer' ;
 
 const TeamPage = () => {
   // Sample data - replace with your actual team members

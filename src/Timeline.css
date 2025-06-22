@@ -3,24 +3,59 @@
   padding: 6rem 2rem;
   max-width: 1400px;
   margin: 5rem auto;
-
 }
 
-/* ==== TITLE ==== */
+/* ==== TITLE (Updated to match FAQ style) ==== */
 .timeline-title {
-  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
   font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(135deg, #3b82f6, #10b981, #06b6d4);
+  font-weight: 800; /* Extra bold to match thickness */
+  
+  /* Exact gradient matching Community Voices */
+  background: linear-gradient(90deg, 
+    #0891b2 0%,    /* Darker cyan start */
+    #06b6d4 20%,   /* Bright cyan */
+    #22d3ee 40%,   /* Light cyan */
+    #0dd6d6 60%,   /* Bright teal */
+    #14b8a6 80%,   /* Teal */
+    #10b981 100%   /* Emerald end */
+  );
+  
+  /* Cross-browser compatibility */
   -webkit-background-clip: text;
+  -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 30px rgba(6, 182, 212, 0.25);
+  -moz-text-fill-color: transparent;
+  color: transparent;
+  
+  /* Subtle glow effect matching the reference */
+  text-shadow: 
+    0 0 10px rgba(6, 182, 212, 0.3),
+    0 0 20px rgba(20, 184, 166, 0.2),
+    0 0 30px rgba(16, 185, 129, 0.1);
+  
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  animation: glow 3s ease-in-out infinite alternate;
+  letter-spacing: 0.1em; /* Slightly reduced for better readability */
   position: relative;
+  
+  /* Ensure proper display */
+  display: inline-block;
+  width: 100%;
+  
+  /* Amplified glow animation */
+  animation: amplifiedGlow 1.5s ease-in-out infinite alternate;
+}
+
+/* Fallback for browsers that don't support background-clip: text */
+@supports not (-webkit-background-clip: text) {
+  .timeline-title {
+    background: none;
+    color: #06b6d4; /* Bright cyan fallback */
+    -webkit-text-fill-color: unset;
+  }
 }
 
 .timeline-title::after {
@@ -28,9 +63,9 @@
   position: absolute;
   bottom: -10px;
   left: 50%;
-  transform: translateX(-50%);
   width: 60%;
   height: 2px;
+  transform: translateX(-50%);
   background: linear-gradient(90deg, transparent, #10b981, transparent);
   border-radius: 5px;
 }
@@ -121,20 +156,30 @@
   transition-delay: 0.7s;
 }
 
-/* ==== GLOW ANIMATION ==== */
-@keyframes glow {
+/* ==== AMPLIFIED GLOW ANIMATION ==== */
+@keyframes amplifiedGlow {
   0% {
-    text-shadow: 0 0 6px #10b981, 0 0 16px #06b6d4;
+    text-shadow: 
+      0 0 10px rgba(6, 182, 212, 0.3),
+      0 0 20px rgba(20, 184, 166, 0.2),
+      0 0 30px rgba(16, 185, 129, 0.1);
   }
   100% {
-    text-shadow: 0 0 16px #10b981, 0 0 32px #06b6d4;
+    text-shadow: 
+      0 0 25px rgba(6, 182, 212, 0.6),
+      0 0 50px rgba(20, 184, 166, 0.4),
+      0 0 75px rgba(16, 185, 129, 0.3),
+      0 0 100px rgba(6, 182, 212, 0.2);
   }
 }
-
-/* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
   .timeline-section {
     padding: 4rem 1rem;
+  }
+
+  .timeline-title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 2rem;
   }
 
   .timeline-container {
@@ -151,5 +196,12 @@
 
   .timeline-content p {
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-title {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
   }
 }

@@ -84,7 +84,7 @@ function Footer() {
             <li><a href="#about">About</a></li>
             <li><a href="#timeline">Timeline</a></li>
             <li><a href="#sponsors">Sponsors</a></li>
-            <li><a href="#humans">Humans of HackAura</a></li>
+            <li><a href="/humans">Humans of HackAura</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><Link to="/code-of-conduct">Code of Conduct</Link></li>
           </ul>

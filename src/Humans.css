@@ -63,7 +63,7 @@
 .team-page {
   min-height: 100vh;
   padding: 10rem 1rem 5rem;
-  background: radial-gradient(ellipse at top, rgba(139, 92, 246, 0.1), transparent 50%),
+  background: radial-gradient(ellipse at top, rgba(59, 130, 246, 0.1), transparent 50%),
               radial-gradient(ellipse at bottom, rgba(16, 185, 129, 0.1), transparent 50%);
 }
 
@@ -81,12 +81,12 @@
 .page-title {
   font-size: 4rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #8b5cf6 0%, #10b981 50%, #3b82f6 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #10b981 50%, #06b6d4 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1.5rem;
-  text-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
+  text-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
 }
 
 .page-description {
@@ -100,10 +100,10 @@
 .page-divider {
   width: 8rem;
   height: 6px;
-  background: linear-gradient(90deg, #8b5cf6, #10b981, #3b82f6);
+  background: linear-gradient(90deg, #3b82f6, #10b981, #06b6d4);
   margin: 2rem auto;
   border-radius: 3px;
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
 }
 
 /* Section Header Styles */
@@ -122,13 +122,13 @@
 .section-icon {
   width: 4.5rem;
   height: 4.5rem;
-  background: linear-gradient(135deg, #8b5cf6, #10b981, #3b82f6);
+  background: linear-gradient(135deg, #3b82f6, #10b981, #06b6d4);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 1rem;
-  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
   transition: transform 0.3s ease;
 }
 
@@ -145,7 +145,7 @@
 .section-title {
   font-size: 2.8rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #a855f7, #10b981, #3b82f6);
+  background: linear-gradient(135deg, #2563eb, #10b981, #0891b2);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -154,10 +154,10 @@
 .section-divider {
   width: 6rem;
   height: 5px;
-  background: linear-gradient(90deg, #8b5cf6, #10b981, #3b82f6);
+  background: linear-gradient(90deg, #3b82f6, #10b981, #06b6d4);
   margin: 0 auto;
   border-radius: 3px;
-  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
 }
 
 .section-subtitle {
@@ -205,9 +205,9 @@
   border-radius: 1.5rem;
   padding: 2px;
   background: linear-gradient(135deg, 
-    rgba(139, 92, 246, 0.4), 
+    rgba(59, 130, 246, 0.4), 
     rgba(16, 185, 129, 0.4), 
-    rgba(59, 130, 246, 0.4));
+    rgba(6, 182, 212, 0.4));
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   opacity: 0;
@@ -220,13 +220,13 @@
 
 .team-card:hover {
   transform: translateY(-1.5rem) scale(1.08);
-  box-shadow: 0 40px 80px -12px rgba(139, 92, 246, 0.4),
+  box-shadow: 0 40px 80px -12px rgba(59, 130, 246, 0.4),
               0 0 50px rgba(16, 185, 129, 0.2),
               0 0 0 1px rgba(255, 255, 255, 0.3);
   background: linear-gradient(135deg, 
-    rgba(139, 92, 246, 0.25) 0%, 
+    rgba(59, 130, 246, 0.25) 0%, 
     rgba(16, 185, 129, 0.2) 50%, 
-    rgba(59, 130, 246, 0.25) 100%);
+    rgba(6, 182, 212, 0.25) 100%);
   border-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -234,18 +234,18 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, 
-    rgba(139, 92, 246, 0.1), 
+    rgba(59, 130, 246, 0.1), 
     rgba(16, 185, 129, 0.08), 
-    rgba(59, 130, 246, 0.1));
+    rgba(6, 182, 212, 0.1));
   border-radius: 1.5rem;
   transition: all 0.6s ease;
 }
 
 .team-card:hover .team-card-overlay {
   background: linear-gradient(135deg, 
-    rgba(139, 92, 246, 0.2), 
+    rgba(59, 130, 246, 0.2), 
     rgba(16, 185, 129, 0.15), 
-    rgba(59, 130, 246, 0.2));
+    rgba(6, 182, 212, 0.2));
 }
 
 .team-card-content {
@@ -260,14 +260,14 @@
 .team-card-avatar {
   width: 5.5rem;
   height: 5.5rem;
-  background: linear-gradient(135deg, #8b5cf6, #10b981, #3b82f6);
+  background: linear-gradient(135deg, #3b82f6, #10b981, #06b6d4);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
   position: relative;
 }
 
@@ -276,7 +276,7 @@
   position: absolute;
   inset: -3px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #8b5cf6, #10b981, #3b82f6);
+  background: linear-gradient(135deg, #3b82f6, #10b981, #06b6d4);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -284,7 +284,7 @@
 
 .team-card:hover .team-card-avatar {
   transform: scale(1.15) rotateY(15deg);
-  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.5);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.5);
 }
 
 .team-card:hover .team-card-avatar::before {
@@ -307,12 +307,12 @@
 }
 
 .team-card:hover .team-card-name {
-  background: linear-gradient(135deg, #c084fc, #34d399, #60a5fa);
+  background: linear-gradient(135deg, #60a5fa, #34d399, #22d3ee);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(1.05);
-  text-shadow: 0 0 20px rgba(192, 132, 252, 0.5);
+  text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
 }
 
 .team-card-role {
@@ -345,7 +345,7 @@
   border-color: rgba(255, 255, 255, 0.3);
   color: #e5e7eb;
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
 }
 
 .linkedin-icon {
@@ -363,14 +363,14 @@
 .cta-section {
   text-align: center;
   background: linear-gradient(135deg, 
-    rgba(139, 92, 246, 0.15), 
+    rgba(59, 130, 246, 0.15), 
     rgba(16, 185, 129, 0.1), 
-    rgba(59, 130, 246, 0.15));
+    rgba(6, 182, 212, 0.15));
   backdrop-filter: blur(20px);
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 2rem;
   padding: 3.5rem;
-  box-shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -380,16 +380,16 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, 
-    rgba(139, 92, 246, 0.05), 
+    rgba(59, 130, 246, 0.05), 
     rgba(16, 185, 129, 0.03), 
-    rgba(59, 130, 246, 0.05));
+    rgba(6, 182, 212, 0.05));
   transition: opacity 0.6s ease;
 }
 
 .cta-title {
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #c084fc, #34d399, #60a5fa);
+  background: linear-gradient(135deg, #60a5fa, #34d399, #22d3ee);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -411,7 +411,7 @@
 }
 
 .cta-button {
-  background: linear-gradient(135deg, #8b5cf6, #10b981, #3b82f6);
+  background: linear-gradient(135deg, #3b82f6, #10b981, #06b6d4);
   color: white;
   padding: 1rem 2.5rem;
   border-radius: 2rem;
@@ -422,14 +422,14 @@
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   position: relative;
   z-index: 1;
-  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
 }
 
 .cta-button:hover {
   transform: scale(1.08) translateY(-2px);
-  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.4),
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4),
               0 0 30px rgba(16, 185, 129, 0.3);
-  background: linear-gradient(135deg, #7c3aed, #059669, #2563eb);
+  background: linear-gradient(135deg, #2563eb, #059669, #0891b2);
 }
 
 /* Responsive Design */

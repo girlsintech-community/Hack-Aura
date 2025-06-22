@@ -1,7 +1,7 @@
 .hack-aura-container {
   position: relative;
   height: 100vh;
-  background: url('E:\Hack-Aura\src\assets\images\hero.jpg') no-repeat center center/cover;
+  background: url('src\assets\images\hero.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -4,7 +4,7 @@ import './CodeOfConduct.css';
 const CodeOfConduct = () => {
   return (
     <section className="code-section" id="code-of-conduct">
-      <h2 className="code-title">Code of Conduct</h2>
+      <h2 className="code-title">CODE OF CONDUCT</h2>
       <p className="code-intro">
         We are committed to providing a safe, welcoming, and inclusive environment for everyone. 
         All participants, speakers, sponsors, and volunteers must abide by the following code of conduct.

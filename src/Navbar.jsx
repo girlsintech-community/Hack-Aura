@@ -26,7 +26,7 @@ const Navbar = () => {
         <a href="#about">About</a>
         <a href="#timeline">Timeline</a>
         <a href="#sponsors">Sponsors</a>
-        <a href="#humans">Humans of HackAura</a>
+        <a href="/humans">Humans of HackAura</a>
         <a href="#footer">Support</a>
       </nav>
     </div>

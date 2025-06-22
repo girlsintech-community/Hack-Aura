@@ -11,6 +11,7 @@ import Timeline from './Timeline';
 import About from './About';
 import OrganizationAbout from './AboutOrg';
 import FAQ from './FAQ' ;
+import Humans from './Humans';
 
 // Create a component for your homepage content
 function HomePage() {
@@ -49,6 +50,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/code-of-conduct" element={<CodeOfConduct />} />
+        <Route path="/humans" element={<Humans />} />
       </Routes>
       <Footer />
     </Router>

@@ -20,7 +20,7 @@ const Hero = () => {
         </div>
  <div className="button-group">
           <button className="btn-primary">Register</button>
-          <button className="btn-secondary">Explore</button>
+          <button className="btn-secondary">Discord</button>
         </div>
         
       </div>

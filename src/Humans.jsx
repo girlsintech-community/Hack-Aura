@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { User, Award, Mic, Users, Gavel, Linkedin } from 'lucide-react';
 import './Humans.css';
+import Navbar from './Navbar' ;
 
 const TeamPage = () => {
   // Sample data - replace with your actual team members
@@ -111,6 +112,8 @@ const TeamPage = () => {
   );
 
   return (
+  <>
+    <Navbar />
     <div className="team-page">
       <div className="team-container">
         {/* Page Header */}
@@ -204,7 +207,9 @@ const TeamPage = () => {
         </div>
       </div>
     </div>
-  );
+  </>
+);
+  
 };
 
 export default TeamPage;

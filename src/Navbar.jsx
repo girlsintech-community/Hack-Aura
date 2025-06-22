@@ -15,14 +15,14 @@ const Navbar = () => {
     <div className="navbar-wrapper">
       {/* Fixed Logo on the left */}
       <div className="navbar-logo">
-        <a href="#home">
+        <a href="/">
           <img src={logo} alt="HackAura Logo" />
         </a>
       </div>
 
       {/* Centered navbar */}
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-        <a href="#home">Home</a>
+        <a href="/">Home</a>
         <a href="#about">About</a>
         <a href="#timeline">Timeline</a>
         <a href="#sponsors">Sponsors</a>

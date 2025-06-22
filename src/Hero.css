@@ -13,12 +13,21 @@
   text-align: center;
 }
 
-.top-text {
+/* .top-text {
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
   font-size: 1rem;
   font-weight: 300;
+} */
+ .top-text{
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5 rem;
+  margin: 1rem 0;
 }
 
 .hack-title {

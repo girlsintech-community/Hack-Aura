@@ -6,8 +6,7 @@ const Hero = () => {
     <div className="hack-aura-container">
       <div className="overlay-text">
         <div className="top-text">
-          <span>Girls Leading Tech</span>
-          <span>Presents</span>
+          <span>Girls Leading Tech Presents</span>
         </div>
 
         <h1 className="hack-title">
@@ -20,7 +19,7 @@ const Hero = () => {
           <span>INNOVATION</span>
         </div>
 
-        <div className="duration">24 Hrs</div>
+        
       </div>
     </div>
   );

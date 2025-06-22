@@ -38,6 +38,7 @@
   border-radius: 8px;
   backdrop-filter: blur(6px);
   box-shadow: 0 0 12px rgba(169, 120, 242, 0.2);
+  color:aquamarine;
 }
 
 .code-list li span {
@@ -45,4 +46,10 @@
   color: var(--aurora-purple);
   display: block;
   margin-bottom: 0.25rem;
+}
+.abc{
+  color: rgb(117, 29, 43);
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color 0.3s ease;
 }

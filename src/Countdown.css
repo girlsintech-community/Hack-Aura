@@ -20,7 +20,7 @@
 .flip-card {
   position: relative;
   width: 100px;
-  height: 120px;
+  height: 80px;
   background: #111;
   border-radius: 12px;
   overflow: hidden;
@@ -74,3 +74,19 @@
   color: var(--dimmed);
   letter-spacing: 1px;
 }
+
+.countdown-wrapper {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.countdown-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #B0E6FF; /* or your preferred heading color */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+

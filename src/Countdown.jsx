@@ -17,11 +17,11 @@ const FlipUnit = ({ value, label }) => {
   }, [value, prevValue]);
 
   return (
-    
     <div className="flip-unit">
       <div className="flip-card">
         <div className="top-half">{value}</div>
         <div className="bottom-half">{value}</div>
+        
 
         {flipping && (
           <>
@@ -59,12 +59,15 @@ const Countdown = () => {
   }, []);
 
   return (
+      <div className="countdown-wrapper">
+    <h2 className="countdown-heading">COUNTDOWN TO HACKATHON</h2>
     <div className="countdown-container single-row">
       <FlipUnit value={String(timeLeft.days).padStart(2, '0')} label="Days" />
       <FlipUnit value={String(timeLeft.hours).padStart(2, '0')} label="Hours" />
       <FlipUnit value={String(timeLeft.minutes).padStart(2, '0')} label="Minutes" />
       <FlipUnit value={String(timeLeft.seconds).padStart(2, '0')} label="Seconds" />
     </div>
+  </div>
   );
 };
 

@@ -99,3 +99,14 @@
     padding: 0.5rem 1rem;
   }
 }
+.navbar-girls-icon {
+  pointer-events: all;
+  flex-shrink: 0;
+}
+
+.navbar-girls-icon img {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}

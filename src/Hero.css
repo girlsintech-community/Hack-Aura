@@ -21,17 +21,17 @@
   font-weight: 300;
 } */
  .top-text{
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 1rem;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
   display: flex;
   justify-content: center;
   gap: 0.5 rem;
   margin: 1rem 0;
+  color: #B0E6FF;
 }
 
 .hack-title {
-  font-size: 3rem;
+  font-size: 6rem;
   font-weight: 700;
   letter-spacing: 1rem;
   display: flex;
@@ -46,7 +46,8 @@
   gap: 3rem;
   font-size: 0.9rem;
   letter-spacing: 0.3rem;
-  font-weight: 400;
+  font-weight: 600;
+  color: black;
 }
 
 .duration {

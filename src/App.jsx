@@ -11,6 +11,7 @@ import Timeline from './Timeline';
 import About from './About';
 import OrganizationAbout from './AboutOrg';
 import FAQ from './FAQ' ;
+import Sponsorships from './Sponsor';
 
 // Create a component for your homepage content
 function HomePage() {
@@ -37,7 +38,7 @@ function HomePage() {
         </div>
       
       <div id="timeline"><Timeline /></div>
-      <div id="sponsors">{/* Sponsors */}</div>
+      <div id="sponsors"><Sponsorships/></div>
       <div id="faq"><FAQ /></div>
     </>
   );

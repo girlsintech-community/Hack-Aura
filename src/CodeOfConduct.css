@@ -43,7 +43,7 @@
 
 .code-list li span {
   font-weight: 600;
-  color: var(--aurora-purple);
+  color: rgb(106, 212, 39);
   display: block;
   margin-bottom: 0.25rem;
 }

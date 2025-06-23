@@ -1,8 +1,12 @@
 import React from 'react';
 import './CodeOfConduct.css';
+import Navbar from './Navbar';
 
 const CodeOfConduct = () => {
   return (
+ <>
+    <Navbar />
+
     <section className="code-section" id="code-of-conduct">
       <h2 className="code-title">CODE OF CONDUCT</h2>
       <p className="code-intro">
@@ -30,6 +34,7 @@ const CodeOfConduct = () => {
         Violations may result in removal from the event. If you experience or witness anything concerning, please contact the organizers immediately.
       </p>
     </section>
+    </>
   );
 };
 

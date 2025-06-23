@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import ContactPopup from './Contact';
 import logo from './assets/logo.png';
-import girlsintech from './assets/girlsintech.jpg';
+import GLT from './assets/GLT.png';
 
 const Navbar = ({onContactClick}) => {
   const [scrolled, setScrolled] = useState(false);
@@ -38,7 +38,7 @@ const Navbar = ({onContactClick}) => {
   {/* Right GirlsInTech Icon */}
   <div className="navbar-girls-icon">
     <a href="/">
-      <img src={girlsintech} alt="GirlsInTech Logo" />
+      <img src={GLT} alt="GirlsInTech Logo" />
     </a>
   </div>
 </div>

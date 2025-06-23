@@ -10,7 +10,7 @@ const TeamPage = () => {
     { name: "Manik", role: "Lead Organizer", linkedin: "mrmanik" },
     { name: "Bagavati Narayan", role: "Tech Lead", linkedin: "bagavati-narayanan-98484b292" },
     { name: "Kashika Gupta", role: "Tech Team", linkedin: "kashikagupta" },
-    { name: "Adyasha", role: "Tech Team", linkedin: "adyasha" },
+    { name: "Adyasha", role: "Tech Team", linkedin: "adyashadas04" },
     { name: "Alex Johnson", role: "Design Lead", linkedin: "alexjohnson" },
     { name: "Emily Davis", role: "Marketing Lead", linkedin: "emilydavis" },
     { name: "Michael Brown", role: "Sponsorship Lead", linkedin: "michaelbrown" },

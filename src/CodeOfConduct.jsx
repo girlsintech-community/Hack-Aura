@@ -77,8 +77,7 @@ const CodeOfConduct = () => {
             <h3 className="abc">Reporting and Resolution:</h3>
             <p>
               If you face or witness misconduct, report it to the organizing team—anonymously or directly. All reports will be treated seriously and confidentially.
-            </p>
-            <p>Organizers may take actions like verbal warnings, removal from the event, or disqualification.</p>
+    Organizers may take actions like verbal warnings, removal from the event, or disqualification.</p>
           </div>
 
           <p className="code-conclusion">

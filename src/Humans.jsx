@@ -7,9 +7,18 @@ import Footer from './Footer' ;
 const TeamPage = () => {
   // Sample data - replace with your actual team members
   const organizingTeam = [
-    { name: "John Doe", role: "Lead Organizer", linkedin: "johndoe" },
-    { name: "Jane Smith", role: "Tech Lead", linkedin: "janesmith" },
-    { name: "Alex Johnson", role: "Design Lead", linkedin: "alexjohnson" }
+    { name: "Manik", role: "Lead Organizer", linkedin: "mrmanik" },
+    { name: "Bagavati Narayan", role: "Tech Lead", linkedin: "bagavati-narayanan-98484b292" },
+    { name: "Kashika Gupta", role: "Tech Team", linkedin: "kashikagupta" },
+    { name: "Adyasha", role: "Tech Team", linkedin: "adyasha" },
+    { name: "Alex Johnson", role: "Design Lead", linkedin: "alexjohnson" },
+    { name: "Emily Davis", role: "Marketing Lead", linkedin: "emilydavis" },
+    { name: "Michael Brown", role: "Sponsorship Lead", linkedin: "michaelbrown" },
+    { name: "Sarah Wilson", role: "Logistics Lead", linkedin: "sarahwilson" },
+    { name: "David Lee", role: "Volunteer Coordinator", linkedin: "davidlee" },
+    { name: "Lisa Kim", role: "Community Manager", linkedin: "lisakim" },
+    { name: "John Smith", role: "Event Coordinator", linkedin: "johnsmith" },
+    { name: "Rachel Green", role: "Content Manager", linkedin: "rachelgreen" },
   ];
 
   const speakers = [

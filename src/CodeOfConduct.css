@@ -24,32 +24,46 @@
   text-align: center;
 }
 
-.code-list {
-  list-style: none;
-  padding: 0;
+.code-block {
   margin-bottom: 2rem;
-}
-
-.code-list li {
-  margin-bottom: 1.2rem;
   background: rgba(255, 255, 255, 0.03);
   padding: 1rem 1.5rem;
   border-left: 4px solid var(--aurora-purple);
   border-radius: 8px;
   backdrop-filter: blur(6px);
   box-shadow: 0 0 12px rgba(169, 120, 242, 0.2);
-  color:aquamarine;
 }
 
-.code-list li span {
-  font-weight: 600;
-  color: rgb(106, 212, 39);
-  display: block;
-  margin-bottom: 0.25rem;
-}
-.abc{
+.code-block h3 {
   color: rgb(117, 29, 43);
   font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
   text-decoration: underline;
   transition: color 0.3s ease;
+}
+
+.code-block ul,
+.code-block ol {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.code-block li {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  color: aquamarine;
+  line-height: 1.6;
+}
+
+.code-block p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--dimmed);
+  margin-top: 0.8rem;
+}
+
+/* Optional hover effect on headings */
+.code-block h3:hover {
+  color: rgb(200, 50, 70);
 }

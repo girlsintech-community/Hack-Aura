@@ -6,10 +6,10 @@ import Footer from './Footer';
 
 const TeamPage = ({ onContactClick }) => {
   const organizingTeam = [
-    { name: "Manik", role: "Lead Organizer", department: "Core", linkedin: "mrmanik" },
-    { name: "Bagavati Narayanan", role: "Tech Lead", department: "Tech", linkedin: "bagavati-narayanan-98484b292" },
-    { name: "Kashika Gupta", role: "Tech Team", department: "Tech", linkedin: "kashikagupta" },
-    { name: "Adyasha", role: "Tech Team", department: "Tech", linkedin: "adyashadas04" },
+    { name: "Manik", role: "Lead Organizer", department: "Core", linkedin: "https://www.linkedin.com/in/mrmanik" },
+    { name: "Bagavati Narayanan", role: "Tech Lead", department: "Tech", linkedin: "https://www.linkedin.com/in/bagavati-narayanan-98484b292" },
+    { name: "Kashika Gupta", role: "Tech Team", department: "Tech", linkedin: "https://www.linkedin.com/in/kashikagupta" },
+    { name: "Adyasha", role: "Tech Team", department: "Tech", linkedin: "https://www.linkedin.com/in/adyashadas04" },
     { name: "Archana", role: "Design Lead", department: "Design", linkedin: "https://www.linkedin.com/in/archana-gupta2006" },
     { name: "Ananya Agarwal", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/ananya-agarwal-861317290/ " },
     { name: "Ankita Kuntal", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/ankita-kuntal" },
@@ -142,14 +142,6 @@ const TeamPage = ({ onContactClick }) => {
           {renderDepartment("Content", User)}
           {renderDepartment("PR", Gavel)}
 
-          <div className="cta-section animate-on-scroll">
-            <h3 className="cta-title">Want to Join Our Team?</h3>
-            <p className="cta-description">
-              We're always looking for passionate individuals to help make Hack Aura even better.
-              Get in touch if you'd like to be part of our amazing community!
-            </p>
-            <button className="cta-button" onClick={onContactClick}>Get Involved</button>
-          </div>
         </div>
       </div>
 

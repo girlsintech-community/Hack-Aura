@@ -1,4 +1,4 @@
-import {React,useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
@@ -9,15 +9,43 @@ import Footer from './Footer';
 import Timeline from './Timeline';
 import About from './About';
 import OrganizationAbout from './AboutOrg';
-import FAQ from './FAQ' ;
+import FAQ from './FAQ';
 import Humans from './Humans';
 import Sponsorships from './Sponsor';
 import ContactPopup from './Contact';
 import HackathonTracks from './Tracks';
 
-// Create a component for your homepage content
-function HomePage() {
+// HomePage Component
+function HomePage({ onContactClick }) {
+  return (
+    <>
+      <Navbar onContactClick={onContactClick} />
+      <Hero />
+      <Countdown />
+      <div id="about">
+        <About />
+        <OrganizationAbout />
+      </div>
+      <div id="timeline"><Timeline /></div>
+      <div id="tracks"><HackathonTracks /></div>
+      <div id="sponsors"><Sponsorships /></div>
+      <div id="faq"><FAQ /></div>
+    </>
+  );
+}
 
+// TeamPage Component
+function TeamPage({ onContactClick }) {
+  return (
+    <>
+      <Navbar onContactClick={onContactClick} />
+      <Humans />
+    </>
+  );
+}
+
+// Main App Component
+function App() {
   const [showContact, setShowContact] = useState(false);
 
   const handleContactClick = () => {
@@ -27,38 +55,18 @@ function HomePage() {
   const closePopup = () => {
     setShowContact(false);
   };
-  return (
-    <>
-      <Navbar onContactClick={handleContactClick}  />
-<Hero />
-      {/* Hero Section */}
-      <Countdown />
-      {/* Page Sections */}
-      <div id = "about" >
-        <About/>
-        <OrganizationAbout/>
-      </div>
-      <div id="timeline"><Timeline /></div>
-      <div id = "tracks"><HackathonTracks/></div>
-      <div id="sponsors"><Sponsorships/></div>
-      <div id="faq"><FAQ /></div>
-      
-      {showContact && <ContactPopup onClose={closePopup} />}
-    </>
-  );
-}
 
-function App() {
-
-  
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage onContactClick={handleContactClick} />} />
         <Route path="/code-of-conduct" element={<CodeOfConduct />} />
-        <Route path="/humans" element={<Humans />} />
+        <Route path="/humans" element={<TeamPage onContactClick={handleContactClick} />} />
       </Routes>
-      <Footer />
+
+      <Footer onContactClick={handleContactClick} />
+
+      {showContact && <ContactPopup onClose={closePopup} />}
     </Router>
   );
 }

@@ -1,50 +1,31 @@
 import React, { useEffect, useRef } from 'react';
 import { User, Award, Mic, Users, Gavel, Linkedin } from 'lucide-react';
 import './Humans.css';
-import Navbar from './Navbar' ;
-import Footer from './Footer' ;
+import Navbar from './Navbar';
+import Footer from './Footer';
 
-const TeamPage = () => {
-  // Sample data - replace with your actual team members
+const TeamPage = ({ onContactClick }) => {
   const organizingTeam = [
-    { name: "Manik", role: "Lead Organizer", linkedin: "mrmanik" },
-    { name: "Bagavati Narayan", role: "Tech Lead", linkedin: "bagavati-narayanan-98484b292" },
-    { name: "Kashika Gupta", role: "Tech Team", linkedin: "kashikagupta" },
-    { name: "Adyasha", role: "Tech Team", linkedin: "adyashadas04" },
-    { name: "Alex Johnson", role: "Design Lead", linkedin: "alexjohnson" },
-    { name: "Emily Davis", role: "Marketing Lead", linkedin: "emilydavis" },
-    { name: "Michael Brown", role: "Sponsorship Lead", linkedin: "michaelbrown" },
-    { name: "Sarah Wilson", role: "Logistics Lead", linkedin: "sarahwilson" },
-    { name: "David Lee", role: "Volunteer Coordinator", linkedin: "davidlee" },
-    { name: "Lisa Kim", role: "Community Manager", linkedin: "lisakim" },
-    { name: "John Smith", role: "Event Coordinator", linkedin: "johnsmith" },
-    { name: "Rachel Green", role: "Content Manager", linkedin: "rachelgreen" },
+    { name: "Manik", role: "Lead Organizer", department: "Core", linkedin: "mrmanik" },
+    { name: "Bagavati Narayanan", role: "Tech Lead", department: "Tech", linkedin: "bagavati-narayanan-98484b292" },
+    { name: "Kashika Gupta", role: "Tech Team", department: "Tech", linkedin: "kashikagupta" },
+    { name: "Adyasha", role: "Tech Team", department: "Tech", linkedin: "adyashadas04" },
+    { name: "Archana", role: "Design Lead", department: "Design", linkedin: "https://www.linkedin.com/in/archana-gupta2006" },
+    { name: "Ananya Agarwal", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/ananya-agarwal-861317290/ " },
+    { name: "Ankita Kuntal", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/ankita-kuntal" },
+    { name: "Alina Abreeq", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/alina-abreeq" },
+    { name: "Ishita Soni", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/ishita-soni-work?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+    { name: "Aarushi Chottani", role: "Content Writing Lead", department: "Content", linkedin: "www.linkedin.com/in/aarushi-chottani-80b861322 " },
+    { name: "Charmi Reddy P", role: "Content Writing Team", department: "Content", linkedin: " https://www.linkedin.com/in/charmi-reddy-p-b2aaa2294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+    { name: "Sanwedana Lokhande", role: "Content Writing Team", department: "Content", linkedin: "https://www.linkedin.com/in/sanwedana-lokhande-35332a33a/" },
+    { name: "Niharika Rawat", role:"PR Lead", department: "PR", linkedin: "http://linkedin.com/in/niharika-rawat-9a1156256" },
+    { name: "Dhairya Kanabar", role: "PR Team", department: "PR", linkedin: "https://www.linkedin.com/in/dhairya-kanabar-411990294" }
   ];
 
-  const speakers = [
-    { name: "Dr. Sarah Wilson", topic: "AI & Machine Learning", linkedin: "sarahwilson" },
-    { name: "Mike Chen", topic: "Blockchain Technology", linkedin: "mikechen" },
-    { name: "Emily Rodriguez", topic: "Cybersecurity", linkedin: "emilyrodriguez" }
-  ];
-
-  const mentors = [
-    { name: "David Kim", topic: "Full Stack Development", linkedin: "davidkim" },
-    { name: "Lisa Zhang", topic: "Product Management", linkedin: "lisazhang" },
-    { name: "Robert Taylor", topic: "Startup Strategy", linkedin: "roberttaylor" }
-  ];
-
-  const judges = [
-    { name: "Prof. Amanda Brown", topic: "Innovation Expert", linkedin: "amandabrown" },
-    { name: "Chris Martinez", topic: "Tech Entrepreneur", linkedin: "chrismartinez" },
-    { name: "Priya Patel", topic: "Venture Capitalist", linkedin: "priyapatel" }
-  ];
-
-  // Refs for animation
   const observerRef = useRef();
   const elementsRef = useRef([]);
 
   useEffect(() => {
-    // Intersection Observer for scroll animations
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -59,7 +40,6 @@ const TeamPage = () => {
       }
     );
 
-    // Observe all elements with animation class
     const elements = document.querySelectorAll('.animate-on-scroll');
     elements.forEach((el) => {
       observerRef.current.observe(el);
@@ -75,33 +55,38 @@ const TeamPage = () => {
     };
   }, []);
 
-  const TeamCard = ({ member, showTopic = false, index = 0 }) => (
-    <div 
+  const getLinkedinURL = (url) => {
+    if (!url) return null;
+    if (url.startsWith("http")) return url;
+    return `https://www.linkedin.com/in/${url}`;
+  };
+
+  const TeamCard = ({ member, index = 0 }) => (
+    <div
       className="team-card animate-on-scroll"
-      style={{ 
+      style={{
         animationDelay: `${index * 150}ms`,
-        '--card-index': index 
+        '--card-index': index
       }}
     >
       <div className="team-card-overlay"></div>
-      
       <div className="team-card-content">
         <div className="team-card-avatar">
           <User className="avatar-icon" />
         </div>
-        
-        <h3 className="team-card-name">
-          {member.name}
-        </h3>
-        
-        <p className="team-card-role">
-          {showTopic ? member.topic : member.role}
-        </p>
-        
-        <div className="team-card-linkedin">
-          <Linkedin className="linkedin-icon" />
-          <span>{member.linkedin}</span>
-        </div>
+        <h3 className="team-card-name">{member.name}</h3>
+        <p className="team-card-role">{member.role}</p>
+        {member.linkedin && (
+          <a
+            className="team-card-linkedin"
+            href={getLinkedinURL(member.linkedin)}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`LinkedIn profile of ${member.name}`}
+          >
+            <Linkedin className="linkedin-icon" />
+          </a>
+        )}
       </div>
     </div>
   );
@@ -112,114 +97,64 @@ const TeamPage = () => {
         <div className="section-icon">
           <Icon className="icon" />
         </div>
-        <h2 className="section-title">
-          {title}
-        </h2>
+        <h2 className="section-title">{title}</h2>
       </div>
       <div className="section-divider"></div>
       <p className="section-subtitle">{count} amazing individuals</p>
     </div>
   );
 
-  return (
-  <>
-    <Navbar />
-    <div className="team-page">
-      <div className="team-container">
-        {/* Page Header */}
-        <div className="page-header">
-          <h1 className="page-title">
-            Humans of Hack Aura
-          </h1>
-          <p className="page-description">
-            Meet the incredible team behind Hack Aura - passionate individuals dedicated to creating 
-            an unforgettable hackathon experience for innovators and creators.
-          </p>
-          <div className="page-divider"></div>
+  const renderDepartment = (deptName, icon) => {
+    const filtered = organizingTeam.filter(member => member.department === deptName);
+    if (filtered.length === 0) return null;
+
+    return (
+      <section className="team-section" key={deptName}>
+        <SectionHeader title={`${deptName} Team`} icon={icon} count={filtered.length} />
+        <div className="team-grid">
+          {filtered.map((member, index) => (
+            <div key={index} className="team-card-wrapper">
+              <TeamCard member={member} index={index} />
+            </div>
+          ))}
         </div>
+      </section>
+    );
+  };
 
-        {/* Organizing Team Section */}
-        <section className="team-section">
-          <SectionHeader 
-            title="Organising Team" 
-            icon={Users} 
-            count={organizingTeam.length}
-          />
-          <div className="team-grid">
-            {organizingTeam.map((member, index) => (
-              <div key={index} className="team-card-wrapper">
-                <TeamCard member={member} index={index} />
-              </div>
-            ))}
+  return (
+    <>
+      <Navbar onContactClick={onContactClick} />
+      <div className="team-page">
+        <div className="team-container">
+          <div className="page-header">
+            <h1 className="page-title">Humans of Hack Aura</h1>
+            <p className="page-description">
+              Meet the incredible team behind Hack Aura - passionate individuals dedicated to creating
+              an unforgettable hackathon experience for innovators and creators.
+            </p>
+            <div className="page-divider"></div>
           </div>
-        </section>
 
-        {/* Speakers Section */}
-        <section className="team-section">
-          <SectionHeader 
-            title="Speakers" 
-            icon={Mic} 
-            count={speakers.length}
-          />
-          <div className="team-grid">
-            {speakers.map((member, index) => (
-              <div key={index} className="team-card-wrapper">
-                <TeamCard member={member} showTopic={true} index={index} />
-              </div>
-            ))}
+          {renderDepartment("Core", Users)}
+          {renderDepartment("Tech", Award)}
+          {renderDepartment("Design", Mic)}
+          {renderDepartment("Content", User)}
+          {renderDepartment("PR", Gavel)}
+
+          <div className="cta-section animate-on-scroll">
+            <h3 className="cta-title">Want to Join Our Team?</h3>
+            <p className="cta-description">
+              We're always looking for passionate individuals to help make Hack Aura even better.
+              Get in touch if you'd like to be part of our amazing community!
+            </p>
+            <button className="cta-button" onClick={onContactClick}>Get Involved</button>
           </div>
-        </section>
-
-        {/* Mentors Section */}
-        <section className="team-section">
-          <SectionHeader 
-            title="Mentors" 
-            icon={Award} 
-            count={mentors.length}
-          />
-          <div className="team-grid">
-            {mentors.map((member, index) => (
-              <div key={index} className="team-card-wrapper">
-                <TeamCard member={member} showTopic={true} index={index} />
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Judges Section */}
-        <section className="team-section">
-          <SectionHeader 
-            title="Judges" 
-            icon={Gavel} 
-            count={judges.length}
-          />
-          <div className="team-grid">
-            {judges.map((member, index) => (
-              <div key={index} className="team-card-wrapper">
-                <TeamCard member={member} showTopic={true} index={index} />
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <div className="cta-section animate-on-scroll">
-          <h3 className="cta-title">
-            Want to Join Our Team?
-          </h3>
-          <p className="cta-description">
-            We're always looking for passionate individuals to help make Hack Aura even better. 
-            Get in touch if you'd like to be part of our amazing community!
-          </p>
-          <button className="cta-button">
-            Get Involved
-          </button>
         </div>
       </div>
-    </div>
-  </>
-);
-  
+
+    </>
+  );
 };
 
 export default TeamPage;

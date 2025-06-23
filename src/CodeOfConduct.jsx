@@ -34,8 +34,7 @@ This Code of Conduct applies to all participants, organizers, volunteers, mentor
 6. Give and receive feedback respectfully.
 7. Celebrate differences. Diverse teams are stronger and more creative.
 </li>
-            <li><span className="abc">Unacceptable Behavior
-We have zero tolerance for the following:</span>
+            <li><span className="abc">Unacceptable Behavior:</span>
 We have zero tolerance for the following:
 - Harassment, bullying, or discrimination in any form
 - Verbal abuse, threats, or intimidation
@@ -59,7 +58,9 @@ Winning is not the only goal. Growth, collaboration, and experience matter equal
 
           </ul>
           <p className="code-conclusion">
-            Violations may result in removal from the event...
+            
+This hackathon is built on trust, mutual respect, and a shared commitment to creating something meaningful. We encourage every participant to contribute to a positive, collaborative atmosphere where everyone has the chance to succeed, grow, and feel proud of what they’ve achieved.
+Let’s work together to ensure a safe, welcoming, and impactful hackathon experience for all.
           </p>
         </section>
       </div>

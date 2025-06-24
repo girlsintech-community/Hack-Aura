@@ -1,2 +1,16 @@
 ## Hack Aura
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/958d36b8-b468-4709-9fe3-e77f0b0602e7">
+
+## 🛠️ Local Setup
+
+Follow the steps to get HackAura running locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/girlsintech-community/Hack-Aura.git
+cd Hack-Aura
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npm run dev

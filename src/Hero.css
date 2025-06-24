@@ -59,7 +59,7 @@
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, #32119e, #1987c6);
+  background: linear-gradient(90deg, #50d2de, #1987c6);
   border: none;
   color: black;
   padding: 0.75rem 2.5rem;
@@ -77,9 +77,9 @@
 
 .btn-secondary {
   background: transparent;
-  color: #32119e;
+  color: #4af2f5;
   padding: 0.75rem 2.5rem;
-  border: 2px solid #3851a2;
+  border: 2px solid #4af2f5;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;

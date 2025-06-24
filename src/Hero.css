@@ -4,9 +4,16 @@
   font-weight: 800;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Jura';
+  src: url('./assets/fonts/Jura-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 .hack-aura-container {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background: url('src/assets/images/hero.png') ;
   background-size: cover;
   background-position: center;
@@ -17,11 +24,12 @@
   color: white;
   font-family: 'Orbitron', sans-serif;
   margin-bottom: 0;
-  padding-bottom: 0;
+  padding: 4rem 2rem;
 }
 
 .overlay-text {
   text-align: center;
+  max-width: 1000px;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -33,9 +41,10 @@
   justify-content: center;
   gap: 0.5 rem;
   margin: 4rem 0;
-  color: #180102;
-  margin-top: 8rem;
+  color: #FFFF;
+  margin-top: 14.5rem;
   font-weight: 600;
+  font-family: 'Jura', sans-serif;
 }
 
 .hack-title {
@@ -55,8 +64,10 @@
   gap: 2rem;
   font-size: 1.2rem;
   letter-spacing: 0.3rem;
-  font-weight: 600;
-  color: rgb(202, 180, 200);
+  font-weight: 700;
+  color: #FFFF;
+  font-family: 'Jura', sans-serif;
+  margin-top: 1rem;
 }
 
 .duration {
@@ -72,15 +83,14 @@
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, #ab0882, #ea15bc);
   border: none;
-  color: black;
+  color: #2C3BC0;
   padding: 0.75rem 2.5rem;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+
 }
 
 .btn-primary:hover {
@@ -90,9 +100,9 @@
 
 .btn-secondary {
   background: transparent;
-  color: #d82bcf;
+  color:#2C3BC0;
   padding: 0.75rem 2.5rem;
-  border: 2px solid #d016d3;
+  border: 2px solid #2C3BC0;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;

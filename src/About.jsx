@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section className="about-section" id="about">
       <div className="about-container">
-        <h2>About the Hackathon</h2>
+        <h2>About hackaura</h2>
 
         <div className="about-content">
           <div className="text-block">

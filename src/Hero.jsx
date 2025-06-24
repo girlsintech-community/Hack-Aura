@@ -1,6 +1,8 @@
 import React from 'react';
 import './Hero.css';
 
+
+
 const Hero = () => {
     return (
         <>
@@ -11,9 +13,14 @@ const Hero = () => {
                     </div>
 
                     <h1 className="hack-title">
-                        <span>HACK</span>
-                        <span>AURA</span>
-                    </h1>
+    HACK A
+    <span className="astro-wrapper">
+        U
+        <img src="src/assets/images/astro.png" alt="Astronaut" className="astro-img" />
+    </span>
+    RA
+</h1>
+
 
                     <div className="subtitle">
                         <span>24</span>

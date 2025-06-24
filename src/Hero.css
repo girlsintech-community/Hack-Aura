@@ -1,7 +1,13 @@
+@font-face {
+  font-family: 'Post No Bills Jaffna';
+  src: url('./assets/fonts/PostNoBillsJaffna-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
 .hack-aura-container {
   position: relative;
   height: 100vh;
-  background: url('src/assets/images/hero.jpg') ;
+  background: url('src/assets/images/hero.png') ;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,21 +28,24 @@
 
  .top-text{
   font-size: 2rem;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
   display: flex;
   justify-content: center;
   gap: 0.5 rem;
-  margin: 1rem 0;
-  color: #B0E6FF;
+  margin: 4rem 0;
+  color: #180102;
+  margin-top: 8rem;
+  font-weight: 600;
 }
 
 .hack-title {
-  font-size: 6rem;
-  font-weight: 700;
+  font-size: 10rem;
+  font-weight: 1200;
   letter-spacing: 1rem;
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 1rem;
+  font-family: 'Post No Bills Jaffna', sans-serif;
   margin: 1rem 0;
 }
 
@@ -44,10 +53,10 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   letter-spacing: 0.3rem;
   font-weight: 600;
-  color: rgb(57, 4, 85);
+  color: rgb(202, 180, 200);
 }
 
 .duration {
@@ -129,4 +138,40 @@
     transform: translateX(-100%);
   }
 }
+.hack-title {
+  position: relative;
+  font-size: 10rem;
+  font-weight: 1200;
+  letter-spacing: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-family: 'Post No Bills Jaffna', sans-serif;
+  margin: 1rem 0;
+}
+
+.astro-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.astro-img {
+  position: absolute;
+  top: -5rem;  /* adjust as needed */
+  left: 1.5rem; /* adjust to center above the "U" */
+  width: 5rem;  /* resize if needed */
+  height: auto;
+  z-index: 5;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 

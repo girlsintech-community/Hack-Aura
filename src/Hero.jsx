@@ -38,9 +38,10 @@ const Hero = () => {
  {/* Now the tagline comes AFTER the image section */}
             <div className="scrolling-tagline-container">
                 <div className="scrolling-tagline">
-                    The clock is ticking. The code is brewing. The future is yours to hack! &nbsp;&nbsp;&nbsp;
-                    The clock is ticking. The code is brewing. The future is yours to hack! &nbsp;&nbsp;&nbsp;
-                    The clock is ticking. The code is brewing. The future is yours to hack!
+                    The clock is ticking.   &nbsp;  The code is brewing.   &nbsp;    The future is yours to hack! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    The clock is ticking.    &nbsp;   The code is brewing.  &nbsp;       The future is yours to hack! &nbsp;&nbsp;&nbsp;&nbsp;
+                    The clock is ticking.   &nbsp;     The code is brewing.    &nbsp;     The future is yours to hack! &nbsp;&nbsp;&nbsp;&nbsp;
+                    The clock is ticking.    &nbsp;   The code is brewing.  &nbsp;      The future is yours to hack! &nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
             </div>
         </>

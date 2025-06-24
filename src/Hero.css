@@ -116,9 +116,9 @@
   padding-left: 100%;
   font-size: 1.2rem;
   font-weight: 500;
-  color: #00ffcc; /* or any neon color you use */
-  animation: scroll-left 20s linear infinite;
-   text-shadow: 0 0 5px #2bdeba, 0 0 10px #58d5bc, 0 0 15px #00ffcc;
+  color: #e222b5; /* or any neon color you use */
+  animation: scroll-left 45s linear infinite;
+   text-shadow: 0 0 5px #3a0939, 0 0 10px #e310b5, 0 0 15px #a00a64;
 }
 
 @keyframes scroll-left {

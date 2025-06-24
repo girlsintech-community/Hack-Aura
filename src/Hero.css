@@ -10,10 +10,14 @@
   justify-content: center;
   color: white;
   font-family: 'Orbitron', sans-serif;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .overlay-text {
   text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
  .top-text{
@@ -93,4 +97,36 @@
   transform: scale(1.05);
 }
 
+.scrolling-tagline-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 0;
+  margin-top: 0;
+  position: relative;
+  top: 0;
+  z-index: 2;
+}
+
+.scrolling-tagline {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #00ffcc; /* or any neon color you use */
+  animation: scroll-left 20s linear infinite;
+   text-shadow: 0 0 5px #2bdeba, 0 0 10px #58d5bc, 0 0 15px #00ffcc;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 

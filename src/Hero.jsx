@@ -13,12 +13,12 @@ const Hero = () => {
                     </div>
 
                     <h1 className="hack-title">
-    HACK A
+    HACK AUR
     <span className="astro-wrapper">
-        U
+        A
         <img src="src/assets/images/astro.png" alt="Astronaut" className="astro-img" />
     </span>
-    RA
+    
 </h1>
 
 

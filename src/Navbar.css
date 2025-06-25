@@ -54,7 +54,7 @@
 }
 
 .navbar a:hover {
-  background: linear-gradient(135deg, #2c085e, #2516d3, #6530d7);
+  background: linear-gradient(135deg, #2C3BC0, #0099ff, #00ffdd);
   background-size: 200% 200%;
   animation: auroraShift 3s ease infinite;
   color: #0f172a;

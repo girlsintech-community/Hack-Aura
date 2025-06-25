@@ -1,11 +1,11 @@
 /* ====== Root Color Variables ====== */
 :root {
-  --aurora-green: #00ff88;
-  --aurora-green-dark: #00cc6a;
-  --aurora-green-light: #33ffaa;
+  --aurora-green: #008cff;
+  --aurora-green-dark: #6d00cc;
+  --aurora-green-light: #4433ff;
   --aurora-blue: #0099ff;
   --aurora-cyan: #00ffdd;
-  --matrix-green: #00ff41;
+  --matrix-green: #3300ff;
   --dark-black: #000000;
   --deep-black: #0a0a0a;
   --charcoal: #1a1a1a;
@@ -14,7 +14,7 @@
   --text-green: #e0ffe0;
   --dimmed: #a0a0a0;
   --glass-bg: rgba(0, 0, 0, 0.3);
-  --glass-border: rgba(0, 255, 136, 0.2);
+  --glass-border: rgba(0, 38, 255, 0.2);
 }
 
 /* ====== Reset & Base Setup ====== */
@@ -182,9 +182,9 @@ p {
   --stop-3: 90%;
   --border-angle: 90deg;
   --border-color-1: rgba(255, 255, 255, 0.3);
-  --border-color-2: rgba(0, 255, 221, 0.4);
+  --border-color-2: rgba(38, 127, 215, 0.882);
   transform: scale(1.05) translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 255, 200, 0.3);
+  box-shadow: 0 10px 25px rgba(20, 176, 211, 0.918);
 }
 
 .btn-secondary {

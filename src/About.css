@@ -213,8 +213,8 @@ li{
 .number {
   font-size: 2.8rem;
   font-weight: bold;
-  color: #10b981;
-  text-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+  color: #1a91eb;
+  text-shadow: 0 0 12px rgba(27, 156, 220, 0.864);
 }
 
 .label {
@@ -303,7 +303,7 @@ li{
   text-align: center;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #10b981;
+  color: #107bb9;
   letter-spacing: 0.12em;
   text-shadow: 0 0 6px rgba(16, 185, 129, 0.3);
   margin-top: 1rem;

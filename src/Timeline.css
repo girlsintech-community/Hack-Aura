@@ -94,7 +94,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: linear-gradient(to right, #10b981, #06b6d4);
+  background: linear-gradient(to right, #5c54ab, #06b6d4);
   box-shadow: 0 0 20px rgba(16, 185, 129, 0.5), 0 0 8px rgba(6, 182, 212, 0.3);
   margin-top: 4px;
   flex-shrink: 0;
@@ -106,7 +106,7 @@
   background: rgba(255, 255, 255, 0.05);
   padding: 1.5rem 2rem;
   border-radius: 18px;
-  border: 1px solid rgba(6, 182, 212, 0.2);
+  border: 1px solid rgba(43, 8, 199, 0.801);
   box-shadow: 0 12px 24px rgba(6, 182, 212, 0.12);
   backdrop-filter: blur(12px);
   color: #e0fdf4;
@@ -167,10 +167,10 @@
   }
   100% {
     text-shadow: 
-      0 0 25px rgba(6, 182, 212, 0.6),
-      0 0 50px rgba(20, 184, 166, 0.4),
-      0 0 75px rgba(16, 185, 129, 0.3),
-      0 0 100px rgba(6, 182, 212, 0.2);
+      0 0 25px rgba(6, 181, 212, 0.988),
+      0 0 50px rgba(10, 19, 200, 0.86),
+      0 0 75px rgba(86, 16, 185, 0.3),
+      0 0 100px rgba(143, 85, 204, 0.979);
   }
 }
 @media (max-width: 768px) {

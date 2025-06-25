@@ -42,9 +42,9 @@
   gap: 0.5 rem;
   margin: 4rem 0;
   color: #FFFF;
-  margin-top: 3.5rem;
   font-weight: 600;
   font-family: 'Jura', sans-serif;
+   margin: 4.8rem 0 1rem 0;
 }
 
 .hack-title {
@@ -55,19 +55,19 @@
   justify-content: center;
   gap: 1rem;
   font-family: 'Post No Bills Jaffna', sans-serif;
-  margin: 1rem 0;
+  margin: 0.2rem 0;
 }
 
 .subtitle {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  font-size: 2rem;
+  font-size: 1.2rem;
   letter-spacing: 0.3rem;
   font-weight: 700;
   color: #FFFF;
   font-family: 'Jura', sans-serif;
-  margin-top: 1rem;
+  margin: 0rem;
 }
 
 .duration {
@@ -77,13 +77,14 @@
 }
 .button-group {
   display: flex;
-  gap: 5.5rem;
+  gap: 10rem;
   justify-content: center;
   margin-top: 2rem;
 }
 
 .btn-primary , .btn-secondary{
-  color: #2C3BC0;
+  background-color: #2C3BC0;
+  color: #ffffff;
   padding: 0.75rem 2.5rem;
   border-radius: 10px;
   font-size: 1rem;

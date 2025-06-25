@@ -42,12 +42,39 @@
   gap: 0.5 rem;
   margin: 4rem 0;
   color: #FFFF;
-  font-weight: 600;
+  font-weight: 1000;
   font-family: 'Jura', sans-serif;
-   margin: 6.8rem 0 1rem 0;
+  margin: 6.8rem 0 1rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  width: 0;
+  animation: typing 3.5s steps(20, end) forwards, blink 0.75s step-end infinite;
+  text-align: center;
+  max-width: fit-content;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30ch; /* Adjust based on your actual text length */
+  }
 }
 
+@keyframes blink {
+  0%, 100% {
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+
 .hack-title {
+  position: relative;
+  left: 2rem;
   font-size: 10rem;
   font-weight: 1200;
   letter-spacing: 1rem;
@@ -77,7 +104,7 @@
 }
 .button-group {
   display: flex;
-  gap: 10rem;
+  gap: 15rem;
   justify-content: center;
   margin-top: 2rem;
 }

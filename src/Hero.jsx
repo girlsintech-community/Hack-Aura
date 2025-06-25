@@ -30,7 +30,7 @@ const Hero = () => {
                     </div>
 
                     <div className="button-group">
-                        <button className="btn-primary">Register</button>
+                        <a href="https://devfolio.co/hackathons" target="_blank" rel="noopener noreferrer" className="btn-primary">Register</a>
                         <a
                             href="https://discord.gg/P8QY7Xgg"
                             target="_blank"

@@ -82,37 +82,34 @@
   margin-top: 2rem;
 }
 
-.btn-primary {
-  border: none;
+.btn-primary , .btn-secondary{
   color: #2C3BC0;
   padding: 0.75rem 2.5rem;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
 }
 
 .btn-primary:hover {
-  transform: scale(1.05);
+ color: #fff;
   box-shadow: 0 0 10px #00d0ff;
+  transform: scale(1.05);
+  border-color: #00c3ff;
 }
 
-.btn-secondary {
-  background: transparent;
-  color:#2C3BC0;
-  padding: 0.75rem 2.5rem;
-  border: 2px solid #2C3BC0;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
+
 
 .btn-secondary:hover {
-  background: rgba(0, 255, 178, 0.1);
-  box-shadow: 0 0 10px #00c3ff;
+  color: #fff;
+  border-color: #00c3ff;
+  box-shadow: 0 0 10px #00d0ff;
   transform: scale(1.05);
 }
 
@@ -135,9 +132,9 @@
   padding-left: 100%;
   font-size: 1.2rem;
   font-weight: 500;
-  color: #e222b5; /* or any neon color you use */
+  color: #731bdf; /* or any neon color you use */
   animation: scroll-left 45s linear infinite;
-   text-shadow: 0 0 5px #3a0939, 0 0 10px #e310b5, 0 0 15px #a00a64;
+   text-shadow: 0 0 5px #3a0939, 0 0 10px #740097, 0 0 15px #69078d;
 }
 
 @keyframes scroll-left {
@@ -168,7 +165,7 @@
 .astro-img {
   position: absolute;
   top: -5rem;  /* adjust as needed */
-  left: -1.3rem; /* adjust to center above the "A" */
+  left: -1.7rem; /* adjust to center above the "A" */
   width: 5rem;  /* resize if needed */
   height: auto;
   z-index: 5;

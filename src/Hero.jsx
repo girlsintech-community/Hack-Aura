@@ -13,13 +13,13 @@ const Hero = () => {
                     </div>
 
                     <h1 className="hack-title">
-    HACK AUR
-    <span className="astro-wrapper">
-        A
-        <img src="src/assets/images/astro.png" alt="Astronaut" className="astro-img" />
-    </span>
-    
-</h1>
+                        HACK AUR
+                        <span className="astro-wrapper">
+                            A
+                            <img src="src/assets/images/astro.png" alt="Astronaut" className="astro-img" />
+                        </span>
+
+                    </h1>
 
 
                     <div className="subtitle">
@@ -42,7 +42,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
- {/* Now the tagline comes AFTER the image section */}
+            {/* Now the tagline comes AFTER the image section */}
             <div className="scrolling-tagline-container">
                 <div className="scrolling-tagline">
                     The clock is ticking.   &nbsp;  The code is brewing.   &nbsp;    The future is yours to hack! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

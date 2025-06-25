@@ -128,7 +128,7 @@ p {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--aurora-green) 0%, var(--aurora-green-dark) 100%);
+  background: linear-gradient(135deg, #0099ff 0%, #00ffdd 100%);
   color: var(--dark-black);
   padding: 1rem 2rem;
   border: none;
@@ -138,7 +138,7 @@ p {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 
-    0 4px 15px rgba(0, 255, 136, 0.3),
+    0 4px 15px rgba(41, 234, 255, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -163,17 +163,17 @@ p {
 
 .btn-primary:hover {
   box-shadow: 
-    0 6px 25px rgba(0, 255, 136, 0.4),
-    0 0 30px rgba(0, 255, 136, 0.3),
+    0 6px 25px rgba(11, 112, 206, 0.4),
+    0 0 30px rgba(92, 214, 238, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
   transform: translateY(-3px) scale(1.02);
 }
 
 .btn-secondary {
   background: rgba(0, 255, 136, 0.1);
-  color: var(--aurora-green);
+  color: #0099ff;
   padding: 1rem 2rem;
-  border: 2px solid var(--aurora-green);
+  border: 2px solid #0099ff;
   border-radius: 12px;
   font-weight: 600;
   font-size: 1.1rem;
@@ -193,7 +193,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--aurora-green);
+  background: #00ffdd;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -206,7 +206,7 @@ p {
 
 .btn-secondary:hover {
   color: var(--dark-black);
-  border-color: var(--aurora-green-light);
+  border-color: #00ffdd;
   box-shadow: 
     0 6px 25px rgba(0, 255, 136, 0.3),
     0 0 30px rgba(0, 255, 136, 0.2);

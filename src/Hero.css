@@ -49,9 +49,10 @@
   overflow: hidden;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   width: 0;
-  animation: typing 3.5s steps(20, end) forwards, blink 0.75s step-end infinite;
+  animation: typing 3.5s steps(30, end) forwards 1s infinite, blink 0.75s step-end infinite;
   text-align: center;
   max-width: fit-content;
+  animation-fill-mode: forwards;
 }
 @keyframes typing {
   from {

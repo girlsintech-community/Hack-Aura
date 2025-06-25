@@ -127,10 +127,42 @@ p {
   position: relative;
 }
 
+/* Custom Properties for Animations */
+.btn-primary,
+.btn-secondary {
+  --pos-x: 50%;
+  --pos-y: 50%;
+  --spread-x: 150%;
+  --spread-y: 180%;
+  --color-1: #2C3BC0;
+  --color-2: #0099ff;
+  --color-3: #00ffdd;
+  --stop-1: 40%;
+  --stop-2: 70%;
+  --stop-3: 100%;
+  --border-angle: 45deg;
+  --border-color-1: rgba(255, 255, 255, 0.1);
+  --border-color-2: rgba(255, 255, 255, 0.4);
+}
+
 .btn-primary {
-  background-color: #2C3BC0;
-  color: #fff;
-  border: 2px solid #0099ff;
+   background: radial-gradient(
+    var(--spread-x) var(--spread-y) at var(--pos-x) var(--pos-y),
+    var(--color-1) var(--stop-1),
+    var(--color-2) var(--stop-2),
+    var(--color-3) var(--stop-3)
+  );
+  color: white;
+  border: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    --pos-x 0.5s, --pos-y 0.5s, --spread-x 0.5s, --spread-y 0.5s,
+    --color-1 0.5s, --color-2 0.5s, --color-3 0.5s,
+    --stop-1 0.5s, --stop-2 0.5s, --stop-3 0.5s,
+    --border-angle 0.5s,
+    --border-color-1 0.5s,
+    --border-color-2 0.5s;
 }
 
 .btn-primary:hover::before {
@@ -138,11 +170,21 @@ p {
 }
 
 .btn-primary:hover {
-  box-shadow: 
-    0 6px 25px rgba(11, 112, 206, 0.4),
-    0 0 30px rgba(92, 214, 238, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  transform: translateY(-3px) scale(1.02);
+  --pos-x: 0%;
+  --pos-y: 100%;
+  --spread-x: 130%;
+  --spread-y: 140%;
+  --color-1: #0099ff;
+  --color-2: #5d00ff;
+  --color-3: #ffffffd1;
+  --stop-1: 0%;
+  --stop-2: 45%;
+  --stop-3: 90%;
+  --border-angle: 90deg;
+  --border-color-1: rgba(255, 255, 255, 0.3);
+  --border-color-2: rgba(0, 255, 221, 0.4);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 255, 200, 0.3);
 }
 
 .btn-secondary {
@@ -161,20 +203,49 @@ p {
   overflow: hidden;
 }
 
+.btn-secondary:hover{
+  --pos-x: 100%;
+  --pos-y: 100%;
+  --spread-x: 120%;
+  --spread-y: 120%;
+  --color-1: #0099ff;
+  --color-2: #5d00ff;
+  --color-3: #ffffffd1;
+  --stop-1: 0%;
+  --stop-2: 40%;
+  --stop-3: 90%;
+  --border-angle: 90deg;
+  --border-color-1: rgba(0, 255, 136, 0.3);
+  --border-color-2: rgba(0, 255, 136, 0.6);
+  background: radial-gradient(
+    var(--spread-x) var(--spread-y) at var(--pos-x) var(--pos-y),
+    var(--color-1) var(--stop-1),
+    var(--color-2) var(--stop-2),
+    var(--color-3) var(--stop-3)
+  );
+  color: white;
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 255, 136, 0.4);
+}
+
 .btn-primary::before
 .btn-secondary::before 
 {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-  z-index: -1;
-  background: linear-gradient(135deg, #0099ff 0%, #00ffdd 100%);
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    var(--border-angle),
+    var(--border-color-1),
+    var(--border-color-2)
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .btn-primary:hover::before

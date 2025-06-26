@@ -89,7 +89,7 @@
 
 .digit {
   display: inline-block;
-  font-family: 'Courier New', monospace;
+  font-family: 'Gura', sans-serif;
   font-size: 3rem;
   font-weight: 700;
   color: #ffff;

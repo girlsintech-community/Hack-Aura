@@ -61,7 +61,7 @@ body::before {
   100% { transform: translateY(100px); }
 }
 
-/* ====== Section Wrapper ====== */
+/* ====== Hero Section (Keep as is) ====== */
 .aurora-bg {
   min-height: 100vh;
   width: 100%;
@@ -92,6 +92,75 @@ body::before {
 @keyframes aurora-pulse {
   0% { opacity: 0.3; }
   100% { opacity: 0.6; }
+}
+
+/* ====== Section Gradients - Structured for Smooth Blending ====== */
+/* First Section - About/Countdown - Purple to Dark */
+.section-about {
+  min-height: 100vh;
+  width: 100%;
+  padding: 4rem 1rem;
+  background: linear-gradient(180deg, #0F0197 0%, #040510 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Custom gradient only for the Countdown section */
+.countdown-gradient {
+  background: linear-gradient(180deg, #040124 0%, #0F0197 100%);
+}
+
+/* Second Section - Timeline/Events - Purple to Medium Blue */
+.section-events,
+.section-team {
+  min-height: 100vh;
+  width: 100%;
+  padding: 4rem 1rem;
+  background: linear-gradient(180deg, #0F0197 0%, #0A0354 75%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Third Section - Sponsors/FAQ - Dark to Medium Blue */
+.section-timeline,
+.section-contact {
+  min-height: 100vh;
+  width: 100%;
+  padding: 4rem 1rem;
+  background: linear-gradient(180deg, #040510 2.4%, #0A0354 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Custom gradient for Hackathon Tracks */
+.tracks-gradient {
+  background: linear-gradient(180deg, #0A0354 0%, #0F0197 100%);
+}
+
+/* Custom gradient for FAQ section */
+.faq-gradient {
+  background: linear-gradient(180deg, #0A0354 0%,  #000000 100%);
+}
+
+
+/* Generic section class for sections that need gradient backgrounds */
+.gradient-section-1 {
+  background: linear-gradient(180deg, #0F0197 0%, #040510 100%);
+}
+
+.gradient-section-2 {
+  background: linear-gradient(180deg, #0F0197 0%, #0A0354 75%);
+}
+
+.gradient-section-3 {
+  background: linear-gradient(180deg, #040510 2.4%, #0A0354 100%);
 }
 
 /* ====== Typography ====== */
@@ -229,9 +298,8 @@ p {
   box-shadow: 0 8px 20px rgba(0, 255, 136, 0.4);
 }
 
-.btn-primary::before
-.btn-secondary::before 
-{
+.btn-primary::before,
+.btn-secondary::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -249,12 +317,12 @@ p {
   z-index: 0;
 }
 
-.btn-primary:hover::before
+.btn-primary:hover::before,
 .btn-secondary:hover::before {
   transform: scaleX(1);
 }
 
-.btn-primary:hover
+.btn-primary:hover,
 .btn-secondary:hover {
   color: #fff;
   border-color: #2C3BC0;
@@ -262,14 +330,17 @@ p {
   transform: scale(1.05);
 }
 
-
 /* ====== Responsive Design ====== */
 @media (max-width: 768px) {
-  .aurora-bg {
+  .aurora-bg,
+  .section-about,
+  .section-events,
+  .section-team,
+  .section-timeline,
+  .section-contact {
     padding: 2rem 1rem;
   }
 } 
- 
 
 @media (max-width: 480px) {
   h1 {

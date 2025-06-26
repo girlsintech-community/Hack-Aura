@@ -18,19 +18,43 @@ import HackathonTracks from './Tracks';
 // HomePage Component
 function HomePage({ onContactClick }) {
   return (
-    <>
+    <div className="main-page">
       <Navbar onContactClick={onContactClick} />
-      <Hero />
-      <Countdown />
-      <div id="about">
-        <About />
-        <OrganizationAbout />
+      
+      {/* Hero Section - keep aurora-bg for hero */}
+      <div className="hero-section">
+        <Hero />
       </div>
-      <div id="timeline"><Timeline /></div>
-      <div id="tracks"><HackathonTracks /></div>
-      <div id="sponsors"><Sponsorships /></div>
-      <div id="faq"><FAQ /></div>
-    </>
+      
+      {/* Content after hero - using new gradient sections */}
+      <div className="content-after-hero">
+        <div className="section-about countdown-gradient">
+  <Countdown />
+</div>
+        
+        <div id="about" className="section-about">
+          <About />
+          <OrganizationAbout />
+        </div>
+        
+        <div id="timeline" className="section-timeline">
+          <Timeline />
+        </div>
+        
+        <div id="tracks" className="section-events tracks-gradient">
+  <HackathonTracks />
+</div>
+        
+        <div id="sponsors" className="section-events">
+          <Sponsorships />
+        </div>
+        
+        <div id="faq" className="section-contact faq-gradient">
+  <FAQ />
+</div>
+
+      </div>
+    </div>
   );
 }
 
@@ -39,7 +63,9 @@ function TeamPage({ onContactClick }) {
   return (
     <>
       <Navbar onContactClick={onContactClick} />
-      <Humans />
+      <div className="section-team">
+        <Humans />
+      </div>
     </>
   );
 }

@@ -167,18 +167,18 @@
   font-weight: 600;
   border-radius: 10px;
   background: linear-gradient(145deg, rgba(16,185,129,0.15), rgba(6,182,212,0.15));
-  border: 1px solid #10b981;
-  color: #10b981;
-  text-shadow: 0 0 4px rgba(16, 185, 129, 0.5);
+  border: 1px solid #5fccfa;
+  color: #e3e3e6;
+  text-shadow: 0 0 4px rgba(15, 169, 231, 0.879);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .sponsor-button:hover {
-  background: #10b981;
+  background: #6457f5;
   color: #0f172a;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.35);
+  box-shadow: 0 8px 25px rgba(15, 145, 251, 0.35);
 }
 
 .cyber-arrow {

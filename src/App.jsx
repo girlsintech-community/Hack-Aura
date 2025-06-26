@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import Hero from './Hero';
-import Countdown from './Countdown';
+import ShiftingCountdown from './ShiftingCountdown';
 import CodeOfConduct from './CodeOfConduct';
 import Footer from './Footer';
 import Timeline from './Timeline';
@@ -29,7 +29,7 @@ function HomePage({ onContactClick }) {
       {/* Content after hero - using new gradient sections */}
       <div className="content-after-hero">
         <div className="section-about countdown-gradient">
-  <Countdown />
+  <ShiftingCountdown />
 </div>
         
         <div id="about" className="section-about">

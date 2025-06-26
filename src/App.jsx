@@ -35,12 +35,14 @@ function HomePage({ onContactClick }) {
 </div>
 
 <div id="timeline" className="section-wrapper section-timeline">
+  
   <Timeline />
+
 </div>
 
 <div id="tracks" className="section-wrapper section-events tracks-gradient">
-  {/* Add content here */}
-  <RollingGallery/>
+<RollingGallery/>
+  
 </div>
 
 <div id="sponsors" className="section-wrapper section-events">

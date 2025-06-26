@@ -1,234 +1,87 @@
-import React, { useEffect, useState } from "react";
-import {
-  motion,
-  useMotionValue,
-  useAnimation,
-  useTransform,
-  PanInfo,
-} from "framer-motion";
+import React from 'react';
 
-const IMGS = [
-  "https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1495103033382-fe343886b671?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1506781961370-37a89d6b3095?q=80&w=3264&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1599576838688-8a6c11263108?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1494094892896-7f14a4433b7a?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://plus.unsplash.com/premium_photo-1664910706524-e783eed89e71?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1503788311183-fa3bf9c4bc32?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1585970480901-90d6bb2a48b5?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-];
-
-export const RollingGallery = ({
-  autoplay = false,
-  pauseOnHover = false,
-  images = [],
-}) => {
-  // Use default images if none are provided
-  const galleryImages = images.length > 0 ? images : IMGS;
-
-  const [isScreenSizeSm, setIsScreenSizeSm] = useState(
-    typeof window !== 'undefined' ? window.innerWidth <= 640 : false
-  );
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const handleResize = () => setIsScreenSizeSm(window.innerWidth <= 640);
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }
-  }, []);
-
-  // 3D geometry calculations
-  const cylinderWidth = isScreenSizeSm ? 1100 : 1800;
-  const faceCount = galleryImages.length;
-  const faceWidth = (cylinderWidth / faceCount) * 1.5;
-  const radius = cylinderWidth / (2 * Math.PI);
-
-  // Framer Motion values and controls
-  const dragFactor = 0.05;
-  const rotation = useMotionValue(0);
-  const controls = useAnimation();
-
-  // Create a 3D transform based on the rotation motion value
-  const transform = useTransform(
-    rotation,
-    (val) => `rotate3d(0,1,0,${val}deg)`
-  );
-
-  const startInfiniteSpin = (startAngle) => {
-    controls.start({
-      rotateY: [startAngle, startAngle - 360],
-      transition: {
-        duration: 20,
-        ease: "linear",
-        repeat: Infinity,
-      },
-    });
-  };
-
-  useEffect(() => {
-    if (autoplay) {
-      const currentAngle = rotation.get();
-      startInfiniteSpin(currentAngle);
-    } else {
-      controls.stop();
-    }
-  }, [autoplay, controls, rotation]);
-
-  const handleUpdate = (latest) => {
-    if (typeof latest.rotateY === "number") {
-      rotation.set(latest.rotateY);
-    }
-  };
-
-  const handleDrag = (_, info) => {
-    controls.stop();
-    rotation.set(rotation.get() + info.offset.x * dragFactor);
-  };
-
-  const handleDragEnd = (_, info) => {
-    const finalAngle = rotation.get() + info.velocity.x * dragFactor;
-    rotation.set(finalAngle);
-    if (autoplay) {
-      startInfiniteSpin(finalAngle);
-    }
-  };
-
-  const handleMouseEnter = () => {
-    if (autoplay && pauseOnHover) {
-      controls.stop();
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (autoplay && pauseOnHover) {
-      const currentAngle = rotation.get();
-      startInfiniteSpin(currentAngle);
-    }
-  };
-
+const RollingGallery = () => {
   const containerStyle = {
+    margin: 0,
+    height: '100vh',
+    display: 'grid',
+    placeItems: 'center',
+    backgroundColor: '#010101',
+  };
+
+  const galleryStyle = {
     position: 'relative',
-    height: '500px',
-    width: '100%',
-    overflow: 'hidden'
-  };
-
-  const leftGradientStyle = {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    height: '100%',
-    width: '48px',
-    zIndex: 10,
-    background: 'linear-gradient(to left, rgba(0,0,0,0) 0%, #060606 100%)'
-  };
-
-  const rightGradientStyle = {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    height: '100%',
-    width: '48px',
-    zIndex: 10,
-    background: 'linear-gradient(to right, rgba(0,0,0,0) 0%, #060606 100%)'
-  };
-
-  const perspectiveContainerStyle = {
-    display: 'flex',
-    height: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    perspective: '1000px',
-    transformStyle: 'preserve-3d'
-  };
-
-  const motionDivStyle = {
-    transform: transform,
-    rotateY: rotation,
-    width: cylinderWidth,
+    width: '300px',
+    height: '200px',
     transformStyle: 'preserve-3d',
-    display: 'flex',
-    minHeight: '200px',
-    cursor: 'grab',
-    alignItems: 'center',
-    justifyContent: 'center'
+    animation: 'rotate 35s linear infinite',
   };
 
-  const imageContainerStyle = (i) => ({
+  const spanBaseStyle = {
     position: 'absolute',
-    display: 'flex',
-    height: 'fit-content',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: isScreenSizeSm ? '6%' : '8%',
-    backfaceVisibility: 'hidden',
-    width: `${faceWidth}px`,
-    transform: `rotateY(${(360 / faceCount) * i}deg) translateZ(${radius}px)`
-  });
+    width: '100%',
+    height: '100%',
+    transformOrigin: 'center',
+    transformStyle: 'preserve-3d',
+  };
 
   const imageStyle = {
-    pointerEvents: 'none',
-    height: isScreenSizeSm ? '100px' : '120px',
-    width: isScreenSizeSm ? '220px' : '300px',
-    borderRadius: '15px',
-    border: '3px solid white',
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
     objectFit: 'cover',
-    transition: 'transform 0.3s ease-out'
   };
 
-  const imageHoverStyle = {
-    ...imageStyle,
-    transform: 'scale(1.05)'
+  const h1Style = {
+    color: 'white',
+    textAlign: 'center',
+    margin: '0 auto',
   };
+
+  // Define dynamic rotation for each item (based on --i * 45deg)
+  const items = [
+    { type: 'text', content: <h1 style={h1Style}>Hello</h1>, i: 1 },
+    { type: 'image', src: 'https://images5.alphacoders.com/653/653698.jpg', i: 2 },
+    { type: 'image', src: 'https://images6.alphacoders.com/803/thumb-1920-803643.png', i: 3 },
+    { type: 'image', src: 'https://images.alphacoders.com/785/thumb-1920-785833.png', i: 4 },
+    { type: 'image', src: 'https://images6.alphacoders.com/749/thumb-1920-749966.png', i: 5 },
+    { type: 'image', src: 'https://images4.alphacoders.com/761/thumb-1920-761076.png', i: 6 },
+    { type: 'image', src: 'https://images.alphacoders.com/682/thumb-1920-682570.png', i: 7 },
+    { type: 'image', src: 'https://images4.alphacoders.com/866/thumb-1920-866812.png', i: 8 },
+  ];
 
   return (
     <div style={containerStyle}>
-      {/* Gradients on sides */}
-      <div style={leftGradientStyle} />
-      <div style={rightGradientStyle} />
-      
-      {/* 3D container */}
-      <div style={perspectiveContainerStyle}>
-        <motion.div
-          drag="x"
-          dragElastic={0}
-          onDrag={handleDrag}
-          onDragEnd={handleDragEnd}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          animate={controls}
-          onUpdate={handleUpdate}
-          style={motionDivStyle}
-        >
-          {galleryImages.map((url, i) => (
-            <div
-              key={i}
-              style={imageContainerStyle(i)}
-              onMouseEnter={(e) => {
-                const img = e.currentTarget.querySelector('img');
-                if (img) {
-                  img.style.transform = 'scale(1.05)';
-                }
-              }}
-              onMouseLeave={(e) => {
-                const img = e.currentTarget.querySelector('img');
-                if (img) {
-                  img.style.transform = 'scale(1)';
-                }
-              }}
-            >
-              <img
-                src={url}
-                alt={`Gallery image ${i + 1}`}
-                style={imageStyle}
-              />
-            </div>
-          ))}
-        </motion.div>
+      <div style={galleryStyle}>
+        {items.map((item, index) => {
+          const rotateY = `${item.i * 45}deg`;
+          const transform = `rotateY(${rotateY}) translateZ(380px)`;
+
+          return (
+            <span key={index} style={{ ...spanBaseStyle, transform }}>
+              {item.type === 'image' ? (
+                <img src={item.src} alt={`slide-${index}`} style={imageStyle} />
+              ) : (
+                item.content
+              )}
+            </span>
+          );
+        })}
       </div>
+
+      {/* Keyframes via <style> since inline styles don't support them */}
+      <style>{`
+        @keyframes rotate {
+          from {
+            transform: perspective(1200px) rotateY(360deg);
+          }
+          to {
+            transform: perspective(1200px) rotateY(0deg);
+          }
+        }
+      `}</style>
     </div>
   );
 };
+
+export default RollingGallery;

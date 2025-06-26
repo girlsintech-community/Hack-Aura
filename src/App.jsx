@@ -14,6 +14,7 @@ import Humans from './Humans';
 import Sponsorships from './Sponsor';
 import ContactPopup from './Contact';
 
+
 // HomePage Component
 function HomePage({ onContactClick }) {
   return (
@@ -24,8 +25,6 @@ function HomePage({ onContactClick }) {
       <div className="hero-section">
         <Hero />
       </div>
-
-      
       {/* Content after hero - using new gradient sections */}
       <div className="content-after-hero">
         <div className="section-about countdown-gradient">

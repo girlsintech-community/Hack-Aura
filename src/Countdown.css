@@ -1,93 +1,3 @@
-/* ==== COUNTDOWN SECTION ====
-.countdown-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin: 3rem 0;
-}
-
-.flip-unit {
-  position: relative;
-  perspective: 1000px;
-  padding: 6rem 2rem;
-
-  max-width: 1400px;
-  margin: 5rem auto;
-  text-align: center;
-}
-
-.flip-card {
-  position: relative;
-  width: 100px;
-  height: 80px;
-  background: #111;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 10px #00ff88;
-}
-
-.top-half,
-.bottom-half,
-.flip-top-half,
-.flip-bottom-half {
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  font-size: 3rem;
-  color: #00ff88;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backface-visibility: hidden;
-}
-
-.countdown-box {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid var(--aurora-purple);
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-  min-width: 100px;
-  box-shadow: 0 0 12px rgba(169, 120, 242, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(8px);
-}
-
-.countdown-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(169, 120, 242, 0.5);
-}
-
-.countdown-value {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--aurora-blue);
-  margin-bottom: 0.3rem;
-  text-shadow: 0 0 6px rgba(0, 179, 255, 0.5);
-}
-
-.countdown-label {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--dimmed);
-  letter-spacing: 1px;
-}
-
-.countdown-wrapper {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.countdown-heading {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #B0E6FF; /* or your preferred heading color */
-  /* margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-} */
 
 .countdown-section {
   text-align: center;
@@ -100,7 +10,7 @@
   font-weight: 800;
   color: var(--aurora-green);
   margin-bottom: 2rem;
-  text-shadow: 0 0 8px rgba(0, 255, 200, 0.4);
+  text-shadow: 0 0 8px rgba(111, 0, 255, 0.4);
 }
 
 .countdown-grid {
@@ -112,26 +22,26 @@
 }
 
 .countdown-box {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(23, 145, 216, 0.05);
   border: 2px solid var(--aurora-purple);
   border-radius: 12px;
   padding: 1.5rem 2rem;
   min-width: 100px;
-  box-shadow: 0 0 12px rgba(105, 160, 146, 0.3);
+  box-shadow: 0 0 12px rgba(49, 13, 181, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(8px);
 }
 
 .countdown-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(42, 211, 107, 0.5);
+  box-shadow: 0 0 20px rgba(41, 10, 195, 0.5);
 }
 
 .countdown-value {
   display: block;
   font-size: 2.5rem;
   font-weight: 700;
-  color: rgb(64, 215, 107);
+  color: rgb(119, 64, 215);
   margin-bottom: 0.3rem;
   text-shadow: 0 0 6px rgba(0, 179, 255, 0.5);
 }
@@ -142,3 +52,54 @@
   color: var(--dimmed);
   letter-spacing: 1px;
 }
+
+.countdown-title h2, .countdown-section h2, .gallery-title {
+
+  
+  /* Exact gradient matching Timeline and Sponsors */
+  background: linear-gradient(90deg, 
+    #0891b2 0%,    /* Darker cyan start */
+    #06b6d4 20%,   /* Bright cyan */
+    #22d3ee 40%,   /* Light cyan */
+    #0dd6d6 60%,   /* Bright teal */
+    #14b8a6 80%,   /* Teal */
+    #10b981 100%   /* Emerald end */
+  );
+  
+  /* Cross-browser compatibility */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  color: transparent;
+  
+  /* Enhanced glow effect matching Timeline/Sponsors */
+  text-shadow: 
+    0 0 10px rgba(6, 182, 212, 0.3),
+    0 0 20px rgba(20, 184, 166, 0.2),
+    0 0 30px rgba(16, 185, 129, 0.1);
+  
+  text-align: center;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em; /* Slightly reduced for better readability */
+  position: relative;
+  
+  /* Ensure proper display */
+  display: inline-block;
+  width: 100%;
+  
+  /* Amplified glow animation */
+  animation: amplifiedGlow 1.5s ease-in-out infinite alternate;
+
+   font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+  z-index: 2;
+  position: relative;
+}
+

@@ -36,7 +36,7 @@ const Countdown = () => {
 
   return (
     <section className="countdown-section">
-      <h2 className="countdown-title">COUNTDOWN TO HACKATHON</h2>
+      <h2 className="countdown-title">GEAR UP! The HACKATHON STORM HITS IN</h2>
       <div className="countdown-grid">
         {Object.entries(timeLeft).map(([unit, value]) => (
           <div className="countdown-box" key={unit}>

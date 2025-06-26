@@ -102,4 +102,14 @@
   z-index: 2;
   position: relative;
 }
-
+.countdown-section h2::after, .countdown-title h2::after, .gallery-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, #10b981, transparent);
+  border-radius: 5px;
+}

@@ -314,7 +314,7 @@
 
 /* Adjust testimonial cards for horizontal layout */
 .testimonial-card {
-  width: 550px;
+  width: 500px;
   height: 500px;
   flex: 0 0 auto; /* Prevents shrinking or growing */
 

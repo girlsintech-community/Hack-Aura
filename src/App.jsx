@@ -13,7 +13,7 @@ import FAQ from './FAQ';
 import Humans from './Humans';
 import Sponsorships from './Sponsor';
 import ContactPopup from './Contact';
-
+import RollingGallery from './Tracks';
 
 // HomePage Component
 function HomePage({ onContactClick }) {
@@ -26,6 +26,7 @@ function HomePage({ onContactClick }) {
       <div className="content-after-hero">
         <div className="section-wrapper countdown-gradient">
   <ShiftingCountdown />
+  
 </div>
 
 <div id="about" className="section-wrapper section-about">
@@ -39,6 +40,7 @@ function HomePage({ onContactClick }) {
 
 <div id="tracks" className="section-wrapper section-events tracks-gradient">
   {/* Add content here */}
+  <RollingGallery/>
 </div>
 
 <div id="sponsors" className="section-wrapper section-events">

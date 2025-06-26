@@ -30,6 +30,7 @@
   box-shadow: 0 0 12px rgba(49, 13, 181, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(8px);
+  margin-top: 4rem;
 }
 
 .countdown-box:hover {
@@ -53,7 +54,7 @@
   letter-spacing: 1px;
 }
 
-.countdown-title h2, .countdown-section h2, .gallery-title {
+.countdown-title h2, .countdown-section h2 {
 
   
   /* Exact gradient matching Timeline and Sponsors */
@@ -102,7 +103,7 @@
   z-index: 2;
   position: relative;
 }
-.countdown-section h2::after, .countdown-title h2::after, .gallery-title::after {
+.countdown-section h2::after, .countdown-title h2::after {
   content: '';
   position: absolute;
   bottom: -12px;

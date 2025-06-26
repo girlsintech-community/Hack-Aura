@@ -100,7 +100,7 @@ body::before {
   min-height: 100vh;
   width: 100%;
   padding: 4rem 1rem;
-  background: linear-gradient(180deg, #0A0354 2.4%, #040510 100%);
+  background: linear-gradient(180deg, #0A0354 0%, #040510 100%);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -118,7 +118,7 @@ body::before {
   min-height: 100vh;
   width: 100%;
   padding: 4rem 1rem;
-  background: linear-gradient(180deg, #0F0197 0%, #0A0354 75%);
+  background: linear-gradient(180deg, #0d026e 2.4%, #0A0354 75%);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -141,12 +141,12 @@ body::before {
 }
 /* Custom gradient for Hackathon Tracks */
 .tracks-gradient {
-  background: linear-gradient(180deg, #0A0354 0%, #0F0197 100%);
+  background: linear-gradient(180deg, #0A0354 0%, #0d026e 100%);
 }
 
 /* Custom gradient for FAQ section */
 .faq-gradient {
-  background: linear-gradient(180deg, #0A0354 0%,  #000000 100%);
+  background: linear-gradient(180deg, #0A0354 2.4%,  #000000 100%);
 }
 
 

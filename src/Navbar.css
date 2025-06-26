@@ -1,16 +1,31 @@
-/* === GLASSY NAVBAR WRAPPER === */
-.navbar-wrapper {
+/* === NAVBAR CONTAINER === */
+.navbar-container {
   position: fixed;
   top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 4rem);
-  max-width: 1400px;
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 2rem;
+  justify-content: center;
+  gap: 2rem;
   z-index: 1000;
+  padding: 0 2rem;
+}
+
+/* === LOGOS === */
+.left-logo img,
+.right-logo img {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* === CENTER NAVBAR === */
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 2rem;
   border-radius: 20px;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -18,29 +33,21 @@
   border: 1px solid rgba(6, 182, 212, 0.25);
   box-shadow: 0 0 25px rgba(6, 182, 212, 0.2);
   transition: all 0.4s ease;
-  pointer-events: none;
+  width: max-content;
 }
 
-/* === LOGO === */
-.navbar-logo {
-  pointer-events: all;
-  flex-shrink: 0;
+.navbar-wrapper.scrolled {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  box-shadow: 0 8px 40px rgba(6, 182, 212, 0.2);
 }
 
-.navbar-logo img {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
-}
-
-/* === NAVIGATION LINKS === */
 .navbar {
   display: flex;
   gap: 1.5rem;
-  pointer-events: all;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: nowrap;
   font-family: 'Gura', sans-serif;
+  pointer-events: all;
 }
 
 .navbar a {
@@ -51,63 +58,66 @@
   padding: 0.4rem 0.8rem;
   border-radius: 10px;
   transition: all 0.3s ease;
-
 }
 
 .navbar a:hover {
   background: linear-gradient(135deg, #2C3BC0, #0099ff, #00ffdd);
   background-size: 200% 200%;
   animation: auroraShift 3s ease infinite;
-  color: #0f172a;
+  color: #fdfeff;
   transform: scale(1.08);
   box-shadow: 0 0 12px rgba(56, 253, 217, 0.4);
 }
 
-/* === Aurora Gradient Animation === */
 @keyframes auroraShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* === SCROLLED NAVBAR STYLE === */
-.navbar-wrapper.scrolled {
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(6, 182, 212, 0.3);
-  box-shadow: 0 8px 40px rgba(6, 182, 212, 0.2);
+/* === Hamburger Menu === */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1100;
 }
 
-/* === RESPONSIVE DESIGN === */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+
   .navbar-wrapper {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.95);
     flex-direction: column;
-    padding: 1rem 1.25rem;
+    align-items: center;
+    padding: 2rem 1rem;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 4px 30px rgba(6, 182, 212, 0.2);
+  }
+
+  .navbar-wrapper.open {
+    display: flex;
   }
 
   .navbar {
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    flex-direction: column;
+    gap: 1.25rem;
   }
 
-  .navbar-logo img {
-    height: 50px;
+  .right-logo {
+    display: none; /* Hide GLT logo on small screens */
   }
 
-  .navbar a {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
+  .left-logo img {
+    height: 60px;
   }
-}
-.navbar-girls-icon {
-  pointer-events: all;
-  flex-shrink: 0;
-}
-
-.navbar-girls-icon img {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
-  border-radius: 10px;
 }

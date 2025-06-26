@@ -34,34 +34,35 @@
   padding-bottom: 0;
 }
 
- .top-text{
+ .top-text {
   font-size: 2rem;
   letter-spacing: 0.3rem;
-  display: flex;
-  justify-content: center;
-  gap: 0.5 rem;
-  margin: 4rem 0;
-  color: #FFFF;
   font-weight: 1000;
   font-family: 'Jura', sans-serif;
-  margin: 6.8rem 0 1rem 0;
+  color: #fff;
+
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid rgba(255, 255, 255, 0.75);
   width: 0;
-  animation: typing 3.5s steps(30, end) forwards 1s infinite, blink 0.75s step-end infinite;
-  text-align: center;
-  max-width: fit-content;
+  
+  /* Remove flex and center align from here */
+  display: block;
+  margin: 6.8rem auto 1rem auto; /* still keeps it centered horizontally */
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  text-align: left;
+
+  animation: typing 6s steps(30, end) infinite, blink 0.75s step-end infinite;
   animation-fill-mode: forwards;
+  max-width: fit-content;
 }
+
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 30ch; /* Adjust based on your actual text length */
-  }
+  0% { width: 0; }
+  40% { width: 32ch; }
+  60% { width: 32ch; } /* hold */
+  100% { width: 0; }
 }
+
 
 @keyframes blink {
   0%, 100% {

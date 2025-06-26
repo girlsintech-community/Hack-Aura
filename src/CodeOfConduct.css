@@ -37,7 +37,7 @@
   border-left: 4px solid #0099ff;
   border-radius: 12px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 0 18px rgba(0, 153, 255, 0.25);
+  box-shadow: 0 0 18px rgba(61, 5, 202, 0.25);
   position: relative;
   overflow: hidden;
 }
@@ -76,7 +76,7 @@
 .code-block li {
   margin-bottom: 0.75rem;
   font-size: 1.05rem;
-  color:  #a0a0a0;;
+  color:  #ffff;
   line-height: 1.6;
   text-align: left;
   position: relative;

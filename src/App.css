@@ -1,6 +1,6 @@
 /* ====== Root Color Variables ====== */
 :root {
-  --aurora-green: #008cff;
+  --aurora-green: oklch(64.065% 0.19745 252.99);
   --aurora-green-dark: #6d00cc;
   --aurora-green-light: #4433ff;
   --aurora-blue: #0099ff;

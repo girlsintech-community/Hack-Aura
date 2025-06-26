@@ -1,70 +1,126 @@
 .code-section {
-  padding: 10rem 2rem;
-  max-width: 900px;
+  padding: 6rem 2rem;
+  max-width: 960px;
   margin: 0 auto;
   text-align: left;
-  color: var(--text-color);
+  color: #ffffff;
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
 .code-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--aurora-green);
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgb(0, 140, 255);
   text-align: center;
-  margin-bottom: 2rem;
-  text-shadow: 0 0 10px rgba(0, 255, 195, 0.5);
+  margin-bottom: 2.5rem;
+  text-shadow: 0 0 15px rgba(47, 0, 255, 0.6);
+  letter-spacing: 1px;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .code-intro,
 .code-conclusion {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  color: var(--dimmed);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #17e0fb;
   text-align: center;
+  font-weight: 300;
 }
 
 .code-block {
-  margin-bottom: 2rem;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 1rem 1.5rem;
-  border-left: 4px solid var(--aurora-purple);
-  border-radius: 8px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 0 12px rgba(169, 120, 242, 0.2);
+  margin-bottom: 2.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem 2rem;
+  border-left: 4px solid #0099ff;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 18px rgba(61, 5, 202, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.code-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(2, 48, 146, 0.784), transparent 60%);
+  z-index: 0;
 }
 
 .code-block h3 {
-  color: rgb(117, 29, 43);
+  color:  #00ffdd;
   font-weight: 700;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
   text-decoration: underline;
-  transition: color 0.3s ease;
+  z-index: 1;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.code-block h3:hover {
+  color: #4433ff;;
 }
 
 .code-block ul,
 .code-block ol {
-  padding-left: 1.2rem;
-  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+  z-index: 1;
+  position: relative;
 }
 
 .code-block li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
   font-size: 1.05rem;
-  color: aquamarine;
+  color:  #ffff;
   line-height: 1.6;
   text-align: left;
+  position: relative;
+  z-index: 1;
 }
 
 .code-block p {
   font-size: 1.05rem;
   line-height: 1.6;
-  color: var(--dimmed);
-  margin-top: 0.8rem;
+  color: #ffff;
+  margin-top: 1rem;
+  z-index: 1;
+  position: relative;
 }
 
-/* Optional hover effect on headings */
-.code-block h3:hover {
-  color: rgb(200, 50, 70);
+@media (max-width: 768px) {
+  .code-section {
+    padding: 4rem 1rem;
+  }
+
+  .code-title {
+    font-size: 2.3rem;
+  }
+
+  .code-block {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .code-title {
+    font-size: 2rem;
+  }
+
+  .code-intro,
+  .code-conclusion {
+    font-size: 1rem;
+  }
+
+  .code-block h3 {
+    font-size: 1.2rem;
+  }
+
+  .code-block li {
+    font-size: 1rem;
+  }
 }

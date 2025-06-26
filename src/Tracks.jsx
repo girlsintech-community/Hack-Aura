@@ -1,35 +1,234 @@
-import React from 'react';
-import './Tracks.css';
+import React, { useEffect, useState } from "react";
+import {
+  motion,
+  useMotionValue,
+  useAnimation,
+  useTransform,
+  PanInfo,
+} from "framer-motion";
 
-const tracks = [
-  {
-    title: 'Web3',
-    description: 'Build decentralized apps, explore blockchain protocols, and shape the future of the internet.',
-  },
-  {
-    title: 'AI',
-    description: 'Create intelligent systems, push boundaries in machine learning, and innovate with data.',
-  },
-  {
-    title: 'Open Innovation',
-    description: 'Break silos, experiment freely, and build solutions that span industries and ideas.',
-  },
+const IMGS = [
+  "https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1495103033382-fe343886b671?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1506781961370-37a89d6b3095?q=80&w=3264&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1599576838688-8a6c11263108?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1494094892896-7f14a4433b7a?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://plus.unsplash.com/premium_photo-1664910706524-e783eed89e71?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1503788311183-fa3bf9c4bc32?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1585970480901-90d6bb2a48b5?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 
-const HackathonTracks = () => {
+export const RollingGallery = ({
+  autoplay = false,
+  pauseOnHover = false,
+  images = [],
+}) => {
+  // Use default images if none are provided
+  const galleryImages = images.length > 0 ? images : IMGS;
+
+  const [isScreenSizeSm, setIsScreenSizeSm] = useState(
+    typeof window !== 'undefined' ? window.innerWidth <= 640 : false
+  );
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const handleResize = () => setIsScreenSizeSm(window.innerWidth <= 640);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  // 3D geometry calculations
+  const cylinderWidth = isScreenSizeSm ? 1100 : 1800;
+  const faceCount = galleryImages.length;
+  const faceWidth = (cylinderWidth / faceCount) * 1.5;
+  const radius = cylinderWidth / (2 * Math.PI);
+
+  // Framer Motion values and controls
+  const dragFactor = 0.05;
+  const rotation = useMotionValue(0);
+  const controls = useAnimation();
+
+  // Create a 3D transform based on the rotation motion value
+  const transform = useTransform(
+    rotation,
+    (val) => `rotate3d(0,1,0,${val}deg)`
+  );
+
+  const startInfiniteSpin = (startAngle) => {
+    controls.start({
+      rotateY: [startAngle, startAngle - 360],
+      transition: {
+        duration: 20,
+        ease: "linear",
+        repeat: Infinity,
+      },
+    });
+  };
+
+  useEffect(() => {
+    if (autoplay) {
+      const currentAngle = rotation.get();
+      startInfiniteSpin(currentAngle);
+    } else {
+      controls.stop();
+    }
+  }, [autoplay, controls, rotation]);
+
+  const handleUpdate = (latest) => {
+    if (typeof latest.rotateY === "number") {
+      rotation.set(latest.rotateY);
+    }
+  };
+
+  const handleDrag = (_, info) => {
+    controls.stop();
+    rotation.set(rotation.get() + info.offset.x * dragFactor);
+  };
+
+  const handleDragEnd = (_, info) => {
+    const finalAngle = rotation.get() + info.velocity.x * dragFactor;
+    rotation.set(finalAngle);
+    if (autoplay) {
+      startInfiniteSpin(finalAngle);
+    }
+  };
+
+  const handleMouseEnter = () => {
+    if (autoplay && pauseOnHover) {
+      controls.stop();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (autoplay && pauseOnHover) {
+      const currentAngle = rotation.get();
+      startInfiniteSpin(currentAngle);
+    }
+  };
+
+  const containerStyle = {
+    position: 'relative',
+    height: '500px',
+    width: '100%',
+    overflow: 'hidden'
+  };
+
+  const leftGradientStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    height: '100%',
+    width: '48px',
+    zIndex: 10,
+    background: 'linear-gradient(to left, rgba(0,0,0,0) 0%, #060606 100%)'
+  };
+
+  const rightGradientStyle = {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    height: '100%',
+    width: '48px',
+    zIndex: 10,
+    background: 'linear-gradient(to right, rgba(0,0,0,0) 0%, #060606 100%)'
+  };
+
+  const perspectiveContainerStyle = {
+    display: 'flex',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    perspective: '1000px',
+    transformStyle: 'preserve-3d'
+  };
+
+  const motionDivStyle = {
+    transform: transform,
+    rotateY: rotation,
+    width: cylinderWidth,
+    transformStyle: 'preserve-3d',
+    display: 'flex',
+    minHeight: '200px',
+    cursor: 'grab',
+    alignItems: 'center',
+    justifyContent: 'center'
+  };
+
+  const imageContainerStyle = (i) => ({
+    position: 'absolute',
+    display: 'flex',
+    height: 'fit-content',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: isScreenSizeSm ? '6%' : '8%',
+    backfaceVisibility: 'hidden',
+    width: `${faceWidth}px`,
+    transform: `rotateY(${(360 / faceCount) * i}deg) translateZ(${radius}px)`
+  });
+
+  const imageStyle = {
+    pointerEvents: 'none',
+    height: isScreenSizeSm ? '100px' : '120px',
+    width: isScreenSizeSm ? '220px' : '300px',
+    borderRadius: '15px',
+    border: '3px solid white',
+    objectFit: 'cover',
+    transition: 'transform 0.3s ease-out'
+  };
+
+  const imageHoverStyle = {
+    ...imageStyle,
+    transform: 'scale(1.05)'
+  };
+
   return (
-    <section className="tracks-section">
-      <h2 className="tracks-title">Hackathon Tracks</h2>
-      <div className="track-cards-container">
-        {tracks.map((track, index) => (
-          <div className="track-card" key={index}>
-            <h3 className="track-name">{track.title}</h3>
-            <p className="track-desc">{track.description}</p>
-          </div>
-        ))}
+    <div style={containerStyle}>
+      {/* Gradients on sides */}
+      <div style={leftGradientStyle} />
+      <div style={rightGradientStyle} />
+      
+      {/* 3D container */}
+      <div style={perspectiveContainerStyle}>
+        <motion.div
+          drag="x"
+          dragElastic={0}
+          onDrag={handleDrag}
+          onDragEnd={handleDragEnd}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          animate={controls}
+          onUpdate={handleUpdate}
+          style={motionDivStyle}
+        >
+          {galleryImages.map((url, i) => (
+            <div
+              key={i}
+              style={imageContainerStyle(i)}
+              onMouseEnter={(e) => {
+                const img = e.currentTarget.querySelector('img');
+                if (img) {
+                  img.style.transform = 'scale(1.05)';
+                }
+              }}
+              onMouseLeave={(e) => {
+                const img = e.currentTarget.querySelector('img');
+                if (img) {
+                  img.style.transform = 'scale(1)';
+                }
+              }}
+            >
+              <img
+                src={url}
+                alt={`Gallery image ${i + 1}`}
+                style={imageStyle}
+              />
+            </div>
+          ))}
+        </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
-
-export default HackathonTracks;

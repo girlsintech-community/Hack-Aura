@@ -1,19 +1,13 @@
 import React, { useState } from 'react';
 import './About.css';
 import './Testimonials.css';
-import slide1 from './assets/images/slide1.png';
-import slide2 from './assets/images/slide2.png';
-import slide3 from './assets/images/slide3.png';
+
 
 const OrganizationAbout = () => {
   const [activeImage, setActiveImage] = useState(0);
   const [visibleReviews, setVisibleReviews] = useState(3);
 
-  const galleryImages = [
-    { id: 1, src: slide1, alt: 'Blockchain Fundamentals' },
-    { id: 2, src: slide2, alt: 'Google Girl Hackathon' },
-    { id: 3, src: slide3, alt: 'How to crack Intuit' },
-  ];
+
 
   const reviews = [
     {
@@ -36,13 +30,7 @@ const OrganizationAbout = () => {
     },
   ];
 
-  const nextImage = () => {
-    setActiveImage((prev) => (prev + 1) % galleryImages.length);
-  };
 
-  const prevImage = () => {
-    setActiveImage((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
-  };
 
   const loadMoreReviews = () => {
     setVisibleReviews((prev) => Math.min(prev + 3, reviews.length));
@@ -91,26 +79,7 @@ const OrganizationAbout = () => {
           </div>
         </div>
 
-        <div className="cyber-gallery">
-          <h2 className="gallery-title cyber-subheading">Inside Girls Leading Tech</h2>
-
-          <div className="gallery-container">
-            <button className="gallery-nav prev" onClick={prevImage} aria-label="Previous image">&lt;</button>
-
-            <div className="gallery-main">
-              <img
-                src={galleryImages[activeImage].src}
-                alt={galleryImages[activeImage].alt}
-                className="active-gallery-image"
-                loading="lazy"
-              />
-            </div>
-
-            <button className="gallery-nav next" onClick={nextImage} aria-label="Next image">&gt;</button>
-          </div>
-
-          <h3 className="gallery-subheading cyber-text-accent">{galleryImages[activeImage].alt}</h3>
-        </div>
+        
 
         <section className="testimonials-section">
           <div className="testimonials-header">

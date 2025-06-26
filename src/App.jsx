@@ -13,7 +13,6 @@ import FAQ from './FAQ';
 import Humans from './Humans';
 import Sponsorships from './Sponsor';
 import ContactPopup from './Contact';
-import HackathonTracks from './Tracks';
 
 // HomePage Component
 function HomePage({ onContactClick }) {
@@ -25,6 +24,7 @@ function HomePage({ onContactClick }) {
       <div className="hero-section">
         <Hero />
       </div>
+
       
       {/* Content after hero - using new gradient sections */}
       <div className="content-after-hero">
@@ -42,7 +42,6 @@ function HomePage({ onContactClick }) {
         </div>
         
         <div id="tracks" className="section-events tracks-gradient">
-  <HackathonTracks />
 </div>
         
         <div id="sponsors" className="section-events">

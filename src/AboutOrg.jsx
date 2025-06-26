@@ -69,7 +69,7 @@ const OrganizationAbout = () => {
                   { label: 'Contests', value: '3' }].map((stat, idx) => (
                   <div className="card" key={idx}>
                     <div className="number">{stat.value}</div>
-                    <div className="label">{stat.label}</div>
+                    <div className="">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -82,44 +82,53 @@ const OrganizationAbout = () => {
         
 
         <section className="testimonials-section">
-          <div className="testimonials-header">
-            <h2 className="cyber-heading">Community Voices</h2>
-            <p className="cyber-subtitle">Hear what our members say about their Girls Leading Tech experience</p>
+  <div className="testimonials-header">
+    <h2 className="cyber-heading">Community Voices</h2>
+    <p className="cyber-subtitle">
+      Hear what our members say about their Girls Leading Tech experience
+    </p>
+  </div>
+
+  <div className="testimonials-slider">
+    <div className="testimonials-track">
+      {[...reviews, ...reviews].map((review, index) => (
+        <div className="testimonial-card" key={index}>
+          <div className="testimonial-content">
+            <div className="quote-icon">“</div>
+            <p className="testimonial-text">{review.text}</p>
           </div>
 
-          <div className="testimonials-grid">
-            {reviews.slice(0, visibleReviews).map((review) => (
-              <div className="testimonial-card" key={review.id}>
-                <div className="testimonial-content">
-                  <div className="quote-icon">“</div>
-                  <p className="testimonial-text">{review.text}</p>
-                </div>
-
-                <div className="testimonial-author">
-                  <div className="author-avatar">{review.author.split(' ').map(n => n[0]).join('')}</div>
-                  <div className="author-info">
-                    <h4 className="author-name">{review.author}</h4>
-                    <div className="author-role">
-                      <a href={review.role} target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                        <img
-                          src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
-                          alt="LinkedIn"
-                          className="linkedin-icon"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
+          <div className="testimonial-author">
+            <div className="author-avatar">
+              {review.author
+                .split(" ")
+                .map((n) => n[0])
+                .join("")}
+            </div>
+            <div className="author-info">
+              <h4 className="author-name">{review.author}</h4>
+              <div className="author-role">
+                <a
+                  href={review.role}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="linkedin-link"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
+                    alt="LinkedIn"
+                    className="linkedin-icon"
+                  />
+                </a>
               </div>
-            ))}
+            </div>
           </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
-          {visibleReviews < reviews.length && (
-            <button className="load-more" onClick={loadMoreReviews}>
-              Show More Reviews <span className="cyber-arrow">→</span>
-            </button>
-          )}
-        </section>
       </div>
     </section>
   );

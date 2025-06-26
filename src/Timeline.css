@@ -1,0 +1,208 @@
+/* ==== TIMELINE SECTION ==== */
+.timeline-section {
+  padding: 6rem 2rem;
+  max-width: 1400px;
+  margin: 5rem auto;
+}
+
+/* ==== TITLE (Updated to match FAQ style) ==== */
+.timeline-title {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800; /* Extra bold to match thickness */
+  
+  /* Exact gradient matching Community Voices */
+  background: linear-gradient(90deg, 
+    #0891b2 0%,    /* Darker cyan start */
+    #06b6d4 20%,   /* Bright cyan */
+    #22d3ee 40%,   /* Light cyan */
+    #0dd6d6 60%,   /* Bright teal */
+    #14b8a6 80%,   /* Teal */
+    #10b981 100%   /* Emerald end */
+  );
+  
+  /* Cross-browser compatibility */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  color: transparent;
+  
+  /* Subtle glow effect matching the reference */
+  text-shadow: 
+    0 0 10px rgba(6, 182, 212, 0.3),
+    0 0 20px rgba(20, 184, 166, 0.2),
+    0 0 30px rgba(16, 185, 129, 0.1);
+  
+  text-align: center;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em; /* Slightly reduced for better readability */
+  position: relative;
+  
+  /* Ensure proper display */
+  display: inline-block;
+  width: 100%;
+  
+  /* Amplified glow animation */
+  animation: amplifiedGlow 1.5s ease-in-out infinite alternate;
+}
+
+/* Fallback for browsers that don't support background-clip: text */
+@supports not (-webkit-background-clip: text) {
+  .timeline-title {
+    background: none;
+    color: #06b6d4; /* Bright cyan fallback */
+    -webkit-text-fill-color: unset;
+  }
+}
+
+.timeline-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, #10b981, transparent);
+  border-radius: 5px;
+}
+
+/* ==== TIMELINE BODY ==== */
+.timeline-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-left: 2.5rem;
+  border-left: 3px solid rgba(16, 185, 129, 0.4);
+}
+
+/* ==== INDIVIDUAL ITEM ==== */
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: all 0.6s ease-out;
+}
+
+/* === GLOWING DOT === */
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #5c54ab, #06b6d4);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5), 0 0 8px rgba(6, 182, 212, 0.3);
+  margin-top: 4px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+/* ==== CARD BACKGROUND FOR CONTENT ==== */
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 2rem;
+  border-radius: 18px;
+  border: 1px solid rgba(43, 8, 199, 0.801);
+  box-shadow: 0 12px 24px rgba(6, 182, 212, 0.12);
+  backdrop-filter: blur(12px);
+  color: #e0fdf4;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+/* ==== TITLE INSIDE ITEM ==== */
+.timeline-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #06b6d4;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.3);
+}
+
+/* ==== DESCRIPTION ==== */
+.timeline-content p {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+
+  color: #a0aec0;
+  line-height: 1.7;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* ==== ANIMATIONS ==== */
+.timeline-item.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.timeline-item:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.timeline-item:nth-child(3) {
+  transition-delay: 0.5s;
+}
+.timeline-item:nth-child(4) {
+  transition-delay: 0.7s;
+}
+
+/* ==== AMPLIFIED GLOW ANIMATION ==== */
+@keyframes amplifiedGlow {
+  0% {
+    text-shadow: 
+      0 0 10px rgba(6, 182, 212, 0.3),
+      0 0 20px rgba(20, 184, 166, 0.2),
+      0 0 30px rgba(16, 185, 129, 0.1);
+  }
+  100% {
+    text-shadow: 
+      0 0 25px rgba(6, 181, 212, 0.988),
+      0 0 50px rgba(10, 19, 200, 0.86),
+      0 0 75px rgba(86, 16, 185, 0.3),
+      0 0 100px rgba(143, 85, 204, 0.979);
+  }
+}
+@media (max-width: 768px) {
+  .timeline-section {
+    padding: 4rem 1rem;
+  }
+
+  .timeline-title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 2rem;
+  }
+
+  .timeline-container {
+    padding-left: 1.25rem;
+  }
+
+  .timeline-content {
+    padding: 1.25rem 1rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-title {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+  }
+}

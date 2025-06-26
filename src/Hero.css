@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'Post No Bills Jaffna';
+  src: url('./assets/fonts/PostNoBillsJaffna-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Jura';
+  src: url('./assets/fonts/Jura-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hack-aura-container {
+  position: relative;
+  min-height: 100vh;
+  background: url('src/assets/images/hero1.png') ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 0;
+  padding: 4rem 2rem;
+}
+
+.overlay-text {
+  text-align: center;
+  max-width: 1000px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+ .top-text {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  font-weight: 1000;
+  font-family: 'Jura', sans-serif;
+  color: #fff;
+
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  
+  /* Remove flex and center align from here */
+  display: block;
+  margin: 6.8rem auto 1rem auto; /* still keeps it centered horizontally */
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  text-align: left;
+
+  animation: typing 6s steps(30, end) infinite, blink 0.75s step-end infinite;
+  animation-fill-mode: forwards;
+  max-width: fit-content;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  40% { width: 32ch; }
+  60% { width: 32ch; } /* hold */
+  100% { width: 0; }
+}
+
+
+@keyframes blink {
+  0%, 100% {
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+.hack-title {
+  position: relative;
+  left: 2rem;
+  font-size: 10rem;
+  font-weight: 1200;
+  letter-spacing: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-family: 'Post No Bills Jaffna', sans-serif;
+  margin: 3.5rem 0;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.3rem;
+  font-weight: 700;
+  color: #FFFF;
+  font-family: 'Jura', sans-serif;
+  margin: 0rem;
+}
+
+.duration {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.button-group {
+  display: flex;
+  gap: 15rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-primary , .btn-secondary{
+  background-color: #2C3BC0;
+  color: #ffffff;
+  padding: 0.75rem 2.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+}
+
+.btn-primary:hover {
+ color: #fff;
+  box-shadow: 0 0 10px #00d0ff;
+  transform: scale(1.05);
+  border-color: #00c3ff;
+}
+
+
+
+.btn-secondary:hover {
+  color: #fff;
+  border-color: #00c3ff;
+  box-shadow: 0 0 10px #00d0ff;
+  transform: scale(1.05);
+}
+
+.scrolling-tagline-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: #000000 ;
+  border-top: none;
+  border-bottom: none;
+  padding: 0;
+  margin-top: -1px;
+  position: relative;
+  top: 0;
+  z-index: 2;
+}
+
+.scrolling-tagline {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding : 0.75rem 0 ;
+  color: #cba9f4;
+  animation: scroll-left 45s linear infinite;
+  text-shadow: 0 0 5px #3a0939, 0 0 10px #740097, 0 0 15px #69078d;
+  
+  /* Add this line for background color */
+  background-color: #000; /* semi-transparent dark bg */
+}
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.hack-title {
+  position: relative;
+  font-size: 10rem;
+  font-weight: 1200;
+  letter-spacing: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-family: 'Post No Bills Jaffna', sans-serif;
+  margin: 1rem 0;
+}
+
+.astro-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.astro-img {
+  position: absolute;
+  top: -5rem;  /* adjust as needed */
+  left: -1.7rem; /* adjust to center above the "A" */
+  width: 5rem;  /* resize if needed */
+  height: auto;
+  z-index: 5;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+

@@ -1,0 +1,235 @@
+/* ==== SPONSORS SECTION ==== */
+.hackathon-sponsors {
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+ 
+  max-width: 1400px;
+  margin: 5rem auto;
+  transition: 0.4s ease;
+}
+
+.hackathon-sponsors::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ==== CONTAINER ==== */
+.sponsors-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ==== HEADER ==== */
+.sponsors-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sponsors-header h2 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800; /* Extra bold to match thickness */
+  
+  /* Exact gradient matching Community Voices */
+  background: linear-gradient(90deg, 
+    #0891b2 0%,    /* Darker cyan start */
+    #06b6d4 20%,   /* Bright cyan */
+    #22d3ee 40%,   /* Light cyan */
+    #0dd6d6 60%,   /* Bright teal */
+    #14b8a6 80%,   /* Teal */
+    #10b981 100%   /* Emerald end */
+  );
+  
+  /* Cross-browser compatibility */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  color: transparent;
+  
+  /* Subtle glow effect matching the reference */
+  text-shadow: 
+    0 0 10px rgba(6, 182, 212, 0.3),
+    0 0 20px rgba(20, 184, 166, 0.2),
+    0 0 30px rgba(16, 185, 129, 0.1);
+  
+  text-transform: uppercase;
+  letter-spacing: 0.1em; /* Slightly reduced for better readability */
+  margin-bottom: 1rem;
+  position: relative;
+  
+  /* Ensure proper display */
+  display: inline-block;
+  width: 100%;
+  
+  /* Amplified glow animation */
+  animation: amplifiedGlow 1.5s ease-in-out infinite alternate;
+}
+
+/* Fallback for browsers that don't support background-clip: text */
+@supports not (-webkit-background-clip: text) {
+  .sponsors-header h2 {
+    background: none;
+    color: #06b6d4; /* Bright cyan fallback */
+    -webkit-text-fill-color: unset;
+  }
+}
+
+.sponsors-header .subtitle {
+  font-size: 1.2rem;
+  color: #c4f5e8;
+  opacity: 0.9;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ==== SPONSOR CARDS ==== */
+.sponsor-call {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.call-card, .cta-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.call-card:hover, .cta-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(16, 185, 129, 0.3);
+  border-color: #10b981;
+}
+
+.call-card h3, .cta-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #10b981;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.call-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.call-card li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: #e0fdf4;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.call-card li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  color: #10b981;
+  font-size: 0.9rem;
+}
+
+/* ==== CTA ==== */
+.cta-card p {
+  font-size: 1.1rem;
+  color: #c4f5e8;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* ==== BUTTON ==== */
+.sponsor-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  background: linear-gradient(145deg, rgba(16,185,129,0.15), rgba(6,182,212,0.15));
+  border: 1px solid #10b981;
+  color: #10b981;
+  text-shadow: 0 0 4px rgba(16, 185, 129, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sponsor-button:hover {
+  background: #10b981;
+  color: #0f172a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.35);
+}
+
+.cyber-arrow {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-button:hover .cyber-arrow {
+  transform: translateX(6px);
+}
+
+/* ==== AMPLIFIED GLOW ANIMATION ==== */
+@keyframes amplifiedGlow {
+  0% {
+    text-shadow: 
+      0 0 10px rgba(6, 182, 212, 0.3),
+      0 0 20px rgba(20, 184, 166, 0.2),
+      0 0 30px rgba(16, 185, 129, 0.1);
+  }
+  100% {
+    text-shadow: 
+      0 0 25px rgba(6, 182, 212, 0.6),
+      0 0 50px rgba(20, 184, 166, 0.4),
+      0 0 75px rgba(16, 185, 129, 0.3),
+      0 0 100px rgba(6, 182, 212, 0.2);
+  }
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .hackathon-sponsors {
+    padding: 4rem 1.5rem;
+  }
+
+  .sponsor-call {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsors-header h2 {
+    font-size: 2rem;
+  }
+
+  .sponsor-button {
+    width: 100%;
+  }
+
+  .call-card li {
+    font-size: 0.95rem;
+  }
+
+  .cta-card p {
+    font-size: 1rem;
+  }
+}

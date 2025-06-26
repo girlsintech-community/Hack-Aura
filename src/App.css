@@ -1,0 +1,354 @@
+/* ====== Root Color Variables ====== */
+:root {
+  --aurora-green: #008cff;
+  --aurora-green-dark: #6d00cc;
+  --aurora-green-light: #4433ff;
+  --aurora-blue: #0099ff;
+  --aurora-cyan: #00ffdd;
+  --matrix-green: #3300ff;
+  --dark-black: #000000;
+  --deep-black: #0a0a0a;
+  --charcoal: #1a1a1a;
+  --dark-gray: #2a2a2a;
+  --text-color: #ffffff;
+  --text-green: #e0ffe0;
+  --dimmed: #a0a0a0;
+  --glass-bg: rgba(0, 0, 0, 0.3);
+  --glass-border: rgba(0, 38, 255, 0.2);
+}
+
+/* ====== Reset & Base Setup ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  font-family: 'Segoe UI', 'Orbitron', 'Courier New', monospace;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 255, 136, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 153, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(0, 255, 65, 0.08) 0%, transparent 50%),
+    linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a1a 50%, #0d1b0d 75%, #000000 100%);
+  background-attachment: fixed;
+  color: var(--text-color);
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ====== Animated Background Effects ====== */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(90deg, transparent 98%, rgba(0, 255, 136, 0.03) 100%),
+    linear-gradient(0deg, transparent 98%, rgba(0, 255, 136, 0.03) 100%);
+  background-size: 50px 50px;
+  animation: matrix-rain 20s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes matrix-rain {
+  0% { transform: translateY(-100px); }
+  100% { transform: translateY(100px); }
+}
+
+/* ====== Hero Section (Keep as is) ====== */
+.aurora-bg {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  position: relative;
+  background: 
+    radial-gradient(ellipse at center, rgba(0, 255, 136, 0.05) 0%, transparent 70%);
+}
+
+.aurora-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 25%),
+    radial-gradient(circle at 70% 80%, rgba(0, 153, 255, 0.08) 0%, transparent 25%);
+  animation: aurora-pulse 4s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes aurora-pulse {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+/* ====== Section Gradients - Structured for Smooth Blending ====== */
+/* First Section - About/Countdown - Purple to Dark */
+.section-about {
+  min-height: 100vh;
+  width: 100%;
+  padding: 4rem 1rem;
+  background: linear-gradient(180deg, #0A0354 0%, #040510 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Custom gradient only for the Countdown section */
+.countdown-gradient {
+  background: linear-gradient(180deg, #040510 2.4%, #0A0354 100%);
+}
+
+/* Second Section - Timeline/Events - Purple to Medium Blue */
+.section-events,
+.section-team {
+  min-height: 100vh;
+  width: 100%;
+  padding: 4rem 1rem;
+  background: linear-gradient(180deg, #0d026e 2.4%, #0A0354 75%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Third Section - Sponsors/FAQ - Dark to Medium Blue */
+.section-timeline,
+.section-contact {
+  min-height: 100vh;
+  width: 100%;
+  padding: 4rem 1rem;
+  background: linear-gradient(180deg, #040510 2.4%, #0A0354 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Custom gradient for Hackathon Tracks */
+.tracks-gradient {
+  background: linear-gradient(180deg, #0A0354 0%, #0d026e 100%);
+}
+
+/* Custom gradient for FAQ section */
+.faq-gradient {
+  background: linear-gradient(180deg, #0A0354 2.4%,  #000000 100%);
+}
+
+
+/* Generic section class for sections that need gradient backgrounds */
+.gradient-section-1 {
+  background: linear-gradient(180deg, #0F0197 0%, #040510 100%);
+}
+
+.gradient-section-2 {
+  background: linear-gradient(180deg, #0F0197 0%, #0A0354 75%);
+}
+
+.gradient-section-3 {
+  background: linear-gradient(180deg, #040510 2.4%, #0A0354 100%);
+}
+
+/* ====== Typography ====== */
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+  z-index: 2;
+  position: relative;
+}
+
+p {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: var(--text-color);
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  position: relative;
+}
+
+/* ====== Buttons ====== */
+.button-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+/* Custom Properties for Animations */
+.btn-primary,
+.btn-secondary {
+  --pos-x: 50%;
+  --pos-y: 50%;
+  --spread-x: 150%;
+  --spread-y: 180%;
+  --color-1: #2C3BC0;
+  --color-2: #0099ff;
+  --color-3: #00ffdd;
+  --stop-1: 40%;
+  --stop-2: 70%;
+  --stop-3: 100%;
+  --border-angle: 45deg;
+  --border-color-1: rgba(255, 255, 255, 0.1);
+  --border-color-2: rgba(255, 255, 255, 0.4);
+}
+
+.btn-primary {
+   background: radial-gradient(
+    var(--spread-x) var(--spread-y) at var(--pos-x) var(--pos-y),
+    var(--color-1) var(--stop-1),
+    var(--color-2) var(--stop-2),
+    var(--color-3) var(--stop-3)
+  );
+  color: white;
+  border: none;
+  border: 2px solid #0099ff;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    --pos-x 0.5s, --pos-y 0.5s, --spread-x 0.5s, --spread-y 0.5s,
+    --color-1 0.5s, --color-2 0.5s, --color-3 0.5s,
+    --stop-1 0.5s, --stop-2 0.5s, --stop-3 0.5s,
+    --border-angle 0.5s,
+    --border-color-1 0.5s,
+    --border-color-2 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  --pos-x: 0%;
+  --pos-y: 100%;
+  --spread-x: 130%;
+  --spread-y: 140%;
+  --color-1: #0099ff;
+  --color-2: #5d00ff;
+  --color-3: #ffffffd1;
+  --stop-1: 0%;
+  --stop-2: 45%;
+  --stop-3: 90%;
+  --border-angle: 90deg;
+  --border-color-1: rgba(255, 255, 255, 0.3);
+  --border-color-2: rgba(38, 127, 215, 0.882);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 10px 25px rgba(20, 176, 211, 0.918);
+}
+
+.btn-secondary {
+  color: #0099ff;
+  padding: 1rem 2rem;
+  border: 2px solid #0099ff;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary:hover{
+  --pos-x: 100%;
+  --pos-y: 100%;
+  --spread-x: 120%;
+  --spread-y: 120%;
+  --color-1: #0099ff;
+  --color-2: #5d00ff;
+  --color-3: #ffffffd1;
+  --stop-1: 0%;
+  --stop-2: 40%;
+  --stop-3: 90%;
+  --border-angle: 90deg;
+  --border-color-1: rgba(0, 255, 136, 0.3);
+  --border-color-2: rgba(0, 255, 136, 0.6);
+  background: radial-gradient(
+    var(--spread-x) var(--spread-y) at var(--pos-x) var(--pos-y),
+    var(--color-1) var(--stop-1),
+    var(--color-2) var(--stop-2),
+    var(--color-3) var(--stop-3)
+  );
+  color: white;
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 255, 136, 0.4);
+}
+
+.btn-primary::before,
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    var(--border-angle),
+    var(--border-color-1),
+    var(--border-color-2)
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.btn-primary:hover::before,
+.btn-secondary:hover::before {
+  transform: scaleX(1);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  color: #fff;
+  border-color: #2C3BC0;
+  box-shadow: 0 0 10px #00c3ff;
+  transform: scale(1.05);
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+  .aurora-bg,
+  .section-about,
+  .section-events,
+  .section-team,
+  .section-timeline,
+  .section-contact {
+    padding: 2rem 1rem;
+  }
+} 
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+}

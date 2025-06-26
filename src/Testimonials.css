@@ -288,3 +288,43 @@
     font-size: 3rem;
   }
 }
+
+.testimonials-slider {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin: 0 auto 4rem;
+}
+
+.testimonials-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: slideLeft 40s linear infinite;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Adjust testimonial cards for horizontal layout */
+.testimonial-card {
+  width: 550px;
+  height: 500px;
+  flex: 0 0 auto; /* Prevents shrinking or growing */
+
+  border-radius: 12px;
+  padding: 1rem;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

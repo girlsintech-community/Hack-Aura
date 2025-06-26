@@ -22,20 +22,7 @@ const About = () => {
           {/* Text Section */}
           <div className="about-content">
             <p>
-              HackAura is a <span style={{ fontWeight: 600 }}>24-hour virtual hackathon</span> scheduled for <span style={{ fontWeight: 600 }}>October 4th</span>, bringing together minds in technology, design, and innovation to build impactful solutions.
-            </p>
-
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: '0.8rem' }}>
-                <span>🧠 Focus:</span> Solve real-world problems under time constraints.
-              </li>
-              <li style={{ marginBottom: '0.8rem' }}>
-                <span>🌍 Diversity First:</span> Each team must include <em>at least one female member</em>, fostering inclusive collaboration.
-              </li>
-              <li style={{ marginBottom: '0.8rem' }}>
-                <span>🚀 Beyond Competition:</span> It's a launchpad for bold ideas and meaningful change—not just a race to win.
-              </li>
-            </ul>
+            HackAura is a 24-hour virtual hackathon scheduled for October 4th, bringing together talented minds in technology, design, and innovation to build impactful solutions under real world constraints. With diversity at its core, HackAura requires each team to include at least one female member, fostering inclusive collaboration and balanced perspectives. It's more than a competition, it's a launchpad for bold ideas and meaningful change.</p>
           </div>
 
           {/* Gallery Section */}

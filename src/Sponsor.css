@@ -233,3 +233,44 @@
     font-size: 1rem;
   }
 }
+.blurred-logos-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.logos-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #10b981;
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+}
+
+.logos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.logo-card {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.2);
+}
+
+.blurred-logo {
+  max-width: 100px;
+  max-height: 40px;
+  filter: blur(8px) grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+

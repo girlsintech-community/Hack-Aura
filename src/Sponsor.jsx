@@ -2,16 +2,27 @@ import React, { useState } from 'react';
 import './Sponsor.css';
 import ContactPopup from './Contact';
 
+// Import logo images from the assets folder
+import akashLogo from './assets/logos/akash.svg';
+import aptosLogo from './assets/logos/aptos.svg';
+import by from './assets/logos/by.avif';
+import github from './assets/logos/github-mark-white.png'
+import mlm from './assets/logos/mlm.jpg';
+
 const HackathonSponsors = () => {
   const [showContact, setShowContact] = useState(false);
 
-  const openContactPopup = () => {
-    setShowContact(true);
-  };
+  const openContactPopup = () => setShowContact(true);
+  const closeContactPopup = () => setShowContact(false);
 
-  const closeContactPopup = () => {
-    setShowContact(false);
-  };
+  const sponsorLogos = [
+    { id: 1, src: akashLogo},
+    { id: 2, src: aptosLogo},
+    { id: 3, src: by},
+    { id: 4, src: github},
+    { id: 5, src: mlm},
+
+  ];
 
   return (
     <section className="hackathon-sponsors" id="sponsors">
@@ -21,6 +32,17 @@ const HackathonSponsors = () => {
           <p className="subtitle">
             Fuel the future of innovation — Collaborate with India’s brightest tech minds and unlock real impact.
           </p>
+        </div>
+
+        <div className="blurred-logos-section">
+          <h3 className="logos-title">Join the League of Visionary Partners</h3>
+          <div className="logos-grid">
+            {sponsorLogos.map((logo) => (
+              <div className="logo-card" key={logo.id}>
+                <img src={logo.src} className="blurred-logo" />
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="sponsor-call">

@@ -46,7 +46,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(0, 255, 136, 0.05), transparent 60%);
+  background: radial-gradient(circle at 20% 20%, rgba(2, 48, 146, 0.784), transparent 60%);
   z-index: 0;
 }
 

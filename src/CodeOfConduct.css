@@ -20,8 +20,6 @@
   font-family: 'Orbitron', sans-serif;
 }
 .code-title h2, .code-section h2, .gallery-title {
-
-  
   /* Exact gradient matching Timeline and Sponsors */
   background: linear-gradient(90deg, 
     #0891b2 0%,    /* Darker cyan start */
@@ -59,7 +57,7 @@
   /* Amplified glow animation */
   animation: amplifiedGlow 1.5s ease-in-out infinite alternate;
 
-   font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
   font-weight: 800;
   color: var(--text-color);
   margin-bottom: 1rem;
@@ -67,6 +65,17 @@
   letter-spacing: -0.02em;
   z-index: 2;
   position: relative;
+}
+.code-section h2::after, .code-title h2::after, .gallery-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, #10b981, transparent);
+  border-radius: 5px;
 }
 
 .code-intro,

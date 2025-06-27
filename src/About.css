@@ -9,6 +9,12 @@
   z-index: 1;
   margin: 5rem auto;
   max-width: 1400px; /* Unified max width */
+
+  margin-top: -120px;
+}
+
+.org-section{
+  margin-top: -170px;
 }
 
 /* ==== FLEX SPLIT LAYOUT (MATCHED WIDTH) ==== */

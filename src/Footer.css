@@ -1,8 +1,7 @@
 .footer {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(5, 15, 8, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.95) 100%);
   color: #ffffff;
-  padding: 4rem 1rem 2.5rem 1rem;
-  border-top: 1px solid rgba(0, 255, 136, 0.3);
+  padding: 6rem 1rem 4rem 1rem;
   backdrop-filter: blur(20px);
   width: 100%;
 }
@@ -92,6 +91,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align : left ;
 }
 
 .quick-links li {
@@ -103,8 +103,8 @@
   text-decoration: none;
   font-size: 1rem;
   transition: all 0.3s ease;
-  padding: 0.8rem 0;
-  display: block;
+  padding: 0.4rem 0; /* Reduced padding */
+  display: inline-block;
   position: relative;
   font-weight: 400;
 }
@@ -112,8 +112,8 @@
 .quick-links a::before {
   content: '';
   position: absolute;
-  left: 0;
   bottom: 0;
+  left: 0;
   width: 0;
   height: 2px;
   background: var(--aurora-green);
@@ -126,7 +126,7 @@
 }
 
 .quick-links a:hover::before {
-  width: 35px;
+  width: 100%; /* Full width under text */
 }
 
 /* Responsive Design */
@@ -166,6 +166,17 @@
   .quick-links a:hover {
     padding-left: 0;
   }
+
+  .footer-right {
+    text-align: left !important;
+    align-items: flex-start;
+  }
+
+  .quick-links {
+    text-align: left;
+    justify-items: start;
+  }
+
 }
 
 @media (max-width: 480px) {

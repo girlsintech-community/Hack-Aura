@@ -39,6 +39,17 @@
   /* Amplified glow animation */
   animation: amplifiedGlow 1.5s ease-in-out infinite alternate;
 }
+.cyber-heading h2::after{
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, #10b981, transparent);
+  border-radius: 5px;
+}
 
 /* Amplified Glow Animation */
 @keyframes amplifiedGlow {

@@ -69,7 +69,7 @@ body::before {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem 4rem 1rem;
   position: relative;
   background: 
     radial-gradient(ellipse at center, rgba(0, 255, 136, 0.05) 0%, transparent 70%);

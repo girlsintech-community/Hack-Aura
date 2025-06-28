@@ -375,3 +375,7 @@ p {
   justify-content: center;
   gap: 2rem; /* Uniform vertical spacing between children */
 }
+.app-wrapper {
+  position: relative;
+  z-index: 1;
+}

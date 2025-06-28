@@ -14,6 +14,7 @@ import Humans from './Humans';
 import Sponsorships from './Sponsor';
 import ContactPopup from './Contact';
 import RollingGallery from './Tracks';
+import ShootingStars from './ShootingStars';
 
 // HomePage Component
 function HomePage({ onContactClick }) {
@@ -84,6 +85,9 @@ function App() {
 
   return (
     <Router>
+      <div className="app-wrapper">
+        {/* Shooting stars in the global background */}
+        <ShootingStars />
       <Routes>
         <Route path="/" element={<HomePage onContactClick={handleContactClick} />} />
         <Route path="/code-of-conduct" element={<CodeOfConduct />} />
@@ -91,6 +95,7 @@ function App() {
       </Routes>
       <Footer onContactClick={handleContactClick} />
       {showContact && <ContactPopup onClose={closePopup} />}
+      </div>
     </Router>
   );
 }

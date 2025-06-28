@@ -1,131 +1,131 @@
 /* === Overlay === */
 .popup-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.65); /* darker glassy layer */
-    backdrop-filter: blur(14px);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: fadeIn 0.4s ease-in-out forwards;
-    padding: 1rem;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(16px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.4s ease-in-out forwards;
+  padding: 1rem;
+}
+
+/* === Popup Container === */
+.popup-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 208, 255, 0.25);
+  border-radius: 20px;
+  padding: 2.5rem 2.2rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(203, 169, 244, 0.3);
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  animation: scaleIn 0.4s ease forwards;
+  position: relative;
+  background-image: linear-gradient(
+    135deg,
+    rgba(0, 208, 255, 0.05),
+    rgba(203, 169, 244, 0.05)
+  );
+}
+
+/* === Heading === */
+.popup-box h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #00d0ff, #cba9f4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px #cba9f4, 0 0 20px #00d0ff;
+}
+
+/* === Email Text === */
+.popup-box p {
+  font-size: 1rem;
+  color: #ddddff;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px #3a0939, 0 0 10px #740097;
+}
+
+/* === Email Link === */
+.email-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #00d0ff;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.email-link:hover {
+  color: #cba9f4;
+  transform: scale(1.05);
+}
+
+/* === Close Button === */
+.close-btn {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #2c3bc0, #00d0ff);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px #00d0ff;
+}
+
+.close-btn:hover {
+  background: #cba9f4;
+  color: #000;
+  box-shadow: 0 0 25px #cba9f4;
+}
+
+/* === Animations === */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
   }
-  
-  /* === Popup Container === */
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 480px) {
   .popup-box {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(6, 182, 212, 0.2);
-    border-radius: 20px;
-    padding: 2.5rem 2.2rem;
-    max-width: 420px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
-    color: #e0fdf4;
-    font-family: 'Orbitron', sans-serif;
-    animation: scaleIn 0.4s ease forwards;
-    position: relative;
-    background-image: linear-gradient(
-      135deg,
-      rgba(56, 253, 217, 0.05),
-      rgba(123, 108, 249, 0.06)
-    );
+    width: 95%;
+    padding: 2rem 1.5rem;
   }
-  
-  /* === Heading === */
+
   .popup-box h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #3b82f6, #10b981, #06b6d4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 18px rgba(6, 182, 212, 0.35);
+    font-size: 1.6rem;
   }
-  
-  /* === Email Text === */
+
   .popup-box p {
-    font-size: 1rem;
-    color: #c1f4e2;
-    line-height: 1.7;
-    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
   }
-  
-  /* === Email Link === */
+
   .email-link {
-    display: inline-block;
-    margin-top: 1rem;
-    font-size: 1.1rem;
-    color: #10b981;
-    text-decoration: underline;
-    font-weight: 600;
-    transition: color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .email-link:hover {
-    color: #06b6d4;
-    transform: scale(1.05);
-  }
-  
-  /* === Close Button === */
-  .close-btn {
-    margin-top: 2rem;
-    padding: 0.8rem 2rem;
-    background: linear-gradient(135deg, #10b981, #06b6d4);
-    color: #0f172a;
-    font-weight: 700;
     font-size: 1rem;
-    border: none;
-    border-radius: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(6, 182, 212, 0.25);
   }
-  
-  .close-btn:hover {
-    background: #3b82f6;
-    color: #ffffff;
-    box-shadow: 0 0 20px #3b82f6;
-  }
-  
-  /* === Animations === */
-  @keyframes scaleIn {
-    from {
-      transform: scale(0.85);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  /* === Responsive === */
-  @media (max-width: 480px) {
-    .popup-box {
-      width: 95%;
-      padding: 2rem 1.5rem;
-    }
-  
-    .popup-box h2 {
-      font-size: 1.6rem;
-    }
-  
-    .popup-box p {
-      font-size: 0.95rem;
-    }
-  
-    .email-link {
-      font-size: 1rem;
-    }
-  }
-  
+}

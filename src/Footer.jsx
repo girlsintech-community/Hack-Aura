@@ -107,9 +107,17 @@ function Footer() {
             <li><a href="/humans">Humans of HackAura</a></li>
             <li><a href="/#faq">FAQ</a></li>
             <li><a href="/code-of-conduct">Code of Conduct</a></li>
+            <li><a href="/code-of-conduct">Brand Assets</a></li>
           </ul>
         </div>
       </div>
+      <div className="footer-signature">
+  Made with <span role="img" aria-label="love">❤️</span> by&nbsp;
+  <a href="https://www.linkedin.com/in/bagavati-narayanan-98484b292/" target="_blank" rel="noopener noreferrer">Bagavati</a> ,&nbsp;
+  <a href="https://www.linkedin.com/in/adyashadas04/" target="_blank" rel="noopener noreferrer">Adyasha</a> &amp;&nbsp;
+  <a href="https://www.linkedin.com/in/kashikagupta/" target="_blank" rel="noopener noreferrer">Kashika</a>
+</div>
+
     </footer>
   );
 }

@@ -74,6 +74,7 @@
 .footer-right {
   display: flex;
   flex-direction: column;
+  padding-left: 7rem;
 }
 
 .footer-right h3 {
@@ -193,4 +194,25 @@
   .social-links {
     gap: 1rem;
   }
+}
+
+.footer-signature {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.footer-signature a {
+  color: var(--aurora-green);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-signature a:hover {
+  color: #f17de8;
+  text-decoration: underline;
 }

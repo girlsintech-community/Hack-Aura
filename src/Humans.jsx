@@ -19,7 +19,9 @@ const TeamPage = ({ onContactClick }) => {
     { name: "Charmi Reddy P", role: "Content Writing Team", department: "Content", linkedin: " https://www.linkedin.com/in/charmi-reddy-p-b2aaa2294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",image : '../public/images/teams/content/charmi.png'  },
     { name: "Sanwedana Lokhande", role: "Content Writing Team", department: "Content", linkedin: "https://www.linkedin.com/in/sanwedana-lokhande-35332a33a/",image : '../public/images/teams/content/sanwedana.jpg'  },
     { name: "Niharika Rawat", role:"PR Lead", department: "PR", linkedin: "http://linkedin.com/in/niharika-rawat-9a1156256",image : '../public/images/teams/pr/nikarika.png'  },
-    { name: "Dhairya Kanabar", role: "PR Team", department: "PR", linkedin: "https://www.linkedin.com/in/dhairya-kanabar-411990294",image : '../public/images/teams/pr/dhairiya.jpg' }
+    { name: "Dhairya Kanabar", role: "PR Team", department: "PR", linkedin: "https://www.linkedin.com/in/dhairya-kanabar-411990294",image : '../public/images/teams/pr/dhairiya.jpg' },
+    { name: "Bhargavi Gangoor", role: "Host Team", department: "Host", linkedin: "https://www.linkedin.com/in/bhargavi-gangoor-857b9b294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",image : '../public/images/teams/host/bhargavi.jpg' },
+    { name: "Swastika Tiwari", role: "Host Team", department: "Host", linkedin: "https://www.linkedin.com/in/swastika-tiwari-007169314",image : '../public/images/teams/host/swastika.png' },
   ];
 
   const observerRef = useRef();
@@ -239,6 +241,7 @@ const TeamPage = ({ onContactClick }) => {
           {renderDepartment("Design", Mic)}
           {renderDepartment("Content", User)}
           {renderDepartment("PR", Gavel)}
+          {renderDepartment("Host", Gavel)}
 
         </div>
       </div>

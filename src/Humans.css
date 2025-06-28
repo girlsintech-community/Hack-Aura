@@ -62,7 +62,7 @@
 /* TeamPage.css */
 .team-page {
   min-height: 100vh;
-  padding: 10rem 1rem 5rem;
+  padding: 5rem 1rem 5rem;
   background: radial-gradient(ellipse at top, rgba(59, 130, 246, 0.1), transparent 50%),
               radial-gradient(ellipse at bottom, rgba(16, 185, 129, 0.1), transparent 50%);
 }

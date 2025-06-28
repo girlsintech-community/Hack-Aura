@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     question: "Who can participate?",
-    answer: "Anyone passionate about technology — students, developers, designers, or hobbyists — can participate from anywhere in the world."
+    answer: "If you're a student (any course, any year, any college or any COUNTRY), you're IN.Just be ready to code, and maybe go slightly feral at 3 AM over a bug."
   },
   {
     question: "Is there any registration fee?",

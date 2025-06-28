@@ -14,17 +14,7 @@ const getRandomStartPoint = () => {
   }
 };
 
-const ShootingStars = ({
-  minSpeed = 10,
-  maxSpeed = 30,
-  minDelay = 1200,
-  maxDelay = 4200,
-  starColor = "#9E00FF",
-  trailColor = "#2EB9DF",
-  starWidth = 10,
-  starHeight = 1,
-  className = ""
-}) => {
+const ShootingStars = () => {
   const [star, setStar] = useState(null);
   const svgRef = useRef(null);
 
@@ -37,73 +27,57 @@ const ShootingStars = ({
         y,
         angle,
         scale: 1,
-        speed: Math.random() * (maxSpeed - minSpeed) + minSpeed,
+        speed: 10,
         distance: 0,
       };
       setStar(newStar);
 
-      const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
+      const randomDelay = Math.random() * (4000 - 1500) + 1500;
       setTimeout(createStar, randomDelay);
     };
 
     createStar();
-    return () => {};
-  }, [minSpeed, maxSpeed, minDelay, maxDelay]);
+  }, []);
 
   useEffect(() => {
     const moveStar = () => {
-      setStar(prev => {
+      setStar((prev) => {
         if (!prev) return null;
-
-        const angleRad = (prev.angle * Math.PI) / 180;
-        const newX = prev.x + prev.speed * Math.cos(angleRad);
-        const newY = prev.y + prev.speed * Math.sin(angleRad);
-        const newDistance = prev.distance + prev.speed;
-        const newScale = 1 + newDistance / 100;
+        const rad = (prev.angle * Math.PI) / 180;
+        const newX = prev.x + prev.speed * Math.cos(rad);
+        const newY = prev.y + prev.speed * Math.sin(rad);
+        const newDist = prev.distance + prev.speed;
 
         if (
-          newX < -20 || newX > window.innerWidth + 20 ||
-          newY < -20 || newY > window.innerHeight + 20
-        ) {
-          return null;
-        }
+          newX < -50 || newX > window.innerWidth + 50 ||
+          newY < -50 || newY > window.innerHeight + 50
+        ) return null;
 
-        return {
-          ...prev,
-          x: newX,
-          y: newY,
-          distance: newDistance,
-          scale: newScale
-        };
+        return { ...prev, x: newX, y: newY, distance: newDist, scale: 1 + newDist / 100 };
       });
-
       requestAnimationFrame(moveStar);
     };
 
-    if (star) {
-      requestAnimationFrame(moveStar);
-    }
+    if (star) requestAnimationFrame(moveStar);
   }, [star]);
 
   return (
-    <svg ref={svgRef} className={`shooting-stars-svg ${className}`}>
+    <svg ref={svgRef} className="shooting-stars-svg">
       {star && (
         <rect
           key={star.id}
           x={star.x}
           y={star.y}
-          width={starWidth * star.scale}
-          height={starHeight}
-          fill="url(#gradient)"
-          transform={`rotate(${star.angle}, ${
-            star.x + (starWidth * star.scale) / 2
-          }, ${star.y + starHeight / 2})`}
+          width={10 * star.scale}
+          height={2}
+          fill="url(#star-gradient)"
+          transform={`rotate(${star.angle}, ${star.x}, ${star.y})`}
         />
       )}
       <defs>
-        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor={trailColor} stopOpacity="0" />
-          <stop offset="100%" stopColor={starColor} stopOpacity="1" />
+        <linearGradient id="star-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#2EB9DF" stopOpacity="0" />
+          <stop offset="100%" stopColor="#9E00FF" stopOpacity="1" />
         </linearGradient>
       </defs>
     </svg>

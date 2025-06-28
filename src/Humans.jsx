@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { User, Award, Mic, Users, Gavel, Linkedin } from 'lucide-react';
+import { User, Award, Mic, Users, Gavel, Linkedin, BookText, Megaphone, Home, Handshake, MessageCircle, Brush } from 'lucide-react';
 import './Humans.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -22,6 +22,17 @@ const TeamPage = ({ onContactClick }) => {
     { name: "Dhairya Kanabar", role: "PR Team", department: "PR", linkedin: "https://www.linkedin.com/in/dhairya-kanabar-411990294",image : '../public/images/teams/pr/dhairiya.jpg' },
     { name: "Bhargavi Gangoor", role: "Host Team", department: "Host", linkedin: "https://www.linkedin.com/in/bhargavi-gangoor-857b9b294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",image : '../public/images/teams/host/bhargavi.jpg' },
     { name: "Swastika Tiwari", role: "Host Team", department: "Host", linkedin: "https://www.linkedin.com/in/swastika-tiwari-007169314",image : '../public/images/teams/host/swastika.png' },
+    { name: "Gungun Goel", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://www.linkedin.com/in/gungun-goyal-05154426a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",image : '../public/images/teams/partnerships/gungun.jpg' },
+    { name: "Kashvi Arora", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://in.linkedin.com/in/kashvi15",image : '../public/images/teams/partnerships/kashvi.jpg' },
+    { name: "Mahak", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://www.linkedin.com/in/documentdiarieswithmahak/",image : '../public/images/teams/partnerships/mahak.png' },
+    { name: "Aditi Madhukar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/aditimadhukar/",image : '../public/images/teams/discord/aditi.jpg' },
+     { name: "Avya Giri", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/avya-giri-919842320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",image : '../public/images/teams/discord/avya.png' },
+      { name: "Simran Nagekar", role: "Discord Team", department: "Discord" },
+       { name: "Maanasa", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/r-maanasa22",image : '../public/images/teams/speaker/manasa.jpg' },
+        { name: "Pathan Sama Khan", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/sama-khan-628959281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",image : '../public/images/teams/speaker/pathan.jpg' },
+          { name: "Vijay Laxmi", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/laxmi-vijay/",image : '../public/images/teams/speaker/vijay.jpg' },
+      
+
   ];
 
   const observerRef = useRef();
@@ -238,10 +249,13 @@ const TeamPage = ({ onContactClick }) => {
 
           {renderDepartment("Core", Users)}
           {renderDepartment("Tech", Award)}
-          {renderDepartment("Design", Mic)}
-          {renderDepartment("Content", User)}
-          {renderDepartment("PR", Gavel)}
-          {renderDepartment("Host", Gavel)}
+          {renderDepartment("Design",Brush)}
+          {renderDepartment("Content", BookText)}
+          {renderDepartment("PR", Megaphone)}
+          {renderDepartment("Host", Home)}
+          {renderDepartment("Partnerships/Sponsorships", Handshake)}
+          {renderDepartment("Discord", MessageCircle)}
+          {renderDepartment("Speaker Outreach", Mic)}
 
         </div>
       </div>

@@ -499,9 +499,99 @@
   justify-content: center;
 }
 
-.team-avatar-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+/* === Updated Team Card with Image Layout === */
+.team-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+              0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+}
+
+.team-card:hover {
+  transform: translateY(-1rem) scale(1.03);
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.3),
+              0 0 80px rgba(6, 182, 212, 0.25);
+  border-color: rgba(16, 185, 129, 0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.15),
+    rgba(16, 185, 129, 0.12),
+    rgba(6, 182, 212, 0.15)
+  );
+}
+
+/* === Image Wrapper === */
+
+
+/* === Content Below Image === */
+.team-card-content {
+  z-index: 10;
+  position: relative;
+}
+
+.team-card-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+  transition: all 0.4s ease;
+}
+
+.team-card:hover .team-card-name {
+  background: linear-gradient(135deg, #60a5fa, #34d399, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+}
+
+.team-card-role {
+  font-size: 1rem;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* === LinkedIn Button === */
+.team-card-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+.team-card:hover .team-card-linkedin {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #e5e7eb;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
+}
+
+.linkedin-icon {
+  width: 1rem;
+  height: 1rem;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 0 3px #3b82f6);
+}
+
+.team-card:hover .linkedin-icon {
+  color: #60a5fa;
+  filter: drop-shadow(0 0 5px rgba(96, 165, 250, 0.5));
 }

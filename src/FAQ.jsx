@@ -8,11 +8,11 @@ const faqs = [
   },
   {
     question: "Who can participate?",
-    answer: "If you're a student (any course, any year, any college or any COUNTRY), you're IN.Just be ready to code, and maybe go slightly feral at 3 AM over a bug."
+    answer: "If you're a student (any course, any year, any college or any COUNTRY), you're IN. Just be ready to code, and maybe go slightly feral at 3 AM over a bug."
   },
   {
-    question: "Is there any registration fee?",
-    answer: "Nope! HackAura is completely free for all participants."
+    question: "Team size?",
+    answer: "Max: 5 Min: 2 There’s a catch! – There SHOULD be at least one Girl in the Team!"
   },
   {
     question: "Where will the hackathon take place?",

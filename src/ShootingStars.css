@@ -1,0 +1,10 @@
+.shooting-stars-svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0; /* make sure it's behind everything */
+  pointer-events: none; /* allows clicks to pass through */
+  overflow: visible;
+}

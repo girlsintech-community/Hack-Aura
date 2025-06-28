@@ -78,7 +78,7 @@ body::before {
 .aurora-bg::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 0 ;
   left: 0;
   right: 0;
   bottom: 0;
@@ -113,18 +113,29 @@ body::before {
 }
 
 /* Second Section - Timeline/Events - Purple to Medium Blue */
-.section-events,
-.section-team {
+.section-events{
   min-height: 100vh;
   width: 100%;
   padding: 2rem 1rem;
-  background: linear-gradient(180deg, #0d026e 2.4%, #0A0354 75%);
+  background: linear-gradient(180deg, #0d046b 2.4%, #09034a 100%);
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+.section-team {
+  min-height: 100vh;
+  width: 100%;
+  padding: 4rem 1rem;
+  background: linear-gradient(180deg, #071342 0%, #031f47 40%, #000000 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* Third Section - Sponsors/FAQ - Dark to Medium Blue */
 .section-timeline,
@@ -141,12 +152,12 @@ body::before {
 }
 /* Custom gradient for Hackathon Tracks */
 .tracks-gradient {
-  background: linear-gradient(180deg, #0A0354 0%, #0d026e 100%);
+  background: linear-gradient(180deg, #0A0354 2.4%, #0d046b 100%);
 }
 
 /* Custom gradient for FAQ section */
 .faq-gradient {
-  background: linear-gradient(180deg, #0A0354 2.4%,  #000000 100%);
+  background: linear-gradient(180deg, #09034a 2.4%,  #000000 100%);
 
 }
 

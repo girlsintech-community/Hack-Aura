@@ -82,6 +82,7 @@
   color: #ffffff;
   font-weight: 600;
   letter-spacing: 0.5px;
+  padding-right: 220px ;
 }
 
 .quick-links {
@@ -96,6 +97,7 @@
 
 .quick-links li {
   margin: 0;
+  display: flex ;
 }
 
 .quick-links a {

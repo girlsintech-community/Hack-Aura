@@ -21,6 +21,30 @@ const faqs = [
   {
     question: "What are the tracks?",
     answer: "You can build your project in any of these zones: AI/ML Web3 Open Innovation (Whatever your brain cooks!)"
+  },
+  {
+    question: " Can we code before the hackathon starts?",
+    answer: "A BIG NO. No pre-coding is allowed. You can brainstorm, make a figma, or even build your team playlist, but the actual coding starts only when we say so! We will check your commit history."
+  },
+  {
+    question:"Are there prizes?",
+    answer: "Will be revealed soon…"
+  },
+  {
+    question: "Where do we talk?",
+    answer: "We’ll be ready to guide on our socials mentioned in the footer along with links."
+  },
+  {
+    question: "How do I register?",
+    answer: "Easy-peasy. Click [insert registration link] and vibe with the form. Takes 2 mins, tops."
+  },
+  {
+    question: "How do we submit?",
+    answer: "We’ll send submission steps closer to the date."
+  },
+  {
+    question: "I’ve never done a hackathon before. Should I still join?",
+    answer: "Yes, because if not now, then when? Form a team and hit that register button!"
   }
 ];
 

@@ -8,13 +8,13 @@ const RollingGallery = () => {
     alignItems: 'center',
     justifyContent: 'center',
     perspective: '1200px',
-    padding: '1rem',
+    padding: '0.5rem 1rem 1rem 1rem',
   };
 
   const headingStyle = {
     fontSize: '3.2rem',
     fontWeight: '800',
-    marginBottom: '5rem',
+    marginBottom: '7rem',
     background: 'linear-gradient(135deg, #3b82f6, #10b981, #06b6d4)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',

@@ -152,12 +152,16 @@ body::before {
 }
 /* Custom gradient for Hackathon Tracks */
 .tracks-gradient {
-  background: linear-gradient(180deg, #0A0354 2.4%, #0d046b 100%);
+  padding-top: 1rem;
+  margin-top: -5rem;
+  background: linear-gradient(180deg, #09034f 2.4%, #0d046b 100%);
 }
 
 /* Custom gradient for FAQ section */
 .faq-gradient {
-  background: linear-gradient(180deg, #09034a 2.4%,  #000000 100%);
+  padding-top: 1rem;
+  margin-top: -7rem;
+  background: linear-gradient(180deg, #0a044b 2.4%,  #000000 100%);
 
 }
 

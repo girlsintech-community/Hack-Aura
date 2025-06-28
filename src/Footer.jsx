@@ -95,6 +95,10 @@ function Footer() {
             </a>
 
           </div>
+          <p className="footer-email">
+            Email us at: <a href="mailto:girlsleadingtech@gmail.com">girlsleadingtech@gmail.com</a>
+          </p>
+
         </div>
 
         <div className="footer-right">

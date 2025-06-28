@@ -15,12 +15,12 @@ const faqs = [
     answer: "Max: 5 Min: 2 There’s a catch! – There SHOULD be at least one Girl in the Team!"
   },
   {
-    question: "Where will the hackathon take place?",
-    answer: "HackAura will be conducted entirely online. All communication, submissions, and sessions will be held virtually."
+    question: "Can I team up with people from other colleges/branches/years?",
+    answer: "Yes, yes and YES!!! You can absolutely team up with anyone who’s also a student."
   },
   {
-    question: "What do I need to participate?",
-    answer: "A working internet connection, a laptop or PC, and lots of enthusiasm! We recommend joining our Discord for smooth coordination."
+    question: "What are the tracks?",
+    answer: "You can build your project in any of these zones: AI/ML Web3 Open Innovation (Whatever your brain cooks!)"
   }
 ];
 

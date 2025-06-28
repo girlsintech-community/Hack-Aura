@@ -9,7 +9,7 @@
   z-index: 1;
   margin: 5rem auto;
   max-width: 1400px; /* Unified max width */
-
+  justify-content: center;
   margin-top: -120px;
 }
 
@@ -254,9 +254,10 @@ li{
 /* ==== STATS CARDS ==== */
 .org-stats-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.2rem;
-  margin: 3.5rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 0 1rem;
 
 }
 
@@ -269,6 +270,9 @@ li{
   backdrop-filter: blur(14px);
   text-align: center;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card:hover {
@@ -278,7 +282,7 @@ li{
 }
 
 .number {
-  font-size: 3.3rem;
+  font-size: 2.3rem;
   font-weight: bold;
   color: var(--color-2);
   text-shadow: 0 0 12px rgba(27, 156, 220, 0.864);
@@ -408,6 +412,7 @@ li{
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  text-align: justify;
 }
 
 .about-content {
@@ -416,6 +421,7 @@ li{
   font-size: 0.9rem;
   line-height: 1.8;
   transition: 0.3s ease;
+  text-align: justify;
 }
 
 .highlight {

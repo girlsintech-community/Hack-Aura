@@ -199,8 +199,8 @@
 
 .astro-img {
   position: absolute;
-  top: -5rem;  /* adjust as needed */
-  left: -1.7rem; /* adjust to center above the "A" */
+  top: -3.8rem;  /* adjust as needed */
+  left: -1.6rem; /* adjust to center above the "A" */
   width: 5rem;  /* resize if needed */
   height: auto;
   z-index: 5;

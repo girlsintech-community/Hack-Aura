@@ -27,9 +27,9 @@
 body, html, #root {
   font-family: 'Segoe UI', 'Orbitron', 'Courier New', monospace;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 255, 136, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(0, 153, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(0, 255, 65, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, #0F0197 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, #0A0354 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(126, 69, 224, 0.875) 0%, transparent 50%),
     linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a1a 50%, #0d1b0d 75%, #000000 100%);
   background-attachment: fixed;
   color: var(--text-color);
@@ -287,8 +287,8 @@ p {
   --stop-2: 40%;
   --stop-3: 90%;
   --border-angle: 90deg;
-  --border-color-1: rgba(0, 255, 136, 0.3);
-  --border-color-2: rgba(0, 255, 136, 0.6);
+  --border-color-1: rgba(0, 4, 255, 0.3);
+  --border-color-2: rgba(17, 36, 243, 0.6);
   background: radial-gradient(
     var(--spread-x) var(--spread-y) at var(--pos-x) var(--pos-y),
     var(--color-1) var(--stop-1),
@@ -297,7 +297,7 @@ p {
   );
   color: white;
   transform: scale(1.05) translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 255, 136, 0.4);
+  box-shadow: 0 8px 20px rgba(42, 153, 183, 0.961);
 }
 
 .btn-primary::before,

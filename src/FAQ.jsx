@@ -3,8 +3,8 @@ import './FAQ.css';
 
 const faqs = [
   {
-    question: "What is HackAura?",
-    answer: "HackAura is a 24-hour online hackathon focused on innovation, creativity, and impactful problem-solving in the tech space."
+    question: "What is a Hackathon?",
+    answer: "A hackathon is a time-bound innovation sprint where individuals or teams collaboratively build tech-based solutions to real-world problems. It fosters creativity, learning, and rapid prototyping in a high-energy environment."
   },
   {
     question: "Who can participate?",

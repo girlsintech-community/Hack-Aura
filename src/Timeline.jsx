@@ -51,7 +51,7 @@
 
 // export default Timeline;
 import React, { useEffect, useRef } from 'react';
-import './timeline.css';
+import './Timeline.css';
 
 const timelineEvents = [
   { month: 'July', details: 'Announcement + Pre-hackathon session' },

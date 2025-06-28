@@ -1,6 +1,5 @@
 /* ==== GENERAL CYBER LAYOUT SECTIONS ==== */
 .about-section, .org-section {
-  padding: 6rem 2rem;
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(18px);
@@ -14,11 +13,12 @@
 }
 
 .org-section{
-  margin-top: -170px;
+  margin-top: -260px;
+
 }
 
 /* ==== FLEX SPLIT LAYOUT (MATCHED WIDTH) ==== */
-.about-content, .org-details {
+.about-content {
   align-items: center;
   gap: 3rem;
   max-width: 1400px; /* Changed from 1200px to match gallery */
@@ -28,6 +28,15 @@
   backdrop-filter: blur(15px);
   transition: 0.4s ease;
 }
+
+ .org-details{
+  align-items: center;
+  gap: 5rem;
+  max-width: 1400px; /* Changed from 1200px to match gallery */
+  line-height: 1.85;
+  backdrop-filter: blur(15px);
+  transition: 0.4s ease;
+ }
 
 /* Glow Background Overlay */
 .about-section::before, .org-section::before {

@@ -40,7 +40,7 @@ const OrganizationAbout = () => {
     <section id="organization" className="org-section">
       <div className="org-container">
         <div className="org-content">
-          <h3 className="cyber-heading">ABOUT GIRLS LEADING TECH</h3>
+
 
           <div className="org-details">
             <div className="text-block">

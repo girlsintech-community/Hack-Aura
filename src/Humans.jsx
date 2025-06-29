@@ -203,13 +203,13 @@ const TeamPage = ({ onContactClick }) => {
     </div>
   );
 
-  const renderDepartment = (deptName, icon) => {
+  const renderDepartment = (deptName, icon , tagline) => {
     const filtered = organizingTeam.filter(member => member.department === deptName);
     if (filtered.length === 0) return null;
 
     return (
       <section className="team-section" key={deptName}>
-        <SectionHeader title={`${deptName} Team`} icon={icon} count={filtered.length} />
+        <SectionHeader title={`${deptName} Team`} icon={icon} count={filtered.length} tagline={tagline} />
         <div className="team-grid">
           {filtered.map((member, index) => (
             <div key={index} className="team-card-wrapper">
@@ -235,15 +235,15 @@ const TeamPage = ({ onContactClick }) => {
             <div className="page-divider"></div>
           </div>
 
-          {renderDepartment("Core", Users)}
-          {renderDepartment("Tech", Award)}
-          {renderDepartment("Design", Brush)}
-          {renderDepartment("Content", BookText)}
-          {renderDepartment("PR", Megaphone)}
-          {renderDepartment("Host", Home)}
-          {renderDepartment("Partnerships/Sponsorships", Handshake)}
-          {renderDepartment("Discord", MessageCircle)}
-          {renderDepartment("Speaker Outreach", Mic)}
+          {renderDepartment("Core", Users,"Leading from the front — vision, direction, execution.")}
+          {renderDepartment("Tech", Award,"Building the backbone of innovation.")}
+          {renderDepartment("Design", Brush,"Turning imagination into visuals, one pixel at a time.")}
+          {renderDepartment("Content", BookText,"We don’t just write content — we write experiences.")}
+          {renderDepartment("PR", Megaphone,"Crafting buzz, clicks, and conversations.")}
+          {renderDepartment("Host", Home,"Where experience meets execution.")}
+          {renderDepartment("Partnerships/Sponsorships", Handshake,"Powering possibilities through meaningful alliances.")}
+          {renderDepartment("Discord", MessageCircle, "Where community meets code — live, loud, and connected.")}
+          {renderDepartment("Speaker Outreach", Mic, "Voicing inspiration, one speaker at a time.")}
 
         </div>
       </div>

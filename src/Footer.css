@@ -233,39 +233,51 @@
 .footer-email a:hover {
   color: var(--aurora-green);
 }
-.illuminate-text {
-  font-size: 7rem;
-  font-weight: bold;
-  margin: 1.5rem 0 1rem;
+.illuminate-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem 1rem;
+  background: transparent; /* or black if it's a section */
+}
+
+.illuminate-glow {
+  font-family: 'Jura', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
   text-align: center;
   color: #00ffff;
-  text-shadow: 0 0 5px #00ffff,
-               0 0 10px #00ffff,
-               0 0 20px #00ffff,
-               0 0 40px #00ccff;
-  animation: glowPulse 2s ease-in-out infinite;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  text-shadow:
+    0 0 5px #00ffff,
+    0 0 15px #00ffff,
+    0 0 30px #00ffff,
+    0 0 60px #00e5ff;
+
+  animation: neonPulse 2.5s ease-in-out infinite;
 }
 
-.illuminate-text span {
-  color: #ff00ff;
-  text-shadow: 0 0 5px #ff00ff,
-               0 0 10px #ff00ff,
-               0 0 20px #ff00ff,
-               0 0 40px #cc00cc;
-}
-
-@keyframes glowPulse {
+@keyframes neonPulse {
   0%, 100% {
-    text-shadow: 0 0 5px #00ffff,
-                 0 0 10px #00ffff,
-                 0 0 20px #00ffff,
-                 0 0 40px #00ccff;
+    text-shadow:
+      0 0 5px #00ffff,
+      0 0 15px #00ffff,
+      0 0 30px #00ffff,
+      0 0 60px #00e5ff;
   }
   50% {
-    text-shadow: 0 0 10px #00ffff,
-                 0 0 20px #00ffff,
-                 0 0 40px #00ffff,
-                 0 0 60px #00ccff;
+    text-shadow:
+      0 0 10px #00ffff,
+      0 0 25px #00ffff,
+      0 0 50px #00ffff,
+      0 0 80px #00e5ff;
   }
 }
-
+@media (max-width: 768px) {
+  .illuminate-glow {
+    font-size: 2.5rem;
+  }
+}

@@ -7,6 +7,8 @@
   background: transparent;
   position: relative;
   z-index: 1;
+  margin-top: -1.5rem;  /* NEW */
+  padding-top: 0;
 }
 
 .code-title {
@@ -18,6 +20,8 @@
   text-shadow: 0 0 15px rgba(47, 0, 255, 0.6);
   letter-spacing: 1px;
   font-family: 'Orbitron', sans-serif;
+  margin-top: -10rem;  /* NEW */
+  padding-top: 0;
 }
 .code-title h2, .code-section h2, .gallery-title {
   /* Exact gradient matching Timeline and Sponsors */

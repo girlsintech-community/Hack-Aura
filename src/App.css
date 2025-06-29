@@ -87,7 +87,7 @@ body::before {
   min-height: 100vh;
   width: 100%;
   padding: 2rem 1rem;
-  background: linear-gradient(180deg, rgba(10, 3, 84, 0.405), rgba(4, 5, 16, 0.586));
+  background: linear-gradient(180deg, rgba(10, 3, 84, 0.279), rgba(4, 5, 16, 0.586));
   position: relative;
   display: flex;
   flex-direction: column;
@@ -96,7 +96,7 @@ body::before {
 }
 /* Custom gradient only for the Countdown section */
 .countdown-gradient {
-  background: linear-gradient(180deg, #040510 2.4%, #0A0354 100%);
+  background: linear-gradient(180deg, #040510 2.4%, #0b035a6d 100%);
 }
 
 /* Second Section - Timeline/Events - Purple to Medium Blue */
@@ -116,7 +116,7 @@ body::before {
   min-height: 100vh;
   width: 100%;
   padding: 0rem 1rem;
-  background: linear-gradient(180deg, #071342 0%, #031f47 40%, #000000 100%);
+  background: linear-gradient(180deg, #071342c2 0%, #031f47 40%, #000000 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,15 +139,15 @@ body::before {
 }
 /* Custom gradient for Hackathon Tracks */
 .tracks-gradient {
-  padding-top: -5rem;
-  margin-top: -5rem;
-  background: linear-gradient(180deg, #09034f9c 2.4%, #0d046bb9 100%);
+  padding-top: 0rem;
+  margin-top: 0rem;
+  background: linear-gradient(180deg, #0a0354aa 2.4%, #0d046bb9 100%);
 }
 
 /* Custom gradient for FAQ section */
 .faq-gradient {
   padding-top: 1rem;
-  margin-top: -7rem;
+  margin-top: 0rem;
   background: linear-gradient(180deg, #0a044bba 2.4%,  #000000bd 100%);
 
 }

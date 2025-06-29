@@ -105,12 +105,20 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(6, 182, 212, 0.2);
   border-radius: 20px;
-  padding: 0.5rem;
-  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  padding-top: 2.5rem;
+  margin-top: 3rem;
   backdrop-filter: blur(12px);
   box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Center children */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
+
 
 .call-card:hover, .cta-card:hover {
   transform: translateY(-6px);
@@ -173,7 +181,8 @@
   text-shadow: 0 0 4px rgba(15, 169, 231, 0.879);
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-left: 25rem;
+  margin-bottom: 2rem;
+  /*margin-left: 25rem;*/
 }
 
 .sponsor-button:hover {

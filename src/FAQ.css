@@ -4,7 +4,8 @@
   backdrop-filter: blur(15px);
   border-radius: 28px;
   max-width: 1400px;
-  margin: 5rem auto;
+  margin: 0rem auto;
+  margin-top: -5rem ;
 }
 
 /* ==== FAQ TITLE ==== */

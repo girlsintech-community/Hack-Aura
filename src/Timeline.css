@@ -2,8 +2,9 @@
 .timeline-section {
   padding: 6rem 2rem;
   max-width: 1400px;
-  margin: 5rem auto;
-  margin-top: -260px;
+  margin: 0rem auto;
+  margin-top: -230px;
+  margin-bottom: -1rem ;
 }
 
 /* ==== TITLE (Updated to match FAQ style) ==== */

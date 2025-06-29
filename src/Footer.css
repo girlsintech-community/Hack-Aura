@@ -247,15 +247,15 @@
   font-size: 4.5rem;
   font-weight: 700;
   text-align: center;
-  color: #00ffff;
+  color: #ffff;
   text-transform: uppercase;
   white-space: nowrap;
 
   text-shadow:
-    0 0 5px #00ffff,
-    0 0 15px #00ffff,
-    0 0 30px #00ffff,
-    0 0 60px #00e5ff;
+    0 0 5px #f3f8f8,
+    0 0 15px #dee6e6,
+    0 0 30px #808585,
+    0 0 60px #b7bcbc;
 
   animation: neonPulse 2.5s ease-in-out infinite;
 }
@@ -278,6 +278,6 @@
 }
 @media (max-width: 768px) {
   .illuminate-glow {
-    font-size: 2.5rem;
+    font-size: 7.5rem;
   }
 }

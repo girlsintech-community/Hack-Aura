@@ -16,7 +16,7 @@ const OrganizationAbout = () => {
       author: 'Manisha HM',
       role: 'https://www.linkedin.com/in/manisha-halale-69b541228',
       image:'../public/manisha.jpeg',
-      location:'',
+      location:'Karnataka, India',
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const OrganizationAbout = () => {
       author: 'PREMI SREE PRIYA T S',
       role: 'https://www.linkedin.com/in/ts-premi-sree-priya-061a54293',
       image:'../public/premi.png',
-      location:'',
+      location:'Chennai, India',
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ const OrganizationAbout = () => {
       author: 'Khushi Mittal',
       role: 'https://www.linkedin.com/in/khushi-mittal-21b3ba246/',
       image:'../public/khushi.jpg',
-      location:'',
+      location:'Bhavnagar, India',
     },
   ];
 
@@ -106,13 +106,11 @@ const OrganizationAbout = () => {
 
           <div className="testimonial-author">
             <div className="author-avatar">
-              {review.author
-                .split(" ")
-                .map((n) => n[0])
-                .join("")}
+              <img src={review.image} alt={review.author} className="avatar-img" />
             </div>
             <div className="author-info">
               <h4 className="author-name">{review.author}</h4>
+              <p className="author-location">{review.location}</p>
               <div className="author-role">
                 <a
                   href={review.role}

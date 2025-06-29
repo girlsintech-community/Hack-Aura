@@ -27,7 +27,7 @@ const TeamPage = ({ onContactClick }) => {
     { name: "Mahak", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://www.linkedin.com/in/documentdiarieswithmahak/",image : '../public/images/teams/partnerships/mahak.png' },
     { name: "Aditi Madhukar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/aditimadhukar/",image : '../public/images/teams/discord/aditi.jpg' },
      { name: "Avya Giri", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/avya-giri-919842320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",image : '../public/images/teams/discord/avya.png' },
-      { name: "Simran Nagekar", role: "Discord Team", department: "Discord" },
+      { name: "Simran Nagekar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/simransn",image : '../public/images/teams/discord/simran.jpg' },
        { name: "Maanasa", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/r-maanasa22",image : '../public/images/teams/speaker/manasa.jpg' },
         { name: "Pathan Sama Khan", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/sama-khan-628959281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",image : '../public/images/teams/speaker/pathan.jpg' },
           { name: "Vijay Laxmi", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/laxmi-vijay/",image : '../public/images/teams/speaker/vijay.jpg' },

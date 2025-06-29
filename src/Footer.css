@@ -233,3 +233,39 @@
 .footer-email a:hover {
   color: var(--aurora-green);
 }
+.illuminate-text {
+  font-size: 7rem;
+  font-weight: bold;
+  margin: 1.5rem 0 1rem;
+  text-align: center;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff,
+               0 0 10px #00ffff,
+               0 0 20px #00ffff,
+               0 0 40px #00ccff;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.illuminate-text span {
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff,
+               0 0 10px #ff00ff,
+               0 0 20px #ff00ff,
+               0 0 40px #cc00cc;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 5px #00ffff,
+                 0 0 10px #00ffff,
+                 0 0 20px #00ffff,
+                 0 0 40px #00ccff;
+  }
+  50% {
+    text-shadow: 0 0 10px #00ffff,
+                 0 0 20px #00ffff,
+                 0 0 40px #00ffff,
+                 0 0 60px #00ccff;
+  }
+}
+

@@ -98,9 +98,9 @@ function Footer() {
           <p className="footer-email">
             Email us at: <a href="mailto:girlsleadingtech@gmail.com">girlsleadingtech@gmail.com</a>
           </p>
- <div className="illuminate-text">
-    Illuminate <span>Innovation</span>
-  </div>
+          <div className="illuminate-text">
+           <h1>ILLUMINATE INNOVATION</h1>
+          </div>
         </div>
 
         <div className="footer-right">
@@ -118,11 +118,11 @@ function Footer() {
         </div>
       </div>
       <div className="footer-signature">
-  Made with <span role="img" aria-label="love">❤️</span> by&nbsp;
-  <a href="https://www.linkedin.com/in/kashikagupta/" target="_blank" rel="noopener noreferrer">Kashika</a> ,&nbsp;
-  <a href="https://www.linkedin.com/in/bagavati-narayanan-98484b292/" target="_blank" rel="noopener noreferrer">Bagavati</a> &amp;&nbsp;
-  <a href="https://www.linkedin.com/in/adyashadas04/" target="_blank" rel="noopener noreferrer">Adyasha</a>
-</div>
+        Made with <span role="img" aria-label="love">❤️</span> by&nbsp;
+        <a href="https://www.linkedin.com/in/kashikagupta/" target="_blank" rel="noopener noreferrer">Kashika</a> ,&nbsp;
+        <a href="https://www.linkedin.com/in/bagavati-narayanan-98484b292/" target="_blank" rel="noopener noreferrer">Bagavati</a> &amp;&nbsp;
+        <a href="https://www.linkedin.com/in/adyashadas04/" target="_blank" rel="noopener noreferrer">Adyasha</a>
+      </div>
 
     </footer>
   );

@@ -45,7 +45,7 @@ const HackathonSponsors = () => {
           </div>
         </div>
 
-        <div className="sponsor-call">
+        {/* <div className="sponsor-call">
           <div className="call-card">
             <h3>Why Partner With Us?</h3>
             <ul>
@@ -54,7 +54,7 @@ const HackathonSponsors = () => {
               <li>💼 Discover recruitment-ready talent and fresh ideas</li>
               <li>🌐 Be known as a champion of real-world change</li>
             </ul>
-          </div>
+          </div> */}
 
           <div className="cta-card">
             <h3>Let’s Build the Future Together</h3>
@@ -71,7 +71,7 @@ const HackathonSponsors = () => {
             </button>
           </div>
         </div>
-      </div>
+      
 
       {showContact && <ContactPopup onClose={closeContactPopup} />}
     </section>

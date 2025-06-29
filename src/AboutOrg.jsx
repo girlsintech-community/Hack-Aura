@@ -14,19 +14,25 @@ const OrganizationAbout = () => {
       id: 1,
       text: `This community has helped me a lot in staying motivated, and I've also discovered many opportunities through it. I would absolutely recommend that girls join this wonderful community.`,
       author: 'Manisha HM',
-      role: 'https://www.linkedin.com/in/manisha-halale-69b541228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      role: 'https://www.linkedin.com/in/manisha-halale-69b541228',
+      image:'../public/manisha.jpeg',
+      location:'',
     },
     {
       id: 2,
       text: `Girls Leading Tech is an incredible initiative that empowers girls to advance their careers by providing valuable technical knowledge. It’s especially beneficial for female students looking to grow in the tech field. Let’s grow and inspire each other!`,
       author: 'PREMI SREE PRIYA T S',
       role: 'https://www.linkedin.com/in/ts-premi-sree-priya-061a54293',
+      image:'../public/premi.png',
+      location:'',
     },
     {
       id: 3,
       text: `The mentors are exceptionally supportive, addressing all doubts and offering top-quality resources across both technical and non-technical domains. Their approachable and friendly nature fosters open communication, making it easy for members to interact and seek guidance.`,
       author: 'Khushi Mittal',
       role: 'https://www.linkedin.com/in/khushi-mittal-21b3ba246/',
+      image:'../public/khushi.jpg',
+      location:'',
     },
   ];
 

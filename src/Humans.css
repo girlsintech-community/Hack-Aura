@@ -86,6 +86,8 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1.5rem;
+  margin-top: -8rem;  /* NEW */
+  padding-top: 0;
   text-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
 }
 

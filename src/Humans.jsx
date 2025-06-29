@@ -9,7 +9,7 @@ const TeamPage = ({ onContactClick }) => {
   const organizingTeam = [
     { name: "Manik", role: "Lead Organizer", department: "Core", linkedin: "https://www.linkedin.com/in/mrmanik", image: '../public/images/teams/manik.jpg', location: "Haryana" },
     { name: "Bagavati Narayanan", role: "Tech Lead", department: "Tech", linkedin: "https://www.linkedin.com/in/bagavati-narayanan-98484b292", image: '../public/images/teams/tech/bagavati.jpg', location: "Chennai" },
-    { name: "Kashika Gupta", role: "Tech Team", department: "Tech", linkedin: "https://www.linkedin.com/in/kashikagupta", image: '../public/images/teams/tech/kashika.jpg', location: "Indore" },
+    { name: "Kashika Gupta", role: "Tech Team", department: "Tech", linkedin: "https://www.linkedin.com/in/kashikagupta", image: '../public/images/teams/tech/kashika1.jpg', location: "Indore" },
     { name: "Adyasha", role: "Tech Team", department: "Tech", linkedin: "https://www.linkedin.com/in/adyashadas04", image: '../public/images/teams/tech/adyasha.jpg', location: "Bhubaneshwar" },
     { name: "Archana", role: "Design Lead", department: "Design", linkedin: "https://www.linkedin.com/in/archana-gupta2006", image: '../public/images/teams/design/archana.jpeg', location: "Delhi" },
     { name: "Ananya Agarwal", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/ananya-agarwal-861317290/ ", image: '../public/images/teams/design/ananya.png', location: "Mumbai" },

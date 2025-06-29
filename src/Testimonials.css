@@ -207,20 +207,40 @@
   color: #93c5fd;
   font-family: 'Courier New', monospace;
   margin-top: -2px;
+  margin-bottom: 4px;
 }
 
 .author-info h4 {
   color: #06b6d4;
   margin-bottom: 0.2rem;
   font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .author-info p {
   color: #9ca3af;
   font-size: 0.8rem;
   font-family: 'Courier New', monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.linkedin-link {
+  display: inline-block;
+}
+.linkedin-icon {
+  width: 18px;
+  height: 18px;
+  filter: drop-shadow(0 0 3px #3b82f6);
+  transition: transform 0.2s ease;
 }
 
+.linkedin-icon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 6px #3b82f6);
+}
 /* === Stars === */
 .testimonial-header {
   display: flex;

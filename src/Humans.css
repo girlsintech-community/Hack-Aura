@@ -62,10 +62,10 @@
 /* TeamPage.css */
 .team-page {
   min-height: 100vh;
-  padding: 5rem 1rem 5rem;
-  background: radial-gradient(ellipse at top, rgba(59, 130, 246, 0.1), transparent 50%),
-              radial-gradient(ellipse at bottom, rgba(16, 185, 129, 0.1), transparent 50%);
+  padding: 18rem 1rem 5rem;
+  background: transparent;
 }
+
 
 .team-container {
   max-width: 1400px;
@@ -105,7 +105,7 @@
   background: linear-gradient(90deg, #3b82f6, #10b981, #06b6d4);
   margin: 2rem auto;
   border-radius: 3px;
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 20px rgba(12, 26, 48, 0.4);
 }
 
 /* Section Header Styles */
@@ -183,6 +183,8 @@
 .team-card-wrapper {
   flex-shrink: 0;
   width: 340px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Team Card Styles */

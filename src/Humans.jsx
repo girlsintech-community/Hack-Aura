@@ -74,131 +74,108 @@ const TeamPage = ({ onContactClick }) => {
     return `https://www.linkedin.com/in/${url}`;
   };
 
- const TeamCard = ({ member, index = 0 }) => (
-  <div
-    className="team-card animate-on-scroll"
-    style={{
-      animationDelay: `${index * 150}ms`,
-      '--card-index': index,
-      position: 'relative',
-      overflow: 'hidden',
-      borderRadius: '1.5rem',
-      width: '280px',
-      height: '360px',
-      background: 'linear-gradient(135deg, rgba(59,130,246,0.12), rgba(16,185,129,0.1), rgba(6,182,212,0.12))',
-      border: '2px solid rgba(255,255,255,0.15)',
-      boxShadow: '0 20px 40px rgba(59,130,246,0.25), 0 0 30px rgba(16,185,129,0.2)',
-      backdropFilter: 'blur(12px)',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'flex-start',
-      alignItems: 'center',
-      padding: 0,
-    }}
-  >
-    {/* Image (top half) */}
-   {/* Image (top 60%) */}
-<div
-  className="team-card-image-wrapper"
-  style={{
-    width: '100%',
-    height: '60%', // increased height
-    overflow: 'hidden',
-    borderTopLeftRadius: '1.5rem',
-    borderTopRightRadius: '1.5rem',
-  }}
->
-  <img
-    src={member.image || '/default-avatar.png'}
-    alt={member.name}
-    className="team-card-image"
-    style={{
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      objectPosition: 'top center', // key fix
-    }}
-  />
-</div>
 
 
-    {/* Content (bottom half) */}
+const TeamCard = ({ member, index = 0 }) => {
+  return (
     <div
-      className="team-card-content"
+      className="team-card"
       style={{
-        padding: '1rem',
-        textAlign: 'center',
-        flexGrow: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
+        width: '260px',
+        height: '340px',
+        borderRadius: '1.5rem',
+        overflow: 'hidden',
+        position: 'relative',
+        boxShadow: '0 8px 24px rgba(0,0,0,0.15)',
+        cursor: 'pointer',
+        transition: 'transform 0.3s ease',
+        animationDelay: `${index * 150}ms`,
+      }}
+      onMouseEnter={(e) => {
+        const info = e.currentTarget.querySelector('.info-panel');
+        const img = e.currentTarget.querySelector('img');
+        if (img) img.style.transform = 'scale(1.05)';
+        if (info) info.style.transform = 'translateY(0)';
+      }}
+      onMouseLeave={(e) => {
+        const info = e.currentTarget.querySelector('.info-panel');
+        const img = e.currentTarget.querySelector('img');
+        if (img) img.style.transform = 'scale(1)';
+        if (info) info.style.transform = 'translateY(100%)';
       }}
     >
-      <h3
-        className="team-card-name"
+      {/* Background image */}
+      <img
+        src={member.image || '/default-avatar.png'}
+        alt={member.name}
         style={{
-          fontSize: '1.1rem',
-          fontWeight: 'bold',
-          marginBottom: '0.3rem',
-          color: '#e5e7eb',
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          transition: 'transform 0.4s ease',
+          filter: 'brightness(0.9)',
         }}
-      >
-        {member.name}
-      </h3>
-      <p
-        className="team-card-role"
-        style={{
-          fontSize: '0.9rem',
-          color: '#a1a1aa',
-          marginBottom: '0.5rem',
-        }}
-      >
-        {member.role}
-      </p>
-      {member.linkedin && (
-        <a
-          className="team-card-linkedin"
-          href={getLinkedinURL(member.linkedin)}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`LinkedIn profile of ${member.name}`}
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '0.4rem',
-            fontSize: '0.875rem',
-            color: '#9ca3af',
-            background: 'rgba(255,255,255,0.08)',
-            padding: '0.35rem 0.9rem',
-            borderRadius: '100px',
-            border: '1px solid rgba(255,255,255,0.1)',
-            transition: 'all 0.3s ease',
-            textDecoration: 'none',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.color = '#e5e7eb';
-            e.currentTarget.style.transform = 'scale(1.05)';
-            e.currentTarget.style.background = 'rgba(255,255,255,0.15)';
-            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.color = '#9ca3af';
-            e.currentTarget.style.transform = 'scale(1)';
-            e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
-            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
-          }}
-        >
-          <Linkedin size={16} />
-        </a>
-      )}
-    </div>
+      />
 
-    {/* Optional visual corner */}
-    <div className="cyber-corner"></div>
-  </div>
-);
+      {/* Info panel */}
+      <div
+        className="info-panel"
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          width: '100%',
+          padding: '1rem',
+          backdropFilter: 'blur(12px)',
+          background: 'rgba(0,0,0,0.4)',
+          borderTopLeftRadius: '1.5rem',
+          borderTopRightRadius: '1.5rem',
+          color: 'white',
+          transform: 'translateY(100%)',
+          transition: 'transform 0.4s ease',
+        }}
+      >
+        <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: '600' }}>{member.name}</h3>
+
+        {member.linkedin && (
+          <a
+            href={
+              member.linkedin.startsWith('http')
+                ? member.linkedin
+                : `https://www.linkedin.com/in/${member.linkedin}`
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+              marginTop: '0.5rem',
+              padding: '0.4rem 0.8rem',
+              fontSize: '0.875rem',
+              borderRadius: '50px',
+              border: '1px solid rgba(255,255,255,0.3)',
+              backgroundColor: 'rgba(255,255,255,0.1)',
+              color: '#fff',
+              textDecoration: 'none',
+              transition: 'all 0.3s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.3)';
+              e.currentTarget.style.transform = 'scale(1.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)';
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
+          >
+            <Linkedin size={16} /> Connect
+          </a>
+        )}
+      </div>
+    </div>
+  );
+};
+
 
 
 

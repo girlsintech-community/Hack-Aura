@@ -182,7 +182,7 @@ const TeamPage = ({ onContactClick }) => {
 
 
 
-  const SectionHeader = ({ title, icon: Icon, count }) => (
+  const SectionHeader = ({ title, icon: Icon, count , tagline }) => (
     <div className="section-header animate-on-scroll">
       <div className="section-header-content">
         <div className="section-icon">
@@ -192,6 +192,14 @@ const TeamPage = ({ onContactClick }) => {
       </div>
       <div className="section-divider"></div>
       <p className="section-subtitle">{count} amazing individuals</p>
+       {tagline && (
+      <p className="section-tagline" style={{
+        fontSize: '1rem',
+        fontStyle: 'italic',
+        color: '#b0bec5',
+        marginTop: '0.4rem'
+      }}>{tagline}</p>
+    )}
     </div>
   );
 

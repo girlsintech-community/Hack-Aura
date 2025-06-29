@@ -7,7 +7,7 @@ function Footer() {
     <footer className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-left">
-          <h2>Hack Aura</h2>
+          <h2>HACK AURA</h2>
           <div className="social-links">
             <a href="https://www.linkedin.com/company/girlsleadingtech" target="_blank" rel="noopener noreferrer" title="LinkedIn">
               <img

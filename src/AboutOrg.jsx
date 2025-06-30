@@ -28,7 +28,7 @@ const OrganizationAbout = () => {
     },
     {
       id: 3,
-      text: `The mentors are exceptionally supportive, addressing all doubts and offering top-quality resources across both technical and non-technical domains. Their approachable and friendly nature fosters open communication, making it easy for members to interact and seek guidance.`,
+      text: `The mentors are exceptionally supportive, addressing all doubts and offering top-quality resources across both technical and non-technical domains. Their approachable and friendly nature fosters open communication, making it easy for members to interact.`,
       author: 'Khushi Mittal',
       role: 'https://www.linkedin.com/in/khushi-mittal-21b3ba246/',
       image:'../public/khushi.jpg',

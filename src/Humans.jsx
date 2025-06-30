@@ -21,7 +21,7 @@ const TeamPage = ({ onContactClick }) => {
     { name: "Sanwedana Lokhande", role: "Content Writing Team", department: "Content", linkedin: "https://www.linkedin.com/in/sanwedana-lokhande-35332a33a/", image: '../public/images/teams/content/sanwedana.jpg', location: "Nagpur" },
     { name: "Niharika Rawat", role: "PR Lead", department: "PR", linkedin: "http://linkedin.com/in/niharika-rawat-9a1156256", image: '../public/images/teams/pr/nikarika.png', location: "Pune" },
     { name: "Dhairya Kanabar", role: "PR Team", department: "PR", linkedin: "https://www.linkedin.com/in/dhairya-kanabar-411990294", image: '../public/images/teams/pr/dhairiya.jpg', location: "Surendranagar" },
-    { name: "Bhargavi Gangoor", role: "Host Team", department: "Host", linkedin: "https://www.linkedin.com/in/bhargavi-gangoor-857b9b294", image: '../public/images/teams/host/bhargavi.jpg', location: "Bengaluru" },
+
     { name: "Swastika Tiwari", role: "Host Team", department: "Host", linkedin: "https://www.linkedin.com/in/swastika-tiwari-007169314", image: '../public/images/teams/host/swastika.png', location: "Delhi" },
     { name: "Gungun Goel", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://www.linkedin.com/in/gungun-goyal-05154426a", image: '../public/images/teams/partnerships/gungun.jpg', location: "Meerut" },
     { name: "Kashvi Arora", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://in.linkedin.com/in/kashvi15", image: '../public/images/teams/partnerships/kashvi.jpg', location: "Delhi" },
@@ -29,7 +29,7 @@ const TeamPage = ({ onContactClick }) => {
     { name: "Aditi Madhukar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/aditimadhukar/", image: '../public/images/teams/discord/aditi.jpg', location: "Delhi" },
     { name: "Avya Giri", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/avya-giri-919842320", image: '../public/images/teams/discord/avya.png', location: "Delhi" },
     { name: "Simran Nagekar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/simransn", image: '../public/images/teams/discord/simran.jpg', location: "Bengaluru" },
-    { name: "Maanasa", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/r-maanasa22", image: '../public/images/teams/speaker/manasa.jpg', location: "Bengaluru" },
+    { name: "Bhargavi Gangoor", role: "Host Team", department: "Speaker Outreach Team", linkedin: "https://www.linkedin.com/in/bhargavi-gangoor-857b9b294", image: '../public/images/teams/host/bhargavi.jpg', location: "Bengaluru" },
     { name: "Pathan Sama Khan", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/sama-khan-628959281", image: '../public/images/teams/speaker/pathan.jpg', location: "Hyderabad" },
     { name: "Vijay Laxmi", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/laxmi-vijay/", image: '../public/images/teams/speaker/vijay.jpg', location: "Delhi" },
 
@@ -107,42 +107,42 @@ const TeamPage = ({ onContactClick }) => {
       >
         {/* Background image */}
         <img
-  src={member.image || '/default-avatar.png'}
-  alt={member.name}
-  style={{
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-    transition: 'transform 0.4s ease',
-    filter: 'brightness(0.9)',
-  }}
-/>
+          src={member.image || '/default-avatar.png'}
+          alt={member.name}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            transition: 'transform 0.4s ease',
+            filter: 'brightness(0.9)',
+          }}
+        />
 
 
-       <div
-  className="info-panel"
-  style={{
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    width: '100%',
-    padding: '1.2rem',
-    backdropFilter: 'blur(12px)',
-    background: 'rgba(0, 0, 0, 0.5)',
-    color: 'white',
-    transform: 'translateY(100%)',
-    transition: 'transform 0.4s ease',
-  }}
->
+        <div
+          className="info-panel"
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            width: '100%',
+            padding: '1.2rem',
+            backdropFilter: 'blur(12px)',
+            background: 'rgba(0, 0, 0, 0.5)',
+            color: 'white',
+            transform: 'translateY(100%)',
+            transition: 'transform 0.4s ease',
+          }}
+        >
 
           <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: '600' }}>{member.name}</h3>
-           <p style={{ margin: '0.2rem 0', fontSize: '0.85rem', color: '#ccc' }}>
-   <MapPin size={14} /> {member.location}
-  </p>
+          <p style={{ margin: '0.2rem 0', fontSize: '0.85rem', color: '#ccc' }}>
+            <MapPin size={14} /> {member.location}
+          </p>
           {member.linkedin && (
             <a
               href={
@@ -186,7 +186,7 @@ const TeamPage = ({ onContactClick }) => {
 
 
 
-  const SectionHeader = ({ title, icon: Icon, count , tagline }) => (
+  const SectionHeader = ({ title, icon: Icon, count, tagline }) => (
     <div className="section-header animate-on-scroll">
       <div className="section-header-content">
         <div className="section-icon">
@@ -196,18 +196,18 @@ const TeamPage = ({ onContactClick }) => {
       </div>
       <div className="section-divider"></div>
       <p className="section-subtitle">{count} amazing individuals</p>
-       {tagline && (
-      <p className="section-tagline" style={{
-        fontSize: '1rem',
-        fontStyle: 'italic',
-        color: '#b0bec5',
-        marginTop: '0.4rem'
-      }}>{tagline}</p>
-    )}
+      {tagline && (
+        <p className="section-tagline" style={{
+          fontSize: '1rem',
+          fontStyle: 'italic',
+          color: '#b0bec5',
+          marginTop: '0.4rem'
+        }}>{tagline}</p>
+      )}
     </div>
   );
 
-  const renderDepartment = (deptName, icon , tagline) => {
+  const renderDepartment = (deptName, icon, tagline) => {
     const filtered = organizingTeam.filter(member => member.department === deptName);
     if (filtered.length === 0) return null;
 
@@ -239,13 +239,13 @@ const TeamPage = ({ onContactClick }) => {
             <div className="page-divider"></div>
           </div>
 
-          {renderDepartment("Core", Users,"Leading from the front — vision, direction, execution.")}
-          {renderDepartment("Tech", Award,"Building the backbone of innovation.")}
-          {renderDepartment("Design", Brush,"Turning imagination into visuals, one pixel at a time.")}
-          {renderDepartment("Content", BookText,"We don’t just write content — we write experiences.")}
-          {renderDepartment("PR", Megaphone,"Crafting buzz, clicks, and conversations.")}
-          {renderDepartment("Host", Home,"Where experience meets execution.")}
-          {renderDepartment("Partnerships/Sponsorships", Handshake,"Powering possibilities through meaningful alliances.")}
+          {renderDepartment("Core", Users, "Leading from the front — vision, direction, execution.")}
+          {renderDepartment("Tech", Award, "Building the backbone of innovation.")}
+          {renderDepartment("Design", Brush, "Turning imagination into visuals, one pixel at a time.")}
+          {renderDepartment("Content", BookText, "We don’t just write content — we write experiences.")}
+          {renderDepartment("PR", Megaphone, "Crafting buzz, clicks, and conversations.")}
+          {renderDepartment("Host", Home, "Where experience meets execution.")}
+          {renderDepartment("Partnerships/Sponsorships", Handshake, "Powering possibilities through meaningful alliances.")}
           {renderDepartment("Discord", MessageCircle, "Where community meets code — live, loud, and connected.")}
           {renderDepartment("Speaker Outreach", Mic, "Voicing inspiration, one speaker at a time.")}
 

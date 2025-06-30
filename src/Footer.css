@@ -198,7 +198,7 @@
 
 .footer-signature {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.75);
   font-weight: 600;
@@ -233,51 +233,95 @@
 .footer-email a:hover {
   color: var(--aurora-green);
 }
-.illuminate-wrapper {
-  width: 100%;
+
+.illuminate-stage-wrapper {
+  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 3rem 1rem 1rem;
-  background: transparent; /* or black if it's a section */
+  padding: 6rem 1rem;
+  margin-top: -5rem;
+  margin-bottom: 2rem;
+  background-color: black;
+  overflow: hidden;
+  height: 40rem;
 }
 
-.illuminate-glow {
+.illuminate-stage-wrapper h2 {
+  position: absolute;
   font-family: 'Jura', sans-serif;
-  font-size: 4.5rem;
-  font-weight: 700;
-  text-align: center;
-  color: #ffff;
+  font-size: 7rem;
+  font-weight: 1000;
   text-transform: uppercase;
+  margin: 0;
   white-space: nowrap;
-
-  text-shadow:
-    0 0 5px #f3f8f8,
-    0 0 15px #dee6e6,
-    0 0 30px #808585,
-    0 0 60px #b7bcbc;
-
-  animation: neonPulse 2.5s ease-in-out infinite;
+  opacity: 0;
+  animation-timing-function: ease-in-out;
+  line-height: 4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@keyframes neonPulse {
-  0%, 100% {
-    text-shadow:
-      0 0 5px #00ffff,
-      0 0 15px #00ffff,
-      0 0 30px #00ffff,
-      0 0 60px #00e5ff;
-  }
-  50% {
-    text-shadow:
-      0 0 10px #00ffff,
-      0 0 25px #00ffff,
-      0 0 50px #00ffff,
-      0 0 80px #00e5ff;
-  }
+/* Main Text - appears first and stays at top */
+.illuminate-stage-wrapper .main {
+  color: #ffffff;
+  animation: floatMain 8s ease-in-out infinite;
+  z-index: 3;
+  position: relative;
 }
+
+/* Outline Text - slides down after main text appears */
+.illuminate-stage-wrapper .outline {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25);
+  text-stroke: 1px rgba(255, 255, 255, 0.25);
+  animation: floatOutline 8s ease-in-out infinite;
+  z-index: 2;
+  position: relative;
+}
+
+/* Faded Text - slides down last, pushing outline further down */
+.illuminate-stage-wrapper .fade {
+  background: linear-gradient(to bottom, #222, #888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: floatFade 8s ease-in-out infinite;
+  z-index: 1;
+  position: relative;
+  filter: blur(0.3px);
+}
+
+/* Updated Keyframes with perfect stacking and pushing effect */
+@keyframes floatMain {
+  0% { opacity: 0; transform: translate(-50%, -50%); }
+  12.5%, 62.5% { opacity: 1; transform: translate(-50%, -50%); }
+  75% { opacity: 0; transform: translate(-50%, -50%); }
+  100% { opacity: 0; transform: translate(-50%, -50%); }
+}
+
+@keyframes floatOutline {
+  0%, 12.5% { opacity: 0; transform: translate(-50%, -50%); }
+  25%, 37.5% { opacity: 0.7; transform: translate(-50%, calc(-50% + 1px)); }
+  50%, 62.5% { opacity: 0.7; transform: translate(-50%, calc(-50% + 2px)); }
+  75% { opacity: 0; transform: translate(-50%, calc(-50% + 2px)); }
+  100% { opacity: 0; transform: translate(-50%, calc(-50% + 2px)); }
+}
+
+@keyframes floatFade {
+  0%, 25% { opacity: 0; transform: translate(-50%, -50%); }
+  37.5% { opacity: 0.5; transform: translate(-50%, calc(-50% + 2px)); }
+  50%, 62.5% { opacity: 0.5; transform: translate(-50%, calc(-50% + 3px)); }
+  75% { opacity: 0; transform: translate(-50%, calc(-50% + 3px)); }
+  100% { opacity: 0; transform: translate(-50%, calc(-50% + 3px)); }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .illuminate-glow {
-    font-size: 7.5rem;
+  .illuminate-stage-wrapper {
+    height: 7rem;
+  }
+  .illuminate-stage-wrapper h2 {
+    font-size: 2.5rem;
   }
 }

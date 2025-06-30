@@ -98,9 +98,11 @@ function Footer() {
           <p className="footer-email">
             Email us at: <a href="mailto:girlsleadingtech@gmail.com">girlsleadingtech@gmail.com</a>
           </p>
+          {/*}
           <div className="illuminate-wrapper">
             <h2 className="illuminate-glow">ILLUMINATE INNOVATION</h2>
           </div>
+          */}
 
         </div>
 
@@ -118,6 +120,11 @@ function Footer() {
           </ul>
         </div>
       </div>
+      <div className="illuminate-stage-wrapper">
+  <h2 className="main">ILLUMINATE INNOVATION</h2>
+  <h2 className="fade">ILLUMINATE INNOVATION</h2>
+  <h2 className="outline">ILLUMINATE INNOVATION</h2>
+</div>
       <div className="footer-signature">
         Made with <span role="img" aria-label="love">❤️</span> by&nbsp;
         <a href="https://www.linkedin.com/in/kashikagupta/" target="_blank" rel="noopener noreferrer">Kashika</a> ,&nbsp;

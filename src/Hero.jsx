@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-
+import { Disc } from 'lucide-react';
 
 
 const Hero = () => {

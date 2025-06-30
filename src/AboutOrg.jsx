@@ -12,7 +12,7 @@ const OrganizationAbout = () => {
   const reviews = [
     {
       id: 1,
-      text: `This community has helped me a lot in staying motivated, and I've also discovered many opportunities through it. I would absolutely recommend that girls join this wonderful community.`,
+      text: `This community has helped me a lot in staying motivated, and I havve also discovered many opportunities through it. I would absolutely recommend that each and every girl should join this wonderful community.`,
       author: 'Manisha HM',
       role: 'https://www.linkedin.com/in/manisha-halale-69b541228',
       image:'../public/manisha.jpeg',

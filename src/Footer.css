@@ -240,11 +240,12 @@
   align-items: center;
   padding: 3rem 1rem 1rem;
   background: transparent; /* or black if it's a section */
+  font-size: large;
 }
 
 .illuminate-glow {
   font-family: 'Jura', sans-serif;
-  font-size: 4.5rem;
+  font-size: 6.5rem;
   font-weight: 700;
   text-align: center;
   color: #ffff;
@@ -263,17 +264,17 @@
 @keyframes neonPulse {
   0%, 100% {
     text-shadow:
-      0 0 5px #00ffff,
-      0 0 15px #00ffff,
-      0 0 30px #00ffff,
-      0 0 60px #00e5ff;
+      0 0 5px #023333,
+      0 0 15px #011414,
+      0 0 30px #011c1c,
+      0 0 60px #0b1e20;
   }
   50% {
     text-shadow:
-      0 0 10px #00ffff,
-      0 0 25px #00ffff,
-      0 0 50px #00ffff,
-      0 0 80px #00e5ff;
+      0 0 10px #022c2c,
+      0 0 25px #dce2e2,
+      0 0 50px #9aa2a2,
+      0 0 80px #a2a8a8;
   }
 }
 @media (max-width: 768px) {

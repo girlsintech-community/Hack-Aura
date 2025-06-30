@@ -107,34 +107,38 @@ const TeamPage = ({ onContactClick }) => {
       >
         {/* Background image */}
         <img
-          src={member.image || '/default-avatar.png'}
-          alt={member.name}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            transition: 'transform 0.4s ease',
-            filter: 'brightness(0.9)',
-          }}
-        />
+  src={member.image || '/default-avatar.png'}
+  alt={member.name}
+  style={{
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    transition: 'transform 0.4s ease',
+    filter: 'brightness(0.9)',
+  }}
+/>
 
-        {/* Info panel */}
-        <div
-          className="info-panel"
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            width: '100%',
-            padding: '1rem',
-            backdropFilter: 'blur(12px)',
-            background: 'rgba(0,0,0,0.4)',
-            borderTopLeftRadius: '1.5rem',
-            borderTopRightRadius: '1.5rem',
-            color: 'white',
-            transform: 'translateY(100%)',
-            transition: 'transform 0.4s ease',
-          }}
-        >
+
+       <div
+  className="info-panel"
+  style={{
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    width: '100%',
+    padding: '1.2rem',
+    backdropFilter: 'blur(12px)',
+    background: 'rgba(0, 0, 0, 0.5)',
+    color: 'white',
+    transform: 'translateY(100%)',
+    transition: 'transform 0.4s ease',
+  }}
+>
+
           <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: '600' }}>{member.name}</h3>
            <p style={{ margin: '0.2rem 0', fontSize: '0.85rem', color: '#ccc' }}>
    <MapPin size={14} /> {member.location}

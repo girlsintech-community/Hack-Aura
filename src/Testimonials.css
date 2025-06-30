@@ -371,3 +371,116 @@
     font-size: 0.75rem;
   }
 }
+/* ===== Extra Small Devices (Mobile: <480px) ===== */
+@media (max-width: 480px) {
+  .testimonials-header h2 {
+    font-size: 2rem;
+  }
+
+  .testimonials-header .subtitle {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .testimonial-card {
+    width: 90vw;
+    padding: 1rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .author-info h4 {
+    font-size: 0.85rem;
+  }
+
+  .author-info p,
+  .author-location {
+    font-size: 0.7rem;
+  }
+
+  .quote-icon {
+    font-size: 3rem;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .linkedin-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* ===== Medium Devices (Tablet: 481px - 991px) ===== */
+@media (min-width: 481px) and (max-width: 991px) {
+  .testimonials-header h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  .testimonial-card {
+    width: 80vw;
+    height: auto;
+    padding: 1.2rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+  }
+
+  .author-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .author-info p {
+    font-size: 0.75rem;
+  }
+
+  .author-location {
+    font-size: 0.7rem;
+  }
+
+  .quote-icon {
+    font-size: 3.5rem;
+  }
+}
+
+/* ===== Large Screens (>= 992px) ===== */
+@media (min-width: 992px) {
+  .testimonial-card {
+    width: 580px;
+  }
+
+  .testimonials-header h2 {
+    font-size: clamp(3rem, 4vw, 4rem);
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .author-info h4 {
+    font-size: 1rem;
+  }
+
+  .author-info p {
+    font-size: 0.85rem;
+  }
+
+  .quote-icon {
+    font-size: 4rem;
+  }
+}
+
+/* ===== Ultra-Wide Screens (>= 1600px) ===== */
+@media (min-width: 1600px) {
+  .testimonial-card {
+    width: 620px;
+  }
+
+  .testimonials-header h2 {
+    font-size: 4.5rem;
+  }
+}
+

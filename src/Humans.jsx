@@ -22,7 +22,7 @@ const TeamPage = ({ onContactClick }) => {
     { name: "Niharika Rawat", role: "PR Lead", department: "PR", linkedin: "http://linkedin.com/in/niharika-rawat-9a1156256", image: '../public/images/teams/pr/nikarika.png', location: "Pune" },
     { name: "Dhairya Kanabar", role: "PR Team", department: "PR", linkedin: "https://www.linkedin.com/in/dhairya-kanabar-411990294", image: '../public/images/teams/pr/dhairiya.jpg', location: "Surendranagar" },
 
-       { name: "Gungun Goel", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://www.linkedin.com/in/gungun-goyal-05154426a", image: '../public/images/teams/partnerships/gungun.jpg', location: "Meerut" },
+       { name: "Gungun Goel", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://www.linkedin.com/in/gungun-goyal-05154426a", image: '../public/images/teams/partnerships/gungun.png', location: "Meerut" },
     { name: "Kashvi Arora", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://in.linkedin.com/in/kashvi15", image: '../public/images/teams/partnerships/kashvi.jpg', location: "Delhi" },
     { name: "Mahak", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://www.linkedin.com/in/documentdiarieswithmahak/", image: '../public/images/teams/partnerships/mahak.png', location: "Delhi" },
     { name: "Aditi Madhukar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/aditimadhukar/", image: '../public/images/teams/discord/aditi.jpg', location: "Delhi" },

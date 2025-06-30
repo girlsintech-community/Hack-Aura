@@ -16,13 +16,13 @@ const About = () => {
   return (
     <section className="about-section" id="about">
       <div className="about-container">
-        <h2>About HackAura</h2>
+        <h2>About Hack Aura</h2>
 
         <div className="about-grid">
           {/* Text Section */}
           <div className="about-content">
             <p>
-            HackAura is a 24-hour virtual hackathon scheduled for October 4th, bringing together talented minds in technology, design, and innovation to build impactful solutions under real world constraints. With diversity at its core, HackAura requires each team to include at least one female member, fostering inclusive collaboration and balanced perspectives. It's more than a competition, it's a launchpad for bold ideas and meaningful change.</p>
+            Hack Aura is a 24-hour virtual hackathon scheduled for October 4th, bringing together talented minds in technology, design, and innovation to build impactful solutions under real world constraints. With diversity at its core, HackAura requires each team to include at least one female member, fostering inclusive collaboration and balanced perspectives. It's more than a competition, it's a launchpad for bold ideas and meaningful change.</p>
           </div>
 
           {/* Gallery Section */}

@@ -11,7 +11,7 @@ const TeamPage = ({ onContactClick }) => {
     { name: "Bagavati Narayanan", role: "Tech Lead", department: "Tech", linkedin: "https://www.linkedin.com/in/bagavati-narayanan-98484b292", image: '../public/images/teams/tech/bagavati.jpg', location: "Chennai" },
     { name: "Kashika Gupta", role: "Tech Team", department: "Tech", linkedin: "https://www.linkedin.com/in/kashikagupta", image: '../public/images/teams/tech/kashika.jpg', location: "Indore" },
     { name: "Adyasha", role: "Tech Team", department: "Tech", linkedin: "https://www.linkedin.com/in/adyashadas04", image: '../public/images/teams/tech/adyasha.jpg', location: "Bhubaneshwar" },
-    { name: "Archana", role: "Design Lead", department: "Design", linkedin: "https://www.linkedin.com/in/archana-gupta2006", image: '../public/images/teams/design/archana.jpeg', location: "Delhi" },
+    { name: "Archana", role: "Design Lead", department: "Design", linkedin: "https://www.linkedin.com/in/archana-gupta2006", image: '../public/images/teams/design/archana1.jpg', location: "Delhi" },
     { name: "Ananya Agarwal", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/ananya-agarwal-861317290/ ", image: '../public/images/teams/design/ananya.png', location: "Mumbai" },
     { name: "Ankita Kuntal", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/ankita-kuntal", image: '../public/images/teams/design/ankita.jpg', location: "Srinagar" },
     { name: "Alina Abreeq", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/alina-abreeq", image: '../public/images/teams/design/alina.png', location: "Hyderabad" },

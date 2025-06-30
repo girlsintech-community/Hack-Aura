@@ -80,6 +80,7 @@
   gap: 3rem;
   padding-left: 2.5rem;
   border-left: 3px solid rgba(16, 185, 129, 0.4);
+  flex-wrap: wrap;
 }
 
 /* ==== INDIVIDUAL ITEM ==== */
@@ -114,6 +115,9 @@
   color: #e0fdf4;
   transition: all 0.3s ease;
   flex: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
 }
 
 /* ==== TITLE INSIDE ITEM ==== */
@@ -175,9 +179,11 @@
       0 0 100px rgba(143, 85, 204, 0.979);
   }
 }
+/* ==== RESPONSIVE STYLES ==== */
 @media (max-width: 768px) {
   .timeline-section {
     padding: 4rem 1rem;
+    margin-top: -100px;
   }
 
   .timeline-title {
@@ -206,5 +212,28 @@
   .timeline-title {
     font-size: 2rem;
     letter-spacing: 0.1em;
+  }
+}
+@media (max-width: 480px) {
+  .timeline-dot {
+    width: 14px;
+    height: 14px;
+    margin-top: 6px;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+
+  .timeline-container {
+    gap: 2rem;
   }
 }

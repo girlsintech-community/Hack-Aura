@@ -28,7 +28,7 @@ const TeamPage = ({ onContactClick }) => {
     { name: "Aditi Madhukar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/aditimadhukar/", image: '../public/images/teams/discord/aditi.jpg', location: "Delhi" },
     { name: "Avya Giri", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/avya-giri-919842320", image: '../public/images/teams/discord/avya.png', location: "Delhi" },
     { name: "Simran Nagekar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/simransn", image: '../public/images/teams/discord/simran.jpg', location: "Bengaluru" },
-    { name: "Bhargavi Gangoor", role: "Host Team", department: "Speaker Outreach Team", linkedin: "https://www.linkedin.com/in/bhargavi-gangoor-857b9b294", image: '../public/images/teams/host/bhargavi.jpg', location: "Bengaluru" },
+    { name: "Bhargavi Gangoor", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/bhargavi-gangoor-857b9b294", image: '../public/images/teams/host/bhargavi.jpg', location: "Bengaluru" },
     { name: "Pathan Sama Khan", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/sama-khan-628959281", image: '../public/images/teams/speaker/pathan.jpg', location: "Hyderabad" },
     { name: "Vijay Laxmi", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/laxmi-vijay/", image: '../public/images/teams/speaker/vijay.jpg', location: "Delhi" },
 

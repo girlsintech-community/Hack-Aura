@@ -244,13 +244,13 @@
   margin-bottom: 4rem;
   background-color: black;
   overflow: hidden;
-  height: 30rem;
+  height: clamp(15rem, 60vw, 30rem);
 }
 
 .illuminate-stage-wrapper h2 {
   position: absolute;
   font-family: 'Jura', sans-serif;
-  font-size: 6rem;
+  font-size: clamp(2rem, 10vw, 6rem); ;
   font-weight: 1000;
   text-transform: uppercase;
   margin: 0;
@@ -316,12 +316,31 @@
   100% { opacity: 0; transform: translate(-50%, calc(-50% + 2px)); }
 }
 
-/* Responsive */
+ /* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .illuminate-stage-wrapper {
+    padding: 4rem 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .illuminate-stage-wrapper {
-    height: 7rem;
+    height: clamp(7rem, 40vw, 15rem);
+    padding: 3rem 1rem;
   }
+
   .illuminate-stage-wrapper h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .illuminate-stage-wrapper {
+    height: clamp(8rem, 45vw, 12rem);
+    padding: 2rem 0.5rem;
+  }
+
+  .illuminate-stage-wrapper h2 {
+    font-size: clamp(1.2rem, 10vw, 2.2rem);
   }
 }

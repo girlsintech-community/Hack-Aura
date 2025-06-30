@@ -80,7 +80,7 @@ const TeamPage = ({ onContactClick }) => {
   const TeamCard = ({ member, index = 0 }) => {
     return (
       <div
-        className="team-card"
+        className="team-card animate-on-scroll"
         style={{
           width: '260px',
           height: '340px',

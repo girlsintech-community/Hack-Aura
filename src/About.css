@@ -169,6 +169,8 @@
 
   .gallery-column {
     max-height: 400px; /* Optional: slightly shorter for mobile */
+    margin-left: 50px;
+    height: 600px;
   }
 
   .cyber-gallery {

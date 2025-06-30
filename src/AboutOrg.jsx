@@ -97,7 +97,7 @@ const OrganizationAbout = () => {
 
   <div className="testimonials-slider">
     <div className="testimonials-track">
-      {[...reviews, ...reviews].map((review, index) => (
+      {[...reviews].map((review, index) => (
         <div className="testimonial-card" key={index}>
           <div className="testimonial-content">
             <div className="quote-icon">“</div>

@@ -13,7 +13,7 @@ const TeamPage = ({ onContactClick }) => {
     { name: "Adyasha", role: "Tech Team", department: "Tech", linkedin: "https://www.linkedin.com/in/adyashadas04", image: '../public/images/teams/tech/adyasha.jpg', location: "Bhubaneshwar" },
     { name: "Archana", role: "Design Lead", department: "Design", linkedin: "https://www.linkedin.com/in/archana-gupta2006", image: '../public/images/teams/design/archana1.jpg', location: "Delhi" },
     { name: "Ananya Agarwal", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/ananya-agarwal-861317290/ ", image: '../public/images/teams/design/ananya.png', location: "Mumbai" },
-    { name: "Ankita Kuntal", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/ankita-kuntal", image: '../public/images/teams/design/ankita.jpg', location: "Srinagar" },
+    { name: "Ankita Kuntal", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/ankita-kuntal", image: '../public/images/teams/design/ankita.png', location: "Srinagar" },
     { name: "Alina Abreeq", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/alina-abreeq", image: '../public/images/teams/design/alina.png', location: "Hyderabad" },
     { name: "Ishita Soni", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/ishita-soni-work", image: '../public/images/teams/design/ishita.png', location: "Jaipur" },
     { name: "Aarushi Chottani", role: "Content Writing Lead", department: "Content", linkedin: "www.linkedin.com/in/aarushi-chottani-80b861322", image: '../public/images/teams/content/aarushi.png', location: "Pune" },

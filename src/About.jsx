@@ -1,15 +1,11 @@
 import React from 'react';
 import './About.css';
-import image1 from './assets/images/slide1.png';
-import image2 from './assets/images/slide2.png';
-import image3 from './assets/images/slide3.png';
-import image4 from './assets/images/slide4.png';
 
 const galleryImages = [
-  { id: 1, src: image1, alt: 'Hackathon event' },
-  { id: 2, src: image2, alt: 'Participants coding' },
-  { id: 3, src: image3, alt: 'Winning team' },
-  { id: 4, src: image4, alt: 'LinkedIn Masterclass' },
+  { id: 1, src: "/side1.png", alt: 'Hackathon event' },
+  { id: 2, src: "/slide2.png", alt: 'Participants coding' },
+  { id: 3, src: "/slide3.png", alt: 'Winning team' },
+  { id: 4, src: "/slide4.png", alt: 'LinkedIn Masterclass' },
 ];
 
 const About = () => {

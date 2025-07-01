@@ -16,7 +16,7 @@ const Hero = () => {
                         HACK AUR
                         <span className="astro-wrapper">
                             A
-                            <img src="src/assets/images/astro.png" alt="Astronaut" className="astro-img" />
+                            <img src="/astro.png" alt="Astronaut" className="astro-img" />
                         </span>
 
                     </h1>

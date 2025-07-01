@@ -15,7 +15,7 @@ const OrganizationAbout = () => {
       text: `This community has helped me a lot in staying motivated, and I havve also discovered many opportunities through it. I would absolutely recommend that each and every girl should join this wonderful community.`,
       author: 'Manisha HM',
       role: 'https://www.linkedin.com/in/manisha-halale-69b541228',
-      image:'../public/manisha.jpeg',
+      image:'/manisha.jpeg',
       location:'Karnataka, India',
     },
     {
@@ -23,7 +23,7 @@ const OrganizationAbout = () => {
       text: `Girls Leading Tech is an incredible initiative that empowers girls to advance their careers by providing valuable technical knowledge. It’s especially beneficial for female students looking to grow in the tech field. Let’s grow and inspire each other!`,
       author: 'PREMI SREE PRIYA T S',
       role: 'https://www.linkedin.com/in/ts-premi-sree-priya-061a54293',
-      image:'../public/premi.png',
+      image:'/premi.png',
       location:'Chennai, India',
     },
     {
@@ -31,7 +31,7 @@ const OrganizationAbout = () => {
       text: `The mentors are exceptionally supportive, addressing all doubts and offering top-quality resources across both technical and non-technical domains. Their approachable and friendly nature fosters open communication, making it easy for members to interact.`,
       author: 'Khushi Mittal',
       role: 'https://www.linkedin.com/in/khushi-mittal-21b3ba246/',
-      image:'../public/khushi.jpg',
+      image:'/khushi.jpg',
       location:'Bhavnagar, India',
     },
   ];

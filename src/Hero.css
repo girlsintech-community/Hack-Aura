@@ -14,7 +14,7 @@
 .hack-aura-container {
   position: relative;
   min-height: 100vh;
-  background: url('src/assets/images/hero1.png') ;
+  background: url('/hero1.png') ;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

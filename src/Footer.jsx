@@ -130,7 +130,7 @@ function Footer() {
           <animateTransform
             attributeName="transform"
             begin="0s"
-            dur="2.5s"
+            dur="4.5s"
             type="translate"
             from="0,0"
             to="140,0"

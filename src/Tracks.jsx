@@ -25,8 +25,8 @@ const RollingGallery = () => {
 
   const galleryStyle = {
     position: 'relative',
-    width: 'min(95vw, 360px)',
-    height: 'min(70vw, 260px)',
+    width: 'min(80vw, 360px)',
+    height: 'min(65vw, 260px)',
     transformStyle: 'preserve-3d',
     animation: 'rotate 30s linear infinite',
   };
@@ -82,7 +82,7 @@ const RollingGallery = () => {
   };
 
   const descStyle = {
-    fontSize: 'clamp(0.9rem, 2.5vw, 1rem)',
+    fontSize: 'clamp(0.85rem, 2.2vw, 0.95rem)',
     lineHeight: 1.6,
     color: '#a7f3d0',
     fontFamily: 'Courier New, monospace',
@@ -177,6 +177,12 @@ const RollingGallery = () => {
               animation-duration: 60s !important; /* Slower spin on small devices */
             }
           } 
+             @media (max-width: 400px) {
+    .gallery {
+      width: 92vw !important;
+      height: 62vw !important;
+    }
+  }
         `}</style>
       </div>
     </>

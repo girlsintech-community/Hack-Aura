@@ -11,7 +11,7 @@ const ContactPopup = ({ onClose }) => {
           <br />
           reach out to us at:
         </p>
-        <a href="mailto:hackaura@event.org" className="email-link">
+        <a href="mailto:girlsleadingtech@gmail.com" className="email-link">
         girlsleadingtech@gmail.com
         </a>
         <br/>

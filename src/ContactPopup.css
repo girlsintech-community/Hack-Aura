@@ -2,34 +2,34 @@
 .popup-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(16px);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: fadeIn 0.4s ease-in-out forwards;
+  animation: fadeIn 0.2s ease-in-out forwards;
   padding: 1rem;
 }
 
 /* === Popup Container === */
 .popup-box {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(0, 208, 255, 0.25);
   border-radius: 20px;
   padding: 2.5rem 2.2rem;
   max-width: 420px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 0 25px rgba(203, 169, 244, 0.3);
+  box-shadow: 0 0 25px rgba(160, 100, 233, 0.15);
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
   animation: scaleIn 0.4s ease forwards;
   position: relative;
   background-image: linear-gradient(
     135deg,
-    rgba(0, 208, 255, 0.05),
-    rgba(203, 169, 244, 0.05)
+    rgba(0, 208, 255, 0.04),
+    rgba(203, 169, 244, 0.04)
   );
 }
 
@@ -40,7 +40,7 @@
   background: linear-gradient(135deg, #00d0ff, #cba9f4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 10px #cba9f4, 0 0 20px #00d0ff;
+  text-shadow: 0 0 10px #6413c7, 0 0 20px #011d24;
 }
 
 /* === Email Text === */
@@ -64,7 +64,7 @@
 }
 
 .email-link:hover {
-  color: #cba9f4;
+  color: #fd25c7;
   transform: scale(1.05);
 }
 
@@ -72,7 +72,7 @@
 .close-btn {
   margin-top: 2rem;
   padding: 0.8rem 2rem;
-  background: linear-gradient(135deg, #2c3bc0, #00d0ff);
+  background: linear-gradient(135deg, #182ce9, #00d0ff);
   color: #ffffff;
   font-weight: 700;
   font-size: 1rem;
@@ -80,13 +80,13 @@
   border-radius: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 0 20px #00d0ff;
+  box-shadow: 0 0 10px rgba(0, 208, 255, 0.2);
 }
 
 .close-btn:hover {
-  background: #cba9f4;
+  background: #5e1fac;
   color: #000;
-  box-shadow: 0 0 25px #cba9f4;
+  box-shadow: 0 0 15px rgba(59, 14, 114, 0.25); 
 }
 
 /* === Animations === */

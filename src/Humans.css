@@ -481,6 +481,8 @@
   
   .page-title {
     font-size: 2rem;
+    margin-top: 0rem;
+     /* Adjusted for smaller screens */
   }
   
   .section-title {

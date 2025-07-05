@@ -271,11 +271,15 @@
   .button-group {
     flex-direction: column;
     gap: 1.5rem;
+    align-items: center;
+  justify-content: center;
   }
 
   .btn-primary, .btn-secondary {
     width: 70%;
-    font-size: 0.95rem;
+    max-width: 80%;
+    font-size: 1rem;
+    text-align: center;
   }
 
   .astro-img {

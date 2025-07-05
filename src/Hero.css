@@ -342,5 +342,18 @@
     left: -0.6rem;
     max-width: 100%;
   }
+  /* Phones */
+  .scrolling-tagline {
+    font-size: 0.85rem; /* or adjust as needed */
+    padding: 0.5rem 0;
+  }
+
+
+}
+@media (max-width: 992px) {
+  .scrolling-tagline {
+    font-size: 1rem;
+    padding: 0.65rem 0;
+  }
 }
 

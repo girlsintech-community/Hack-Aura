@@ -47,7 +47,7 @@ const TeamPage = ({ onContactClick }) => {
     { name: "Aarushi Chottani", role: "Content Writing Lead", department: "Content", linkedin: "www.linkedin.com/in/aarushi-chottani-80b861322", image: '/images/teams/content/aarushi.png', location: "Pune" },
     { name: "Charmi Reddy P", role: "Content Writing Team", department: "Content", linkedin: "https://www.linkedin.com/in/charmi-reddy-p-b2aaa2294", image: '/images/teams/content/charmi.png', location: "Hyderabad" },
     { name: "Sanwedana Lokhande", role: "Content Writing Team", department: "Content", linkedin: "https://www.linkedin.com/in/sanwedana-lokhande-35332a33a/", image: '/images/teams/content/sanwedana.jpg', location: "Nagpur" },
-   // { name: "Niharika Rawat", role: "PR Lead", department: "PR", linkedin: "http://linkedin.com/in/", image: '/images/teams/pr/nikarika.png', location: "Pune" },
+   // { name: "New", role: "PR Lead", department: "PR", linkedin: "http://linkedin.com/in/", image: '/images/teams/pr/', location: "" },
     { name: "Dhairya Kanabar", role: "PR Team", department: "PR", linkedin: "https://www.linkedin.com/in/dhairya-kanabar-411990294", image: '/images/teams/pr/dhairiya.jpg', location: "Surendranagar" },
     { name: "Gungun Goel", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://www.linkedin.com/in/gungun-goyal-05154426a", image: '/images/teams/partnerships/gungun.png', location: "Meerut" },
     { name: "Kashvi Arora", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://in.linkedin.com/in/kashvi15", image: '/images/teams/partnerships/kashvi.jpg', location: "Delhi" },

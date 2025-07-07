@@ -85,11 +85,12 @@
 @media (max-width: 900px) {
   .hamburger {
   display: flex;
-  position: relative;
+  position: absolute;
+  top: 20px;
   order:2;
   width: 30px;
   height: 24px;
-  right: -146px;
+  right: 16px;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;

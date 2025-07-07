@@ -48,13 +48,12 @@ const Navbar = ({ onContactClick }) => {
       </div>
 
       {/* Hamburger Menu */}
-      <div className="hamburger" onClick={handleMenuToggle}>
-        <svg viewBox="0 0 100 80" width="25" height="25" fill="#fff">
-          <rect width="100" height="10"></rect>
-          <rect y="30" width="100" height="10"></rect>
-          <rect y="60" width="100" height="10"></rect>
-        </svg>
-      </div>
+      <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
     </div>
   );
 };

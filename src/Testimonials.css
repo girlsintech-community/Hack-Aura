@@ -80,8 +80,9 @@
 }
 
 .testimonials-track {
-  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
+  justify-content: center;
   width: max-content;
   animation: slideLeft 40s linear infinite;
 }
@@ -182,8 +183,8 @@
 }
 
 .author-avatar {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: linear-gradient(135deg, #10b981, #06b6d4);
   color: #0f172a;
@@ -235,6 +236,7 @@
   height: 18px;
   filter: drop-shadow(0 0 3px #3b82f6);
   transition: transform 0.2s ease;
+  margin: -3px;
 }
 
 .linkedin-icon:hover {
@@ -356,15 +358,15 @@
   }
 
   .testimonials-header h2 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 4rem);
   }
 
   .testimonial-text {
-    font-size: 0.95rem;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
   }
 
   .author-info h4 {
-    font-size: 0.9rem;
+    font-size: clamp(0.85rem, 1vw, 1rem);
   }
 
   .author-info p {
@@ -383,8 +385,9 @@
   }
 
   .testimonial-card {
-    width: 90vw;
-    padding: 1rem;
+    width: 100%;
+  max-width: 90vw;
+  padding: 1rem;
   }
 
   .testimonial-text {

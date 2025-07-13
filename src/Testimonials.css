@@ -53,9 +53,8 @@
 
 .testimonials-track {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 2.5rem;
+  gap: 2rem;
+  width: max-content;
   animation: slideLeft 40s linear infinite;
   width: max-content;
   padding: 1rem 0;
@@ -159,8 +158,8 @@
 }
 
 .author-avatar {
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: linear-gradient(135deg, #10b981, #06b6d4);
   display: flex;
@@ -197,9 +196,20 @@
 
 .author-info p {
   color: #9ca3af;
-  font-size: 0.85rem;
-  font-family: 'Inter', sans-serif;
-  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.linkedin-link {
+  display: inline-block;
+}
+.linkedin-icon {
+  width: 18px;
+  height: 18px;
+  filter: drop-shadow(0 0 3px #3b82f6);
+  transition: transform 0.2s ease;
 }
 
 .author-location {
@@ -321,51 +331,65 @@
     min-height: 350px;
     padding: 2rem 1.75rem;
   }
+
+  .testimonials-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+  }
+
+  .author-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .author-info p {
+    font-size: 0.75rem;
+  }
 }
-
-@media (max-width: 768px) {
-  .testimonials-header {
-    margin-bottom: 3rem;
+/* ===== Extra Small Devices (Mobile: <480px) ===== */
+@media (max-width: 480px) {
+  .testimonials-header h2 {
+    font-size: 2rem;
   }
 
-  .testimonials-track {
-    gap: 2rem;
+  .testimonials-header .subtitle {
+    font-size: 0.95rem;
+    padding: 0 1rem;
   }
 
-
-  
-  .subtitle {
-    font-size: 1.1rem;
-    max-width: 90%;
-  }
-  
-  .testimonials-track {
-    gap: 1.5rem;
-    animation-duration: 35s;
-  }
-  
   .testimonial-card {
-    max-width: 85vw;
-    min-height: 320px;
-    padding: 1.75rem 1.5rem;
+    width: 90vw;
+    padding: 1rem;
   }
   
   .testimonial-text {
-    font-size: 1rem;
-    margin-top: 2.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
-  
+
+  .author-info h4 {
+    font-size: 0.85rem;
+  }
+
+  .author-info p,
+  .author-location {
+    font-size: 0.7rem;
+  }
+
   .quote-icon {
-    font-size: 4rem;
-    top: 1.25rem;
-    left: 1.25rem;
+    font-size: 3rem;
+    top: 1rem;
+    left: 1rem;
   }
-  
-  .author-avatar {
-    width: 48px;
-    height: 48px;
+
+  .linkedin-icon {
+    width: 16px;
+    height: 16px;
   }
 }
+
 
 @media (max-width: 480px) {
   .testimonials-section {

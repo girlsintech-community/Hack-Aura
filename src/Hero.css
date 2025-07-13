@@ -24,7 +24,7 @@
   color: white;
   font-family: 'Orbitron', sans-serif;
   margin-bottom: 0;
-  margin-top: -10rem;  /* NEW */
+  margin-top: -10rem; /* NEW */
   padding-top: 0;
 }
 
@@ -271,11 +271,15 @@
   .button-group {
     flex-direction: column;
     gap: 1.5rem;
+    align-items: center;
+  justify-content: center;
   }
 
   .btn-primary, .btn-secondary {
     width: 70%;
-    font-size: 0.95rem;
+    max-width: 80%;
+    font-size: 1rem;
+    text-align: center;
   }
 
   .astro-img {
@@ -288,7 +292,7 @@
 /* Phones */
 @media (max-width: 600px) {
    .hack-aura-container {
-    margin-top: 0rem;
+    margin-top: -10rem;
     padding: 1rem;
     text-align: center;
   }
@@ -341,6 +345,19 @@
     top: -1.5rem;
     left: -0.6rem;
     max-width: 100%;
+  }
+  /* Phones */
+  .scrolling-tagline {
+    font-size: 0.85rem; /* or adjust as needed */
+    padding: 0.5rem 0;
+  }
+
+
+}
+@media (max-width: 992px) {
+  .scrolling-tagline {
+    font-size: 1rem;
+    padding: 0.65rem 0;
   }
 }
 

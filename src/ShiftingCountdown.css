@@ -169,14 +169,15 @@
   }
 
   .countdown-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
+    gap: 1rem; /* Maintain horizontal row */
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .countdown-item {
-    width: 100%;
-    max-width: 280px;
+    min-width: 120px;
+    flex: 1 1 120px;
+    max-width: 160px;
   }
 
   .digit-box {
@@ -185,5 +186,17 @@
 
   .digit {
     font-size: 2.2rem;
+  }
+}
+@media (max-width: 768px) and (min-width: 600px) {
+  .countdown-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .countdown-item {
+    flex: 0 1 calc(50% - 1.5rem); /* Two items per row with spacing */
+    max-width: calc(50% - 1.5rem);
   }
 }

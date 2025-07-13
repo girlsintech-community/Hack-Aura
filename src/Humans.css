@@ -604,3 +604,25 @@
 }
 
 
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .team-card .info-panel {
+    transform: translateY(0) !important;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+  }
+  
+  .team-card img {
+    filter: brightness(0.7);
+  }
+  
+  .team-card {
+    height: auto;
+    min-height: 340px;
+  }
+  
+  .team-card-wrapper {
+    width: 100%;
+    max-width: 300px;
+  }
+}

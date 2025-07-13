@@ -11,27 +11,43 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 
 const TeamPage = ({ onContactClick }) => {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    // Check if mobile on component mount and on resize
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
+
   useEffect(() => {
     toast.info('👋 Meet our awesome organizers — hover on the cards to see their details!', {
-  position: 'bottom-right',
-  autoClose: 4000,
-  hideProgressBar: true,
-  closeOnClick: true,
-  pauseOnHover: true,
-  draggable: false,
-  style: {
-    background: 'linear-gradient(135deg, #3b82f6, #10b981, #06b6d4)',
-    color: '#ffffff',
-    borderRadius: '12px',
-    boxShadow: '0 10px 30px rgba(59, 130, 246, 0.3)',
-    fontWeight: '500',
-    fontSize: '0.95rem',
-    padding: '0.85rem 1.2rem',
-    backdropFilter: 'blur(8px)',
-    border: '1px solid rgba(255, 255, 255, 0.2)',
-  },
-  icon: '✨',
-});
+      position: 'bottom-right',
+      autoClose: 4000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      style: {
+        background: 'linear-gradient(135deg, #3b82f6, #10b981, #06b6d4)',
+        color: '#ffffff',
+        borderRadius: '12px',
+        boxShadow: '0 10px 30px rgba(59, 130, 246, 0.3)',
+        fontWeight: '500',
+        fontSize: '0.95rem',
+        padding: '0.85rem 1.2rem',
+        backdropFilter: 'blur(8px)',
+        border: '1px solid rgba(255, 255, 255, 0.2)',
+      },
+      icon: '✨',
+    });
   }, []);
 
   const organizingTeam = [
@@ -71,6 +87,12 @@ const TeamPage = ({ onContactClick }) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-in');
+            
+            // On mobile, show the info panel when card comes into view
+            if (isMobile) {
+              const info = entry.target.querySelector('.info-panel');
+              if (info) info.style.transform = 'translateY(0)';
+            }
           }
         });
       },
@@ -93,50 +115,53 @@ const TeamPage = ({ onContactClick }) => {
         });
       }
     };
-  }, []);
+  }, [isMobile]); // Re-run effect when isMobile changes
 
   const TeamCard = ({ member, index = 0 }) => (
-  <div
-    className="team-card animate-on-scroll"
-    style={{ animationDelay: `${index * 150}ms` }}
-    onMouseEnter={(e) => {
-      const info = e.currentTarget.querySelector('.info-panel');
-      const img = e.currentTarget.querySelector('img');
-      if (img) img.style.transform = 'scale(1.05)';
-      if (info) info.style.transform = 'translateY(0)';
-    }}
-    onMouseLeave={(e) => {
-      const info = e.currentTarget.querySelector('.info-panel');
-      const img = e.currentTarget.querySelector('img');
-      if (img) img.style.transform = 'scale(1)';
-      if (info) info.style.transform = 'translateY(100%)';
-    }}
-  >
-    <img
-      src={member.image || '/default-avatar.png'}
-      alt={member.name}
-    />
-    <div className="info-panel">
-      <h3>{member.name}</h3>
-      <p className='location'><MapPin size={14} /> {member.location}</p>
-      {member.linkedin && (
-        <a
-          href={
-            member.linkedin.startsWith('http')
-              ? member.linkedin
-              : `https://www.linkedin.com/in/${member.linkedin}`
-          }
-          target="_blank"
-          rel="noopener noreferrer"
-          className="linkedin-link"
-        >
-          <Linkedin size={16} /> Connect
-        </a>
-      )}
+    <div
+      className="team-card animate-on-scroll"
+      style={{ animationDelay: `${index * 150}ms` }}
+      onMouseEnter={(e) => {
+        if (!isMobile) {
+          const info = e.currentTarget.querySelector('.info-panel');
+          const img = e.currentTarget.querySelector('img');
+          if (img) img.style.transform = 'scale(1.05)';
+          if (info) info.style.transform = 'translateY(0)';
+        }
+      }}
+      onMouseLeave={(e) => {
+        if (!isMobile) {
+          const info = e.currentTarget.querySelector('.info-panel');
+          const img = e.currentTarget.querySelector('img');
+          if (img) img.style.transform = 'scale(1)';
+          if (info) info.style.transform = 'translateY(100%)';
+        }
+      }}
+    >
+      <img
+        src={member.image || '/default-avatar.png'}
+        alt={member.name}
+      />
+      <div className="info-panel" style={isMobile ? { transform: 'translateY(0)' } : {}}>
+        <h3>{member.name}</h3>
+        <p className='location'><MapPin size={14} /> {member.location}</p>
+        {member.linkedin && (
+          <a
+            href={
+              member.linkedin.startsWith('http')
+                ? member.linkedin
+                : `https://www.linkedin.com/in/${member.linkedin}`
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+            className="team-card-linkedin"
+          >
+            <Linkedin size={16} /> Connect
+          </a>
+        )}
+      </div>
     </div>
-  </div>
-);
-
+  );
 
   const SectionHeader = ({ title, icon: Icon, count, tagline }) => (
     <div className="section-header animate-on-scroll">

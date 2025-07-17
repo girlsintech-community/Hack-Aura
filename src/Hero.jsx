@@ -29,7 +29,7 @@ const Hero = () => {
                         <span>HACKATHON</span>
                     </div>
                     <div className="button-group">
-                        <a href="https://devfolio.co/hackathons" target="_blank" rel="noopener noreferrer" className="btn-primary">Register Now</a>
+                        <a href="https://hackaura.devfolio.co/" target="_blank" rel="noopener noreferrer" className="btn-primary">Register Now</a>
                         <a
                             href="https://discord.gg/P8QY7Xgg"
                             target="_blank"

@@ -58,10 +58,10 @@ const OrganizationAbout = () => {
               </div>
               <div className="org-stats-container">
                 {[
-                  { label: 'Members', value: '2500+' },
-                  { label: 'Social Media', value: '13k+' },
+                  { label: 'Members', value: '3000+' },
+                  { label: 'Social Media', value: '15k+' },
                   { label: 'Mentorship Sessions', value: '34' },
-                  { label: 'Colleges Reached', value: '550+' },
+                  { label: 'Colleges Reached', value: '900+' },
                   { label: 'States Reached', value: '25+' },
                 ].map((stat, idx) => (
                   <div className="card" key={idx}>

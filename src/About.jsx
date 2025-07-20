@@ -2,7 +2,7 @@ import React from 'react';
 import './About.css';
 
 const galleryImages = [
-  { id: 1, src: "/side1.png", alt: 'Hackathon event' },
+  { id: 1, src: "/slide1.png", alt: 'Hackathon event' },
   { id: 2, src: "/slide2.png", alt: 'Participants coding' },
   { id: 3, src: "/slide3.png", alt: 'Winning team' },
   { id: 4, src: "/slide4.png", alt: 'LinkedIn Masterclass' },

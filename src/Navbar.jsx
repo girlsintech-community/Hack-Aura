@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import ContactPopup from './Contact';
-import logo from './assets/logo.png';
+import logo from './assets/Logo1.png';
 import GLT from './assets/GLT.png';
 
 const Navbar = ({ onContactClick }) => {

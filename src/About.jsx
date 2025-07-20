@@ -8,7 +8,7 @@ const galleryImages = [
   { id: 4, src: "/slide4.png", alt: 'LinkedIn Masterclass' },
   { id: 5, src: "/slide5.png", alt: 'Codess Cafe' },
   { id: 6, src: "/slide6.png", alt: 'Networking Day' },
-  { id: 7, src: "/s8.png", alt: 'Hackathon celebration' },
+  { id: 7, src: "/s8.png", alt: 'Google Step Intern' },
   
 ];
 

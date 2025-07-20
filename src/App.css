@@ -25,7 +25,7 @@
 }
 
 body, html, #root {
-  font-family: 'Segoe UI', 'Orbitron', 'Courier New', monospace;
+  font-family: 'Jura', 'Orbitron', 'Courier New', monospace;
   background: 
     radial-gradient(circle at 20% 80%, #0F0197 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, #0A0354 0%, transparent 50%),

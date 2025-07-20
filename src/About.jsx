@@ -6,6 +6,10 @@ const galleryImages = [
   { id: 2, src: "/slide2.png", alt: 'Participants coding' },
   { id: 3, src: "/slide3.png", alt: 'Winning team' },
   { id: 4, src: "/slide4.png", alt: 'LinkedIn Masterclass' },
+  { id: 5, src: "/slide5.png", alt: 'Codess Cafe' },
+  { id: 6, src: "/slide6.png", alt: 'Networking Day' },
+  { id: 7, src: "/s8.png", alt: 'Hackathon celebration' },
+  
 ];
 
 const About = () => {

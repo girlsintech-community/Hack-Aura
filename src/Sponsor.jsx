@@ -3,11 +3,11 @@ import './Sponsor.css';
 import ContactPopup from './Contact';
 
 // Import logo images from the assets folder
-import akashLogo from './assets/logos/akash.svg';
-import aptosLogo from './assets/logos/aptos.svg';
-import by from './assets/logos/by.avif';
-import github from './assets/logos/github-mark-white.png'
-import mlm from './assets/logos/mlm.jpg';
+import balsamiq from './assets/logos/balsamiq.png';
+import cake from './assets/logos/cake.svg';
+import GLT from './assets/logos/GLT.png';
+import IBlogo from './assets/logos/IBlogo.svg';
+//import mlm from './assets/logos/mlm.jpg';
 
 const HackathonSponsors = () => {
   const [showContact, setShowContact] = useState(false);
@@ -16,11 +16,11 @@ const HackathonSponsors = () => {
   const closeContactPopup = () => setShowContact(false);
 
   const sponsorLogos = [
-    { id: 1, src: akashLogo},
-    { id: 2, src: aptosLogo},
-    { id: 3, src: by},
-    { id: 4, src: github},
-    { id: 5, src: mlm},
+    { id: 1, src: balsamiq},
+   { id: 2, src: cake},
+    { id: 3, src: GLT},
+    { id: 4, src: IBlogo},
+   // { id: 5, src: mlm},
 
   ];
 

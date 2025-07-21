@@ -85,7 +85,7 @@ const RollingGallery = () => {
     fontSize: 'clamp(0.85rem, 2.2vw, 0.95rem)',
     lineHeight: 1.6,
     color: '#a7f3d0',
-    fontFamily: 'Courier New, monospace',
+    fontFamily: 'Jura',
     opacity: 0.95,
     padding: '0 0.25rem',
   };

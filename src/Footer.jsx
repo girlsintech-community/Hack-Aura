@@ -109,7 +109,7 @@ function Footer() {
             <li><a href="/humans">Humans of Hack Aura</a></li>
             <li><a href="/#faq">FAQ</a></li>
             <li><a href="/code-of-conduct">Code of Conduct</a></li>
-            <li><a href="/code-of-conduct">Brand Assets</a></li>
+            <li><a href="https://girlsleadingtech.notion.site/Girls-Leading-Tech-Brand-Kit-2365d11357bd80a5ab7ce198354d4903">Brand Assets</a></li>
           </ul>
         </div>
       </div>

@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     question: "How do I register?",
-    answer: "Easy-peasy. Click https://hackaura.devfolio.co/ and vibe with the form. Takes 2 mins, tops."
+    answer: "Easy-peasy. Click  [https://hackaura.devfolio.co/] and vibe with the form. Takes 2 mins, tops."
   },
   {
     question: "How do we submit?",

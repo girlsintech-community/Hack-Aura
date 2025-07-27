@@ -35,9 +35,23 @@ const faqs = [
     answer: "We’ll be ready to guide on our socials mentioned in the footer along with links."
   },
   {
-    question: "How do I register?",
-    answer: "Easy-peasy. Click  [https://hackaura.devfolio.co/] and vibe with the form. Takes 2 mins, tops."
-  },
+  question: "How do I register?",
+  answer: (
+    <>
+      Easy-peasy. Click&nbsp;
+      <a
+        href="https://hackaura.devfolio.co/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#4fc3f7', textDecoration: 'underline' }}
+      >
+        here
+      </a>
+      &nbsp;and vibe with the form. Takes 2 mins, tops.
+    </>
+  )
+},
+
   {
     question: "How do we submit?",
     answer: "We’ll send submission steps closer to the date."

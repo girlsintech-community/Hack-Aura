@@ -66,7 +66,7 @@ function Footer() {
             </a>
 
 
-            <a href="https://discord.gg/P8QY7Xgg" target="_blank" rel="noopener noreferrer" title="Discord">
+            <a href="https://discord.gg/EFtjVupxBk" target="_blank" rel="noopener noreferrer" title="Discord">
               <img
                 src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.15.0/discord.svg"
                 alt="Discord"

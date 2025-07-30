@@ -280,7 +280,6 @@
 .blurred-logo {
   max-width: 200px;
   max-height: 80px;
- /* filter: blur(8px) grayscale(100%); */
   opacity: 0.7;
   transition: all 0.3s ease;
 }

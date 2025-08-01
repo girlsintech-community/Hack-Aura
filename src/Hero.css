@@ -110,7 +110,7 @@
 }
 .button-group {
   display: flex;
-  gap: 15rem;
+  gap: 9rem;
   justify-content: center;
   margin-top: 2rem;
 }

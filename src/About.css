@@ -8,10 +8,10 @@
   border-radius: 28px;
   transition: all 0.5s ease;
   z-index: 1;
-  margin: 5rem auto;
+  margin: 7rem;
   max-width: 1400px;
   padding: 2rem 1rem;
-  margin-left: 150px;
+  /* margin-left: 220px; */
 }
 
 .about-container {
@@ -25,9 +25,12 @@
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 800;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   letter-spacing: -0.02em;
   position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
   
   /* Gradient Text */
   background: linear-gradient(90deg, 
@@ -61,8 +64,9 @@
   font-size: clamp(1rem, 1.5vw, 2.5rem);
   line-height: 1.8;
   color: #e0fdf4;
-  margin-bottom: 1.5rem;
+  margin-top: 2rem;
   text-align: justify;
+  margin-left:2rem;
 }
 
 /* === LAYOUT === */
@@ -70,6 +74,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
+  margin-top: -2rem;
 }
 
 
@@ -322,7 +327,7 @@
 
 .number {
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: bolder;
   color: #06b6d4;
   margin-bottom: 0.5rem;
 }

@@ -173,7 +173,9 @@ const TeamPage = ({ onContactClick }) => {
         <h2 className="section-title">{title}</h2>
       </div>
       <div className="section-divider"></div>
-      <p className="section-subtitle">{count} amazing individual</p>
+      <p className="section-subtitle">
+        {count === 1 ? "1 amazing individual" : `${count} amazing individuals`}
+      </p>
       {tagline && (
         <p style={{
           fontSize: '1rem',

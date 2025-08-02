@@ -173,9 +173,7 @@ const TeamPage = ({ onContactClick }) => {
         <h2 className="section-title">{title}</h2>
       </div>
       <div className="section-divider"></div>
-      <p className="section-subtitle">
-        {count === 1 ? "1 amazing individual" : `${count} amazing individuals`}
-      </p>
+     
       {tagline && (
         <p style={{
           fontSize: '1rem',
@@ -193,7 +191,7 @@ const TeamPage = ({ onContactClick }) => {
 
     return (
       <section className="team-section" key={deptName}>
-        <SectionHeader title={`${deptName} Team`} icon={icon} count={filtered.length} tagline={tagline} />
+        {/* <SectionHeader title={`${deptName} Team`} icon={icon} count={filtered.length} tagline={tagline} /> */}
         <div className="team-grid">
           {filtered.map((member, index) => (
             <div key={index} className="team-card-wrapper">

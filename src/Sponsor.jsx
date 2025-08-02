@@ -28,14 +28,11 @@ const HackathonSponsors = () => {
     <section className="hackathon-sponsors" id="sponsors">
       <div className="sponsors-container">
         <div className="sponsors-header">
-          <h2>SPONSORS & PARTNERS</h2>
-          <p className="subtitle">
-            Fuel the future of innovation — Collaborate with India’s brightest tech minds and unlock real impact.
-          </p>
+          <h2>OUR SPONSORS</h2>
         </div>
 
         <div className="blurred-logos-section">
-          <h3 className="logos-title">Join the League of Visionary Partners</h3>
+          
           <div className="logos-grid">
             {sponsorLogos.map((logo) => (
               <div className="logo-card" key={logo.id}>

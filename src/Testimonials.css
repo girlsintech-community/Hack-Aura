@@ -221,6 +221,7 @@
   align-items: center;
   gap: 0.25rem;
   color: #93c5fd;
+  margin:0.25rem;
   font-size: clamp(0.7rem, 2.5vw, 0.8rem);
 }
 

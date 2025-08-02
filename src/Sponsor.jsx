@@ -7,7 +7,9 @@ import balsamiq from './assets/logos/balsamiq.png';
 import cake from './assets/logos/cake.svg';
 import GLT from './assets/logos/GLT.png';
 import IBlogo from './assets/logos/IBlogo.svg';
-//import mlm from './assets/logos/mlm.jpg';
+import wolfram from './assets/logos/wolfram.png';
+import GMC from './assets/logos/GMC.png';
+import codecrafters from './assets/logos/codecrafters.png';
 
 const HackathonSponsors = () => {
   const [showContact, setShowContact] = useState(false);
@@ -20,7 +22,9 @@ const HackathonSponsors = () => {
    { id: 2, src: cake},
     { id: 3, src: GLT},
     { id: 4, src: IBlogo},
-   // { id: 5, src: mlm},
+   { id: 5, src: wolfram},
+    { id: 6, src: GMC},
+    { id: 7, src: codecrafters},
 
   ];
 

@@ -181,10 +181,7 @@
 }
 
 .team-card-wrapper {
-  flex-shrink: 0;
-  width: 340px;
-  display: flex;
-  justify-content: center;
+  flex: 0 1 300px; /* Adjust width of each card */
 }
 
 /* Team Card Styles */

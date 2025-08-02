@@ -1,0 +1,125 @@
+.cards-container {
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rolling-gallery-heading {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 800;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #3b82f6, #10b981, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 12px rgba(6, 182, 212, 0.3);
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  height: 320px;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.6s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  backdrop-filter: blur(8px);
+  transform: rotateY(180deg);
+}
+
+.card.flipped .card-front {
+  transform: rotateY(-180deg);
+}
+
+.card.flipped .card-back {
+  transform: rotateY(0deg);
+}
+
+.card-title {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #3b82f6, #10b981, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-desc {
+  font-size: clamp(0.9rem, 2.2vw, 1rem);
+  line-height: 1.6;
+  color: #e2e8f0;
+  opacity: 0.95;
+  margin-bottom: 1rem;
+}
+
+.card-prize {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  line-height: 1.8;
+  color: #d1fae5;
+  font-weight: 500;
+  white-space: pre-line;
+}
+
+.flip-hint {
+  position: absolute;
+  bottom: 1.5rem;
+  font-size: 0.8rem;
+  color: rgba(209, 250, 229, 0.7);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+  
+  .card {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: 260px;
+  }
+}

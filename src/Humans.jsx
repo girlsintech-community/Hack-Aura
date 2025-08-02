@@ -164,6 +164,77 @@ const TeamPage = ({ onContactClick }) => {
     </div>
   );
 
+  const SectionHeader = ({ title, icon: Icon, count, tagline }) => (
+    <div className="section-header animate-on-scroll">
+      <div className="section-header-content">
+        <div className="section-icon">
+          <Icon className="icon" />
+        </div>
+        <h2 className="section-title">{title}</h2>
+      </div>
+      <div className="section-divider"></div>
+      <p className="section-subtitle">
+        {count === 1 ? "1 amazing individual" : `${count} amazing individuals`}
+      </p>
+      {tagline && (
+        <p style={{
+          fontSize: '1rem',
+          fontStyle: 'italic',
+          color: '#b0bec5',
+          marginTop: '0.4rem'
+        }}>{tagline}</p>
+      )}
+    </div>
+  );
+
+  const renderDepartment = (deptName, icon, tagline) => {
+    const filtered = organizingTeam.filter(member => member.department === deptName);
+    if (filtered.length === 0) return null;
+
+    return (
+      <section className="team-section" key={deptName}>
+        <SectionHeader title={`${deptName} Team`} icon={icon} count={filtered.length} tagline={tagline} />
+        <div className="team-grid">
+          {filtered.map((member, index) => (
+            <div key={index} className="team-card-wrapper">
+              <TeamCard member={member} index={index} />
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  };
+
+  return (
+    <>
+      <Navbar onContactClick={onContactClick} />
+      <div className="team-page">
+        <div className="team-container">
+          <div className="page-header">
+            <h1 className="page-title">Humans of Hack Aura</h1>
+            <p className="page-description">
+              Meet the incredible team behind Hack Aura - passionate individuals dedicated to creating
+              an unforgettable hackathon experience for innovators and creators.
+            </p>
+            <div className="page-divider"></div>
+          </div>
+
+          {renderDepartment("Core", Users, "Leading from the front — vision, direction, execution.")}
+          {renderDepartment("Tech", Award, "Building the backbone of innovation.")}
+          {renderDepartment("Design", Brush, "Turning imagination into visuals, one pixel at a time.")}
+          {renderDepartment("Content", BookText, "We don’t just write content — we write experiences.")}
+          {renderDepartment("PR", Megaphone, "Crafting buzz, clicks, and conversations.")}
+          {renderDepartment("Host", Home, "Where experience meets execution.")}
+          {renderDepartment("Partnerships/Sponsorships", Handshake, "Powering possibilities through meaningful alliances.")}
+          {renderDepartment("Discord", MessageCircle, "Where community meets code — live, loud, and connected.")}
+          {renderDepartment("Speaker Outreach", Mic, "Voicing inspiration, one speaker at a time.")}
+        </div>
+      </div>
+      <ToastContainer />
+      <StyleTag />
+    </>
+  );
+};
 
 export default TeamPage;
 

@@ -66,7 +66,7 @@ function Footer() {
             </a>
 
 
-            <a href="https://discord.gg/P8QY7Xgg" target="_blank" rel="noopener noreferrer" title="Discord">
+            <a href="https://discord.gg/EFtjVupxBk" target="_blank" rel="noopener noreferrer" title="Discord">
               <img
                 src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/9.15.0/discord.svg"
                 alt="Discord"
@@ -93,14 +93,10 @@ function Footer() {
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.15s-.767.967-.94 1.165c-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.149-.669-1.612-.916-2.203-.242-.58-.487-.502-.67-.512l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.718 2.006-1.412.248-.694.248-1.29.173-1.412-.074-.123-.272-.198-.57-.347zm-5.421 6.53h-.001a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.437-9.884 9.888-9.884a9.82 9.82 0 0 1 6.993 2.897 9.823 9.823 0 0 1 2.893 6.994c-.003 5.45-4.438 9.884-9.889 9.884zM12.003 1.5C6.201 1.5 1.5 6.201 1.5 12c0 2.094.547 4.112 1.588 5.902L1 23l5.208-1.372A10.47 10.47 0 0 0 12.003 22.5c5.801 0 10.502-4.701 10.502-10.5 0-2.807-1.094-5.445-3.082-7.433A10.46 10.46 0 0 0 12.003 1.5z" />
               </svg>
             </a>
-
           </div>
           <p className="footer-email">
             Email us at: <a href="mailto:girlsleadingtech@gmail.com">girlsleadingtech@gmail.com</a>
           </p>
-
-         
-
         </div>
 
         <div className="footer-right">
@@ -113,14 +109,60 @@ function Footer() {
             <li><a href="/humans">Humans of Hack Aura</a></li>
             <li><a href="/#faq">FAQ</a></li>
             <li><a href="/code-of-conduct">Code of Conduct</a></li>
-            <li><a href="/code-of-conduct">Brand Assets</a></li>
+            <li><a href="https://girlsleadingtech.notion.site/Girls-Leading-Tech-Brand-Kit-2365d11357bd80a5ab7ce198354d4903">Brand Assets</a></li>
           </ul>
         </div>
       </div>
+
       <div className="illuminate-stage-wrapper">
-  <h2 className="main">ILLUMINATE INNOVATION</h2>
-  <h2 className="fade">ILLUMINATE INNOVATION</h2>
-  <h2 className="outline">ILLUMINATE INNOVATION</h2>
+  <svg viewBox="0 0 350 70" className="liquid-text">
+    <defs>
+      <linearGradient id="whiteWave">
+        <stop stopColor="white" offset="0%" />
+        <stop stopColor="white" offset="100%" />
+      </linearGradient>
+      <pattern id="wave" x="0" y="0" width="100%" height="100%" patternUnits="userSpaceOnUse">
+        <path
+          id="wavePath"
+          d="M-70 35 Q-52.5 28 -35 35 T0 35 T35 35 T70 35 T105 35 T140 35 T175 35 T210 35 T245 35 T280 35 T315 35 T350 35 V70 H-70z"
+          fill="url(#whiteWave)"
+        >
+          <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="4.5s"
+            type="translate"
+            from="0,0"
+            to="140,0"
+            repeatCount="indefinite"
+          />
+        </path>
+      </pattern>
+    </defs>
+
+    <text
+      textAnchor="middle"
+      x="175"
+      y="48"
+      fontSize="20"
+      fill="black"
+      fontWeight="900"
+      fontFamily="Jura, sans-serif"
+    >
+      ILLUMINATE INNOVATION
+    </text>
+    <text
+      textAnchor="middle"
+      x="175"
+      y="48"
+      fontSize="20"
+      fill="url(#wave)"
+      fontWeight="900"
+      fontFamily="Jura, sans-serif"
+    >
+      ILLUMINATE INNOVATION
+    </text>
+  </svg>
 </div>
 
       <div className="footer-signature">
@@ -129,7 +171,6 @@ function Footer() {
         <a href="https://www.linkedin.com/in/bagavati-narayanan-98484b292/" target="_blank" rel="noopener noreferrer">Bagavati</a> &amp;&nbsp;
         <a href="https://www.linkedin.com/in/adyashadas04/" target="_blank" rel="noopener noreferrer">Adyasha</a>
       </div>
-
     </footer>
   );
 }

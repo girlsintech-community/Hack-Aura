@@ -8,23 +8,25 @@ const RollingGallery = () => {
     alignItems: 'center',
     justifyContent: 'center',
     perspective: '1200px',
-    padding: '0rem 1rem 1rem 1rem',
+    padding: '1rem',
+    boxSizing: 'border-box',
   };
 
   const headingStyle = {
-    fontSize: '3.2rem',
+    fontSize: 'clamp(2rem, 6vw, 3.2rem)',
     fontWeight: '800',
-    marginBottom: '7rem',
+    marginBottom: '4rem',
     background: 'linear-gradient(135deg, #3b82f6, #10b981, #06b6d4)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     textShadow: '0 0 12px rgba(6, 182, 212, 0.3)',
+    textAlign: 'center',
   };
 
   const galleryStyle = {
     position: 'relative',
-    width: 'min(90vw, 400px)',
-    height: '280px',
+    width: 'min(80vw, 360px)',
+    height: 'min(65vw, 260px)',
     transformStyle: 'preserve-3d',
     animation: 'rotate 30s linear infinite',
   };
@@ -46,7 +48,7 @@ const RollingGallery = () => {
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: '1.2rem',
-    padding: '1.4rem',
+    padding: '0.75rem',
     background: 'rgba(255, 255, 255, 0.06)',
     border: '2px solid rgba(6, 182, 212, 0.25)',
     backdropFilter: 'blur(16px)',
@@ -70,7 +72,7 @@ const RollingGallery = () => {
   };
 
   const titleStyle = {
-    fontSize: '1.6rem',
+    fontSize: 'clamp(1.2rem, 3vw, 1.6rem)',
     fontWeight: '700',
     marginBottom: '0.75rem',
     background: 'linear-gradient(135deg, #3b82f6, #10b981, #06b6d4)',
@@ -80,12 +82,12 @@ const RollingGallery = () => {
   };
 
   const descStyle = {
-    fontSize: '1rem',
+    fontSize: 'clamp(0.85rem, 2.2vw, 0.95rem)',
     lineHeight: 1.6,
     color: '#a7f3d0',
-    fontFamily: 'Courier New, monospace',
+    fontFamily: 'Jura',
     opacity: 0.95,
-    padding: '0 0.5rem',
+    padding: '0 0.25rem',
   };
 
   const items = [
@@ -104,7 +106,8 @@ const RollingGallery = () => {
   ];
 
   const angle = 360 / items.length;
-  const translateZ = 160;
+  const translateZ = typeof window !== "undefined" && window.innerWidth < 480 ? 100 : 160;
+
 
   return (
     <>
@@ -166,6 +169,20 @@ const RollingGallery = () => {
             0% { transform: rotateY(0deg); }
             100% { transform: rotateY(360deg); }
           }
+            @media (max-width: 480px) {
+            h1 {
+              margin-bottom: 2rem !important;
+            }
+            .gallery {
+              animation-duration: 60s !important; /* Slower spin on small devices */
+            }
+          } 
+             @media (max-width: 400px) {
+    .gallery {
+      width: 92vw !important;
+      height: 62vw !important;
+    }
+  }
         `}</style>
       </div>
     </>

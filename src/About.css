@@ -76,43 +76,58 @@
 
 /* === UPDATED GALLERY STYLES (Vertical Scroll & Wider Section) === */
 .gallery-column {
+  position: relative;
   width: 100%;
   overflow: hidden;
-  max-height: 500px; /* optional: set vertical scroll limit */
-  margin-left: 190px;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+
+  height: 500px;
 }
 
 .cyber-gallery {
   position: relative;
   padding: 1rem 0;
-  width: 100%; /* Increase width */
-  height: 100px;
+  width: 100%;
 }
 
 .gallery-wrapper {
   overflow: hidden;
   width: 100%;
+  border-radius: 1rem;
+  position: relative;
 }
 
 .gallery-main {
   display: flex;
-  flex-direction: column; /* Vertical scroll */
-  gap: 1rem;
-  animation: verticalScroll 20s linear infinite;
-  height: calc(120px * 8); /* 8 images tall */
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: verticalScroll 25s linear infinite;
+  will-change: transform;
+}
+
+.gallery-main:hover {
+  animation-play-state: paused;
 }
 
 .gallery-main img {
-  width: 300px; /* Increased width */
-  height: 180px; /* Increased height */
+  width: 100%;
+  height: 200px;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.3),
+    0 0 10px rgba(6, 182, 212, 0.2);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .gallery-main img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(6, 182, 212, 0.4);
+  border-color: var(--cyber-teal);
 }
 
 /* === VERTICAL SCROLL ANIMATION === */
@@ -169,8 +184,8 @@
 
   .gallery-column {
     max-height: 400px; /* Optional: slightly shorter for mobile */
-    margin-left: 50px;
     height: 600px;
+    margin-left: 30px;
   }
 
   .cyber-gallery {

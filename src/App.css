@@ -25,13 +25,13 @@
 }
 
 body, html, #root {
-  font-family: 'Segoe UI', 'Orbitron', 'Courier New', monospace;
+  font-family: 'Jura', 'Orbitron', 'Courier New', monospace;
   background: 
     radial-gradient(circle at 20% 80%, #0F0197 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, #0A0354 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(126, 69, 224, 0.875) 0%, transparent 50%),
     linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a1a 50%, #0d1b0d 75%, #000000 100%);
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   color: var(--text-color);
   height: 100%;
   width: 100%;

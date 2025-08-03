@@ -9,7 +9,7 @@ import GLT from './assets/logos/GLT.png';
 import IBlogo from './assets/logos/IBlogo.svg';
 import wolfram from './assets/logos/wolfram.png';
 import GMC from './assets/logos/GMC.png';
-import CodeCrafters from './assets/logos/CodeCrafters.png';
+import CC from './assets/logos/cc.jpg';
 import XYZ from './assets/logos/XYZ.svg';
 import dev from './assets/logos/dev.png';
 import scc from './assets/logos/scc.png';
@@ -28,7 +28,7 @@ const HackathonSponsors = () => {
     { id: 4, src: IBlogo },
     { id: 5, src: wolfram },
     { id: 6, src: GMC },
-    { id: 7, src: CodeCrafters },
+    { id: 7, src: CC },
     { id: 8, src: XYZ },
   ];
   const partnerLogos = [

@@ -3,9 +3,9 @@
   padding: 2rem 2rem;
   position: relative;
   overflow: hidden;
- 
+  margin-top: -4rem;
   max-width: 1400px;
-  margin: 5rem auto;
+  /* margin: 5rem auto; */
   transition: 0.4s ease;
 }
 
@@ -13,9 +13,16 @@
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(16, 185, 129, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(6, 182, 212, 0.08) 0%,
+      transparent 50%
+    );
   z-index: -1;
   pointer-events: none;
 }
@@ -30,11 +37,10 @@
 /* ==== HEADER ==== */
 .sponsors-header {
   text-align: center;
-  margin-bottom: 3rem;
 }
 
-.sponsors-header h2 {
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
+.sponsors-header, .partner-header {
+  font-size: clamp(1.5rem, 4vw, 3rem);
   font-family: 'Orbitron', sans-serif;
   font-weight: 800; /* Extra bold to match thickness */
   
@@ -62,9 +68,10 @@
     0 0 20px rgba(20, 184, 166, 0.2),
     0 0 30px rgba(16, 185, 129, 0.1);
   
+  text-align: center;
+  margin-bottom: 3rem;
   text-transform: uppercase;
   letter-spacing: 0.1em; /* Slightly reduced for better readability */
-  margin-bottom: 1rem;
   position: relative;
   
   /* Ensure proper display */
@@ -77,11 +84,27 @@
 
 /* Fallback for browsers that don't support background-clip: text */
 @supports not (-webkit-background-clip: text) {
-  .sponsors-header h2 {
+  .timeline-title {
     background: none;
     color: #06b6d4; /* Bright cyan fallback */
     -webkit-text-fill-color: unset;
   }
+}
+
+.partner-header{
+  margin-top:9rem;
+}
+
+.sponsors-header::after, .partner-header::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, #10b981, transparent);
+  border-radius: 5px;
 }
 
 .sponsors-header .subtitle {
@@ -101,13 +124,14 @@
   margin-top: 3rem;
 }
 
-.call-card, .cta-card {
+.call-card,
+.cta-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(6, 182, 212, 0.2);
   border-radius: 20px;
   padding: 0.5rem 1rem;
   padding-top: 2.5rem;
-  margin-top: 3rem;
+  margin-top: 5rem;
 
   box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -119,14 +143,15 @@
   text-align: center;
 }
 
-
-.call-card:hover, .cta-card:hover {
+.call-card:hover,
+.cta-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 45px rgba(16, 185, 129, 0.3);
   border-color: #10b981;
 }
 
-.call-card h3, .cta-card h3 {
+.call-card h3,
+.cta-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #10b981;
@@ -150,7 +175,7 @@
 }
 
 .call-card li::before {
-  content: "★";
+  content: '★';
   position: absolute;
   left: 0;
   top: 0.1rem;
@@ -175,7 +200,11 @@
   font-size: 1rem;
   font-weight: 600;
   border-radius: 10px;
-  background: linear-gradient(145deg, rgba(16,185,129,0.15), rgba(6,182,212,0.15));
+  background: linear-gradient(
+    145deg,
+    rgba(16, 185, 129, 0.15),
+    rgba(6, 182, 212, 0.15)
+  );
   border: 1px solid #5fccfa;
   color: #e3e3e6;
   text-shadow: 0 0 4px rgba(15, 169, 231, 0.879);
@@ -204,16 +233,12 @@
 /* ==== AMPLIFIED GLOW ANIMATION ==== */
 @keyframes amplifiedGlow {
   0% {
-    text-shadow: 
-      0 0 10px rgba(6, 182, 212, 0.3),
-      0 0 20px rgba(20, 184, 166, 0.2),
-      0 0 30px rgba(16, 185, 129, 0.1);
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.3),
+      0 0 20px rgba(20, 184, 166, 0.2), 0 0 30px rgba(16, 185, 129, 0.1);
   }
   100% {
-    text-shadow: 
-      0 0 25px rgba(6, 182, 212, 0.6),
-      0 0 50px rgba(20, 184, 166, 0.4),
-      0 0 75px rgba(16, 185, 129, 0.3),
+    text-shadow: 0 0 25px rgba(6, 182, 212, 0.6),
+      0 0 50px rgba(20, 184, 166, 0.4), 0 0 75px rgba(16, 185, 129, 0.3),
       0 0 100px rgba(6, 182, 212, 0.2);
   }
 }
@@ -282,4 +307,3 @@
   max-height: 80px;
   transition: all 0.3s ease;
 }
-

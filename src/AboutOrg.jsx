@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Linkedin } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight, Linkedin } from "lucide-react";
 
 const OrganizationAbout = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -9,28 +9,28 @@ const OrganizationAbout = () => {
   const reviews = [
     {
       id: 1,
-      text: `This community has helped me a lot in staying motivated, and I have also discovered many opportunities through it. I would absolutely recommend that each and every girl should join this wonderful community.`,
-      author: 'Manisha HM',
-      role: 'https://www.linkedin.com/in/manisha-halale-69b541228',
-      image: '/manisha.jpeg',
-      location: 'Karnataka, India',
+      text: `This community has helped me a lot in staying motivated, and I have also discovered many opportunities through it, that are very beneficial for me and my carrer. I would absolutely recommend that each and every girl should join this wonderful community.`,
+      author: "Manisha HM",
+      role: "https://www.linkedin.com/in/manisha-halale-69b541228",
+      image: "/manisha.jpeg",
+      location: "Karnataka, India",
     },
     {
       id: 2,
       text: `Girls Leading Tech is an incredible initiative that empowers girls to advance their careers by providing valuable technical knowledge. It's especially beneficial for female students looking to grow in the tech field. Let's grow and inspire each other!`,
-      author: 'PREMI SREE PRIYA T S',
-      role: 'https://www.linkedin.com/in/ts-premi-sree-priya-061a54293',
-      image: '/premi.png',
-      location: 'Chennai, India',
+      author: "PREMI SREE PRIYA T S",
+      role: "https://www.linkedin.com/in/ts-premi-sree-priya-061a54293",
+      image: "/premi.png",
+      location: "Chennai, India",
     },
     {
       id: 3,
       text: `The mentors are exceptionally supportive, addressing all doubts and offering top-quality resources across both technical and non-technical domains. Their approachable and friendly nature fosters open communication, making it easy for members to interact.`,
-      author: 'Khushi Mittal',
-      role: 'https://www.linkedin.com/in/khushi-mittal-21b3ba246/',
-      image: '/khushi.jpg',
-      location: 'Bhavnagar, India',
-    }
+      author: "Khushi Mittal",
+      role: "https://www.linkedin.com/in/khushi-mittal-21b3ba246/",
+      image: "/khushi.jpg",
+      location: "Bhavnagar, India",
+    },
   ];
 
   // Responsive slides calculation
@@ -46,9 +46,9 @@ const OrganizationAbout = () => {
     };
 
     updateSlidesToShow();
-    window.addEventListener('resize', updateSlidesToShow);
-    
-    return () => window.removeEventListener('resize', updateSlidesToShow);
+    window.addEventListener("resize", updateSlidesToShow);
+
+    return () => window.removeEventListener("resize", updateSlidesToShow);
   }, []);
 
   // Auto-play functionality
@@ -87,25 +87,39 @@ const OrganizationAbout = () => {
             <div className="text-block">
               <div className="org-vision-section">
                 <div className="vision-card">
-                  <h3 className="vision-title">Vision</h3>
+                  <h3 className="vision-title">
+                    <b>Vision</b>
+                  </h3>
                   <p>
-                    To build a world where every Indian girl—regardless of background or resources—has equal access to opportunities, the confidence to lead, and a strong support system to thrive in technology and beyond. We envision girls not just participating in tech, but leading it—empowered to pursue dreams, uplift families, and shape an inclusive future.
+                    To build a world where every Indian girl—regardless of
+                    background or resources—has equal access to opportunities,
+                    the confidence to lead, and a strong support system to
+                    thrive in technology and beyond. We envision girls not just
+                    participating in tech, but leading it—empowered to pursue
+                    dreams, uplift families, and shape an inclusive future.
                   </p>
                 </div>
                 <div className="vision-card">
-                  <h3 className="vision-title">Mission</h3>
+                  <h3 className="vision-title">
+                    <b>Mission</b>
+                  </h3>
                   <p>
-                    To empower Indian girls in tech by providing them with access to resources, opportunities, mentorship, and a safe, inclusive community, helping them overcome societal and institutional barriers, build confidence, and grow into future-ready leaders and changemakers in the technology space.
+                    To empower Indian girls in tech by providing them with
+                    access to resources, opportunities, mentorship, and a safe,
+                    inclusive community, helping them overcome societal and
+                    institutional barriers, build confidence, and grow into
+                    future-ready leaders and changemakers in the technology
+                    space.
                   </p>
                 </div>
               </div>
               <div className="org-stats-container">
                 {[
-                  { label: 'Members', value: '3000+' },
-                  { label: 'Social Media', value: '15k+' },
-                  { label: 'Mentorship Sessions', value: '34' },
-                  { label: 'Colleges Reached', value: '900+' },
-                  { label: 'States Reached', value: '25+' },
+                  { label: "Members", value: "3000+" },
+                  { label: "Social Media", value: "15k+" },
+                  { label: "Mentorship Sessions", value: "34" },
+                  { label: "Colleges Reached", value: "900+" },
+                  { label: "States Reached", value: "25+" },
                 ].map((stat, idx) => (
                   <div className="card" key={idx}>
                     <div className="number">{stat.value}</div>
@@ -121,30 +135,38 @@ const OrganizationAbout = () => {
           <div className="testimonials-header">
             <h2 className="cyber-heading">Community Voices</h2>
             <p className="cyber-subtitle">
-              Hear what our members say about their Girls Leading Tech experience
+              Hear what our members say about their Girls Leading Tech
+              experience
             </p>
           </div>
 
-          <div 
+          <div
             className="testimonials-slider"
             onMouseEnter={() => setIsAutoPlaying(false)}
             onMouseLeave={() => setIsAutoPlaying(true)}
           >
-            <button className="slider-btn slider-btn-prev" onClick={prevSlide}>
-              <ChevronLeft size={24} />
-            </button>
-            
+            {reviews.length > slidesToShow && (
+              <button
+                className="slider-btn slider-btn-prev"
+                onClick={prevSlide}
+              >
+                <ChevronLeft size={24} />
+              </button>
+            )}
+
             <div className="slider-wrapper">
-              <div 
+              <div
                 className="testimonials-track"
                 style={{
-                  transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)`,
-                  width: `${(reviews.length * 100) / slidesToShow}%`
+                  transform: `translateX(-${
+                    currentSlide * (100 / slidesToShow)
+                  }%)`,
+                  width: `${(reviews.length * 100) / slidesToShow}%`,
                 }}
               >
                 {reviews.map((review, index) => (
-                  <div 
-                    className="testimonial-card" 
+                  <div
+                    className="testimonial-card"
                     key={index}
                     style={{ width: `${100 / reviews.length}%` }}
                   >
@@ -160,7 +182,7 @@ const OrganizationAbout = () => {
                           alt={review.author}
                           className="avatar-img"
                           onError={(e) => {
-                            e.target.src = '/default-avatar.png';
+                            e.target.src = "/default-avatar.png";
                           }}
                         />
                       </div>
@@ -182,21 +204,30 @@ const OrganizationAbout = () => {
               </div>
             </div>
 
-            <button className="slider-btn slider-btn-next" onClick={nextSlide}>
-              <ChevronRight size={24} />
-            </button>
+            {reviews.length > slidesToShow && (
+              <button
+                className="slider-btn slider-btn-next"
+                onClick={nextSlide}
+              >
+                <ChevronRight size={24} />
+              </button>
+            )}
           </div>
 
           {/* Dots Indicator */}
-          <div className="slider-dots">
-            {Array.from({ length: Math.ceil(reviews.length - slidesToShow + 1) }).map((_, index) => (
-              <button
-                key={index}
-                className={`dot ${index === currentSlide ? 'active' : ''}`}
-                onClick={() => goToSlide(index)}
-              />
-            ))}
-          </div>
+          {reviews.length > slidesToShow && (
+            <div className="slider-dots">
+              {Array.from({
+                length: Math.ceil(reviews.length - slidesToShow + 1),
+              }).map((_, index) => (
+                <button
+                  key={index}
+                  className={`dot ${index === currentSlide ? "active" : ""}`}
+                  onClick={() => goToSlide(index)}
+                />
+              ))}
+            </div>
+          )}
         </section>
       </div>
 
@@ -215,7 +246,7 @@ const OrganizationAbout = () => {
           margin: 0 auto;
         }
 
-        /* Vision/Mission Cards */
+        /*  /Mission Cards */
         .org-vision-section {
           display: flex;
           gap: 2rem;
@@ -340,7 +371,11 @@ const OrganizationAbout = () => {
         }
 
         .testimonial-card {
-          background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(16, 185, 129, 0.1));
+          background: linear-gradient(
+            135deg,
+            rgba(6, 182, 212, 0.1),
+            rgba(16, 185, 129, 0.1)
+          );
           border: 1px solid rgba(6, 182, 212, 0.2);
           border-radius: 16px;
           padding: 2rem;
@@ -437,7 +472,11 @@ const OrganizationAbout = () => {
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
-          background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(16, 185, 129, 0.2));
+          background: linear-gradient(
+            135deg,
+            rgba(6, 182, 212, 0.2),
+            rgba(16, 185, 129, 0.2)
+          );
           border: 1px solid rgba(6, 182, 212, 0.3);
           border-radius: 50%;
           width: 50px;
@@ -453,7 +492,11 @@ const OrganizationAbout = () => {
         }
 
         .slider-btn:hover {
-          background: linear-gradient(135deg, rgba(6, 182, 212, 0.4), rgba(16, 185, 129, 0.4));
+          background: linear-gradient(
+            135deg,
+            rgba(6, 182, 212, 0.4),
+            rgba(16, 185, 129, 0.4)
+          );
           transform: translateY(-50%) scale(1.1);
           box-shadow: 0 5px 15px rgba(6, 182, 212, 0.3);
         }
@@ -499,7 +542,7 @@ const OrganizationAbout = () => {
             flex-direction: column;
             gap: 1.5rem;
           }
-          
+
           .org-stats-container {
             grid-template-columns: repeat(3, 1fr);
           }

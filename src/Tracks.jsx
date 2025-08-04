@@ -32,22 +32,22 @@ const RollingGallery = () => {
 
   return (
     <div className="cards-container">
-      <h1 className="rolling-gallery-heading">Tracks</h1>
+      <h2 className="rolling-gallery-heading">TRACKS</h2>
       <div className="cards-grid">
         {items.map((item, index) => (
           <div 
             key={index}
-            className={`card ${flippedCards.includes(index) ? 'flipped' : ''}`}
+            className={`card1 ${flippedCards.includes(index) ? 'flipped' : ''}`}
             onClick={() => toggleFlip(index)}
           >
-            <div className="card-face card-front">
-              <h3 className="card-title">{item.title}</h3>
-              <p className="card-desc">{item.desc}</p>
+            <div className="card1-face card1-front">
+              <h3 className="card1-title">{item.title}</h3>
+              <p className="card1-desc">{item.desc}</p>
               <div className="flip-hint">Click to see prizes</div>
             </div>
-            <div className="card-face card-back">
-              <h3 className="card-title">{item.title} Prizes</h3>
-              <p className="card-prize">{item.prize}</p>
+            <div className="card1-face card1-back">
+              <h3 className="card1-title">{item.title} Prizes</h3>
+              <p className="card1-prize">{item.prize}</p>
               <div className="flip-hint">Click to return</div>
             </div>
           </div>

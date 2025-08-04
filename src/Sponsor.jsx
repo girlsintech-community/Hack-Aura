@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import './Sponsor.css';
-import ContactPopup from './Contact';
+import React, { useState } from "react";
+import "./Sponsor.css";
+import ContactPopup from "./Contact";
 
 // Import logo images from the assets folder
-import balsamiq from './assets/logos/balsamiq.png';
-import cake from './assets/logos/cake.svg';
-import GLT from './assets/logos/GLT.png';
-import IBlogo from './assets/logos/IBlogo.svg';
-import wolfram from './assets/logos/wolfram.png';
-import GMC from './assets/logos/GMC.png';
-import CC from './assets/logos/cc.jpg';
-import XYZ from './assets/logos/XYZ.svg';
-import dev from './assets/logos/dev.png';
-import scc from './assets/logos/scc.png';
-import civo from './assets/logos/civo.png';
+import balsamiq from "./assets/logos/balsamiq.png";
+import cake from "./assets/logos/cake.svg";
+import GLT from "./assets/logos/GLT.png";
+import IBlogo from "./assets/logos/IBlogo.svg";
+import wolfram from "./assets/logos/wolfram.png";
+import GMC from "./assets/logos/GMC.png";
+import CC from "./assets/logos/cc.jpg";
+import XYZ from "./assets/logos/XYZ.jpg";
+import dev from "./assets/logos/dev.png";
+import scc from "./assets/logos/scc.png";
+import civo from "./assets/logos/civo.png";
 
 const HackathonSponsors = () => {
   const [showContact, setShowContact] = useState(false);
@@ -37,7 +37,6 @@ const HackathonSponsors = () => {
     { id: 3, src: civo },
   ];
 
-
   return (
     <section className="hackathon-sponsors" id="sponsors">
       <div className="sponsors-container">
@@ -46,7 +45,6 @@ const HackathonSponsors = () => {
         </div>
 
         <div className="blurred-logos-section">
-
           <div className="logos-grid">
             {sponsorLogos.map((logo) => (
               <div className="logo-card" key={logo.id}>
@@ -56,12 +54,11 @@ const HackathonSponsors = () => {
           </div>
         </div>
 
-   <div className="sponsors-header">
+        <div className="partner-header">
           <h2>OUR PARTNERS</h2>
         </div>
 
         <div className="blurred-logos-section">
-
           <div className="logos-grid">
             {partnerLogos.map((logo) => (
               <div className="logo-card" key={logo.id}>
@@ -74,8 +71,9 @@ const HackathonSponsors = () => {
         <div className="cta-card">
           <h3>Let’s Build the Future Together</h3>
           <p>
-            Join us as a sponsor or community partner. Get featured across our platform, events, panels, swag kits, and more.
-            Elevate your brand while empowering the next generation of changemakers.
+            Join us as a sponsor or community partner. Get featured across our
+            platform, events, panels, swag kits, and more. Elevate your brand
+            while empowering the next generation of changemakers.
           </p>
           <button
             className="sponsor-button"
@@ -86,7 +84,6 @@ const HackathonSponsors = () => {
           </button>
         </div>
       </div>
-
 
       {showContact && <ContactPopup onClose={closeContactPopup} />}
     </section>

@@ -92,11 +92,11 @@ const OrganizationAbout = () => {
                     <b>Vision</b>
                   </h3>
                   <p>
-                    To build a world where every Indian girl—regardless of
-                    background or resources—has equal access to opportunities,
+                    To build a world where every Indian girl - regardless of
+                    background or resources - has equal access to opportunities,
                     the confidence to lead, and a strong support system to
                     thrive in technology and beyond. We envision girls not just
-                    participating in tech, but leading it—empowered to pursue
+                    participating in tech, but leading it - empowered to pursue
                     dreams, uplift families, and shape an inclusive future.
                   </p>
                 </div>
@@ -109,7 +109,7 @@ const OrganizationAbout = () => {
                     access to resources, opportunities, mentorship, and a safe,
                     inclusive community, helping them overcome societal and
                     institutional barriers, build confidence, and grow into
-                    future-ready leaders and changemakers in the technology
+                    future - ready leaders and changemakers in the technology
                     space.
                   </p>
                 </div>

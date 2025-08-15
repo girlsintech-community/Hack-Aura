@@ -1,3 +1,7 @@
+/* Center align About Hack Aura text block */
+.text-block {
+  text-align: center;
+}
 .testimonials-section {
   width: 100%;
   padding: 1rem 0 0.5rem 0; /* Less vertical space */
@@ -270,7 +274,7 @@
   font-size: 1rem;
   line-height: 1.8;
   color: #e0fdf4;
-  text-align: justify;
+  text-align: center;
 }
 
 /* Stats Section */

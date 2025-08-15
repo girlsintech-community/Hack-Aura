@@ -4,17 +4,14 @@
   box-sizing: border-box;
 }
 
+/* OG grid layout for cards restored */
 .cards-grid {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #10b981 #1e293b;
-  padding-bottom: 1rem;
 }
 
 .cards-grid::-webkit-scrollbar {
@@ -94,21 +91,14 @@
 }
 
 
+/* OG desktop/laptop card1 style restored */
 .card1 {
   position: relative;
-  height: 380px;
-  min-width: 320px;
-  max-width: 370px;
+  height: 320px;
   perspective: 1000px;
   cursor: pointer;
-  transition: transform 0.4s cubic-bezier(.4,2,.6,1);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
-  border-radius: 1.5rem;
-  background: rgba(20, 40, 80, 0.18);
-  border: 1.5px solid rgba(16, 185, 129, 0.18);
-  margin: 0 auto;
-  display: flex;
-  align-items: stretch;
+  transition: transform 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card1:hover {
@@ -127,7 +117,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  transition: all 0.6s cubic-bezier(.4,2,.6,1);
+  transition: all 0.7s cubic-bezier(.4,2,.6,1); /* Adjusted transition speed */
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.13);
 }
 
@@ -150,7 +140,8 @@
 }
 
 .card1.flipped .card1-back {
-  transform: rotateY(0deg);
+  transform: rotateY(0deg); /* Ensure no scaling on flip */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18); /* Softer shadow on flip */
 }
 
 .card1-title {

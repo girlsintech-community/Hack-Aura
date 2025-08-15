@@ -1,6 +1,6 @@
 .testimonials-section {
   width: 100%;
-  padding: 2rem 0;
+  padding: 1rem 0 0.5rem 0; /* Less vertical space */
 }
 
 .testimonials-header {
@@ -22,7 +22,7 @@
   overflow: hidden;
   width: 100%;
   position: relative;
-  margin: 2rem 0;
+  margin: 1rem 0; /* Less vertical space */
 }
 
 .marquee-track {
@@ -143,17 +143,18 @@
 
 @media (max-width: 600px) {
   .testimonials-section {
-    padding: 1rem 0.2rem;
+    padding: 0.5rem 0.1rem 0 0.1rem; /* Even less space on mobile */
   }
   .marquee-wrapper {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
   }
   .testimonial-card {
-    min-width: 85vw;
-    max-width: 90vw;
-    margin: 0 0.5rem;
-    padding: 0.9rem 0.5rem;
-    font-size: 0.95rem;
+    min-width: 95vw;
+    max-width: 98vw;
+    width: 98vw;
+    margin: 0 0.2rem;
+    padding: 1.3rem 0.7rem;
+    font-size: 1.08rem;
   }
   .testimonial-text {
     font-size: 0.98rem;

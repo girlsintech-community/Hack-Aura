@@ -23,8 +23,7 @@ const Hero = () => {
 
 
                     <div className="subtitle">
-                        <span>24</span>
-                        <span>HOURS</span>
+                        <span>24 HOURS</span>
                         <span>VIRTUAL</span>
                         <span>HACKATHON</span>
                     </div>

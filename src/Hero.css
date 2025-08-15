@@ -125,7 +125,7 @@
   background-color: #2C3BC0;
   color: #ffffff;
   padding: 0.75rem 2.5rem;
-  border-radius: 10px;
+  border-radius: 2rem; /* More circular */
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -347,6 +347,7 @@
     padding: 0.6rem 1.0rem;
     font-size: 0.85rem;
     text-align: center;
+    border-radius: 2rem; /* More circular on mobile too */
   }
 
   .astro-img {

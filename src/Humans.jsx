@@ -18,7 +18,7 @@ const TeamPage = ({ onContactClick }) => {
     };
   }, []);
 
-  const organizingTeam = [
+  const allTeam = [
     { name: "Aarushi Chottani", role: "Content Writing Team", department: "Content", linkedin: "www.linkedin.com/in/aarushi-chottani-80b861322", image: '/images/teams/content/aarushi.png', location: "Pune" },
     { name: "Aditi Madhukar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/aditimadhukar/", image: '/images/teams/discord/aditi.jpg', location: "Delhi" },
     { name: "Adyasha Das", role: "Tech Team", department: "Tech", linkedin: "https://www.linkedin.com/in/adyashadas04", image: '/images/teams/tech/adyasha1.png', location: "Bhubaneshwar" },
@@ -38,12 +38,22 @@ const TeamPage = ({ onContactClick }) => {
     { name: "Kashvi Arora", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://in.linkedin.com/in/kashvi15", image: '/images/teams/partnerships/kashvi.jpg', location: "Delhi" },
     { name: "Lakshya S", role: "PR Team", department: "PR", linkedin: "https://www.linkedin.com/in/lakshya-sasikumar-7bb659342/", image: '/images/teams/pr/lakshya.jpeg', location: "Chennai" },
     { name: "Mahak", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://www.linkedin.com/in/documentdiarieswithmahak/", image: '/images/teams/partnerships/mahak.png', location: "Delhi" },
-    { name: "Manik", role: "Lead Organizer", department: "Core", linkedin: "https://www.linkedin.com/in/mrmanik", image: '/images/teams/manik.jpg', location: "Haryana" },
     { name: "Pathan Sama Khan", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/sama-khan-628959281", image: '/images/teams/speaker/pathan.jpg', location: "Hyderabad" },
     { name: "Sanwedana Lokhande", role: "Content Writing Team", department: "Content", linkedin: "https://www.linkedin.com/in/sanwedana-lokhande-35332a33a/", image: '/images/teams/content/sanwedana.jpg', location: "Nagpur" },
     { name: "Simran Nagekar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/simransn", image: '/images/teams/discord/simran.png', location: "Bengaluru" },
     { name: "Vijay Laxmi", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/laxmi-vijay/", image: '/images/teams/speaker/vijay1.jpg', location: "Delhi" }
-  ].sort((a, b) => a.name.localeCompare(b.name));
+  ];
+
+  const manik = {
+    name: "Manik",
+    role: "Lead Organizer",
+    department: "Core",
+    linkedin: "https://www.linkedin.com/in/mrmanik",
+    image: '/images/teams/manik.jpg',
+    location: "Haryana"
+  };
+
+  const organizingTeam = allTeam.sort((a, b) => a.name.localeCompare(b.name));
 
   const observerRef = useRef();
   const elementsRef = useRef([]);
@@ -78,50 +88,72 @@ const TeamPage = ({ onContactClick }) => {
     };
   }, [isMobile]);
 
-  const TeamCard = ({ member, index = 0 }) => (
-    <div
-      className="team-card animate-on-scroll"
-      style={{ animationDelay: `${index * 150}ms` }}
-    >
-      <div className="image-container">
-        <img
-          src={member.image || '/default-avatar.png'}
-          alt={member.name}
-          className="team-member-image"
-        />
-      </div>
-      <div className="name-header" style={{ height: '40px', padding: '0.5rem' }}>
-        <p style={{ 
-          margin: 0,
-          fontSize: '15px',
-          textAlign: 'left',
-          width: '100%'
-        }}>
-          {member.department}
-        </p>
-      </div>
-      <div className="info-panel">
-        <div style={{display: 'flex'}}>
-          <h3 style={{ fontSize: '15px' }}>{member.name}</h3>
-          {member.linkedin && (
-            <a
-              href={
-                member.linkedin.startsWith('http')
-                  ? member.linkedin
-                  : `https://www.linkedin.com/in/${member.linkedin}`
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{height: '10px', marginLeft: '15px'}}
-            >
-              <Linkedin size={15} />
-            </a>
-          )}
+  const [activeCard, setActiveCard] = useState(null);
+  // For mobile: toggle info on tap
+  const handleCardClick = (idx) => {
+    if (!isMobile) return;
+    setActiveCard(activeCard === idx ? null : idx);
+  };
+
+  const TeamCard = ({ member, index = 0 }) => {
+    // Determine if info should be shown
+    const showInfo = isMobile ? activeCard === index : false;
+    return (
+      <div
+        className={`team-card animate-on-scroll${showInfo ? ' show-info' : ''}`}
+        style={{ animationDelay: `${index * 150}ms` }}
+        onClick={() => handleCardClick(index)}
+      >
+        <div className="image-container">
+          <img
+            src={member.image || '/default-avatar.png'}
+            alt={member.name}
+            className="team-member-image"
+          />
+          {/* Info panel overlays image, hidden by default, shown on hover/tap */}
+            <div className="info-panel">
+              <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px', width: '100%'}}>
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', width: '100%'}}>
+                  <span style={{ fontSize: '17px', fontWeight: 700, color: '#10b981', letterSpacing: '0.02em', textAlign: 'center', width: '100%' }}>{member.department}</span>
+                  {member.linkedin && (
+                    <a
+                      href={
+                        member.linkedin.startsWith('http')
+                          ? member.linkedin
+                          : `https://www.linkedin.com/in/${member.linkedin}`
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="team-card-linkedin"
+                      style={{margin: '0 auto', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', padding: '6px 14px', borderRadius: '50px', background: 'rgba(16,185,129,0.13)', border: '1.5px solid #10b981', color: '#10b981', fontWeight: 600, fontSize: '15px', boxShadow: '0 2px 8px rgba(16,185,129,0.08)', transition: 'all 0.2s'}} 
+                      onClick={e => e.stopPropagation()}
+                    >
+                      <Linkedin size={18} style={{marginRight: '6px'}} />
+                      <span style={{fontSize: '15px'}}>LinkedIn</span>
+                    </a>
+                  )}
+                </div>
+                <span className="location" style={{margin: 0, display: 'flex', alignItems: 'center', gap: '7px', color: '#e2e8f0', fontSize: '15px', fontWeight: 500, justifyContent: 'center'}}>
+                  <MapPin size={16} />
+                  {member.location}
+                </span>
+              </div>
+            </div>
         </div>
-        <p className="location"><MapPin size={14} /> {member.location}</p>
+        {/* Department header always visible at top */}
+        <div className="name-header" style={{ height: '40px', padding: '0.5rem' }}>
+          <p style={{ 
+            margin: 0,
+            fontSize: '15px',
+            textAlign: 'center',
+            width: '100%'
+          }}>
+              {member.name}
+          </p>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="team-page">
@@ -141,6 +173,13 @@ const TeamPage = ({ onContactClick }) => {
               <TeamCard member={member} index={index} />
             </div>
           ))}
+        </div>
+        <div style={{ marginTop: '2.5rem', display: 'flex', justifyContent: 'center', width: '100%' }}>
+          <div style={{ maxWidth: 320, width: '100%' }}>
+            <div className="team-card-wrapper">
+              <TeamCard member={manik} index={999} />
+            </div>
+          </div>
         </div>
       </div>
     </div>

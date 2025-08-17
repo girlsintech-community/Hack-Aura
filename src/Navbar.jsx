@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import ContactPopup from "./Contact";
-import logo from "./assets/Logo1.png";
-import GLT from "./assets/GLT.png";
+import logo from "./assets/Logo1.webp";
+import GLT from "./assets/GLT.webp";
 
 const Navbar = ({ onContactClick }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +23,7 @@ const Navbar = ({ onContactClick }) => {
       {/* Left Logo */}
       <div className="left-logo">
         <a href="/">
-          <img src={logo} alt="HackAura Logo" />
+          <img src={logo} alt="HackAura Logo" width="48" height="48" />
         </a>
       </div>
 
@@ -52,7 +52,7 @@ const Navbar = ({ onContactClick }) => {
       {/* Right Logo */}
       <div className="right-logo">
         <a href="/">
-          <img src={GLT} alt="GirlsInTech Logo" />
+          <img src={GLT} alt="GirlsInTech Logo" width="40" height="40" />
         </a>
       </div>
 

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Linkedin } from "lucide-react";
+import ChevronLeft from 'lucide-react/dist/esm/icons/chevron-left';
+import ChevronRight from 'lucide-react/dist/esm/icons/chevron-right';
+import Linkedin from 'lucide-react/dist/esm/icons/linkedin';
 import "./AboutOrg.css";
 
 const OrganizationAbout = () => {
@@ -13,7 +15,7 @@ const OrganizationAbout = () => {
       text: `This community has helped me a lot in staying motivated, and I have also discovered many opportunities through it, that are very beneficial for me and my carrer. I would absolutely recommend that each and every girl should join this wonderful community.`,
       author: "Manisha HM",
       role: "https://www.linkedin.com/in/manisha-halale-69b541228",
-      image: "/manisha.jpeg",
+  image: "/manisha.webp",
       location: "Karnataka, India",
     },
     {
@@ -21,7 +23,7 @@ const OrganizationAbout = () => {
       text: `Girls Leading Tech is an incredible initiative that empowers girls to advance their careers by providing valuable technical knowledge. It's especially beneficial for female students looking to grow in the tech field. Let's grow and inspire each other!`,
       author: "PREMI SREE PRIYA T S",
       role: "https://www.linkedin.com/in/ts-premi-sree-priya-061a54293",
-      image: "/premi.png",
+  image: "/premi.webp",
       location: "Chennai, India",
     },
     {
@@ -29,7 +31,7 @@ const OrganizationAbout = () => {
       text: `The mentors are exceptionally supportive, addressing all doubts and offering top-quality resources across both technical and non-technical domains. Their approachable and friendly nature fosters open communication, making it easy for members to interact.`,
       author: "Khushi Mittal",
       role: "https://www.linkedin.com/in/khushi-mittal-21b3ba246/",
-      image: "/khushi.jpg",
+  image: "/khushi.webp",
       location: "Bhavnagar, India",
     },
   ];
@@ -158,7 +160,7 @@ const OrganizationAbout = () => {
                         alt={review.author}
                         className="avatar-img"
                         onError={(e) => {
-                          e.target.src = "/default-avatar.png";
+                          e.target.src = "/default-avatar.webp";
                         }}
                       />
                     </div>

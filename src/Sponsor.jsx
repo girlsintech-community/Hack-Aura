@@ -3,17 +3,17 @@ import "./Sponsor.css";
 import ContactPopup from "./Contact";
 
 // Import logo images from the assets folder
-import balsamiq from "./assets/logos/balsamiq.png";
+import balsamiq from "./assets/logos/balsamiq.webp";
 import cake from "./assets/logos/cake.svg";
-import GLT from "./assets/logos/GLT.png";
+import GLT from "./assets/logos/GLT.webp";
 import IBlogo from "./assets/logos/IBlogo.svg";
-import wolfram from "./assets/logos/wolfram.png";
-import GMC from "./assets/logos/GMC.png";
-import CC from "./assets/logos/cc.jpg";
-import XYZ from "./assets/logos/XYZ.jpg";
-import dev from "./assets/logos/dev.png";
-import scc from "./assets/logos/scc.png";
-import civo from "./assets/logos/civo.png";
+import wolfram from "./assets/logos/wolfram.webp";
+import GMC from "./assets/logos/GMC.webp";
+import CC from "./assets/logos/cc.webp";
+import XYZ from "./assets/logos/XYZ.webp";
+import dev from "./assets/logos/dev.webp";
+import scc from "./assets/logos/scc.webp";
+import civo from "./assets/logos/civo.webp";
 
 const HackathonSponsors = () => {
   const [showContact, setShowContact] = useState(false);
@@ -48,7 +48,7 @@ const HackathonSponsors = () => {
           <div className="logos-grid">
             {sponsorLogos.map((logo) => (
               <div className="logo-card" key={logo.id}>
-                <img src={logo.src} className="blurred-logo" />
+                <img src={logo.src} className="blurred-logo" width="160" height="80" />
               </div>
             ))}
           </div>
@@ -62,7 +62,7 @@ const HackathonSponsors = () => {
           <div className="logos-grid">
             {partnerLogos.map((logo) => (
               <div className="logo-card" key={logo.id}>
-                <img src={logo.src} className="blurred-logo" />
+                <img src={logo.src} className="blurred-logo" width="160" height="80" />
               </div>
             ))}
           </div>

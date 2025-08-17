@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import { Disc } from 'lucide-react';
+import Disc from 'lucide-react/dist/esm/icons/disc';
 
 
 const Hero = () => {
@@ -16,7 +16,7 @@ const Hero = () => {
                         HACK AUR
                         <span className="astro-wrapper">
                             A
-                            <img src="/astro.png" alt="Astronaut" className="astro-img" />
+                            <img src="/astro.webp" alt="Astronaut" className="astro-img" width="60" height="60" />
                         </span>
 
                     </h1>

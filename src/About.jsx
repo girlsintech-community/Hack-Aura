@@ -2,13 +2,13 @@ import React from 'react';
 import './About.css';
 
 const galleryImages = [
-  { id: 1, src: "/slide1.png", alt: 'Hackathon event' },
-  { id: 2, src: "/slide2.png", alt: 'Participants coding' },
-  { id: 3, src: "/slide3.png", alt: 'Winning team' },
-  { id: 4, src: "/slide4.png", alt: 'LinkedIn Masterclass' },
-  { id: 5, src: "/slide5.png", alt: 'Codess Cafe' },
-  { id: 6, src: "/slide6.png", alt: 'Networking Day' },
-  { id: 7, src: "/s8.png", alt: 'Google Step Intern' },
+  { id: 1, src: "/slide1.webp", alt: 'Hackathon event' },
+  { id: 2, src: "/slide2.webp", alt: 'Participants coding' },
+  { id: 3, src: "/slide3.webp", alt: 'Winning team' },
+  { id: 4, src: "/slide4.webp", alt: 'LinkedIn Masterclass' },
+  { id: 5, src: "/slide5.webp", alt: 'Codess Cafe' },
+  { id: 6, src: "/slide6.webp", alt: 'Networking Day' },
+  { id: 7, src: "/s8.webp", alt: 'Google Step Intern' },
   
 ];
 
@@ -31,7 +31,7 @@ const About = () => {
               <div className="gallery-wrapper">
                 <div className="gallery-main">
                   {galleryImages.concat(galleryImages).map((img, index) => (
-                    <img key={index} src={img.src} alt={img.alt} />
+                    <img key={index} src={img.src} alt={img.alt} width="400" height="300" />
                   ))}
                 </div>
               </div>

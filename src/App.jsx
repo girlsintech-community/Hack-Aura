@@ -1,4 +1,5 @@
 import React, { useState, Suspense, lazy } from 'react';
+import AudioPlayer from './AudioPlayer';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
@@ -96,37 +97,41 @@ function App() {
   };
 
   return (
-    <Router>
-      <div className="app-wrapper">
-        {/* Shooting stars in the global background */}
-        <Suspense fallback={null}>
-          <ShootingStars />
-        </Suspense>
-        <Routes>
-          <Route path="/" element={<HomePage onContactClick={handleContactClick} />} />
-          <Route path="/code-of-conduct" element={
-            <Suspense fallback={<LoadingSpinner />}>
-              <CodeOfConduct />
-            </Suspense>
-          } />
-          <Route path="/humans" element={<TeamPage onContactClick={handleContactClick} />} />
-          <Route path="/tickets" element={
-    <Suspense fallback={<LoadingSpinner />}>
-      <TicketsPage />
-    </Suspense>
-  } />
-        </Routes>
-        <Suspense fallback={<LoadingSpinner />}>
-          <Footer onContactClick={handleContactClick} />
-        </Suspense>
-
-        {showContact && (
+    <>
+      {/* Global Audio Player - outside Router for persistence */}
+      <AudioPlayer />
+      <Router>
+        <div className="app-wrapper">
+          {/* Shooting stars in the global background */}
           <Suspense fallback={null}>
-            <ContactPopup onClose={closePopup} />
+            <ShootingStars />
           </Suspense>
-        )}
-      </div>
-    </Router>
+          <Routes>
+            <Route path="/" element={<HomePage onContactClick={handleContactClick} />} />
+            <Route path="/code-of-conduct" element={
+              <Suspense fallback={<LoadingSpinner />}>
+                <CodeOfConduct />
+              </Suspense>
+            } />
+            <Route path="/humans" element={<TeamPage onContactClick={handleContactClick} />} />
+            <Route path="/tickets" element={
+      <Suspense fallback={<LoadingSpinner />}>
+        <TicketsPage />
+      </Suspense>
+    } />
+          </Routes>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Footer onContactClick={handleContactClick} />
+          </Suspense>
+
+          {showContact && (
+            <Suspense fallback={null}>
+              <ContactPopup onClose={closePopup} />
+            </Suspense>
+          )}
+        </div>
+      </Router>
+    </>
   );
 }
 

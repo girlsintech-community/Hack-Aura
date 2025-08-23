@@ -102,13 +102,13 @@ function Footer() {
         <div className="footer-right">
           <h3>Quick Links</h3>
           <ul className="quick-links">
-            <li><a href="/">Home</a></li>
+            <li><Link to="/">Home</Link></li>
             <li><a href="/#about">About</a></li>
             <li><a href="/#timeline">Timeline</a></li>
             <li><a href="/#sponsors">Sponsors</a></li>
-            <li><a href="/humans">Humans of Hack Aura</a></li>
+            <li><Link to="/humans">Humans of Hack Aura</Link></li>
             <li><a href="/#faq">FAQ</a></li>
-            <li><a href="/code-of-conduct">Code of Conduct</a></li>
+            <li><Link to="/code-of-conduct">Code of Conduct</Link></li>
             <li><a href="https://girlsleadingtech.notion.site/Girls-Leading-Tech-Brand-Kit-2365d11357bd80a5ab7ce198354d4903">Brand Assets</a></li>
           </ul>
         </div>

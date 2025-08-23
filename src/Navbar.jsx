@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import "./Navbar.css";
 import ContactPopup from "./Contact";
 import logo from "./assets/Logo1.webp";
@@ -22,9 +23,9 @@ const Navbar = ({ onContactClick }) => {
     <div className="navbar-container">
       {/* Left Logo */}
       <div className="left-logo">
-        <a href="/">
+        <Link to="/">
           <img src={logo} alt="HackAura Logo" width="48" height="48" />
-        </a>
+        </Link>
       </div>
 
       {/* Center or Mobile Menu */}
@@ -34,13 +35,13 @@ const Navbar = ({ onContactClick }) => {
         }`}
       >
         <nav className="navbar">
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
           <a href="/#about">About</a>
           <a href="/#timeline">Timeline</a>
           <a href="/#sponsors">Sponsors</a>
           <a href="/#tracks">Tracks</a>
-          <a href="/tickets">Tickets</a>
-          <a href="/humans">Humans</a>
+          <Link to="/tickets">Tickets</Link>
+          <Link to="/humans">Humans</Link>
           <a onClick={onContactClick} style={{ cursor: "pointer" }}>
             Contact
           </a>
@@ -52,9 +53,9 @@ const Navbar = ({ onContactClick }) => {
 
       {/* Right Logo */}
       <div className="right-logo">
-        <a href="/">
+        <Link to="/">
           <img src={GLT} alt="GirlsInTech Logo" width="40" height="40" />
-        </a>
+        </Link>
       </div>
 
       {/* Hamburger Menu */}

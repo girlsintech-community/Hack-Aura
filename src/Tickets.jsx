@@ -13,21 +13,21 @@ const houses = [
   },
   {
     name: "LUNO House",
-    description:"hello",
+    description:"They do not merely write code; they transform it. What begins as simple logic leaves their hands as something rare and remarkable. “Turn code into gold.”",
     cover: "/images/houses/green.png",
     video: "/images/houses/green.mp4",
     download: "/images/houses/LUNO.png"
   },
   {
     name: "ASTRA House",
-    description:"hello",
+    description:"They thrive where others falter; stepping into chaos and returning with order, as if they had tamed the storm itself. “Code clarity from chaos.”",
     cover: "/images/houses/pink.png",
     video: "/images/houses/pink.mp4",
     download: "/images/houses/ASTRA.png"
   },
   {
     name: "NYX House",
-    description:"hello",
+    description:"Here, the rules blur; endings become beginnings, and code dares to go where reason hesitates. “Where logic ends, code begins.”",
     cover: "/images/houses/yellow.png",
     video: "/images/houses/yellow.mp4",
     download: "/images/houses/NYX.png"

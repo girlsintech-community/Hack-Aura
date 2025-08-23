@@ -159,7 +159,7 @@
 }
 
 .team-card.show-info .image-container img {
-  filter: blur(4px) brightness(0.7) contrast(1.1);
+  filter: brightness(0.7) contrast(1.1);
 }
 
 /* INFO PANEL TEXT */

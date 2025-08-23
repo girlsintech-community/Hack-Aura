@@ -6,24 +6,28 @@ import Navbar from "./Navbar";
 const houses = [
   {
     name: "NOVA House",
+    description:"They look beyond the horizon; catching sight of the future while the rest are still lost in today. Code the future before it arrives.",
     cover: "/images/houses/blue.png",
     video: "/images/houses/blue.mp4", // replace with actual promo video
     download: "/images/houses/NOVA.png"
   },
   {
     name: "LUNO House",
+    description:"hello",
     cover: "/images/houses/green.png",
     video: "/images/houses/green.mp4",
     download: "/images/houses/LUNO.png"
   },
   {
     name: "ASTRA House",
+    description:"hello",
     cover: "/images/houses/pink.png",
     video: "/images/houses/pink.mp4",
     download: "/images/houses/ASTRA.png"
   },
   {
     name: "NYX House",
+    description:"hello",
     cover: "/images/houses/yellow.png",
     video: "/images/houses/yellow.mp4",
     download: "/images/houses/NYX.png"
@@ -67,6 +71,10 @@ const Tickets = () => {
                   onClick={() => toggleFlip(idx)}
                 >
                   <Info size={20} />
+                  <div className="info-hover-panel">
+    <span className="house-name">{house.name}</span>
+    <span className="house-desc">{house.description}</span>
+  </div>
                 </button>
               </div>
             </div>

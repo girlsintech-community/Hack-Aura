@@ -98,7 +98,7 @@
   border-radius: 1rem;
   position: absolute;
   backface-visibility: hidden;
-  overflow: hidden;
+  overflow: visible;
   transition: transform 0.6s;
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
@@ -212,11 +212,20 @@
 }
 
 /* Fade in on hover of the button */
-.info-btn:hover .info-hover-panel {
+.info-container:hover .info-hover-panel {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
+.info-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 /* Typography */
 .info-hover-panel .house-name {

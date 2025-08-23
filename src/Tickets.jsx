@@ -66,16 +66,19 @@ const Tickets = () => {
                 >
                   Download
                 </a>
+                <div className="info-container">
                 <button
                   className="info-btn"
                   onClick={() => toggleFlip(idx)}
                 >
                   <Info size={20} />
+                  </button>
                   <div className="info-hover-panel">
     <span className="house-name">{house.name}</span>
     <span className="house-desc">{house.description}</span>
   </div>
-                </button>
+  </div>
+                
               </div>
             </div>
 

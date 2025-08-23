@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import Hero from './Hero';
+import Tickets from "./Tickets";
 import ShiftingCountdown from './ShiftingCountdown';
 const CodeOfConduct = lazy(() => import('./CodeOfConduct'));
 const Footer = lazy(() => import('./Footer'));
@@ -15,6 +16,7 @@ const Sponsorships = lazy(() => import('./Sponsor'));
 const ContactPopup = lazy(() => import('./Contact'));
 const RollingGallery = lazy(() => import('./Tracks'));
 const ShootingStars = lazy(() => import('./ShootingStars'));
+const TicketsPage = lazy(() => import('./Tickets'));
 // Loading spinner for Suspense fallback
 const LoadingSpinner = () => (
   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px', color: '#fff' }}>
@@ -79,6 +81,8 @@ function TeamPage({ onContactClick }) {
   );
 }
 
+
+
 // Main App Component
 function App() {
   const [showContact, setShowContact] = useState(false);
@@ -106,10 +110,16 @@ function App() {
             </Suspense>
           } />
           <Route path="/humans" element={<TeamPage onContactClick={handleContactClick} />} />
+          <Route path="/tickets" element={
+    <Suspense fallback={<LoadingSpinner />}>
+      <TicketsPage />
+    </Suspense>
+  } />
         </Routes>
         <Suspense fallback={<LoadingSpinner />}>
           <Footer onContactClick={handleContactClick} />
         </Suspense>
+
         {showContact && (
           <Suspense fallback={null}>
             <ContactPopup onClose={closePopup} />

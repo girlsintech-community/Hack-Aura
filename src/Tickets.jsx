@@ -43,7 +43,7 @@ const Tickets = () => {
     <>
       <Navbar />
       <div className="tickets-page">
-        <h1 className="tickets-title">HOUSE TICKETS</h1>
+        <h1 className="tickets-title">HACKAURA HOUSES</h1>
         <div className="tickets-grid">
           {houses.map((house, idx) => (
             <div

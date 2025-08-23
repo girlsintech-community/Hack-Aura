@@ -81,7 +81,7 @@ const Tickets = () => {
                 className="back-btn"
                 onClick={() => toggleFlip(idx)}
               >
-                Back
+                Flip Back
               </button>
             </div>
           </div>

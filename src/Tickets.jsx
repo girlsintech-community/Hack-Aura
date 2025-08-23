@@ -4,28 +4,28 @@ import { Info } from "lucide-react";
 
 const houses = [
   {
-    name: "Aqua House",
+    name: "NOVA House",
     cover: "/images/houses/blue.png",
     video: "/images/houses/blue.mp4", // replace with actual promo video
-    download: "/tickets/aqua_ticket.pdf"
+    download: "/images/houses/NOVA.png"
   },
   {
-    name: "Terra House",
+    name: "LUNO House",
     cover: "/images/houses/green.png",
     video: "/images/houses/green.mp4",
-    download: "/tickets/terra_ticket.pdf"
+    download: "/images/houses/LUNO.png"
   },
   {
-    name: "Ignis House",
+    name: "ASTRA House",
     cover: "/images/houses/pink.png",
     video: "/images/houses/pink.mp4",
-    download: "/tickets/ignis_ticket.pdf"
+    download: "/images/houses/ASTRA.png"
   },
   {
-    name: "Ventus House",
+    name: "NYX House",
     cover: "/images/houses/yellow.png",
     video: "/images/houses/yellow.mp4",
-    download: "/tickets/ventus_ticket.pdf"
+    download: "/images/houses/NYX.png"
   }
 ];
 

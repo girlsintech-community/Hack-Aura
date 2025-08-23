@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Tickets.css";
 import { Info } from "lucide-react";
+import Navbar from "./Navbar";
 
 const houses = [
   {
@@ -39,11 +40,13 @@ const Tickets = () => {
   };
 
   return (
-    <div className="tickets-page">
-      <h1 className="tickets-title">House Tickets</h1>
-      <div className="tickets-grid">
-        {houses.map((house, idx) => (
-          <div
+    <>
+      <Navbar />
+      <div className="tickets-page">
+        <h1 className="tickets-title">House Tickets</h1>
+        <div className="tickets-grid">
+          {houses.map((house, idx) => (
+            <div
             key={idx}
             className={`ticket-card ${flipped[idx] ? "flipped" : ""}`}
           >
@@ -88,6 +91,7 @@ const Tickets = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

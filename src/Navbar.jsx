@@ -42,6 +42,7 @@ const Navbar = ({ onContactClick }) => {
           <a href="/#tracks">Tracks</a>
           <Link to="/tickets">Tickets</Link>
           <Link to="/humans">Humans</Link>
+          
           <a onClick={onContactClick} style={{ cursor: "pointer" }}>
             Contact
           </a>

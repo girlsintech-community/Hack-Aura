@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 const houses = [
   {
     name: "NOVA House",
-    description:"They look beyond the horizon; catching sight of the future while the rest are still lost in today. "Code the future before it arrives."",
+    description:"They look beyond the horizon; catching sight of the future while the rest are still lost in today. “Code the future before it arrives.”",
     cover: "/images/houses/blue.png",
     video: "/images/houses/blue.mp4", // replace with actual promo video
     download: "/images/houses/NOVA.png"

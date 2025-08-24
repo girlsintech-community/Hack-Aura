@@ -43,9 +43,9 @@ const Navbar = ({ onContactClick }) => {
           <Link to="/tickets">Tickets</Link>
           <Link to="/humans">Humans</Link>
           
-          <a onClick={onContactClick} style={{ cursor: "pointer" }}>
+          {/* <a onClick={onContactClick} style={{ cursor: "pointer" }}>
             Contact
-          </a>
+          </a> */}
           <a href="https://hackaura.devfolio.co/" className="register-btn">
             Register Now
           </a>

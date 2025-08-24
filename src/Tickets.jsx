@@ -13,7 +13,7 @@ const houses = [
   },
   {
     name: "LUNO House",
-    description:"They do not merely write code; they transform it. What begins as simple logic leaves their hands as something rare and remarkable. “Turn code into gold.”",
+    description:"They do not merely write code; they transform it. What begins as simple logic leaves their hands as something rare. “Turn code into gold.”",
     cover: "/images/houses/green.png",
     video: "/images/houses/green.mp4",
     download: "/images/houses/LUNO.png"
@@ -56,8 +56,14 @@ const Tickets = () => {
           >
             {/* Front side */}
             <div className="card-front">
-              <img src={house.cover} alt={house.name} className="card-cover" />
+              <div className="ticket-image-container">
+                <img src={house.cover} alt={house.name} className="card-cover" />
+              </div>
               <div className="front-overlay">
+                <div className="ticket-info-panel">
+                  <span className="house-name">{house.name}</span>
+                  <span className="house-desc">{house.description}</span>
+                </div>
                 <a
                   href={house.download}
                   download
@@ -67,18 +73,13 @@ const Tickets = () => {
                   Download
                 </a>
                 <div className="info-container">
-                <button
-                  className="info-btn"
-                  onClick={() => toggleFlip(idx)}
-                >
-                  <Info size={20} />
+                  <button
+                    className="info-btn"
+                    onClick={() => toggleFlip(idx)}
+                  >
+                    <Info size={20} />
                   </button>
-                  <div className="info-hover-panel">
-    <span className="house-name">{house.name}</span>
-    <span className="house-desc">{house.description}</span>
-  </div>
-  </div>
-                
+                </div>
               </div>
             </div>
 

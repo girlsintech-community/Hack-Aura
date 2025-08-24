@@ -1,3 +1,39 @@
+@media (max-width: 600px) {
+  .uiverse-stealth-msg {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 80px !important;
+    position: fixed !important;
+    width: 80vw !important;
+    min-width: 0 !important;
+    max-width: 90vw !important;
+    font-size: 0.93rem !important;
+    z-index: 10000 !important;
+    margin: 0 !important;
+    padding: 0.5rem 0.3rem !important;
+    border-radius: 1.2rem !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+}
+@media (max-width: 600px) {
+  .uiverse-stealth-msg {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 80px !important;
+    position: fixed !important;
+    width: 90vw !important;
+    min-width: 0 !important;
+    max-width: 95vw !important;
+    font-size: 1rem !important;
+    z-index: 10000 !important;
+    margin: 0 !important;
+    padding: 0.7rem 0.5rem !important;
+    border-radius: 2rem !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+}
 .uiverse-stealth-msg {
   display: flex;
   justify-content: center;

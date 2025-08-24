@@ -1,3 +1,175 @@
+@media (max-width: 768px) {
+  .tickets-page {
+    padding: 1rem 0 2rem 0 !important;
+  }
+  .tickets-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+  .ticket-card {
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 0 auto 18px auto !important;
+    height: 420px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 768px) {
+  .tickets-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0 8px;
+  }
+  .ticket-card {
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 0 auto 18px auto !important;
+    height: 420px;
+    box-sizing: border-box;
+  }
+  .tickets-page {
+    padding: 1rem 0 2rem 0 !important;
+  }
+}
+@media (max-width: 768px) {
+  .tickets-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  .ticket-card {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    height: 420px;
+    box-sizing: border-box;
+  }
+  .tickets-page {
+    padding: 1rem 0 2rem 0 !important;
+  }
+}
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .tickets-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .ticket-card {
+    width: 100%;
+    max-width: 98vw;
+    min-width: 0;
+    margin: 0 auto;
+    height: 420px;
+  }
+  .ticket-info-panel {
+    min-width: 0;
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+  }
+  .download-btn {
+    width: 90%;
+    max-width: 320px;
+    margin: 0.7rem auto 0 auto;
+    display: block;
+    font-size: 1.1rem;
+  }
+  .ticket-card.show-info .ticket-info-panel {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .ticket-card.show-info .ticket-image-container .card-cover {
+    filter: blur(4px) brightness(0.7) contrast(1.1);
+    transform: scale(1.05);
+  }
+}
+.ticket-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.ticket-card .ticket-image-container .card-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.4s, transform 0.4s;
+}
+.ticket-info-panel {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  padding: 2.2rem 1.2rem 2.2rem 1.2rem;
+  background: rgba(10, 30, 50, 0.32);
+  color: white;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  border-radius: 1.2rem;
+  backdrop-filter: blur(12px);
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 60%;
+  max-width: 90%;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.10);
+  border: none;
+}
+.ticket-info-panel .house-name {
+  display: block;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #10b981;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.ticket-info-panel .house-desc {
+  display: block;
+  font-size: 1.08rem;
+  color: #e2e8f0;
+  line-height: 1.5;
+  text-align: center;
+  font-family: 'Orbitron', 'Jura', sans-serif;
+}
+/* Show info panel and blur image on hover (desktop) or .show-info (mobile) */
+.ticket-card:hover .ticket-info-panel,
+.ticket-card:focus-within .ticket-info-panel {
+  opacity: 1;
+  pointer-events: auto;
+}
+.ticket-card:hover .ticket-image-container .card-cover,
+.ticket-card:focus-within .ticket-image-container .card-cover {
+  filter: blur(4px) brightness(0.7) contrast(1.1);
+  transform: scale(1.05);
+}
 .tickets-page {
   min-height: 100vh;
   padding: 3rem 1rem;

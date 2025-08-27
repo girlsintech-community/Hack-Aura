@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: "Team size?",
-    answer: "Max: 5 Min: 2 There’s a catch! – There SHOULD be at least one Girl in the Team!"
+    answer: "Max: 5 Min: 1 There’s a catch! – There SHOULD be at least one Girl in the Team !! If team size is 1 then solo female participants are only allowed!!"
   },
   {
     question: "Can I team up with people from other colleges/branches/years?",

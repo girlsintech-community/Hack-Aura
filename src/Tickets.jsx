@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Tickets.css";
 import { Info } from "lucide-react";
 import Navbar from "./Navbar";
@@ -8,42 +9,45 @@ const houses = [
   {
     name: "NOVA House",
     description:
-      "They look beyond the horizon; catching sight of the future while the rest are still lost in today. “Code the future before it arrives.”",
+      "They look beyond the horizon; catching sight of the future while the rest are still lost in today. 'Code the future before it arrives.'",
     cover: "/images/houses/blue.png",
     video: "/images/houses/blue.mp4",
-    download: "/images/houses/NOVA.png",
+    ticket_link: "https://drive.google.com/uc?export=download&id=1IJsq_DuhniMIOcuX5J0yUywT9qLRuQTw",
   },
   {
     name: "LUNO House",
     description:
-      "They do not merely write code; they transform it. What begins as simple logic leaves their hands as something rare. “Turn code into gold.”",
+      "They do not merely write code; they transform it. What begins as simple logic leaves their hands as something rare. 'Turn code into gold.'",
     cover: "/images/houses/green.png",
     video: "/images/houses/green.mp4",
-    download: "/images/houses/LUNO.png",
+    ticket_link: "https://drive.google.com/uc?export=download&id=1Nb-StzbIq1HBQS3DTQcBxEftXzPCNKZi",
   },
   {
     name: "ASTRA House",
     description:
-      "They thrive where others falter; stepping into chaos and returning with order, as if they had tamed the storm itself. “Code clarity from chaos.”",
+      "They thrive where others falter; stepping into chaos and returning with order, as if they had tamed the storm itself. 'Code clarity from chaos.'",
     cover: "/images/houses/pink.png",
     video: "/images/houses/pink.mp4",
-    download: "/images/houses/ASTRA.png",
+    ticket_link: "https://drive.google.com/uc?export=download&id=1CiCn_sLJY7Zr0sxGj9i42dXZ9IdwF05I",
   },
   {
     name: "NYX House",
     description:
-      "Here, the rules blur; endings become beginnings, and code dares to go where reason hesitates. “Where logic ends, code begins.”",
+      "Here, the rules blur; endings become beginnings, and code dares to go where reason hesitates. 'Where logic ends, code begins.'",
     cover: "/images/houses/yellow.png",
     video: "/images/houses/yellow.mp4",
-    download: "/images/houses/NYX.png",
+    ticket_link: "https://drive.google.com/uc?export=download&id=1zsPhuTUhkryG0qDKLrBG4smpPZQ9EOLD",
   },
 ];
 
 
+
 const Tickets = () => {
   const [flipped, setFlipped] = useState(Array(houses.length).fill(false));
-  const [showPopup, setShowPopup] = useState(false);
-  const [popupMode, setPopupMode] = useState("contact"); // 'contact' or 'join'
+  const [showPopup, setShowPopup] = useState(true); // Show on load
+  const [popupMode, setPopupMode] = useState("join"); // Always join for ticket
+  const [userInfo, setUserInfo] = useState(null); // { name, email }
+  const [selectedHouse, setSelectedHouse] = useState(null); // index of selected house
 
   const toggleFlip = (index) => {
     const newFlipped = [...flipped];
@@ -51,9 +55,38 @@ const Tickets = () => {
     setFlipped(newFlipped);
   };
 
-  const handleJoinNowClick = () => {
-    setPopupMode("join");
-    setShowPopup(true);
+  // When user submits the popup form
+  const handlePopupSubmit = (info) => {
+    setUserInfo(info);
+    setShowPopup(false);
+  };
+
+  // When user selects a ticket (house)
+  const handleTicketSelect = async (idx) => {
+    setSelectedHouse(idx);
+    if (userInfo && userInfo.email) {
+      const house = houses[idx];
+      // EmailJS config from .env
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      // Prepare template params
+      const templateParams = {
+        to_name: userInfo.name,
+        house_name: house.name,
+        house_desc: house.description,
+        ticket_link: house.ticket_link,
+        to_email: userInfo.email,
+      };
+      try {
+        await emailjs.send(serviceId, templateId, templateParams, publicKey);
+        alert("Ticket sent to " + userInfo.email + "! Check your inbox.");
+      } catch (err) {
+        alert("Failed to send ticket. Please try again later.");
+        // Optionally log error
+        // console.error(err);
+      }
+    }
   };
 
   return (
@@ -80,10 +113,15 @@ const Tickets = () => {
                     className="download-btn"
                     onClick={(e) => {
                       e.stopPropagation();
-                      handleJoinNowClick();
+                      if (!userInfo) {
+                        setShowPopup(true);
+                        setPopupMode("join");
+                      } else {
+                        handleTicketSelect(idx);
+                      }
                     }}
                   >
-                    Join Now
+                    {userInfo ? "Get Ticket" : "Join Now"}
                   </button>
                   <div className="info-container">
                     <button
@@ -117,6 +155,7 @@ const Tickets = () => {
         <ContactPopup
           mode={popupMode}
           onClose={() => setShowPopup(false)}
+          onSubmit={handlePopupSubmit}
         />
       )}
     </>

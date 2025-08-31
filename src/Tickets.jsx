@@ -70,7 +70,7 @@ const Tickets = () => {
                   className="download-btn"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  Download
+                  Join Now
                 </a>
                 <div className="info-container">
                   <button

@@ -129,3 +129,62 @@
     font-size: 1rem;
   }
 }
+/* === Form Inputs === */
+.popup-box input[type="text"],
+.popup-box input[type="email"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0 1rem;
+  border: 1px solid rgba(0, 208, 255, 0.4);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.popup-box input[type="text"]::placeholder,
+.popup-box input[type="email"]::placeholder {
+  color: #bbb;
+}
+
+.popup-box input[type="text"]:focus,
+.popup-box input[type="email"]:focus {
+  border-color: #00d0ff;
+  background-color: rgba(0, 208, 255, 0.05);
+}
+
+/* === Submit Button (Enter) === */
+.submit-btn {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #00d0ff, #fd25c7);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(253, 37, 199, 0.2);
+}
+
+.submit-btn:hover {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* === Form Labels === */
+.popup-box label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.3rem;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: #ddd;
+  font-weight: 500;
+}
+

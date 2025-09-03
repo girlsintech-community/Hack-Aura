@@ -17,8 +17,16 @@ import civo from "./assets/logos/civo.webp";
 import devfolio from "./assets/logos/devfolio.svg";
 import code4govtech from "./assets/logos/code4govtech.svg";
 import postman from "./assets/logos/postman.png";
-
-
+import da from "./assets/logos/da.svg";
+import FS from "./assets/logos/FS.png";
+import uni from "./assets/logos/uni.jpg";
+import slido from "./assets/logos/slido.png";
+import cats from "./assets/logos/cats.jpeg";
+import dao from "./assets/logos/dao.jpeg";
+import lb from "./assets/logos/lb.png";
+import devarmy from "./assets/logos/devarmy.jpeg";
+import wemakedevs from "./assets/logos/wemakedevs.png";
+import welzin from "./assets/logos/welzin.jpeg";
 const HackathonSponsors = () => {
   const [showContact, setShowContact] = useState(false);
 
@@ -34,6 +42,10 @@ const HackathonSponsors = () => {
     { id: 6, src: GMC },
     { id: 7, src: CC },
     { id: 8, src: XYZ },
+    { id: 9, src: da },
+    {id: 10, src: FS },
+    {id: 11, src: uni },
+    {id:12, src: slido }
   ];
   const partnerLogos = [
     { id: 1, src: dev },
@@ -42,6 +54,12 @@ const HackathonSponsors = () => {
     { id: 4, src: devfolio },
     { id: 5, src: code4govtech },
     { id: 6, src: postman },
+    { id: 7, src: cats },
+    { id: 8, src: dao },
+    { id: 9, src: lb },
+    { id: 10, src: devarmy },
+    { id: 11, src: wemakedevs },
+    { id: 12, src: welzin },
   ];
 
   return (

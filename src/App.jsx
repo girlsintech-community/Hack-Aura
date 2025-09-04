@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import Tickets from "./Tickets";
 import ShiftingCountdown from './ShiftingCountdown';
+import Speakers from './Speakers';
 const CodeOfConduct = lazy(() => import('./CodeOfConduct'));
 const Footer = lazy(() => import('./Footer'));
 const Timeline = lazy(() => import('./Timeline'));
@@ -51,6 +52,11 @@ function HomePage({ onContactClick }) {
         <Suspense fallback={<LoadingSpinner />}>
           <div id="tracks" className="section-wrapper section-events tracks-gradient">
             <RollingGallery />
+          </div>
+        </Suspense>
+        <Suspense fallback={<LoadingSpinner />}>
+          <div id="speakers" className="section-wrapper section-events">
+            <Speakers />
           </div>
         </Suspense>
         <Suspense fallback={<LoadingSpinner />}>

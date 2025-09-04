@@ -1,0 +1,165 @@
+.speakers-section {
+  padding: 3rem 1rem 2.5rem 1rem;
+  border-radius: 24px;
+  margin: 3rem auto 2rem auto;
+  max-width: 1400px;
+  box-shadow: none;
+  background: linear-gradient(135deg, rgba(24,182,255,0.12) 0%, rgba(80,0,255,0.10) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(24,182,255,0.18);
+}
+.speakers-heading-bar {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.speakers-title {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+  background: linear-gradient(90deg, #0891b2 0%, #06b6d4 20%, #22d3ee 40%, #0dd6d6 60%, #14b8a6 80%, #10b981 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.3), 0 0 20px rgba(20, 184, 166, 0.2), 0 0 30px rgba(16, 185, 129, 0.1);
+  text-align: center;
+  margin-bottom: 2.2rem;
+  margin-top: -2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  width: 100%;
+}
+.speakers-underline {
+  width: 60%;
+  height: 2px;
+  margin: 0 auto 0 auto;
+  background: linear-gradient(90deg, transparent, #10b981, transparent);
+  border-radius: 5px;
+}
+.speaker-linkedin {
+  margin-top: 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #0a66c2;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 4px 14px;
+  background: linear-gradient(90deg, #0891b2 0%, #06b6d4 100%);
+  border: none;
+  box-shadow: 0 2px 12px rgba(6,182,212,0.13);
+  color: #fff;
+  font-family: 'Orbitron', 'Jura', sans-serif;
+  font-weight: 700;
+  font-size: 1.13rem;
+  letter-spacing: 0.025em;
+  padding: 7px 22px;
+  margin-bottom: 1.15rem;
+  transition: all 0.2s;
+}
+.speaker-linkedin:hover {
+  background: linear-gradient(90deg, #06b6d4 0%, #10b981 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(16,185,129,0.18);
+}
+.speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+.speaker-card {
+  background: transparent;
+  border: 2px solid #3a4a5a;
+  min-height: 420px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 1.5rem 1rem 1.2rem 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 220px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+.speaker-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+}
+.speaker-img {
+  width: 100%;
+  max-width: 160px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  background: #e0e7ff;
+}
+.speaker-info {
+  width: 100%;
+}
+.speaker-name {
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  font-weight: 800;
+  margin-bottom: 1.15rem;
+  font-family: 'Orbitron', 'Jura', sans-serif;
+  background: linear-gradient(135deg, #3b82f6, #10b981, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  letter-spacing: 0.045em;
+}
+.speaker-role-org {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: center;
+}
+.speaker-role {
+  font-size: 1.08rem;
+  color: #06b6d4;
+  font-weight: 600;
+  font-family: 'Jura', 'Orbitron', sans-serif;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.13rem;
+}
+.speaker-org {
+  font-size: 1.01rem;
+  color: #10b981;
+  font-weight: 500;
+  font-family: 'Jura', 'Orbitron', sans-serif;
+  letter-spacing: 0.01em;
+}
+@media (max-width: 1200px) {
+  .speakers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .speakers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .speakers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  .speakers-section {
+    padding: 2rem 0.5rem 1.5rem 0.5rem;
+  }
+  .speaker-card {
+    max-width: 98vw;
+    min-width: 0;
+    padding: 1rem 0.5rem;
+  }
+}

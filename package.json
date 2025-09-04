@@ -13,6 +13,7 @@
     "@emailjs/browser": "^4.4.1",
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
     "@fortawesome/react-fontawesome": "^0.2.3",
+    "emailjs": "^4.0.3",
     "framer-motion": "^12.19.1",
     "lucide-react": "^0.522.0",
     "react": "^19.1.0",

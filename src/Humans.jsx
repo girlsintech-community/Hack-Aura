@@ -41,15 +41,9 @@ const TeamPage = ({ onContactClick }) => {
   { name: "Pathan Sama Khan", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/sama-khan-628959281", image: '/images/teams/speaker/pathan.webp', location: "Hyderabad" },
   { name: "Sanwedana Lokhande", role: "Content Writing Team", department: "Content", linkedin: "https://www.linkedin.com/in/sanwedana-lokhande-35332a33a/", image: '/images/teams/content/sanwedana.webp', location: "Nagpur" },
   { name: "Simran Nagekar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/simransn", image: '/images/teams/discord/simran.webp', location: "Bengaluru" },
-    { name: "Vijay Laxmi", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/laxmi-vijay/", image: '/images/teams/speaker/vijay1.webp', location: "Delhi" }
- {
-    name: "Manik",
-    role: "Lead Organizer",
-    department: "Core",
-    linkedin: "https://www.linkedin.com/in/mrmanik",
-    image: '/images/teams/manik.webp',
-    location: "Haryana"
-  } ];
+    { name: "Vijay Laxmi", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/laxmi-vijay/", image: '/images/teams/speaker/vijay1.webp', location: "Delhi" },
+ { name: "Manik", role: "Lead Organizer", department: "Core", linkedin: "https://www.linkedin.com/in/mrmanik", image: '/images/teams/manik.webp', location: "Haryana"} ,
+];
 
  
 
@@ -174,13 +168,7 @@ const TeamPage = ({ onContactClick }) => {
             </div>
           ))}
         </div>
-        <div style={{ marginTop: '2.5rem', display: 'flex', justifyContent: 'center', width: '100%' }}>
-          <div style={{ maxWidth: 320, width: '100%' }}>
-            <div className="team-card-wrapper">
-              <TeamCard member={manik} index={999} />
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
   );

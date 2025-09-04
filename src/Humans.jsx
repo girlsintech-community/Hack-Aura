@@ -42,16 +42,16 @@ const TeamPage = ({ onContactClick }) => {
   { name: "Sanwedana Lokhande", role: "Content Writing Team", department: "Content", linkedin: "https://www.linkedin.com/in/sanwedana-lokhande-35332a33a/", image: '/images/teams/content/sanwedana.webp', location: "Nagpur" },
   { name: "Simran Nagekar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/simransn", image: '/images/teams/discord/simran.webp', location: "Bengaluru" },
     { name: "Vijay Laxmi", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/laxmi-vijay/", image: '/images/teams/speaker/vijay1.webp', location: "Delhi" }
-  ];
-
-  const manik = {
+ {
     name: "Manik",
     role: "Lead Organizer",
     department: "Core",
     linkedin: "https://www.linkedin.com/in/mrmanik",
     image: '/images/teams/manik.webp',
     location: "Haryana"
-  };
+  } ];
+
+ 
 
   const organizingTeam = allTeam.sort((a, b) => a.name.localeCompare(b.name));
 

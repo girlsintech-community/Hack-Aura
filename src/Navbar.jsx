@@ -40,7 +40,7 @@ const Navbar = ({ onContactClick }) => {
           <a href="/#timeline">Timeline</a>
           <a href="/#sponsors">Sponsors</a>
           <a href="/#tracks">Tracks</a>
-          <Link to="/tickets">Tickets</Link>
+          <Link to="/tickets">Houses</Link>
           <Link to="/humans">Humans</Link>
           
           {/* <a onClick={onContactClick} style={{ cursor: "pointer" }}>

@@ -32,6 +32,8 @@ const TeamPage = ({ onContactClick }) => {
   { name: "Bagavati Narayanan", role: "Tech Team", department: "Tech", linkedin: "https://www.linkedin.com/in/bagavati-narayanan-98484b292", image: '/images/teams/tech/bagavati.webp', location: "Chennai" },
   { name: "Charmi Reddy P", role: "Content Writing Team", department: "Content", linkedin: "https://www.linkedin.com/in/charmi-reddy-p-b2aaa2294", image: '/images/teams/content/charmi.webp', location: "Hyderabad" },
   { name: "Dhairya Kanabar", role: "PR Team", department: "PR", linkedin: "https://www.linkedin.com/in/dhairya-kanabar-411990294", image: '/images/teams/pr/dhairiya.webp', location: "Surendranagar" },
+  { name: "Diya K Bhat",role:"PR Team",department:"PR",linkedin:"http://www.linkedin.com/in/diya-k-bhat-75b450257",image:"/images/teams/pr/diya.jpg",location:"Bangalore" },
+
   { name: "Gungun Goel", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://www.linkedin.com/in/gungun-goyal-05154426a", image: '/images/teams/partnerships/gungun.webp', location: "Meerut" },
   { name: "Ishita Soni", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/ishita-soni-work", image: '/images/teams/design/ishita.webp', location: "Jaipur" },
   { name: "Kashika Gupta", role: "Tech Team", department: "Tech", linkedin: "https://www.linkedin.com/in/kashikagupta", image: '/images/teams/tech/kashika1.webp', location: "Indore" },
@@ -39,8 +41,10 @@ const TeamPage = ({ onContactClick }) => {
   { name: "Lakshya S", role: "PR Team", department: "PR", linkedin: "https://www.linkedin.com/in/lakshya-sasikumar-7bb659342/", image: '/images/teams/pr/lakshya.webp', location: "Chennai" },
   { name: "Mahak", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://www.linkedin.com/in/documentdiarieswithmahak/", image: '/images/teams/partnerships/mahak.webp', location: "Delhi" },
   { name: "Pathan Sama Khan", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/sama-khan-628959281", image: '/images/teams/speaker/pathan.webp', location: "Hyderabad" },
+  { name: "Ragini Pandey", role: "Host Team", department: "Host", linkedin: "https://www.linkedin.com/in/ragini-pandey-594564261", image: '/images/teams/host/ragini.jpeg', location: "Ghaziabad" },
   { name: "Sanwedana Lokhande", role: "Content Writing Team", department: "Content", linkedin: "https://www.linkedin.com/in/sanwedana-lokhande-35332a33a/", image: '/images/teams/content/sanwedana.webp', location: "Nagpur" },
-  { name: "Simran Nagekar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/simransn", image: '/images/teams/discord/simran.webp', location: "Bengaluru" },
+  { name: "Simran Nagekar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/simransn", image: '/images/teams/discord/simran.jpg', location: "Bengaluru" },
+  { name: "Vanshika", role: "Host Team", department: "Host", linkedin: "https://www.linkedin.com/in/vanshika-chauhan-1ba100279", image: '/images/teams/host/vanshika.jpeg', location: "Ghaziabad" },
     { name: "Vijay Laxmi", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/laxmi-vijay/", image: '/images/teams/speaker/vijay1.webp', location: "Delhi" }
   ];
 

@@ -73,7 +73,14 @@ const HackathonSponsors = () => {
           <div className="logos-grid">
             {sponsorLogos.map((logo) => (
               <div className="logo-card" key={logo.id}>
-                <img src={logo.src} className="blurred-logo" width="160" height="80" />
+
+              {logo.url?(
+               <a href={logo.url} target="_blank" rel="noopener noreferrer">
+        <img src={logo.src} className="blurred-logo" width="160" height="80" />
+      </a>
+      ):(
+        <img src={logo.src} className="blurred-logo" width="160" height="80" />
+      )}
               </div>
             ))}
           </div>
@@ -87,7 +94,13 @@ const HackathonSponsors = () => {
           <div className="logos-grid">
             {partnerLogos.map((logo) => (
               <div className="logo-card" key={logo.id}>
-                <img src={logo.src} className="blurred-logo" width="160" height="80" />
+                {logo.url?(
+               <a href={logo.url} target="_blank" rel="noopener noreferrer">
+        <img src={logo.src} className="blurred-logo" width="160" height="80" />
+      </a>
+      ):(
+        <img src={logo.src} className="blurred-logo" width="160" height="80" />
+      )}
               </div>
             ))}
           </div>

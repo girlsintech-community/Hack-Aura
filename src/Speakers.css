@@ -187,15 +187,41 @@ div.speakers-section {
 }
 @media (max-width: 600px) {
   .speakers-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.2rem;
+    justify-items: center;
   }
   .speakers-section {
-    padding: 2rem 0.5rem 1.5rem 0.5rem;
+    padding: 1.2rem 0.2rem 1rem 0.2rem;
+    border-radius: 16px;
+    margin: 1rem auto;
+    box-shadow: 0 4px 16px rgba(24,182,255,0.10);
   }
   .speaker-card {
-    max-width: 98vw;
+    max-width: 95vw;
     min-width: 0;
-    padding: 1rem 0.5rem;
+    padding: 0.8rem 0.3rem;
+    border-radius: 14px;
+    font-size: 0.97rem;
+  }
+  .speaker-img {
+    max-width: 120px;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 0.7rem;
+  }
+  .speakers-title {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .speakers-underline {
+    width: 80%;
+    margin-bottom: 0.7rem;
+  }
+  .speaker-linkedin {
+    font-size: 1rem;
+    padding: 6px 14px;
+    margin-bottom: 0.7rem;
   }
 }

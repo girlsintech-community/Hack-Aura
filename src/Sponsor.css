@@ -290,7 +290,7 @@
 }
 
 .blurred-logo {
-  max-width: 120px;
+  max-width: 100px;
   max-height: 80px;
   transition: all 0.3s ease;
 }

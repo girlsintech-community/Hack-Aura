@@ -38,8 +38,8 @@ const Navbar = ({ onContactClick }) => {
           <Link to="/">Home</Link>
           <a href="/#about">About</a>
           <a href="/#timeline">Timeline</a>
-          <a href="/#sponsors">Sponsors</a>
           <a href="/#tracks">Tracks</a>
+          <a href="/#sponsors">Sponsors</a>
           <Link to="/tickets">Houses</Link>
           <Link to="/humans">Humans</Link>
           

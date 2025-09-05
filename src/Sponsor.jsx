@@ -17,7 +17,7 @@ import civo from "./assets/logos/civo.webp";
 import devfolio from "./assets/logos/devfolio.svg";
 import code4govtech from "./assets/logos/code4govtech.svg";
 import postman from "./assets/logos/postman.png";
-import da from "./assets/logos/da.svg";
+import da from "./assets/logos/da.png";
 import FS from "./assets/logos/FS.png";
 import uni from "./assets/logos/uni.jpg";
 import slido from "./assets/logos/slido.png";

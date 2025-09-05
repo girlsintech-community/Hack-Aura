@@ -48,18 +48,18 @@ const HackathonSponsors = () => {
     {id:12, src: slido, url:"https://www.slido.com/" }
   ];
   const partnerLogos = [
-    { id: 1, src: dev },
-    { id: 2, src: scc },
-    { id: 3, src: civo },
-    { id: 4, src: devfolio },
-    { id: 5, src: code4govtech },
-    { id: 6, src: postman },
-    { id: 7, src: cats },
-    { id: 8, src: dao },
-    { id: 9, src: lb },
-    { id: 10, src: devarmy },
-    { id: 11, src: wemakedevs },
-    { id: 12, src: welzin },
+    { id: 1, src: dev, url:"https://dev3pack.xyz/" },
+    { id: 2, src: scc, url:"https://shecancode.io/" },
+    { id: 3, src: civo, url:"https://www.civo.com/" },
+    { id: 4, src: devfolio, url:"https://devfolio.co/discover" },
+    { id: 5, src: code4govtech, url:"https://codeforgovtech.in/" },
+    { id: 6, src: postman, url:"https://www.postmancommunitypune.in/" },
+    { id: 7, src: cats, url:"https://in.linkedin.com/company/cats-in-tech" },
+    { id: 8, src: dao, url:"https://x.com/herdaonigeria?lang=en" },
+    { id: 9, src: lb, url:"https://www.linkedin.com/company/devlearn-com/" },
+    { id: 10, src: devarmy, url:"https://thedevarmy.com/" },
+    { id: 11, src: wemakedevs, url:"https://wemakedevs.org/" },
+    { id: 12, src: welzin, url:"https://www.welzin.ai/" },
   ];
 
   return (

@@ -72,7 +72,7 @@ const Tickets = () => {
                 >
                   Join Now
                 </a>
-                <div className="info-container">
+                <div className="info-container">Click here
                   <button
                     className="info-btn"
                     onClick={() => toggleFlip(idx)}

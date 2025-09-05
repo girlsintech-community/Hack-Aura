@@ -17,8 +17,16 @@ import civo from "./assets/logos/civo.webp";
 import devfolio from "./assets/logos/devfolio.svg";
 import code4govtech from "./assets/logos/code4govtech.svg";
 import postman from "./assets/logos/postman.png";
-
-
+import da from "./assets/logos/da.svg";
+import FS from "./assets/logos/FS.png";
+import uni from "./assets/logos/uni.jpg";
+import slido from "./assets/logos/slido.png";
+import cats from "./assets/logos/cats.jpeg";
+import dao from "./assets/logos/dao.jpeg";
+import lb from "./assets/logos/lb.png";
+import devarmy from "./assets/logos/devarmy.jpeg";
+import wemakedevs from "./assets/logos/wemakedevs.png";
+import welzin from "./assets/logos/welzin.jpeg";
 const HackathonSponsors = () => {
   const [showContact, setShowContact] = useState(false);
 
@@ -26,22 +34,32 @@ const HackathonSponsors = () => {
   const closeContactPopup = () => setShowContact(false);
 
   const sponsorLogos = [
-    { id: 1, src: balsamiq },
-    { id: 2, src: cake },
-    { id: 3, src: GLT },
-    { id: 4, src: IBlogo },
-    { id: 5, src: wolfram },
-    { id: 6, src: GMC },
-    { id: 7, src: CC },
-    { id: 8, src: XYZ },
+    { id: 1, src: balsamiq, url:"https://balsamiq.com/" },
+    { id: 2, src: cake, url:"https://www.interviewcake.com/" },
+    { id: 3, src: GLT, url:"https://www.linkedin.com/company/girlsleadingtech/" },
+    { id: 4, src: IBlogo, url:"https://interviewbuddy.net/" },
+    { id: 5, src: wolfram, url:"https://www.wolframalpha.com/" },
+    { id: 6, src: GMC, url:"https://givemycertificate.com/" },
+    { id: 7, src: CC, url:"https://codecrafters.io/" },
+    { id: 8, src: XYZ, url:"https://gen.xyz/" },
+    { id: 9, src: da, url:"https://www.duality.ai/" },
+    {id: 10, src: FS, url:"https://getfailsafe.com/" },
+    {id: 11, src: uni },
+    {id:12, src: slido, url:"https://www.slido.com/" }
   ];
   const partnerLogos = [
-    { id: 1, src: dev },
-    { id: 2, src: scc },
-    { id: 3, src: civo },
-    { id: 4, src: devfolio },
-    { id: 5, src: code4govtech },
-    { id: 6, src: postman },
+    { id: 1, src: dev, url:"https://dev3pack.xyz/" },
+    { id: 2, src: scc, url:"https://shecancode.io/" },
+    { id: 3, src: civo, url:"https://www.civo.com/" },
+    { id: 4, src: devfolio, url:"https://devfolio.co/discover" },
+    { id: 5, src: code4govtech, url:"https://codeforgovtech.in/" },
+    { id: 6, src: postman, url:"https://www.postmancommunitypune.in/" },
+    { id: 7, src: cats, url:"https://in.linkedin.com/company/cats-in-tech" },
+    { id: 8, src: dao, url:"https://x.com/herdaonigeria?lang=en" },
+    { id: 9, src: lb, url:"https://www.linkedin.com/company/devlearn-com/" },
+    { id: 10, src: devarmy, url:"https://thedevarmy.com/" },
+    { id: 11, src: wemakedevs, url:"https://wemakedevs.org/" },
+    { id: 12, src: welzin, url:"https://www.welzin.ai/" },
   ];
 
   return (
@@ -55,7 +73,14 @@ const HackathonSponsors = () => {
           <div className="logos-grid">
             {sponsorLogos.map((logo) => (
               <div className="logo-card" key={logo.id}>
-                <img src={logo.src} className="blurred-logo" width="160" height="80" />
+
+              {logo.url?(
+               <a href={logo.url} target="_blank" rel="noopener noreferrer">
+        <img src={logo.src} className="blurred-logo" width="160" height="80" />
+      </a>
+      ):(
+        <img src={logo.src} className="blurred-logo" width="160" height="80" />
+      )}
               </div>
             ))}
           </div>
@@ -69,7 +94,13 @@ const HackathonSponsors = () => {
           <div className="logos-grid">
             {partnerLogos.map((logo) => (
               <div className="logo-card" key={logo.id}>
-                <img src={logo.src} className="blurred-logo" width="160" height="80" />
+                {logo.url?(
+               <a href={logo.url} target="_blank" rel="noopener noreferrer">
+        <img src={logo.src} className="blurred-logo" width="160" height="80" />
+      </a>
+      ):(
+        <img src={logo.src} className="blurred-logo" width="160" height="80" />
+      )}
               </div>
             ))}
           </div>

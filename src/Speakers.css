@@ -51,7 +51,7 @@ div.speakers-section {
   background: rgba(0,0,0,0.25); /* semi-transparent for depth */
   border: 2px solid #3a4a5a;
   border-radius: 18px;
-  padding: 1.5rem 1rem 1.2rem;
+  padding: 0.9rem 1rem 0.7rem;
   text-align: center;
   width: 100%;
   max-width: 220px;
@@ -143,9 +143,9 @@ div.speakers-section {
   width: 100%;
 }
 .speaker-name {
-  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
   font-weight: 800;
-  margin-bottom: 1.15rem;
+  margin-bottom: 0.6rem;
   font-family: 'Orbitron', 'Jura', sans-serif;
   background: linear-gradient(135deg, #3b82f6, #10b981, #06b6d4);
   -webkit-background-clip: text;
@@ -187,15 +187,41 @@ div.speakers-section {
 }
 @media (max-width: 600px) {
   .speakers-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.2rem;
+    justify-items: center;
   }
   .speakers-section {
-    padding: 2rem 0.5rem 1.5rem 0.5rem;
+    padding: 1.2rem 0.2rem 1rem 0.2rem;
+    border-radius: 16px;
+    margin: 1rem auto;
+    box-shadow: 0 4px 16px rgba(24,182,255,0.10);
   }
   .speaker-card {
-    max-width: 98vw;
+    max-width: 95vw;
     min-width: 0;
-    padding: 1rem 0.5rem;
+  padding: 0.5rem 0.3rem;
+    border-radius: 14px;
+    font-size: 0.97rem;
+  }
+  .speaker-img {
+    max-width: 120px;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 0.7rem;
+  }
+  .speakers-title {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .speakers-underline {
+    width: 80%;
+    margin-bottom: 0.7rem;
+  }
+  .speaker-linkedin {
+    font-size: 1rem;
+    padding: 6px 14px;
+    margin-bottom: 0.7rem;
   }
 }

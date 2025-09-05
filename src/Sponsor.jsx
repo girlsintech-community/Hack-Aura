@@ -39,7 +39,7 @@ const HackathonSponsors = () => {
     { id: 3, src: GLT },
     { id: 4, src: IBlogo },
     { id: 5, src: wolfram },
-    { id: 6, src: GMC },
+    { id: 6, src: GMC, url:"https://givemycertificate.com/" },
     { id: 7, src: CC },
     { id: 8, src: XYZ },
     { id: 9, src: da },

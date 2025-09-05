@@ -25,7 +25,7 @@ const speakers = [
     linkedin: "https://linkedin.com/in/nandini-taneja4"
   },
   {
-    name: "Ayush kumar prajapati",
+    name: "Ayush kumar Prajapati",
     role: "Outreach partner",
     org: "Market mafiaa",
     image: "/images/speakers/Ayush kumar prajapati.jpg",
@@ -33,7 +33,7 @@ const speakers = [
   },
   {
     name: "Praveen Kumar Purushothaman",
-    role: "Director of Engineering",
+    role: "Director",
     org: "Cloudroit",
     image: "/images/speakers/Praveen Kumar Purushothaman.png",
     linkedin: "https://www.linkedin.com/in/praveentech/"
@@ -41,7 +41,7 @@ const speakers = [
   {
     name: "Pankaj Rai",
     role: "GDE Android, Firebase and AI",
-    org: "N/A",
+    org: "",
     image: "/images/speakers/Pankaj Rai.JPG",
     linkedin: "https://in.linkedin.com/in/pankajrai16"
   },
@@ -67,8 +67,8 @@ const speakers = [
     linkedin: "https://www.linkedin.com/in/preeteesh/"
   },
   {
-    name: "Dr. Krishna Chaitanya Rao Kathala",
-    role: "Senior Researcher and Education Lead (TDAI)",
+    name: "Dr. Krishna Rao Kathala",
+    role: "Senior Researcher (TDAI)",
     org: "The Ohio State University",
     image: "/images/speakers/Dr. Krishna Chaitanya Rao Kathala.jpg",
     linkedin: "https://www.linkedin.com/in/krishnachaitanyarao/"
@@ -81,7 +81,7 @@ const speakers = [
     linkedin: "https://www.linkedin.com/in/arushi-garg105"
   },
   {
-    name: "souradip pal",
+    name: "Souradip Lal",
     role: "Applied AI Eng.",
     org: "The Cloud Ops Community",
     image: "/images/speakers/souradip pal.jpg",

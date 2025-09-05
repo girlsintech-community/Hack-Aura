@@ -51,7 +51,7 @@ div.speakers-section {
   background: rgba(0,0,0,0.25); /* semi-transparent for depth */
   border: 2px solid #3a4a5a;
   border-radius: 18px;
-  padding: 1.5rem 1rem 1.2rem;
+  padding: 0.9rem 1rem 0.7rem;
   text-align: center;
   width: 100%;
   max-width: 220px;
@@ -143,9 +143,9 @@ div.speakers-section {
   width: 100%;
 }
 .speaker-name {
-  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
   font-weight: 800;
-  margin-bottom: 1.15rem;
+  margin-bottom: 0.6rem;
   font-family: 'Orbitron', 'Jura', sans-serif;
   background: linear-gradient(135deg, #3b82f6, #10b981, #06b6d4);
   -webkit-background-clip: text;
@@ -200,7 +200,7 @@ div.speakers-section {
   .speaker-card {
     max-width: 95vw;
     min-width: 0;
-    padding: 0.8rem 0.3rem;
+  padding: 0.5rem 0.3rem;
     border-radius: 14px;
     font-size: 0.97rem;
   }

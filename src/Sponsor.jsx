@@ -34,18 +34,18 @@ const HackathonSponsors = () => {
   const closeContactPopup = () => setShowContact(false);
 
   const sponsorLogos = [
-    { id: 1, src: balsamiq },
-    { id: 2, src: cake },
-    { id: 3, src: GLT },
-    { id: 4, src: IBlogo },
-    { id: 5, src: wolfram },
+    { id: 1, src: balsamiq, url:"https://balsamiq.com/" },
+    { id: 2, src: cake, url:"https://www.interviewcake.com/" },
+    { id: 3, src: GLT, url:"https://www.linkedin.com/company/girlsleadingtech/" },
+    { id: 4, src: IBlogo, url:"https://interviewbuddy.net/" },
+    { id: 5, src: wolfram, url:"https://www.wolframalpha.com/" },
     { id: 6, src: GMC, url:"https://givemycertificate.com/" },
-    { id: 7, src: CC },
-    { id: 8, src: XYZ },
-    { id: 9, src: da },
-    {id: 10, src: FS },
+    { id: 7, src: CC, url:"https://codecrafters.io/" },
+    { id: 8, src: XYZ, url:"https://gen.xyz/" },
+    { id: 9, src: da, url:"https://www.duality.ai/" },
+    {id: 10, src: FS, url:"https://getfailsafe.com/" },
     {id: 11, src: uni },
-    {id:12, src: slido }
+    {id:12, src: slido, url:"https://www.slido.com/" }
   ];
   const partnerLogos = [
     { id: 1, src: dev },

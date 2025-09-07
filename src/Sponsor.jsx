@@ -5,7 +5,7 @@ import ContactPopup from "./Contact";
 // Import logo images from the assets folder
 import balsamiq from "./assets/logos/balsamiq.webp";
 import cake from "./assets/logos/cake.svg";
-import GLT from "./assets/logos/GLT.webp";
+import GLT from "./assets/logos/glt2.png";
 import IBlogo from "./assets/logos/IBlogo.svg";
 import wolfram from "./assets/logos/wolfram.webp";
 import GMC from "./assets/logos/GMC.webp";

@@ -43,6 +43,8 @@ const TeamPage = ({ onContactClick }) => {
     { name: "Ragini Pandey", role: "Host Team", department: "Host", linkedin: "https://www.linkedin.com/in/ragini-pandey-594564261", image: '/images/teams/host/ragini.jpeg', location: "Ghaziabad" },
     { name: "Sanwedana Lokhande", role: "Content Writing Team", department: "Content", linkedin: "https://www.linkedin.com/in/sanwedana-lokhande-35332a33a/", image: '/images/teams/content/sanwedana.webp', location: "Nagpur" },
     { name: "Simran Nagekar", role: "Discord Team", department: "Discord", linkedin: "https://www.linkedin.com/in/simransn", image: '/images/teams/discord/simran.jpg', location: "Bengaluru" },
+    { name: "Simran Parween", role: "Management Team", department: "Management", linkedin: "https://www.linkedin.com/in/simran-parween-9529b6277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", image: "/images/teams/management/Simran Parween.jpeg", location: "Noida" },
+    { name: "Swagita Parida", role: "Management Team", department: "Management", linkedin: "https://www.linkedin.com/in/swagita-parida-876b54303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", image: "/images/teams/management/Swagita Parida.jpeg", location: "Patiala" },
     { name: "Vanshika", role: "Host Team", department: "Host", linkedin: "https://www.linkedin.com/in/vanshika-chauhan-1ba100279", image: '/images/teams/host/vanshika.jpeg', location: "Ghaziabad" },
     { name: "Vijay Laxmi", role: "Speaker Outreach Team", department: "Speaker Outreach", linkedin: "https://www.linkedin.com/in/laxmi-vijay/", image: '/images/teams/speaker/vijay1.webp', location: "Delhi" },
     

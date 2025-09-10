@@ -81,7 +81,7 @@ const speakers = [
     linkedin: "https://www.linkedin.com/in/arushi-garg105"
   },
   {
-    name: "Souradip Lal",
+    name: "Souradip Pal",
     role: "Applied AI Eng.",
     org: "The Cloud Ops Community",
     image: "/images/speakers/souradip pal.jpg",

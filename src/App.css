@@ -145,7 +145,6 @@ body::before {
 .faq-gradient {
   padding-top: 1rem;
   margin-top: 0rem;
-  background: linear-gradient(180deg, #0a044bba 2.4%,  #000000bd 100%);
 
 }
 
@@ -331,6 +330,108 @@ p {
   transform: scale(1.05);
 }
 
+/* ====== Testimonial Section Container ====== */
+.testimonial-container {
+  display: grid;
+  gap: 2rem;
+  overflow: visible;
+  align-items: stretch;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.testimonial-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  background: linear-gradient(
+    var(--border-angle),
+    var(--border-color-1),
+    var(--border-color-2)
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.testimonial-card:hover,
+.testimonial-card:active {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 10px 25px rgba(20, 176, 211, 0.9);
+}
+
+.testimonial-card:hover::before,
+.testimonial-card:active::before {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+@media (max-width: 1200px) {
+  .testimonial-card {
+    min-width: 320px;
+    max-width: 320px;
+    width: 320px;
+    padding: 1.5rem 1rem;
+  }
+}
+@media (max-width: 900px) {
+  .testimonial-card {
+    min-width: 280px;
+    max-width: 280px;
+    width: 280px;
+    padding: 1.2rem 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-width: 260px;
+    max-width: 260px;
+    width: 260px;
+    padding: 1rem 0.6rem;
+  }
+}
+@media (max-width: 600px) {
+  .testimonial-card {
+    min-width: 95vw;
+    max-width: 98vw;
+    width: 98vw;
+    margin: 0 0.2rem;
+    padding: 1.3rem 0.7rem;
+    font-size: 1.08rem;
+  }
+}
+@media (max-width: 480px) {
+  .testimonial-card {
+    min-width: 90vw;
+    max-width: 95vw;
+    width: 95vw;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 0.98rem;
+  }
+}
+@media (max-width: 400px) {
+  .testimonial-card {
+    min-width: 90vw;
+    max-width: 95vw;
+    width: 95vw;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
 /* ====== Responsive Design ====== */
 @media (max-width: 768px) {
   .aurora-bg,
@@ -366,4 +467,14 @@ p {
 .app-wrapper {
   position: relative;
   z-index: 1;
+}
+
+.testimonials-section,
+.marquee-wrapper {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: visible;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
 }

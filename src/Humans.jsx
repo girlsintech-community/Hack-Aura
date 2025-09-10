@@ -32,7 +32,7 @@ const TeamPage = ({ onContactClick }) => {
     { name: "Bagavati Narayanan", role: "Tech Team", department: "Tech", linkedin: "https://www.linkedin.com/in/bagavati-narayanan-98484b292", image: '/images/teams/tech/bagavati.webp', location: "Chennai" },
     { name: "Charmi Reddy P", role: "Content Writing Team", department: "Content", linkedin: "https://www.linkedin.com/in/charmi-reddy-p-b2aaa2294", image: '/images/teams/content/charmi.webp', location: "Hyderabad" },
     { name: "Dhairya Kanabar", role: "PR Team", department: "PR", linkedin: "https://www.linkedin.com/in/dhairya-kanabar-411990294", image: '/images/teams/pr/dhairiya.webp', location: "Surendranagar" },
-    { name: "Diya K Bhat", role: "PR Team", department: "PR", linkedin: "http://www.linkedin.com/in/diya-k-bhat-75b450257", image: "/images/teams/pr/diya.jpg", location: "Bangalore" },
+    { name: "Diya K Bhat", role: "PR Team", department: "PR", linkedin: "http://www.linkedin.com/in/diya-k-bhat-75b450257", image: "/images/teams/pr/diyaa.jpg", location: "Bangalore" },
     { name: "Gungun Goel", role: "Partnerships/Sponsorships Team", department: "Partnerships/Sponsorships", linkedin: "https://www.linkedin.com/in/gungun-goyal-05154426a", image: '/images/teams/partnerships/gungun.webp', location: "Meerut" },
     { name: "Ishita Soni", role: "Design Team", department: "Design", linkedin: "https://www.linkedin.com/in/ishita-soni-work", image: '/images/teams/design/ishita.webp', location: "Jaipur" },
     { name: "Kashika Gupta", role: "Tech Team", department: "Tech", linkedin: "https://www.linkedin.com/in/kashikagupta", image: '/images/teams/tech/kashika1.webp', location: "Indore" },

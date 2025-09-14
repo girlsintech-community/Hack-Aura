@@ -9,28 +9,28 @@ const houses = [
     description:"They look beyond the horizon; catching sight of the future while the rest are still lost in today. “Code the future before it arrives.”",
     cover: "/images/houses/blue.png",
     video: "/images/houses/blue.mp4", // replace with actual promo video
-    download: "/images/houses/NOVA.png"
+    driveLink: "https://drive.google.com/drive/folders/1rzwK8E_L3hcSiZ1S1YlYYYp-oR8pa3nb"
   },
   {
     name: "LUNO House",
     description:"They do not merely write code; they transform it. What begins as simple logic leaves their hands as something rare. “Turn code into gold.”",
     cover: "/images/houses/green.png",
     video: "/images/houses/green.mp4",
-    download: "/images/houses/LUNO.png"
+    driveLink: "https://drive.google.com/drive/folders/1tsAdsJSCNCIgGLBx2TxwdhsHDHGCJjap"
   },
   {
     name: "ASTRA House",
     description:"They thrive where others falter; stepping into chaos and returning with order, as if they had tamed the storm itself. “Code clarity from chaos.”",
     cover: "/images/houses/pink.png",
     video: "/images/houses/pink.mp4",
-    download: "/images/houses/ASTRA.png"
+    driveLink: "https://drive.google.com/drive/folders/15V9sgQZVls-WNcxD1J4_AUWiGwOxttp-"
   },
   {
     name: "NYX House",
     description:"Here, the rules blur; endings become beginnings, and code dares to go where reason hesitates. “Where logic ends, code begins.”",
     cover: "/images/houses/yellow.png",
     video: "/images/houses/yellow.mp4",
-    download: "/images/houses/NYX.png"
+    driveLink: "https://drive.google.com/drive/folders/12K_Cw-H1gko_WbHDhntU0G44fVzeJEQg"
   }
 ];
 
@@ -65,12 +65,13 @@ const Tickets = () => {
                   <span className="house-desc">{house.description}</span>
                 </div>
                 <a
-                  href={house.download}
-                  download
+                  href={house.driveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="download-btn"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  Join Now
+                  Download & Join
                 </a>
                 <div className="info-container">Click here
                   <button

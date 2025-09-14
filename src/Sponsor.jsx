@@ -4,7 +4,7 @@ import ContactPopup from "./Contact";
 
 // Import logo images from the assets folder
 import balsamiq from "./assets/logos/balsamiq.webp";
-import cake from "./assets/logos/cake.svg";
+import cake from "./assets/logos/interview-cake.jpg";
 import GLT from "./assets/logos/glt2.png";
 import IBlogo from "./assets/logos/IBlogo.svg";
 import wolfram from "./assets/logos/wolfram.webp";
@@ -14,7 +14,7 @@ import XYZ from "./assets/logos/XYZ.webp";
 import dev from "./assets/logos/dev.webp";
 import scc from "./assets/logos/scc.webp";
 import civo from "./assets/logos/civo.webp";
-import devfolio from "./assets/logos/devfolio.svg";
+import devfolio from "./assets/logos/devfolioo.png";
 import code4govtech from "./assets/logos/code4govtech.png";
 import postman from "./assets/logos/postman.png";
 import da from "./assets/logos/da.png";
@@ -109,10 +109,10 @@ const HackathonSponsors = () => {
 
               {logo.url?(
                <a href={logo.url} target="_blank" rel="noopener noreferrer">
-        <img src={logo.src} className="blurred-logo" width="160" height="80" />
+        <img src={logo.src} className="blurred-logo"/>
       </a>
       ):(
-        <img src={logo.src} className="blurred-logo" width="160" height="80" />
+        <img src={logo.src} className="blurred-logo"/>
       )}
               </div>
             ))}
@@ -129,10 +129,10 @@ const HackathonSponsors = () => {
               <div className="logo-card" key={logo.id}>
                 {logo.url?(
                <a href={logo.url} target="_blank" rel="noopener noreferrer">
-        <img src={logo.src} className="blurred-logo" width="160" height="80" />
+        <img src={logo.src} className="blurred-logo"  />
       </a>
       ):(
-        <img src={logo.src} className="blurred-logo" width="160" height="80" />
+        <img src={logo.src} className="blurred-logo"  />
       )}
               </div>
             ))}

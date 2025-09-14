@@ -1,5 +1,6 @@
 import React from "react";
 import Linkedin from 'lucide-react/dist/esm/icons/linkedin';
+import Twitter from 'lucide-react/dist/esm/icons/twitter';
 import "./Speakers.css";
 
 const speakers = [
@@ -17,6 +18,62 @@ const speakers = [
     image: "/images/speakers/Mannan Tyagi.jpg",
     linkedin: "https://www.linkedin.com/in/mannantyagi/"
   },
+    {
+      name: "Ankush Dharkar",
+      role: "Founder Coach",
+      org: "Real Dev Squad",
+      image: "/images/speakers/Ankush Dharkar.jpeg",
+      twitter: "ankushdharkar",
+      email: "ankushdharkar@gmail.com"
+    },
+    {
+      name: "Anubha Pandey",
+      role: "Data Science Manager",
+      org: "Mastercard",
+      image: "/images/speakers/Anubha Pandey.jpeg",
+      linkedin: "https://www.linkedin.com/in/anubha-pandey-294747161/",
+      email: "anubha.pandey@mastercard.com"
+    },
+    {
+      name: "Matilde Silva",
+      role: "Comunity Strategist Advisor",
+      org: "H.E.R DAO",
+      image: "/images/speakers/Matilde Silva.jpeg",
+      linkedin: "https://www.linkedin.com/in/matildecsilva/",
+      email: "whtifigo@gmail.com"
+    },
+    {
+      name: "Manik",
+      role: "Business Development Manager",
+      org: "BlockOn Ventures",
+      image: "/images/speakers/Manik.jpeg",
+      twitter: "@themanikdiaries",
+      email: "Manik23265@gmail.com"
+    },
+    {
+      name: "Ayush Chugh",
+      role: "Full Stack Developer",
+      org: "Avenue Tickets | CGC Landran",
+      image: "/images/speakers/Ayush Chugh.jpeg",
+      twitter: "aayushchugh_x",
+      email: "hey@ayushchugh.com"
+    },
+    {
+      name: "Unnati",
+      role: "Data Scientist",
+      org: "Grid Dynamics",
+      image: "/images/speakers/Unnati.jpeg",
+      twitter: "unnati_twts",
+      email: "cunnati@griddynamics.com"
+    },
+    {
+      name: "Rieselle Saure",
+      role: "Lead Community Ambassador",
+      org: "Core DAO/Base PH",
+      image: "/images/speakers/Rieselle Saure.jpeg",
+      twitter: "@rie_1497",
+      email: "riewagmi@gmail.com"
+    },
   {
     name: "Nandini Taneja",
     role: "Software Engineer",
@@ -128,6 +185,15 @@ const SpeakerCard = ({ speaker }) => (
           rel="noopener noreferrer"
           className="speaker-linkedin">
           <Linkedin size={18} /> LinkedIn
+        </a>
+      )}
+      {speaker.twitter && (
+        <a
+          href={`https://twitter.com/${speaker.twitter.replace(/^@/, "")}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="speaker-linkedin">
+          <Twitter size={18} /> Twitter
         </a>
       )}
       <h3 className="speaker-name">{speaker.name}</h3>

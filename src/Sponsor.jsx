@@ -82,17 +82,17 @@ const HackathonSponsors = () => {
     { id: 13, src: zairaa, url:"https://www.linkedin.com/company/zairza/" },
     { id: 14, src: tmi, url:"https://www.linkedin.com/company/techmasters-community" },
     { id: 15, src: GDGUECU, url:"https://www.instagram.com/gdg_uecu" },
-    { id: 16, src: girl, url:"" },
-    { id: 17, src: event, url:"" },
-    { id: 18, src: elite, url:"" },
-    { id: 19, src: Draft, url:"" },
-    { id: 20, src: ieee, url:"" },
-    { id: 21, src: LM, url:"" },
-    { id: 22, src: osc, url:"" },
-    { id: 23, src: techleads, url:"" },
-    { id: 24, src: AC, url:"" },
-    { id: 25, src: cfi, url:"" },
-    { id: 26, src: tac, url:"" }
+    { id: 16, src: girl, url:"https://in.linkedin.com/company/girlup-coders" },
+    { id: 17, src: event, url:"https://eventopia.in/" },
+    { id: 18, src: elite, url:"https://www.linkedin.com/company/the-elites-in/" },
+    { id: 19, src: Draft, url:"https://krowdkraft.live/join-community" },
+    { id: 20, src: ieee, url:"https://www.linkedin.com/company/ieee-igdtuw/" },
+    { id: 21, src: LM, url:"https://www.linkedin.com/company/lamit-club" },
+    { id: 22, src: osc, url:"https://www.linkedin.com/company/open-source-chandigarh/posts/?feedView=all" },
+    { id: 23, src: techleads, url:"https://instagram.com/techleads.in/" },
+    { id: 24, src: AC, url:"https://linkedin.com/company/apna-coding-by-apna-counsellors" },
+    { id: 25, src: cfi, url:"https://codeforindia.com/" },
+    { id: 26, src: tac, url:"https://ascentcircle.web.app/" }
   ];
 
   return (

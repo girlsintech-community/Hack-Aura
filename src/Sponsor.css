@@ -290,7 +290,10 @@
 }
 
 .blurred-logo {
-  max-width: 100px;
-  max-height: 80px;
+  max-width: 160px;   /* limit width */
+  max-height: 80px;   /* limit height */
+  width: auto;        /* preserve aspect ratio */
+  height: auto;       /* preserve aspect ratio */
+  object-fit: contain;
   transition: all 0.3s ease;
 }

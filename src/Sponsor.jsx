@@ -27,6 +27,23 @@ import lb from "./assets/logos/lb.png";
 import devarmy from "./assets/logos/devarmy.jpeg";
 import wemakedevs from "./assets/logos/wemakedevs.png";
 import welzin from "./assets/logos/welzin.jpeg";
+import AC from "./assets/logos/AC.png";
+import cfi from "./assets/logos/cfi.png";
+import techleads from "./assets/logos/techleads.png";
+import LM from "./assets/logos/LM.png";
+import ieee from "./assets/logos/ieee.jpeg";
+import Draft from "./assets/logos/Draft.png";
+import elite from "./assets/logos/elite.png";
+import event from "./assets/logos/event.png";
+import GDGUECU from "./assets/logos/GDGUECU.jpeg";
+import girl from "./assets/logos/girl.jpeg";
+import osc from "./assets/logos/osc.jpeg";
+import tmi from "./assets/logos/tmi.png";
+import truscholar from "./assets/logos/truscholar.png";
+import vonage from "./assets/logos/vonage.jpeg";
+import zairaa from "./assets/logos/zairaa.jpeg";
+import tac from "./assets/logos/tac.png";
+
 const HackathonSponsors = () => {
   const [showContact, setShowContact] = useState(false);
 
@@ -45,7 +62,9 @@ const HackathonSponsors = () => {
     { id: 9, src: da, url:"https://www.duality.ai/" },
     {id: 10, src: FS, url:"https://getfailsafe.com/" },
     {id: 11, src: uni },
-    {id:12, src: slido, url:"https://www.slido.com/" }
+    {id:12, src: slido, url:"https://www.slido.com/" },
+    {id:13, src:vonage,url:"https://www.vonage.com/"},
+    {id:14, src:truscholar, url:"https://www.truscholar.io/" },
   ];
   const partnerLogos = [
     { id: 1, src: dev, url:"https://dev3pack.xyz/" },
@@ -60,6 +79,20 @@ const HackathonSponsors = () => {
     { id: 10, src: devarmy, url:"https://thedevarmy.com/" },
     { id: 11, src: wemakedevs, url:"https://wemakedevs.org/" },
     { id: 12, src: welzin, url:"https://www.welzin.ai/" },
+    { id: 13, src: zairaa, url:"https://www.linkedin.com/company/zairza/" },
+    { id: 14, src: tmi, url:"https://www.linkedin.com/company/techmasters-community" },
+    { id: 15, src: GDGUECU, url:"https://www.instagram.com/gdg_uecu" },
+    { id: 16, src: girl, url:"" },
+    { id: 17, src: event, url:"" },
+    { id: 18, src: elite, url:"" },
+    { id: 19, src: Draft, url:"" },
+    { id: 20, src: ieee, url:"" },
+    { id: 21, src: LM, url:"" },
+    { id: 22, src: osc, url:"" },
+    { id: 23, src: techleads, url:"" },
+    { id: 24, src: AC, url:"" },
+    { id: 25, src: cfi, url:"" },
+    { id: 26, src: tac, url:"" }
   ];
 
   return (

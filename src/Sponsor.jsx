@@ -43,6 +43,7 @@ import truscholar from "./assets/logos/truscholar.png";
 import vonage from "./assets/logos/vonage.jpeg";
 import zairaa from "./assets/logos/zairaa.jpeg";
 import tac from "./assets/logos/tac.png";
+import GCET from "./assets/logos/GCET.jpeg";
 
 const HackathonSponsors = () => {
   const [showContact, setShowContact] = useState(false);
@@ -92,7 +93,8 @@ const HackathonSponsors = () => {
     { id: 23, src: techleads, url:"https://instagram.com/techleads.in/" },
     { id: 24, src: AC, url:"https://linkedin.com/company/apna-coding-by-apna-counsellors" },
     { id: 25, src: cfi, url:"https://codeforindia.com/" },
-    { id: 26, src: tac, url:"https://ascentcircle.web.app/" }
+    { id: 26, src: tac, url:"https://ascentcircle.web.app/" },
+    { id: 27, src: GCET, url:"https://gdg.community.dev/gdg-on-campus-galgotias-college-of-engineering-technology-greater-noida-india/" },
   ];
 
   return (

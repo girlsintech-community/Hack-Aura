@@ -18,7 +18,7 @@ import devfolio from "./assets/logos/devfolioo.png";
 import code4govtech from "./assets/logos/code4govtech.png";
 import postman from "./assets/logos/postman.png";
 import da from "./assets/logos/da.png";
-import FS from "./assets/logos/FS.png";
+import fs from "./assets/logos/FS.jpeg";
 import uni from "./assets/logos/uni.jpg";
 import slido from "./assets/logos/slido.png";
 import cats from "./assets/logos/cats.jpeg";
@@ -61,7 +61,7 @@ const HackathonSponsors = () => {
     { id: 7, src: CC, url:"https://codecrafters.io/" },
     { id: 8, src: XYZ, url:"https://gen.xyz/" },
     { id: 9, src: da, url:"https://www.duality.ai/" },
-    {id: 10, src: FS, url:"https://getfailsafe.com/" },
+    {id: 10, src: fs, url:"https://getfailsafe.com/" },
     {id: 11, src: uni },
     {id:12, src: slido, url:"https://www.slido.com/" },
     {id:13, src:vonage,url:"https://www.vonage.com/"},

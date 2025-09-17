@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Tickets.css";
 import { Info } from "lucide-react";
 import Navbar from "./Navbar";
@@ -42,6 +42,10 @@ const Tickets = () => {
     newFlipped[index] = !newFlipped[index];
     setFlipped(newFlipped);
   };
+  useEffect(() => {
+    // Scroll to top when component loads
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

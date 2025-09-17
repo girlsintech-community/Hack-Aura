@@ -110,7 +110,6 @@ const HackathonSponsors = () => {
     { id:33, src: techNinja, url:"" },
     { id:34, src: campusBody, url:"" },
   ];
-
   return (
     <section className="hackathon-sponsors" id="sponsors">
       <div className="sponsors-container">

@@ -101,11 +101,11 @@ const HackathonSponsors = () => {
     { id: 25, src: cfi, url:"https://codeforindia.com/" },
     { id: 26, src: tac, url:"https://ascentcircle.web.app/" },
     { id: 27, src: GCET, url:"https://gdg.community.dev/gdg-on-campus-galgotias-college-of-engineering-technology-greater-noida-india/" },
-    { id:28, src: eventInfo, url:"" },
+    { id:28, src: eventInfo, url:"https://www.linkedin.com/company/eventsinfo" },
     { id:29, src: IEEEStu, url:"" },
-    { id:30, src: minerva, url:"" },
-    { id:31, src: techeduwor, url:"" },
-    { id:32, src: cyberX, url:"" },
+    { id:30, src: minerva, url:"https://minervaforums.in/" },
+    { id:31, src: techeduwor, url:"https://sites.google.com/view/techeducation-world" },
+    { id:32, src: cyberX, url:"https://www.instagram.com/cyberx.nashik/#" },
     { id:33, src: techNinja, url:"" },
   ];
 

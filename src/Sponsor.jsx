@@ -50,6 +50,7 @@ import minerva from "./assets/logos/minerva.png";
 import techeduwor from "./assets/logos/techeduwor.png";
 import cyberX from "./assets/logos/cyberX.png";
 import techNinja from "./assets/logos/techNinja.png";
+import campusBody from "./assets/logos/campusBody.png";
 
 const HackathonSponsors = () => {
   const [showContact, setShowContact] = useState(false);
@@ -107,6 +108,7 @@ const HackathonSponsors = () => {
     { id:31, src: techeduwor, url:"" },
     { id:32, src: cyberX, url:"" },
     { id:33, src: techNinja, url:"" },
+    { id:34, src: campusBody, url:"" },
   ];
 
   return (

@@ -18,7 +18,7 @@ import devfolio from "./assets/logos/devfolioo.png";
 import code4govtech from "./assets/logos/code4govtech.png";
 import postman from "./assets/logos/postman.png";
 import da from "./assets/logos/da.png";
-import fs from "./assets/logos/FS.jpeg";
+import fs from "./assets/logos/FS.png";
 import uni from "./assets/logos/uni.jpg";
 import slido from "./assets/logos/slido.png";
 import cats from "./assets/logos/cats.jpeg";

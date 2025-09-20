@@ -4,6 +4,42 @@ import Twitter from 'lucide-react/dist/esm/icons/twitter';
 import "./Speakers.css";
 
 const speakers = [
+  // Newly added speakers
+  {
+    name: "Rudrakshi",
+    role: "Intern - Community Manager",
+    org: "TechKareer",
+    image: "/images/speakers/Rudrakshi.jpeg",
+    twitter: "rudythetechy"
+  },
+  {
+    name: "Francesco Ciulla",
+    role: "Developer Advocate",
+    org: "daily.dev",
+    image: "/images/speakers/Francesco Ciulla.jpeg",
+    twitter: "@Francescociull4"
+  },
+  {
+    name: "Aditi Tiwari",
+    role: "Founder",
+    org: "Sia Health",
+    image: "/images/speakers/Aditi Tiwari.jpeg",
+    twitter: "iamaditi007"
+  },
+  {
+    name: "Kanishk Khurana",
+    role: "Developer Relations Engineer",
+    org: "Across Protocol",
+    image: "/images/speakers/Kanishk Khurana.jpeg",
+    twitter: "@kanishkkhurana_"
+  },
+  {
+    name: "Narayani Gurunathan",
+    role: "Consultant - Careers",
+    org: "Self Employed",
+    image: "/images/speakers/Narayani Gurunathan.jpeg",
+    twitter: "@Narayani07"
+  },
   // Non-Indians (international speakers)
   {
     name: "Matilde Silva",

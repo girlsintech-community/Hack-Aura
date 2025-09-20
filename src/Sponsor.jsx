@@ -51,7 +51,8 @@ import techeduwor from "./assets/logos/techeduwor.png";
 import cyberX from "./assets/logos/cyberX.png";
 import techNinja from "./assets/logos/techNinja.png";
 import campusBody from "./assets/logos/campusBody.png";
-
+import deva from "./assets/logos/deva.png";
+import cmx from "./assets/logos/cmx.png";
 const HackathonSponsors = () => {
   const [showContact, setShowContact] = useState(false);
 
@@ -109,6 +110,8 @@ const HackathonSponsors = () => {
     { id:32, src: cyberX, url:"https://www.instagram.com/cyberx.nashik/#" },
     { id:33, src: techNinja, url:"" },
     { id:34, src: campusBody, url:"" },
+    { id:35, src: deva, url:"https://www.linkedin.com/company/devantra-community/" },
+    { id:36, src: cmx, url:"https://events.cmxhub.com/mohali/" }
   ];
   return (
     <section className="hackathon-sponsors" id="sponsors">

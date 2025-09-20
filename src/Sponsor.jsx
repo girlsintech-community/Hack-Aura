@@ -95,7 +95,7 @@ const HackathonSponsors = () => {
     { id: 18, src: elite, url:"https://www.linkedin.com/company/the-elites-in/" },
     { id: 19, src: Draft, url:"https://krowdkraft.live/join-community" },
     { id: 20, src: ieee, url:"https://www.linkedin.com/company/ieee-igdtuw/" },
-    { id: 21, src: LM, url:"https://www.linkedin.com/company/lamit-club" },
+    { id: 21, src: LM, url:"https://www.linkedin.com/company/lamit-club" }, 
     { id: 22, src: osc, url:"https://www.linkedin.com/company/open-source-chandigarh/posts/?feedView=all" },
     { id: 23, src: techleads, url:"https://instagram.com/techleads.in/" },
     { id: 24, src: AC, url:"https://linkedin.com/company/apna-coding-by-apna-counsellors" },

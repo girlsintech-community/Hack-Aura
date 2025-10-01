@@ -53,6 +53,17 @@ import techNinja from "./assets/logos/techNinja.png";
 import campusBody from "./assets/logos/campusBody.png";
 import deva from "./assets/logos/deva.png";
 import cmx from "./assets/logos/cmx.png";
+import bvcoe from "./assets/logos/bvcoe.png";
+import chain from "./assets/logos/chain.jpeg";
+import girlsWhoML from "./assets/logos/girlsWhoML.png";
+import globe from "./assets/logos/globe.jpeg";
+import hh from "./assets/logos/hh.jpeg";
+import leni from "./assets/logos/leni.jpeg";
+import metamorphosis from "./assets/logos/metamorphosis.png";
+import nitra from "./assets/logos/nitra.png";
+import red from "./assets/logos/red.png";
+import techno from "./assets/logos/techno.jpeg";
+import hela from "./assets/logos/hela.png";
 const HackathonSponsors = () => {
   const [showContact, setShowContact] = useState(false);
 
@@ -70,10 +81,11 @@ const HackathonSponsors = () => {
     { id: 8, src: XYZ, url:"https://gen.xyz/" },
     { id: 9, src: da, url:"https://www.duality.ai/" },
     {id: 10, src: fs, url:"https://getfailsafe.com/" },
-    {id: 11, src: uni },
+    {id: 11, src: uni, url:"" },
     {id:12, src: slido, url:"https://www.slido.com/" },
     {id:13, src:vonage,url:"https://www.vonage.com/"},
     {id:14, src:truscholar, url:"https://www.truscholar.io/" },
+    {id:15, src:hela, url:"https://helalabs.com/"},
   ];
   const partnerLogos = [
     { id: 1, src: dev, url:"https://dev3pack.xyz/" },
@@ -111,7 +123,17 @@ const HackathonSponsors = () => {
     { id:33, src: techNinja, url:"" },
     { id:34, src: campusBody, url:"" },
     { id:35, src: deva, url:"https://www.linkedin.com/company/devantra-community/" },
-    { id:36, src: cmx, url:"https://events.cmxhub.com/mohali/" }
+    { id:36, src: cmx, url:"https://events.cmxhub.com/mohali/" },
+    { id:37, src: bvcoe, url:"https://bvcoe.bharatividyapeeth.edu/" },
+    { id:38, src: chain, url:"https://www.linkedin.com/company/chain-reactors/" },
+    { id:39, src: girlsWhoML, url:"https://girlswhoml.com/" },
+    { id:40, src: globe, url:"https://www.linkedin.com/company/globewomen/" },
+    { id:41, src: hh, url:"https://herhacks.org/" },
+    { id:42, src: leni, url:"https://www.linkedin.com/company/leni-institute-of-technology/" },
+    { id:43, src: metamorphosis, url:"https://www.linkedin.com/company/metamorphosis-ecell-nit-surat/" },
+    { id:44, src: nitra, url:"https://nitra.tech/" },
+    { id:45, src: red, url:"https://www.linkedin.com/company/red-hat-developers/" },
+    { id:46, src: techno, url:"https://www.linkedin.com/company/technoclubvit/" },
   ];
   return (
     <section className="hackathon-sponsors" id="sponsors">

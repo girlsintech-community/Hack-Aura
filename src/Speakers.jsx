@@ -211,6 +211,27 @@ const speakers = [
     twitter: "@themanikdiaries",
     email: "Manik23265@gmail.com"
   },
+  {
+    name: "Kaushika Anandharaman",
+    role: "Core SWE Developer",
+    org: "Stealth Startup",
+    image: "/images/speakers/Kaushika Anandharaman.png",
+    linkedin: "https://www.linkedin.com/in/kaushika-anandharaman/"
+  },
+  {
+    name: "Isha Parekh",
+    role: "jr. Devrel",
+    org: "Pinch / Charusat",
+    image: "/images/speakers/Isha Parekh.jpeg",
+    twitter: "https://x.com/iishaparekh"
+  },
+  {
+    name: "Ankita Tripathi",
+    role: "CEO",
+    org: "Nuvoarc",
+    image: "/images/speakers/Ankita Tripathi.jpeg",
+    twitter: "ankitatr_"
+  }
 ];
 
 const SpeakerCard = ({ speaker }) => (

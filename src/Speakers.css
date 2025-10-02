@@ -123,7 +123,7 @@ div.speakers-section {
 }
 .speakers-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   justify-items: center;
 }
@@ -177,7 +177,7 @@ div.speakers-section {
 }
 @media (max-width: 1200px) {
   .speakers-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (max-width: 900px) {

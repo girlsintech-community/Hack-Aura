@@ -3,6 +3,7 @@ import "./Sponsor.css";
 import ContactPopup from "./Contact";
 
 // Import logo images from the assets folder
+import Aptos from "./assets/logos/Aptos.png";
 import balsamiq from "./assets/logos/balsamiq.webp";
 import cake from "./assets/logos/interview-cake.jpg";
 import GLT from "./assets/logos/glt2.png";
@@ -71,21 +72,23 @@ const HackathonSponsors = () => {
   const closeContactPopup = () => setShowContact(false);
 
   const sponsorLogos = [
-    { id: 1, src: balsamiq, url:"https://balsamiq.com/" },
-    { id: 2, src: cake, url:"https://www.interviewcake.com/" },
-    { id: 3, src: GLT, url:"https://www.linkedin.com/company/girlsleadingtech/" },
-    { id: 4, src: IBlogo, url:"https://interviewbuddy.net/" },
-    { id: 5, src: wolfram, url:"https://www.wolframalpha.com/" },
-    { id: 6, src: GMC, url:"https://givemycertificate.com/" },
-    { id: 7, src: CC, url:"https://codecrafters.io/" },
-    { id: 8, src: XYZ, url:"https://gen.xyz/" },
-    { id: 9, src: da, url:"https://www.duality.ai/" },
-    {id: 10, src: fs, url:"https://getfailsafe.com/" },
-    {id: 11, src: uni, url:"" },
-    {id:12, src: slido, url:"https://www.slido.com/" },
-    {id:13, src:vonage,url:"https://www.vonage.com/"},
-    {id:14, src:truscholar, url:"https://www.truscholar.io/" },
-    {id:15, src:hela, url:"https://helalabs.com/"},
+     {id:1, src:Aptos, url:"https://aptoslabs.com/"},
+     {id:2, src:hela, url:"https://helalabs.com/"},
+    { id: 3, src: da, url:"https://www.duality.ai/" },
+    { id: 4, src: balsamiq, url:"https://balsamiq.com/" },
+    { id: 5, src: cake, url:"https://www.interviewcake.com/" },
+    { id: 6, src: GLT, url:"https://www.linkedin.com/company/girlsleadingtech/" },
+    { id: 7, src: IBlogo, url:"https://interviewbuddy.net/" },
+    { id: 8, src: wolfram, url:"https://www.wolframalpha.com/" },
+    { id: 9, src: GMC, url:"https://givemycertificate.com/" },
+    { id: 10, src: CC, url:"https://codecrafters.io/" },
+    { id: 11, src: XYZ, url:"https://gen.xyz/" },
+    {id: 12, src: fs, url:"https://getfailsafe.com/" },
+    {id: 13, src: uni, url:"" },
+    {id:14, src: slido, url:"https://www.slido.com/" },
+    {id:15, src:vonage,url:"https://www.vonage.com/"},
+    {id:16, src:truscholar, url:"https://www.truscholar.io/" },
+   
   ];
   const partnerLogos = [
     { id: 1, src: dev, url:"https://dev3pack.xyz/" },

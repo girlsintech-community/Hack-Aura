@@ -106,7 +106,7 @@
 /* ==== SPONSOR CARDS ==== */
 .sponsor-call {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -274,6 +274,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+   grid-template-columns: repeat(5, 1fr); 
 }
 
 .logo-card {

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useAnimate } from 'framer-motion';
 import "./ShiftingCountdown.css";
 
-const COUNTDOWN_FROM = "2025-10-04T00:00:00";
+const COUNTDOWN_FROM = "2025-10-04T10:00:00";
 
 const SECOND = 1000;
 const MINUTE = SECOND * 60;

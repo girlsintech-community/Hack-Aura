@@ -12,7 +12,7 @@ const DAY = HOUR * 24;
 export default function ShiftingCountdown() {
   return (
     <section className="countdown-wrapper">
-      <h2 className="countdown-title">GEAR UP! The HACKATHON STORM HITS IN</h2>
+      <h2 className="countdown-title">HACKAURA IS LIVE! COUNTDOWN TO THE FINALE</h2>
       <div className="countdown-container">
         <CountdownItem unit="Day" label="Days" />
         <CountdownItem unit="Hour" label="Hours" />

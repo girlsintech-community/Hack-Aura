@@ -14,7 +14,6 @@ export default function ShiftingCountdown() {
     <section className="countdown-wrapper">
       <h2 className="countdown-title">HACKAURA IS LIVE! COUNTDOWN TO THE FINALE</h2>
       <div className="countdown-container">
-        <CountdownItem unit="Day" label="Days" />
         <CountdownItem unit="Hour" label="Hours" />
         <CountdownItem unit="Minute" label="Minutes" />
         <CountdownItem unit="Second" label="Seconds" />
@@ -59,9 +58,7 @@ function useTimer(unit) {
 
     let newTime = 0;
     switch (unit) {
-      case "Day":
-        newTime = Math.max(0, Math.floor(distance / DAY));
-        break;
+      
       case "Hour":
         newTime = Math.max(0, Math.floor((distance % DAY) / HOUR));
         break;
